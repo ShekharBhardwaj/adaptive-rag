@@ -3,7 +3,7 @@ title: "Adaptive Retrieval for Repository Question Answering: A Pre-Specified Pi
 author:
   - "Shekhar Bhardwaj"
   - "Independent Researcher · [www.shekharbhardwaj.com](https://www.shekharbhardwaj.com)"
-date: "Draft of November 20, 2026"
+date: "November 2026"
 abstract: |
   A language model answering questions about a code repository can look up
   source with a cheap vector search or with an expensive agentic search, in
@@ -654,11 +654,12 @@ this.
 
 **The saving depends on how often the cascade escalates.** A question that does
 not escalate costs about what Vector costs, and one that does costs about
-Vector plus the navigator. With escalation rate $p$, Vector cost $c_V$ and
-navigator cost $c_A$, the cascade's cost per question is roughly
-$c_V + p\,c_A$. This comes within about 7% of the observed cost in both runs:
-\$0.0188 predicted against \$0.0181 observed in development, where $p$ was
-0.20, and \$0.0382 against \$0.0408 on held-out questions, where $p$ was 0.44.
+Vector plus the navigator. With escalation rate *p*, Vector cost *c*~V~ and
+navigator cost *c*~A~, the cascade's cost per question is roughly
+*c*~V~ + *p* × *c*~A~. This comes within about 7% of the observed cost in both
+runs: \$0.0188 predicted against \$0.0181 observed in development, where *p*
+was 0.20, and \$0.0382 against \$0.0408 on held-out questions, where *p* was
+0.44.
 The saving over the navigator therefore shrinks as questions get harder for
 Vector. Under this approximation it disappears when 86% to 88% of questions
 escalate, depending on which run's costs are used. On a workload where Vector

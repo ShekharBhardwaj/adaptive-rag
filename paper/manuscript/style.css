@@ -110,7 +110,7 @@ a {
 }
 
 code {
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 0.86em;
   white-space: nowrap;
 }
@@ -132,7 +132,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin: 0.35em 0 1.25em;
-  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 8.3pt;
   line-height: 1.32;
   font-variant-numeric: tabular-nums;

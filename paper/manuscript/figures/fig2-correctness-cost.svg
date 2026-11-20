@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 372" width="760" height="372" role="img" aria-label="Correctness against cost per question, by condition" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 372" width="760" height="372" role="img" aria-label="Correctness against cost per question, by condition" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif'>
 <rect width="760" height="372" fill="#ffffff"/>
 <circle cx="63" cy="22" r="5" fill="#2a78d6"/>
 <text x="74.0" y="26.0" font-size="13" fill="#52514e">Cascade (adaptive)</text>
