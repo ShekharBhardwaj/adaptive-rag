@@ -112,6 +112,11 @@ a {
 code {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.86em;
+  white-space: nowrap;
+}
+
+td code {
+  white-space: normal;
   overflow-wrap: anywhere;
 }
 

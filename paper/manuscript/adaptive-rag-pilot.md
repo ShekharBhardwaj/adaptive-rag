@@ -1,8 +1,8 @@
 ---
 title: "Adaptive Retrieval for Repository Question Answering: A Pre-Specified Pilot Study of a Vector-First Cascade"
 author:
-  - "Shekhar [family name]"
-  - "[affiliation] · [contact]"
+  - "Shekhar Bhardwaj"
+  - "Independent Researcher · [www.shekharbhardwaj.com](https://www.shekharbhardwaj.com)"
 date: "Draft of November 20, 2026"
 abstract: |
   A language model answering questions about a code repository can look up
@@ -34,6 +34,9 @@ bibliography: references.bib
 link-citations: true
 lang: en
 ---
+
+**Keywords:** retrieval-augmented generation; adaptive retrieval; agentic
+retrieval; model cascades; code question answering; pre-specified evaluation.
 
 # 1 Introduction
 
@@ -715,6 +718,9 @@ to these scores, and more retrieval is not always better.
   them, the wording rule for elapsed time, was written when the elapsed times
   were known.
 - **Local pre-specification.** The protocol was not registered externally.
+- **Raw logs.** The per-job logs behind the reported aggregates are not yet in
+  a public archive, so the results cannot be recomputed from the public
+  repository alone.
 - **Time and cost.** Elapsed times include pacing waits. Costs are estimates
   from reported usage at list prices, exclude index construction, and are
   incomplete for a small number of failed requests. Five of 1,088 intervals
@@ -745,16 +751,17 @@ ten-point difference between the cascade and each fixed strategy.
 
 # Use of AI assistance
 
-*[Author to confirm this section, and to add the versions of both assistants.]*
-
 This study was carried out by the author working with two AI coding
 assistants. Codex (OpenAI) built the initial evaluation framework under the
 author's direction, drafted the benchmark questions and reference answers from
 the source, and scored the answers of the second development run and the
-held-out run as a blind AI reviewer. Claude (Anthropic) carried out the
-diagnosis, designed and implemented the reserved-selection navigator and the
-cascade, prepared the held-out protocol, ran the experiments after the author
-authorized each one, wrote the analysis script and drafted this manuscript.
+held-out run as a blind AI reviewer. Claude (Anthropic), used through Claude
+Code, carried out the diagnosis, designed and implemented the
+reserved-selection navigator and the cascade, prepared the held-out protocol,
+ran the experiments after the author authorized each one, wrote the analysis
+script and drafted this manuscript. At the time of writing Codex was configured
+with the model `gpt-6.1-sol`, and the Claude session that did this work used
+Claude Fable 5.2.
 
 The author conceived the study, reviewed every benchmark annotation against
 the source, scored the first development run, authorized each run, reviewed the
@@ -762,10 +769,18 @@ AI scores, and is responsible for the content of this paper.
 
 # Data and code availability
 
-The framework, configurations, benchmark, raw run records, score files, freeze
-records, analysis script and the scripts that draw the figures are in the
-project repository *[URL to be added on release]*. Appendix D lists the
-identifiers and hashes of the main artifacts.
+The framework, the benchmark, example configurations, each run's manifest and
+frozen configuration, the score files, aggregates, freeze records, the analysis
+script and the scripts that draw the figures are in the project repository,
+<https://github.com/ShekharBhardwaj/adaptive-rag>.
+
+The per-job result and event logs of each run and the vector index are kept
+outside the repository because of their size: 19 files, 9.2 GB in all. The
+repository records their paths, sizes and SHA-256 hashes, and the author holds
+the files. No public archive of them exists yet, so the comparisons in Section
+7 can be checked against the recorded aggregates but cannot be recomputed from
+the repository alone. Appendix D lists the identifiers and hashes of the main
+artifacts.
 
 # References
 
