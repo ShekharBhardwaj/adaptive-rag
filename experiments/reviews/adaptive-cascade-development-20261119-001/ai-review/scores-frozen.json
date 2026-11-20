@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "kind": "frozen_blinded_ai_scores",
+  "frozen_at": "2026-11-19T19:23:02.754410+00:00",
+  "reviewer": "Codex (AI reviewer)",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "item_count": 206,
+  "unique_cases": 88,
+  "unique_questions": 15,
+  "classifications": {
+    "correct": 127,
+    "partial": 37,
+    "incorrect": 10,
+    "abstained": 32
+  },
+  "citation_support_counts": {
+    "full": 116,
+    "partial": 45,
+    "unsupported": 0,
+    "not_applicable": 45
+  },
+  "human_score_file_present": false,
+  "score_file": "answers.ai-scores.jsonl",
+  "score_file_sha256": "99d4a84742cf75b8b83483cf1e0b93d65471872f5de2adb32a9a1555a402d2c0",
+  "template_sha256": "af02082dc3452bf6042194c5c7eeca89cc135df817531ca8cf5b71c2295227a9",
+  "rubric_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+  "adjudication_sha256": "0bf82f9f0cda55a0236915476bcd21820803adc2d4a90dd1de507d07ec6187d4",
+  "assessment_files": {
+    "a": {
+      "file": "ai-review/assessments/group-a.jsonl",
+      "sha256": "a669f263e2627e8a8396d6afde606084fb73dd5efd490b27dcecd7f32c94047e",
+      "created_at": "2026-11-19T14:19:43.097904-05:00",
+      "source_birthtime_epoch_seconds": 1795115983.0979042,
+      "unique_cases": 30
+    },
+    "b": {
+      "file": "ai-review/assessments/group-b.jsonl",
+      "sha256": "3b422c1eb64f2ca61134c2fece11524a1cdea557342f085521bb1b501c405825",
+      "created_at": "2026-11-19T14:18:39.191154-05:00",
+      "source_birthtime_epoch_seconds": 1795115919.1911535,
+      "unique_cases": 32
+    },
+    "c": {
+      "file": "ai-review/assessments/group-c.jsonl",
+      "sha256": "208fbc5fd9a85cc1e3bd9539012bc8c2133bb66ba064c57eaa55e3ded612fc29",
+      "created_at": "2026-11-19T14:20:00.256080-05:00",
+      "source_birthtime_epoch_seconds": 1795116000.2560797,
+      "unique_cases": 26
+    }
+  },
+  "item_assessments_sha256": "48d3de161b3fd759e37492b8fbb5d4a8805d14e2a7b6fe6b98e77537ddddb7f7",
+  "blinding": "Scores finalized without condition labels, selected strategies, aggregate results, raw traces or prior-run grades. Root used programmatic raw binding validation without displaying conditions. Answer style can reveal a strategy.",
+  "timestamp_basis": "Original creation time (filesystem birthtime) of each completed assessment file, using the user-approved file-creation-time convention. ISO8601 America/New_York, microsecond precision exposed by filesystem API.",
+  "validation": "206 exact output/question bindings; all available answer texts covered once; frozen packets/template/raw/source files unchanged.",
+  "limitations": "Single AI evaluation workflow with delegated source checks and root adjudication; no independent human review or inter-rater reliability estimate."
+}

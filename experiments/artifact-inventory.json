@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "archive_status": "not_uploaded_or_provided",
+  "source": {
+    "repository_url": "https://github.com/langchain-ai/langchain.git",
+    "commit_sha": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+    "snapshot_record": "datasets/langchain.snapshot.json",
+    "configuration": "configs/langchain.yaml"
+  },
+  "index_directory": "datasets/indexes/langchain-openrouter-qwen3-phase4-002",
+  "artifacts": [
+    {
+      "path": "datasets/indexes/langchain-openrouter-qwen3-phase4-002/build-summary.json",
+      "size_bytes": 157578,
+      "sha256": "3d8fc6a429dee95ea81c7e67b05e3f7d5ea4157e2a246d371247fd2a38cb4f79"
+    },
+    {
+      "path": "datasets/indexes/langchain-openrouter-qwen3-phase4-002/chunks.json",
+      "size_bytes": 25491606,
+      "sha256": "127119b70446831027d57ed21f0066a5c18ceeacfa6fa993989e986126eab1c2"
+    },
+    {
+      "path": "datasets/indexes/langchain-openrouter-qwen3-phase4-002/index.faiss",
+      "size_bytes": 154075181,
+      "sha256": "5217f824b0f74d2e20f87fd0933e1e121c48e614eaf06983ab7b9633451240cd"
+    },
+    {
+      "path": "datasets/indexes/langchain-openrouter-qwen3-phase4-002/manifest.json",
+      "size_bytes": 1427771473,
+      "sha256": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11"
+    },
+    {
+      "path": "experiments/raw/adaptive-anthropic-development-20261116-001/events.jsonl",
+      "size_bytes": 13685035,
+      "sha256": "b04e4bdb518b55b4153343de92df3438eed7d9a7f11e72b553d35f6914d0ad07"
+    },
+    {
+      "path": "experiments/raw/adaptive-anthropic-development-20261116-001/index-manifest.json",
+      "size_bytes": 1427771473,
+      "sha256": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11"
+    },
+    {
+      "path": "experiments/raw/adaptive-anthropic-development-20261116-001/results.jsonl",
+      "size_bytes": 18062710,
+      "sha256": "20049cbaf5df26799d60513d25f1db37de6630a7ef46106bd3c1482bf1a34043"
+    },
+    {
+      "path": "experiments/raw/adaptive-anthropic-paced-development-20261117-001/events.jsonl",
+      "size_bytes": 48845356,
+      "sha256": "43cf284f0a3a88aec7c1f0e26fd1666c5c3e69b491abf78dac95cc9650dbc08f"
+    },
+    {
+      "path": "experiments/raw/adaptive-anthropic-paced-development-20261117-001/index-manifest.json",
+      "size_bytes": 1427771473,
+      "sha256": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11"
+    },
+    {
+      "path": "experiments/raw/adaptive-anthropic-paced-development-20261117-001/results.jsonl",
+      "size_bytes": 66515672,
+      "sha256": "169f3c56575c3d7f7152167caea54c669eb0e23f8abae62619015ffe55ccffe2"
+    },
+    {
+      "path": "experiments/raw/adaptive-cascade-development-20261119-001/events.jsonl",
+      "size_bytes": 48503882,
+      "sha256": "1c745426ae857d72897b6be3a12a590f7108562cee12c09e0fa488a44e7c840b"
+    },
+    {
+      "path": "experiments/raw/adaptive-cascade-development-20261119-001/index-manifest.json",
+      "size_bytes": 1427771473,
+      "sha256": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11"
+    },
+    {
+      "path": "experiments/raw/adaptive-cascade-development-20261119-001/results.jsonl",
+      "size_bytes": 67473831,
+      "sha256": "e19808c9f9e0665abc0751f3aeb8755ccb2cebb793ff93375e8683dfc196668a"
+    },
+    {
+      "path": "experiments/raw/adaptive-cascade-heldout-20261119-001/events.jsonl",
+      "size_bytes": 55440683,
+      "sha256": "aa55da99c8c03c76955425d33a0fffe5637c4a6e54fc819d674b4829f6723455"
+    },
+    {
+      "path": "experiments/raw/adaptive-cascade-heldout-20261119-001/index-manifest.json",
+      "size_bytes": 1427771473,
+      "sha256": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11"
+    },
+    {
+      "path": "experiments/raw/adaptive-cascade-heldout-20261119-001/results.jsonl",
+      "size_bytes": 75617431,
+      "sha256": "7f05e44e9d2238f49f8ab274805398bfc73d3d0191a788949357527cbcf48fe0"
+    },
+    {
+      "path": "experiments/raw/adaptive-development-20261116-001/events.jsonl",
+      "size_bytes": 26668171,
+      "sha256": "b87a095f03a877f2ac4852d6be801f2595f48bfbb193ff6c31a07d75b0f58740"
+    },
+    {
+      "path": "experiments/raw/adaptive-development-20261116-001/index-manifest.json",
+      "size_bytes": 1427771473,
+      "sha256": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11"
+    },
+    {
+      "path": "experiments/raw/adaptive-development-20261116-001/results.jsonl",
+      "size_bytes": 43697280,
+      "sha256": "060e5898da61669376668bd04fc9dda37f97ab1a188e8c6b880fe8f4e82fff65"
+    }
+  ]
+}

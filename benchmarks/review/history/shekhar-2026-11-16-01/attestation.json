@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "batch_id": "shekhar-2026-11-16-01",
+  "reviewer": "Shekhar",
+  "method": "source_inspection",
+  "source_commit_reported": "ea17e48f",
+  "source_commit_resolved": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "recorded_at": "2026-11-16T20:26:38.537917+00:00",
+  "inspection_time_supplied": null,
+  "timestamp_semantics": "The reviewer supplied no separate inspection time; reviewed_at records when the chat attestation was recorded.",
+  "dataset_before_sha256": "1f7b49d9709ec29902fbfe3ebcddef26a45faa4925b0309036683537a98e30a0",
+  "dataset_after_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "inspected_question_ids": [
+    "lc-c-02"
+  ],
+  "accept": {
+    "lc-c-02": "I confirm the revised lc-c-02 at commit ea17e48f: the question names Serializable.to_json(), the answer is unchanged, and serializable.py 274-304 and 360-378 support it. Accept."
+  },
+  "revise": {},
+  "reject": [],
+  "attestation_text": "Reviewer: Shekhar. I confirm the revised lc-c-02 at commit ea17e48f: the question names Serializable.to_json(), the answer is unchanged, and serializable.py 274-304 and 360-378 support it. Accept."
+}

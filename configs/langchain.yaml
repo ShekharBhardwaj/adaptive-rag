@@ -1,0 +1,8 @@
+schema_version: "1"
+repository:
+  url: https://github.com/langchain-ai/langchain.git
+  path: ../datasets/repos/langchain
+  commit_sha: ea17e48f0a4336c920394fd029de99f1568b4c38
+# The complete default discovery policy is recorded in each inspection manifest.
+files:
+  max_file_bytes: 1000000

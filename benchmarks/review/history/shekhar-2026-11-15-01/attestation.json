@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "batch_id": "shekhar-2026-11-15-01",
+  "reviewer": "Shekhar",
+  "method": "source_inspection",
+  "source_commit_reported": "ea17e48f",
+  "source_commit_resolved": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "recorded_at": "2026-11-15T19:23:53.327293+00:00",
+  "inspection_time_supplied": null,
+  "timestamp_semantics": "The reviewer supplied no separate inspection time; reviewed_at records when the chat attestation was recorded.",
+  "dataset_before_sha256": "bdf8c7586ee10b264f9f9ff2d7ce23c4539605ec283a313089fd7bc427fc2f89",
+  "inspected_question_ids": [
+    "lc-c-01",
+    "lc-c-02",
+    "lc-c-03",
+    "lc-c-04",
+    "lc-c-05"
+  ],
+  "accept": {
+    "lc-c-01": "json.py 81-95 supports every claim. The text is result[0].text, stripped (83-84); the partial branch returns None on JSONDecodeError (88-89); the non-partial branch raises OutputParserException with the stripped text in both the message and llm_output (93-95).",
+    "lc-c-03": "messages/utils.py 1681-1711 and 1977 support all four string/block cases and the empty-content case.",
+    "lc-c-04": "embeddings.py 67 and 78 delegate to self.embed_documents and self.embed_query through run_in_executor(None, ...), so the subclass overrides run.",
+    "lc-c-05": "document_loaders/base.py 97-100 and 43 support the guard, the NotImplementedError and the non-recursion claim."
+  },
+  "revise": {
+    "lc-c-02": {
+      "notes": "The answer is correct for Serializable.to_json(), but \"constructor JSON\" is ambiguous. dumpd/dumps wrap a nested secret marker in __lc_escaped__, because _serialize_lc_object skips only top-level secret keys (_validation.py 156-159, 92-95).",
+      "requested_changes": {
+        "question": "For a serializable object whose lc_secrets maps credentials.api_key to API_KEY, with that nested dictionary and key present in its constructor kwargs, how does Serializable.to_json() represent the secret in the kwargs of the constructor dict it returns, and does the replacement modify the original nested dictionary?",
+        "ground_truth_answer": "Keep the answer text unchanged.",
+        "evidence": {
+          "path": "libs/core/langchain_core/load/serializable.py",
+          "start_line": 274,
+          "end_line": 304,
+          "reason": "Include the lc_secrets-to-secrets link at line 277."
+        }
+      }
+    }
+  },
+  "reject": [],
+  "dataset_after_sha256": "610cb100bb50a523286184997b2577037c6174f62db486cddef173cda44254aa"
+}

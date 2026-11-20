@@ -1,0 +1,147 @@
+{
+  "recorded_at": "2026-11-19T19:07:04.434184+00:00",
+  "run_id": "efc5034c-b904-4a02-889f-f45e746a3e49",
+  "status": "completed_with_errors",
+  "execution_coverage": "225/225 planned jobs have unique durable outcomes; failures retained",
+  "planned_jobs": 225,
+  "observed_jobs": 225,
+  "result_counts": {
+    "budget_exhausted": 16,
+    "completed": 206,
+    "error": 3
+  },
+  "result_counts_by_condition": {
+    "adaptive_cascade": {
+      "completed": 45
+    },
+    "agentic": {
+      "completed": 27,
+      "budget_exhausted": 15,
+      "error": 3
+    },
+    "agentic_wrapup": {
+      "completed": 44,
+      "budget_exhausted": 1
+    },
+    "no_retrieval": {
+      "completed": 45
+    },
+    "vector": {
+      "completed": 45
+    }
+  },
+  "model_calls": 1026,
+  "model_call_counts": {
+    "Anthropic chat": 936,
+    "OpenRouter Qwen query embeddings": 90
+  },
+  "elapsed_seconds_monotonic": 6115.068900209037,
+  "provider_cost_estimate": {
+    "estimated_usd": null,
+    "known_subtotal_usd": 7.086515680000002,
+    "unknown_calls": 2,
+    "note": "Dated price estimates of reported usage; total unknown. Separate reservations are admission charges, not bills."
+  },
+  "budget_accounting": {
+    "estimated_cost_usd": 7.140553680000002,
+    "interpretation": "Used-or-reserved admission estimates; not actual billed usage.",
+    "known_cost_subtotal_usd": 7.140553680000002,
+    "policy": "reserve",
+    "reserved_unknown_calls": 2,
+    "unknown_cost_jobs": 0,
+    "unreserved_unknown_calls": 0,
+    "usage": {
+      "input_tokens": 6342485,
+      "output_tokens": 160457
+    }
+  },
+  "synthetic_preflight": {
+    "provider_calls": 9,
+    "estimated_cost_usd": 0.01846328
+  },
+  "known_run_plus_preflight_estimate_usd": 7.104978960000002,
+  "unknown_usage_jobs": [
+    {
+      "condition": "agentic_wrapup",
+      "question_id": "lc-s-03",
+      "repetition": 1,
+      "cause": "ConnectTimeout"
+    },
+    {
+      "condition": "agentic",
+      "question_id": "lc-c-01",
+      "repetition": 0,
+      "cause": "ConnectTimeout"
+    }
+  ],
+  "model_call_errors": {
+    "ConnectTimeout": 2
+  },
+  "non_200_http_statuses": {},
+  "index_rebuilt": false,
+  "automatic_retries": 0,
+  "automatic_reruns": 0,
+  "load_run": {
+    "partial": true,
+    "issues": [
+      "status.json: run status is 'completed_with_errors'; results are partial"
+    ],
+    "interpretation": "Conservative flag from completed_with_errors; no missing planned jobs."
+  },
+  "pacing_audit": {
+    "anthropic_chat": {
+      "requests": 936,
+      "min_adjacent_gap_seconds": 6.000046,
+      "gaps_below_6_seconds": 0,
+      "smallest_gaps_seconds": [
+        6.000046,
+        6.00011,
+        6.000161
+      ],
+      "rolling_60_second_peak_starts": 10
+    },
+    "openrouter_embedding": {
+      "requests": 90,
+      "min_adjacent_gap_seconds": 6.004859,
+      "gaps_below_6_seconds": 0,
+      "smallest_gaps_seconds": [
+        6.004859,
+        6.005103,
+        6.455526
+      ],
+      "rolling_60_second_peak_starts": 6
+    },
+    "note": "Wall-clock started_at values recorded per request; monotonic admission times are not persisted."
+  },
+  "human_review": {
+    "available_answer_texts": 206,
+    "ratings_completed": 0,
+    "score_file_present": false
+  },
+  "next_gate": "Human scoring by Shekhar, then the development decision and a frozen held-out protocol; no held-out execution performed",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "configuration_file_sha256": "afaf50e69bbb7048b072f1f1ac24fb534ab8849483d5bf70207e0b7595704b8b",
+  "configuration_sha256": "0d94a09dc2b72837b3be554672d8575901ec5358a88d7e650aee7cae20c5f78a",
+  "framework_source_sha256": "b59ad0bce4ec89471d3bc792ed26d2e83ea08aaeb91436851f0ca662684b813b",
+  "raw_file_sha256": {
+    "benchmark.jsonl": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+    "configuration.json": "8bc9ff66343541a0b1ef564bcefb7b373250d6cff21103f8a1b38d02c55e0749",
+    "corpus-manifest.json": "897e6a1e449bf8295aec339bcad84db316504b09709b25375cc2631e65fee546",
+    "events.jsonl": "1c745426ae857d72897b6be3a12a590f7108562cee12c09e0fa488a44e7c840b",
+    "index-manifest.json": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11",
+    "manifest.json": "6506c4c28bb9623bf1b60226d0e859f7429c6b9353edf3c5fed33886053b4c0c",
+    "price-schedule.json": "03e2a87b96af12e0e250e54e8e0342c338d1aa728dfb1c903b775fd18b0f8eed",
+    "results.jsonl": "e19808c9f9e0665abc0751f3aeb8755ccb2cebb793ff93375e8683dfc196668a",
+    "status.json": "8934c420e2db05febd428c53474ea6968e198a37f407b6506aaf63a7bc917d37",
+    "validation.json": "c01a6893bad649289da36bf630b407c1056282c8879de5851d4b1a2cef04a9f9"
+  },
+  "derived_artifacts": {
+    "aggregate": "experiments/aggregates/adaptive-cascade-development-20261119-001-unreviewed.json",
+    "aggregate_sha256": "3f6ab794030ab1930c4bba8297491b81f0d816bc06f1b656a513d82e90d7d429",
+    "review_template": "experiments/reviews/adaptive-cascade-development-20261119-001/answers.review-template.jsonl",
+    "review_template_sha256": "af02082dc3452bf6042194c5c7eeca89cc135df817531ca8cf5b71c2295227a9",
+    "review_template_seed": 0
+  },
+  "temporary_sleep_inhibitor": "caffeinate -is wrapped the run process and exited with it; no system setting was changed.",
+  "started_by": "Claude (AI assistant) on Shekhar's authorization; credentials loaded from .env into the process environment and not displayed"
+}

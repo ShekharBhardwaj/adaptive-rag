@@ -1,0 +1,78 @@
+{
+  "recorded_at": "2026-11-16T20:57:54.347899-05:00",
+  "framework_source_sha256": "b2eae0b62bf0feb4b51b88e0e633a114acd7a9c64592e25484d1d02879817ef5",
+  "offline_checks": [
+    {
+      "command": ".venv/bin/pytest -q tests/test_chat_connections.py tests/test_agentic.py tests/test_adaptive_retrieval.py tests/test_adaptive_runner.py tests/test_routing.py tests/test_journal.py tests/test_phase4_cli.py tests/test_runner_boundary.py",
+      "passed": 243,
+      "elapsed_seconds": 76.58
+    },
+    {
+      "command": "focused answer and JSON parser tests",
+      "passed": 128,
+      "elapsed_seconds": 0.1,
+      "reported_by": "phase4_cli_docs"
+    }
+  ],
+  "ruff_lint": "passed",
+  "ruff_format": "passed;71files",
+  "git_diff_check": "passed",
+  "configuration_validation": "passed",
+  "live_compatibility": {
+    "status": "passed",
+    "kind": "synthetic_compatibility_check_not_benchmark_results",
+    "recorded_at": "2026-11-17T01:57:26.605823+00:00",
+    "config_sha256": "187ce8612d060ea1f8ab6646c9f1f9e6271bfe5762ddb8d87fb1fcdacc10fd36",
+    "model_identities": {
+      "embedding": {
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "qwen/qwen3-embedding-8b",
+        "dimensions": null
+      },
+      "answer": {
+        "base_url": "https://api.anthropic.com/v1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "agent": {
+        "base_url": "https://api.anthropic.com/v1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "router": {
+        "base_url": "https://api.anthropic.com/v1",
+        "model": "claude-haiku-4-5-20251001"
+      }
+    },
+    "limits": {
+      "model_calls": 8,
+      "seconds": 180,
+      "estimated_cost_usd": 0.1
+    },
+    "results": {
+      "qwen_query_embedding": {
+        "status": "passed",
+        "dimensions": 4096
+      },
+      "anthropic_routing": {
+        "status": "passed",
+        "selection": "vectorless"
+      },
+      "anthropic_grounded_answer": {
+        "status": "passed",
+        "citations": 1
+      },
+      "anthropic_native_tools": {
+        "status": "passed",
+        "model_calls": 2
+      }
+    },
+    "model_calls": 5,
+    "cost": {
+      "estimated_usd": 0.00677328,
+      "known_subtotal_usd": 0.00677328,
+      "unknown_calls": 0,
+      "priced_calls": 5,
+      "schedule_sha256": "4a0fd3b11070c2bd2952e8835acd92e896bf26269fcd814203cbfbe7ae4ff793"
+    }
+  },
+  "preserved_old_run": "experiments/raw/adaptive-development-20261116-001"
+}

@@ -1,0 +1,430 @@
+{
+  "schema_version": "1",
+  "benchmark_version": "pilot-v1",
+  "status": "frozen_independently_reviewed",
+  "frozen_at": "2026-11-16T20:30:50.515745+00:00",
+  "benchmark_file": "pilot.jsonl",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "authoring_record": "pilot.draft.jsonl",
+  "authoring_record_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "schema_file": "question.schema.json",
+  "schema_sha256": "3d89720d2b04395fbeac123def7adc53f26e278a53fe4bd16866795c7d5881f3",
+  "question_count": 30,
+  "category_counts": {
+    "conceptual": 10,
+    "structural": 10,
+    "cross_file": 10
+  },
+  "split_counts": {
+    "development": 15,
+    "held_out": 15
+  },
+  "category_split_counts": {
+    "conceptual": {
+      "development": 5,
+      "held_out": 5
+    },
+    "structural": {
+      "development": 5,
+      "held_out": 5
+    },
+    "cross_file": {
+      "development": 5,
+      "held_out": 5
+    }
+  },
+  "source_commit": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "corpus_fingerprint": "3924731244e2e23840fc8930ff6d8cf39dc4cf3af55fcb17f02c96a75d8a5848",
+  "source_policy": {
+    "include_globs": [
+      "**/*"
+    ],
+    "exclude_globs": [
+      "**/.git/**",
+      "**/.env",
+      "**/.env.*",
+      "**/.aws/**",
+      "**/.ssh/**",
+      "**/secrets.*",
+      "**/credentials.*",
+      "**/*.pem",
+      "**/*.key",
+      "**/id_rsa",
+      "**/id_ed25519",
+      "**/node_modules/**",
+      "**/vendor/**",
+      "**/vendors/**",
+      "**/vendored/**",
+      "**/third_party/**",
+      "**/third-party/**",
+      "**/.venv/**",
+      "**/venv/**",
+      "**/env/**",
+      "**/build/**",
+      "**/dist/**",
+      "**/target/**",
+      "**/out/**",
+      "**/coverage/**",
+      "**/htmlcov/**",
+      "**/__pycache__/**",
+      "**/.pytest_cache/**",
+      "**/.mypy_cache/**",
+      "**/.ruff_cache/**",
+      "**/.cache/**",
+      "**/.tox/**",
+      "**/.nox/**",
+      "**/.next/**",
+      "**/.nuxt/**",
+      "**/.output/**",
+      "**/.eggs/**",
+      "**/*.egg-info/**",
+      "**/*.min.js",
+      "**/*.min.css",
+      "**/*.map",
+      "**/*_pb2.py",
+      "**/*_pb2_grpc.py",
+      "**/*.generated.*",
+      "**/*.gen.*",
+      "**/package-lock.json",
+      "**/pnpm-lock.yaml",
+      "**/yarn.lock",
+      "**/poetry.lock",
+      "**/uv.lock",
+      "**/Pipfile.lock",
+      "**/Cargo.lock",
+      "**/composer.lock"
+    ],
+    "max_file_bytes": 1000000
+  },
+  "strict_validation": {
+    "file": "pilot.validation.json",
+    "sha256": "68e3407f5a10565e6451d1e5a68e87a7b0b15dcf252787a7109e53cb171fa37c",
+    "valid": true,
+    "require_reviewed": true,
+    "pilot": true
+  },
+  "human_review": {
+    "accepted": 30,
+    "pending": 0,
+    "reviewer": "Shekhar",
+    "method": "source_inspection",
+    "ledger": "review/decisions.jsonl",
+    "ledger_sha256": "15ffc2acaa2d606e4ac1e460f2472b8295bf00473e4529c199759c27d02d345a",
+    "ledger_events": 31,
+    "attestations": [
+      {
+        "file": "review/history/shekhar-2026-11-15-01/attestation.json",
+        "sha256": "a526b1ebe12f4860b39877518af41da3c7e779864b04a155347fccdb71e2629a"
+      },
+      {
+        "file": "review/history/shekhar-2026-11-15-02/attestation.json",
+        "sha256": "df914152e3dd1c656e443e7c6a1f4aedf3ea23ce7e301d1b95301740a7d071fd"
+      },
+      {
+        "file": "review/history/shekhar-2026-11-15-03/attestation.json",
+        "sha256": "3c37c58b929b6af527dffa1e9d0c137bc34ea40d3bca61e3cda3ebd106671afa"
+      },
+      {
+        "file": "review/history/shekhar-2026-11-15-04/attestation.json",
+        "sha256": "b9507584eb2ff9427f7b07466e1485a2f6b348c1989fa72b7ee802e3ce7c72a0"
+      },
+      {
+        "file": "review/history/shekhar-2026-11-16-01/attestation.json",
+        "sha256": "bf14bf7d636a6ff917fe9392543557f69dce06724624ea71d3190cdf3696f486"
+      }
+    ],
+    "timestamp_semantics": "Review timestamps record when the actual chat attestations were recorded; no separate inspection times were supplied."
+  },
+  "ai_cross_checks": [
+    {
+      "file": "review/ai-cross-checks/claude-2026-11-15-01.json",
+      "sha256": "b6189963bf95e7131f5a99ce811ce787d5583dd347120017186b55963ed443ec",
+      "counts_as_human_review": false
+    }
+  ],
+  "questions": [
+    {
+      "id": "lc-c-01",
+      "question_sha256": "a595f2d39386ad5ac26ba7f6773cfe50a5d2f1404a767077b79ea92c86d10a15",
+      "category": "conceptual",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-02",
+      "question_sha256": "783a15312571d894f7db301188e65ecb1fd564dc3f388fca040ce7b982dd0abe",
+      "category": "conceptual",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-03",
+      "question_sha256": "e39d31fdfb01aad579c566a3c009bb1daca072ac9613645abf4f7787723f298a",
+      "category": "conceptual",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-04",
+      "question_sha256": "0821796370a635cebcbadb3c421d8dc1817e5d2940151f946526cc3cec2a1c79",
+      "category": "conceptual",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-05",
+      "question_sha256": "dec52ed30e16dca790c9fa3b28fb79c9dc28e146b88a61a69b3bb30eb5bb3394",
+      "category": "conceptual",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-06",
+      "question_sha256": "227c17654f5bbac5fe54491c1979cf9194685a46e6eaab55adb63849723a139d",
+      "category": "conceptual",
+      "split": "held_out",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-07",
+      "question_sha256": "c918a917c7aa87c2559a0f4292e8da242a2cf959927a01e51f7377d50356d691",
+      "category": "conceptual",
+      "split": "held_out",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-08",
+      "question_sha256": "f8a33b0ac7e3e42177f652f50ab2d48849a33c0f7f0d80529185f5e9f7c88103",
+      "category": "conceptual",
+      "split": "held_out",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-c-09",
+      "question_sha256": "4cf340ec5426b4211db960b161ff58066387e36d657979e629c803fe88e0e1e2",
+      "category": "conceptual",
+      "split": "held_out",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-c-10",
+      "question_sha256": "9b5993d38db0410e1e9fb191413d785d69d8411329fdbf19776876b9c22c5799",
+      "category": "conceptual",
+      "split": "held_out",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-s-01",
+      "question_sha256": "8f36e0feee07a2eb4da7dd5143cb04476b6405744c828af20e3ec27da01e0552",
+      "category": "structural",
+      "split": "development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "lc-s-02",
+      "question_sha256": "b3e93f80812ed0753829ca21b28c6d689e20fc89548fe955d7b9ac89183d39a7",
+      "category": "structural",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-s-03",
+      "question_sha256": "61b5e64866c467b8155bf14ed64cc9a5822710257644ae5f06dac232873c5859",
+      "category": "structural",
+      "split": "development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "lc-s-04",
+      "question_sha256": "438327b71e4792a7f7fb7e1a1bb81f4a767eb3fab9ccbbe7a5133e726c61b571",
+      "category": "structural",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-s-05",
+      "question_sha256": "e721fd5627da8718381a3ca9e6312841472f88932bb1047758e3152ba33a8c07",
+      "category": "structural",
+      "split": "development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "lc-s-06",
+      "question_sha256": "157fdf740b4b85420466a7e4ad48dfac491a876f2ee75c7d2586738592453a4f",
+      "category": "structural",
+      "split": "held_out",
+      "difficulty": "easy"
+    },
+    {
+      "id": "lc-s-07",
+      "question_sha256": "8b3adc2d43336405f6579c8e0515b651048c360f22b2b69424115be6acbcbeb6",
+      "category": "structural",
+      "split": "held_out",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-s-08",
+      "question_sha256": "e4e6e723af5ba0ca7c8d12d85941021c3a15f3a1103cd0955f39edabf616b7aa",
+      "category": "structural",
+      "split": "held_out",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-s-09",
+      "question_sha256": "52b21a28f10535a6bf5b0b5cd3e0c21885dca3b0642600544ddaa9390c570177",
+      "category": "structural",
+      "split": "held_out",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-s-10",
+      "question_sha256": "2186fb63c99b07de59dc4fa56384fad08e4a62fcc8dcae8fa9aa5aaecda631e1",
+      "category": "structural",
+      "split": "held_out",
+      "difficulty": "easy"
+    },
+    {
+      "id": "lc-x-01",
+      "question_sha256": "908895591e6210ca780f862542735d33e032fef97506b86d42588aed129763f5",
+      "category": "cross_file",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-x-02",
+      "question_sha256": "8e0b5ffee66d7c59cd6b798ffd42ecb6e406bb517f74920fd7c869d267d36e2e",
+      "category": "cross_file",
+      "split": "development",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-x-03",
+      "question_sha256": "2f92e526569ccaf1bfb3748eae3b5d31eee3e983f34e067f4757f05803ef4568",
+      "category": "cross_file",
+      "split": "development",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-x-04",
+      "question_sha256": "9c0fde84b4135a56e2d8fe02477191215a09b60c81ce53888e1e44707004874f",
+      "category": "cross_file",
+      "split": "development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-x-05",
+      "question_sha256": "ab765e5e1289f31827b1d30d96274b09d3a977a6447a352cd5bf52d4233113b7",
+      "category": "cross_file",
+      "split": "development",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-x-06",
+      "question_sha256": "f8463e6dd7be4b25d75c87d6d14103dfe5e830beffc0c0e07f44ea9d6114f379",
+      "category": "cross_file",
+      "split": "held_out",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-x-07",
+      "question_sha256": "128386fa269d8ac92a03dcc8034ddcc6589d38db20fc30d3842698ae38eae5e5",
+      "category": "cross_file",
+      "split": "held_out",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-x-08",
+      "question_sha256": "e413a8bfa933e789bff13f5ebceafc630e7c866a4816f208d92e3772f421f6cb",
+      "category": "cross_file",
+      "split": "held_out",
+      "difficulty": "medium"
+    },
+    {
+      "id": "lc-x-09",
+      "question_sha256": "30530454609984611bdc20c207cd2238ac28af32b4250117144255e0523afee2",
+      "category": "cross_file",
+      "split": "held_out",
+      "difficulty": "hard"
+    },
+    {
+      "id": "lc-x-10",
+      "question_sha256": "5ff1f58fe1c15c66858b4d401ec6025ce6ffa5e4a4434644db509880f09a4bb6",
+      "category": "cross_file",
+      "split": "held_out",
+      "difficulty": "hard"
+    }
+  ],
+  "software_environment": {
+    "framework_version": "0.3.0",
+    "framework_git_sha": "a44b4cdde7a05cb4c4ed4068b948ac209d3bd5ae",
+    "framework_worktree_dirty": true,
+    "framework_source_sha256": "be5f0b7dd10f7178af88e584f02e861e0fb6c19fc30613a26e47d2b42ce83c59",
+    "lockfile_sha256": "245b8919ed4b622ab084cdbc5a8ce95e8e211f039988960fb09f1109b7c4d097",
+    "python": "3.13.9 (main, Oct 14 2025, 21:10:40) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "dependencies": {
+      "pydantic": "2.14.3",
+      "PyYAML": "6.0.3",
+      "httpx": "0.28.1",
+      "numpy": "2.5.4",
+      "faiss-cpu": "1.16.0",
+      "tree-sitter": "0.26.1",
+      "tree-sitter-python": "0.25.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    }
+  },
+  "source_config": {
+    "file": "../configs/langchain.yaml",
+    "sha256": "5da7cf29cc31df60363d6d5d36b8331169b51b85fafd7c9eb07fc95fd8348833"
+  },
+  "execution_profile_at_freeze": {
+    "file": "../configs/openrouter.local.yaml",
+    "sha256": "ad936d19f79e6d93b124e057e618fd894b00ae18aa01abec57cfe9188822ee55",
+    "models": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "embedding_model": "qwen/qwen3-embedding-8b",
+      "chat_model": "anthropic/claude-haiku-4.5",
+      "embedding_dimensions": null,
+      "temperature": 0.0,
+      "max_output_tokens": 512,
+      "token_parameter": "max_tokens"
+    },
+    "experiment": {
+      "dataset": "/Users/shekhar/development/research/adaptive-rag/benchmarks/pilot.jsonl",
+      "split": "development",
+      "conditions": [
+        "vector",
+        "vectorless",
+        "agentic",
+        "no_retrieval"
+      ],
+      "repetitions": 3,
+      "order_seed": 17,
+      "vector_index": "/Users/shekhar/development/research/adaptive-rag/datasets/indexes/langchain-openrouter-qwen3-001",
+      "require_pilot": true,
+      "answer_model": null,
+      "generation": {
+        "temperature": 0.0,
+        "max_output_tokens": 1024,
+        "max_tokens": 16000,
+        "max_seconds": 30.0,
+        "max_evidence_chars": 24000
+      },
+      "budget": {
+        "max_model_calls": 1000,
+        "max_tokens": 1000000,
+        "max_seconds": 3600.0,
+        "max_cost_usd": null
+      },
+      "price_schedule": null
+    },
+    "note": "This is the local profile at benchmark freeze, not a completed experiment plan or execution record."
+  },
+  "sampling": "Purposive implementation questions; not a random or representative sample.",
+  "split_discipline": "Held-out answers and labels are for annotation review and evaluation only; exclude them from router prompts, examples, and tuning.",
+  "live_provider_requests_during_freeze": 0,
+  "experiment_results": null,
+  "versioning": "Preserve this dataset and split. Future annotation or split changes require a new version, renewed review, and strict validation."
+}

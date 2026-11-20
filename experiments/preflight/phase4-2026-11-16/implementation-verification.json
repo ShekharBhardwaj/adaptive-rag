@@ -1,0 +1,124 @@
+{
+  "schema_version": "1",
+  "recorded_at": "2026-11-16T21:15:51.331752+00:00",
+  "framework_version": "0.4.0",
+  "offline_verification": {
+    "command": "UV_CACHE_DIR=/private/tmp/adaptive-rag-uv-cache uv run --offline --frozen --extra dev --extra vector --extra parse pytest -q",
+    "passed": 718,
+    "failed": 0,
+    "elapsed_seconds": 209.57,
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "git_diff_check": "passed",
+    "wheel_and_sdist": "built"
+  },
+  "compatibility_checks": [
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-001",
+      "status": "failed",
+      "summary_sha256": "9cd9df0eaf2e48eee50c4958c8d202e0c31cb64cd0c7613d7b13aa4e114ce645",
+      "executed_model_calls": 1,
+      "cost": {
+        "estimated_usd": null,
+        "known_subtotal_usd": 0.0,
+        "unknown_calls": 1,
+        "priced_calls": 0,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    },
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-002",
+      "status": "failed",
+      "summary_sha256": "943ec22bab622259ca2e7fc4ebff9e888a07faeb871510243f950b214f381649",
+      "executed_model_calls": 2,
+      "cost": {
+        "estimated_usd": null,
+        "known_subtotal_usd": 5.6e-07,
+        "unknown_calls": 1,
+        "priced_calls": 1,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    },
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-003",
+      "status": "failed",
+      "summary_sha256": "666c60992d57ff57a46851729d5bd3ebb520a09893f48bfc276cfb674ceee25a",
+      "executed_model_calls": 3,
+      "cost": {
+        "estimated_usd": 0.004394,
+        "known_subtotal_usd": 0.004394,
+        "unknown_calls": 0,
+        "priced_calls": 3,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    },
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-004",
+      "status": "failed",
+      "summary_sha256": "3c81ec78e7835dc3d9ebc536b289fe6e1a63866c68a42887eeb5c9013275f2db",
+      "executed_model_calls": 3,
+      "cost": {
+        "estimated_usd": 0.004384,
+        "known_subtotal_usd": 0.004384,
+        "unknown_calls": 0,
+        "priced_calls": 3,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    },
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-005",
+      "status": "failed",
+      "summary_sha256": "f12a435c297ce2016ed7814c84f9e3c3ee86eb16c62e2a45405ffb9790f44291",
+      "executed_model_calls": 5,
+      "cost": {
+        "estimated_usd": 0.008036,
+        "known_subtotal_usd": 0.008036,
+        "unknown_calls": 0,
+        "priced_calls": 5,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    },
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-006",
+      "status": "failed",
+      "summary_sha256": "5c86998784a459286593803b20096150b52f75865ebc7f0b7b4c935dfd90d9df",
+      "executed_model_calls": 3,
+      "cost": {
+        "estimated_usd": 0.00656,
+        "known_subtotal_usd": 0.00656,
+        "unknown_calls": 0,
+        "priced_calls": 3,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    },
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-007",
+      "status": "failed",
+      "summary_sha256": "80b5f1c6f2b0cdc984c7fb7838bac97ffee0498961cfedac487520b14a0b9103",
+      "executed_model_calls": 3,
+      "cost": {
+        "estimated_usd": 0.007176,
+        "known_subtotal_usd": 0.007176,
+        "unknown_calls": 0,
+        "priced_calls": 3,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    },
+    {
+      "directory": "experiments/preflight/phase4-2026-11-16/live-compatibility-008",
+      "status": "passed",
+      "summary_sha256": "8f2cc69ee141c500502c3e6f4ba38212ab50cb1abad7f1feaafb358294a3c5d7",
+      "executed_model_calls": 2,
+      "cost": {
+        "estimated_usd": 0.004666,
+        "known_subtotal_usd": 0.004666,
+        "unknown_calls": 0,
+        "priced_calls": 2,
+        "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+      }
+    }
+  ],
+  "compatibility_gate": "live-compatibility-008/summary.json",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "scope": "Implementation and endpoint compatibility only; no benchmark answer correctness or comparative outcome is asserted."
+}

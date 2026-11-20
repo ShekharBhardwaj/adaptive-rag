@@ -1,0 +1,311 @@
+{
+  "schema_version": "1",
+  "kind": "resolved_human_review_submission",
+  "status": "validated_and_recorded",
+  "recorded_at": "2026-11-18T02:49:13.665990+00:00",
+  "reviewer": "Shekhar",
+  "reviewed_at": "2026-11-17T22:21:00-05:00",
+  "review_time_precision": "minute",
+  "reviewer_timestamp_text": "November 17, 2026 at 10:21 PM EST,",
+  "timezone": "America/New_York",
+  "timezone_basis": "Explicit EST timestamp in reviewer submission; established chat timezone.",
+  "packet": 14,
+  "items": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210
+  ],
+  "template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19",
+  "packet_sha256": "df32aec8fea9649fa3f889326387b1ff171d13ffef5d97d78806a9c3c7e54fb4",
+  "score_file": "answers.scores.jsonl",
+  "score_file_sha256_before": "0e43280e162df1df46942d3fcd922db06b577bd8cd827e796999dc753c76f139",
+  "score_file_sha256_after": "dfea3078823e30a5897f466e48d78bc32643017e4b6e34e84a05b765463856fc",
+  "previous_scores_preserved_byte_for_byte": true,
+  "validation": {
+    "schema": "passed15/15",
+    "exact_output_bindings": "passed15/15",
+    "benchmark_question_bindings": "passed15/15",
+    "not_before_output": "passed15/15",
+    "no_duplicates": "passed210/210"
+  },
+  "summary": {
+    "received_judgments": 15,
+    "fully_correct": 6,
+    "partially_correct": 2,
+    "abstained": 6,
+    "incorrect_attempted": 1,
+    "citation_support_not_applicable": 7,
+    "validated_total": 210,
+    "remaining_unreviewed": 17
+  },
+  "normalization": "Only N/A normalized to JSON null. User scores and reasons retained. Abstentions use notes prefix Abstained; incorrect attempted answers remain distinct. Correctness and citation support remain independent.",
+  "reviews": [
+    {
+      "packet": 14,
+      "item": 196,
+      "review_id": "c3f4cdb1478f6fc7764daaa471752f6f25968db55f97bf85a657c7a9d5904129",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "03dfd5ec6629f2f568b14b9be49111abef28af58ff44b5fd134d1758470c9e54",
+        "output_sha256": "63e3b80d12c5d68da2a0763770df0fc76efe7b511a0414779ce8a63aa35be67c",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 2 item 28.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 197,
+      "review_id": "a5e7a4b8f42da693cea1ed2faa118bb268fff30457779707faaecff48d925fb7",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "febf23a6aabd19c63ec6fe15e1354d44ddc65a5db2fe5172d47222af8946e079",
+        "output_sha256": "f21b60be76a80dcf699537ffc5fe10789efc81c61abc923ddf0ffc2b1aa488b5",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.0,
+        "citation_support": 1.0,
+        "notes": "Abstained on the substance. Same as packet 3 item 35: it restates the chunk contents and says it cannot tell what happens to the metadata. The two cited ranges support the little it claims.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 198,
+      "review_id": "fdfd3e81e6d0760f134a8dd6118b01e4e529c208b9af95daec3ab657d57450ae",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "2c7ba7c338fbfea46d1c3c943c75f5b90a2ce3aa9d3b2d26b3a1330ef97b71da",
+        "output_sha256": "3978fb424d36dd7bb4a34f1ac74deb7f1c8f6e9fd7545b894f55d0c0890d298e",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Wrong. Same text as packet 8 item 119: names AIMessage where the class is ChatGeneration.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 199,
+      "review_id": "e8dc526244d0aceb3cf37974d6928181e4783cf5e55db5df43a901761db89329",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "15724b60735793d3e8fb5c97f2a7f5bf5409b17cf16ff08b8ade9c4bebc5a650",
+        "output_sha256": "d63be6b2c2b717f2fabc71564fe539f5e7e6584ddb77cf3bc57e4e63c66f5c08",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "JsonOutputParser, its file and \"simple_json_output_parser\" from _type match output_parsers/json.py 129-135; both cited ranges cover those lines.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 200,
+      "review_id": "08f90edd19b58c9cdd2e2e2ce1a3699901cdffd1e88dc5aefdc1fc55333c9e3b",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "8c84cf665a9445638ceff3ebae37519f90a6edc6bad746e6c56f34a30afe8a80",
+        "output_sha256": "e06f456db012dc6ac73b3105d86dbcd6400b207ce0213ce15b0d05e82a66a608",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.5,
+        "citation_support": null,
+        "notes": "Same substance as packet 1 item 1: right about the legacy case, but predicts infinite recursion or an error where document_loaders/base.py 97-100 raises NotImplementedError. No citations.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 201,
+      "review_id": "431089f61244623628f3679ac9fbdd56f68e4bd4d3f20889bf331dcf64cb3c5c",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "16292bedd0fb4f948332293553843c9e5409e32b327f83367818a4cc3972f599",
+        "output_sha256": "e468e3779ddd03c493f8b6a7258913769ac1bb707f062fce86875a1486e7620f",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as packet 8 item 112; matches embeddings/embeddings.py 67 and 78.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 202,
+      "review_id": "8338bf9de6d9e305b82ba725e372e89b764a210113fcea83b9da078afc866b45",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "0560ff925d380a79375be56ce53b9fcff3c45da574eb2f154777fab3b91ece40",
+        "output_sha256": "afe1ee8fc90c5c7bf212f3e649ee198ca97d62e636deef09a9e95422b26b6a1e",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citation as packet 3 item 38; BaseBlobParser and the lazy_parse signature match document_loaders/base.py 117-138.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 203,
+      "review_id": "5448fbbb884408f508f2eeae6bf71325925225c6c91980727e904551b5f2dc32",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "982ca11fa4cb3e38680a400072474b89b1304f446949f3345781e4778a5fa760",
+        "output_sha256": "f3c3616a4c2bbdf6fa9834b587e2380b1ee1d044015cf14c0aae3efd2fb440fa",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same substance as packet 10 item 148.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 204,
+      "review_id": "1367b485da20deb583168f6874b6ab9777c176597eee44c0805faedb9d48b2c1",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "4a65116bd59f1ef49d375c102be9ae0c234c6d29217f2eb590dcb29ed964bbea",
+        "output_sha256": "3c6865569a0499d26a2ae58168604a7eae35c906deefbef0f021073c4e833891",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 3 item 31.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 205,
+      "review_id": "ffa6d9edd7712d6f4cc7fd1b3526717ce9c91a88cccbde329114ed03a7059dcd",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "cac650973afca599eeea3b47584bf64f04d73eabd11763e2097a64ec6bf2be7d",
+        "output_sha256": "6c0f8463ce1174a0fb825588894dafa10c4d40477fc2232bc5d2a6f4bc305031",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citation as packet 2 item 19; matches output_parsers/json.py 129-135.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 206,
+      "review_id": "11346d8bbc39d21e9fa308ca9f3191c027637c55c6605ec6b108cda2d04dafe3",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "ae2de33077b0cf636d36922684099955b6b37125e687016d7413305366fdce45",
+        "output_sha256": "eda2d1fc1b451ab3dd944a7e65b593dfba7975cf93331959cd8335add8e21ffe",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 0.5,
+        "notes": "Right that the output is JSONPatch from jsonpatch.make_patch(prev, next).patch. Wrong on which stages emit: it says every stage does and that the repeated A yields an empty patch, but output_parsers/transform.py 143 skips None and unchanged parses entirely. The cited json.py supports _diff; the cited test does not show what it is used to claim.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 207,
+      "review_id": "04ea9eec95909c2e22220c381109f0f193f6732298fdc46121413b10275e2157",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "fe8a1f625f3bb5538093ede6e85d243cbce7e4ce4f7c78e5b3029e78ad6bcf2d",
+        "output_sha256": "36bd4f1ec95026798fe603d7a9f9d632cf61bc48de066b5b43299337f379c966",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 13.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 208,
+      "review_id": "17df9b8e06f20cea8f38b8877165124bcb0f8dcb4384f70aaa64f4941f19c219",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "df9731a63e2047a9b44a1cf79294682a78b6adbe5290d55bfa7be2b1664be2bc",
+        "output_sha256": "713fea80d6b1be078b529097f41663822cc293f49d773198c57d814753df6086",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 9.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 209,
+      "review_id": "afe7200d30bdb8192520d9fc61cfa7cd6424ae9d5559f2efe0b1e61c2219eea9",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "16cb044bef724b468f316ada1b9a3faff27785cbdf6704d7dd6feacbdefdbb40",
+        "output_sha256": "d8812c6c4b7995abf9a021f6d80a29d4f65bc5a48813bc8d6d62832cfca076b3",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as packet 2 item 17; matches document_loaders/base.py 97-100 and the cited test_lazy_load_not_implemented.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 14,
+      "item": 210,
+      "review_id": "f7412a96ad26435906af158cf956ee94c121be5ed4d474d3125ba6fb5527e475",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "181039da5114d1897611dbf2c0ec76606c980581f246d6c4021cb9d3b7d42b2f",
+        "output_sha256": "09a1bfbd9490457374ba8c381007a9e42f1d0b5fafdd53b72500e07d9d945e18",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:21:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "BaseBlobParser and @abstractmethod lazy_parse(self, blob: Blob) -> Iterator[Document] match document_loaders/base.py 117 and 127-128, inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    }
+  ]
+}

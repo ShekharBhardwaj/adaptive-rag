@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "kind": "synthetic_compatibility_check_not_benchmark_results",
+  "recorded_at": "2026-11-17T20:59:56.708910+00:00",
+  "config_sha256": "93fbc5415894f2eb452fc9f13c2e30008360c8c9cab3634b5607e95e21fb60e4",
+  "model_identities": {
+    "embedding": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "qwen/qwen3-embedding-8b",
+      "dimensions": null
+    },
+    "answer": {
+      "base_url": "https://api.anthropic.com/v1",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    "agent": {
+      "base_url": "https://api.anthropic.com/v1",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    "router": {
+      "base_url": "https://api.anthropic.com/v1",
+      "model": "claude-haiku-4-5-20251001"
+    }
+  },
+  "limits": {
+    "model_calls": 8,
+    "seconds": 180,
+    "estimated_cost_usd": 0.1
+  },
+  "results": {
+    "qwen_query_embedding": {
+      "status": "passed",
+      "dimensions": 4096
+    },
+    "anthropic_routing": {
+      "status": "passed",
+      "selection": "vectorless"
+    },
+    "anthropic_grounded_answer": {
+      "status": "passed",
+      "citations": 1
+    },
+    "anthropic_native_tools": {
+      "status": "passed",
+      "model_calls": 2
+    }
+  },
+  "model_calls": 5,
+  "cost": {
+    "estimated_usd": 0.00677328,
+    "known_subtotal_usd": 0.00677328,
+    "unknown_calls": 0,
+    "priced_calls": 5,
+    "schedule_sha256": "4a0fd3b11070c2bd2952e8835acd92e896bf26269fcd814203cbfbe7ae4ff793"
+  }
+}

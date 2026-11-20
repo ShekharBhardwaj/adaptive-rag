@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "batch_id": "shekhar-2026-11-15-03",
+  "reviewer": "Shekhar",
+  "method": "source_inspection",
+  "source_commit_reported": "ea17e48f",
+  "source_commit_resolved": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "recorded_at": "2026-11-15T19:41:33.797320+00:00",
+  "inspection_time_supplied": null,
+  "timestamp_semantics": "The reviewer supplied no separate inspection time; reviewed_at records when the chat attestation was recorded.",
+  "dataset_before_sha256": "5e808ef5fb8f1f1f1efde9dcb612ad80a044b1fc39607f13da9837dc6d25c753",
+  "dataset_after_sha256": "c85a14e6910d8f73069fcad1c1114910bb85181d7f9dbe0fa501ec7df66829df",
+  "inspected_question_ids": [
+    "lc-x-01",
+    "lc-x-02",
+    "lc-x-03",
+    "lc-x-04",
+    "lc-x-05"
+  ],
+  "accept": {
+    "lc-x-01": "output_parsers/transform.py 125-148 and json.py 51-53. Output is yielded only for a non-None parse that differs from prev_parsed (143), as self._diff(prev_parsed, parsed) (145), which JsonOutputParser implements with jsonpatch.make_patch(prev, next).patch; prev_parsed is updated after the yield (148).",
+    "lc-x-02": "load/_validation.py 28-66, 69-102, 165-191 and load/load.py 819-836. _serialize_value escapes before recursing (92-93); _load checks for the escape wrapper before child traversal or the reviver (826-831); _unescape_value returns the inner dict as-is (181-185).",
+    "lc-x-03": "outputs/chat_generation.py 44-74 and 106-114, messages/base.py 365-408 and 414-451. merge_content gives ['A', {'text': 'B'}] (393); set_text takes the legacy-block branch and joins to 'AB' (57-68).",
+    "lc-x-04": "embeddings/embeddings.py 58-67 and runnables/config.py 678-712. The wrapper raises RuntimeError from the StopIteration (699-703); executor None selects the loop default executor with copy_context().run (705-710).",
+    "lc-x-05": "document_loaders/base.py 37-43 and 74-87, text-splitters base.py 101-106 and 119-160. Metadata is deep-copied per chunk (137); start indices are 0 and 2 (139-141); the original keeps start_index 99."
+  },
+  "revise": {},
+  "reject": []
+}

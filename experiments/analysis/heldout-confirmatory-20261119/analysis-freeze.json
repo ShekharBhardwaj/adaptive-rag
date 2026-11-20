@@ -1,0 +1,174 @@
+{
+  "schema_version": "1",
+  "kind": "confirmatory_analysis_freeze",
+  "recorded_at": "2026-11-19T21:06:42-05:00",
+  "recorded_by": "Claude (AI assistant), for Shekhar",
+  "status": "analysis_ready_scores_absent",
+  "script": "experiments/analysis/heldout-confirmatory-20261119/confirmatory.py",
+  "script_sha256": "5fdadf7958fe72942fa86e933e6ea592a48aa2178d31598739c0cabe01501506",
+  "protocol": "paper/phase7-held-out-protocol.md",
+  "protocol_sha256": "f5892af99dd4551f8703b9a67bcb32438d96a28934a3812d9d82705a7becf30b",
+  "framework_source_sha256": "b59ad0bce4ec89471d3bc792ed26d2e83ea08aaeb91436851f0ca662684b813b",
+  "framework_source_equals_held_out_run": true,
+  "held_out_scores_when_recorded": {
+    "run_id": "eb914cf0-4437-4d25-bfd3-2b4253f990a6",
+    "score_file_present": false,
+    "score_freeze_record_present": false,
+    "author_attestation_present": false,
+    "review_folder_newest_file_modified": "2026-11-19T17:08:13-05:00",
+    "review_folder_files": 17,
+    "review_folder_file_names": [
+      "README.md",
+      "answers.review-template.jsonl",
+      "render_review_packets.py",
+      "review-packets/packet-001.md",
+      "review-packets/packet-002.md",
+      "review-packets/packet-003.md",
+      "review-packets/packet-004.md",
+      "review-packets/packet-005.md",
+      "review-packets/packet-006.md",
+      "review-packets/packet-007.md",
+      "review-packets/packet-008.md",
+      "review-packets/packet-009.md",
+      "review-packets/packet-010.md",
+      "review-packets/packet-011.md",
+      "review-packets/packet-012.md",
+      "review-packets/packet-013.md",
+      "review-packets/packet-014.md"
+    ],
+    "how_checked": "Listed the review folder; searched the project for files changed after the review export; searched the three backups and, by file name, the rest of the indexed disk. The only score files found belong to the development run.",
+    "template_sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+    "template_rating_fields_filled": 0
+  },
+  "what_the_author_of_this_script_had_seen": {
+    "held_out_correctness_scores": "None. No held-out score existed.",
+    "held_out_execution_data_by_condition": "Completion, failure reasons, known cost, elapsed time, request counts, mechanical evidence recall and escalation counts, all reported in paper/phase7-held-out-run.md before this script was written.",
+    "consequence": "The cost and elapsed-time parts of comparison 2 do not depend on scores and were already determined by the run. The reading that elapsed time uses the general rule with 'the cascade takes less time' as its direction was written with those data known. The comparisons themselves, their order and the cost and quality wording were fixed in the protocol before the run."
+  },
+  "readings_fixed_before_scores": [
+    "An interval excludes zero only if the nearer endpoint is beyond zero; an endpoint at zero counts as including zero. Endpoints use a 1e-9 tolerance.",
+    "Within ten points either side of zero includes exactly ten points.",
+    "The protocol words the cost result. Elapsed time uses the same general rule, with 'the cascade takes less time' as the direction.",
+    "A job that fails because the provider could not be reached is an unsuccessful job with a recorded model request that raised a transport error. The sensitivity analysis removes those jobs from the plan and the results, so a question's mean covers its remaining repetitions.",
+    "Every answer text must have a score, the score file's hash must appear in the score freeze record, and the frozen rubric's hash must appear there too. Otherwise nothing is computed."
+  ],
+  "validation_on_development_run": {
+    "purpose": "Shows the script reproduces results already recorded for the development run. It adds no new development result.",
+    "output": "experiments/analysis/heldout-confirmatory-20261119/development-validation.json",
+    "output_sha256": "337df8b126873e2afdecac30aa45d8c2a873b3a854312e88798aad725154376a",
+    "existing_aggregate": "experiments/aggregates/adaptive-cascade-development-20261119-001-ai-reviewed-001.json",
+    "existing_aggregate_sha256": "52a55211d61f995b7cad402835d4976c9018146e9b91ddfae963c3d49e308fbb",
+    "largest_absolute_gap": 0.0,
+    "rows": [
+      {
+        "comparison": 1,
+        "left": "adaptive_cascade",
+        "right": "vector",
+        "metric": "failure_aware_correctness",
+        "mean_difference": 0.12222222222222223,
+        "interval_95": [
+          0.03333333333333333,
+          0.23333333333333334
+        ],
+        "paired_questions": 15,
+        "verdict": "Supported",
+        "gap_to_existing_aggregate": 0.0
+      },
+      {
+        "comparison": 2,
+        "left": "adaptive_cascade",
+        "right": "agentic_wrapup",
+        "metric": "failure_aware_correctness",
+        "mean_difference": 0.0,
+        "interval_95": [
+          -0.16666666666666666,
+          0.13333333333333333
+        ],
+        "paired_questions": 15,
+        "verdict": "Not distinguishable at this sample size",
+        "gap_to_existing_aggregate": 0.0
+      },
+      {
+        "comparison": 2,
+        "left": "adaptive_cascade",
+        "right": "agentic_wrapup",
+        "metric": "estimated_cost_usd",
+        "mean_difference": -0.04107136857142857,
+        "interval_95": [
+          -0.056379465738095234,
+          -0.02423947735714288
+        ],
+        "paired_questions": 14,
+        "verdict": "Supported",
+        "gap_to_existing_aggregate": 0.0
+      },
+      {
+        "comparison": 2,
+        "left": "adaptive_cascade",
+        "right": "agentic_wrapup",
+        "metric": "latency_seconds",
+        "mean_difference": -28.396354033324556,
+        "interval_95": [
+          -37.7840099087741,
+          -17.095488805057
+        ],
+        "paired_questions": 15,
+        "verdict": "Supported",
+        "gap_to_existing_aggregate": 0.0
+      },
+      {
+        "comparison": 3,
+        "left": "agentic_wrapup",
+        "right": "agentic",
+        "metric": "failure_aware_correctness",
+        "mean_difference": 0.35555555555555557,
+        "interval_95": [
+          0.14444444444444446,
+          0.5666666666666667
+        ],
+        "paired_questions": 15,
+        "verdict": "Supported",
+        "gap_to_existing_aggregate": 0.0
+      }
+    ],
+    "plain_json_recomputation_agrees": true,
+    "distinct_answer_cases": 88
+  },
+  "checks_run": {
+    "wording_rules": "20 constructed cases, all as expected",
+    "refusals": "an unscored answer, a rating changed after the freeze, a score bound to a different output, an existing output file and absent inputs each stop the script without writing results",
+    "pooled_table": "30 questions from two disjoint question sets; shared questions are refused",
+    "lint": "ruff check and ruff format clean"
+  },
+  "score_independent_parts_of_comparison_2_on_the_held_out_run": {
+    "note": "Read from the unreviewed aggregate recorded with the run and recomputed from the raw JSON with no difference. Under the protocol the cost result is stated together with the quality result, never instead of it, so these are not a reportable result until the answers are scored.",
+    "source": "experiments/aggregates/adaptive-cascade-heldout-20261119-001-unreviewed.json",
+    "source_sha256": "4a3767a4340bc08955ac0e18e53f8071aa082d6bc8fb7687e2ceff3908dc6c63",
+    "left": "adaptive_cascade",
+    "right": "agentic_wrapup",
+    "difference": "left_minus_right",
+    "rows": [
+      {
+        "metric": "estimated_cost_usd",
+        "mean_difference": -0.02505123288888889,
+        "interval_95": [
+          -0.04087250388888889,
+          -0.009057099822222244
+        ],
+        "paired_questions": 15,
+        "verdict": "Supported"
+      },
+      {
+        "metric": "latency_seconds",
+        "mean_difference": -19.599953297197096,
+        "interval_95": [
+          -31.364933822094333,
+          -7.395622445472465
+        ],
+        "paired_questions": 15,
+        "verdict": "Supported"
+      }
+    ]
+  },
+  "next": "When the held-out score file, its freeze record and the author's attestation exist in the review folder, run the script once with the command in its docstring."
+}

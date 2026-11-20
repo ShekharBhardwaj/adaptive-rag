@@ -1,0 +1,70 @@
+{
+  "schema_version": "1",
+  "kind": "frozen_blinded_ai_scores",
+  "frozen_at": "2026-11-20T14:09:57.524573+00:00",
+  "reviewer": "Codex (AI reviewer)",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "item_count": 202,
+  "unique_cases": 105,
+  "unique_questions": 15,
+  "correctness_counts": {
+    "1": 121,
+    "0.5": 31,
+    "0": 50
+  },
+  "human_score_file_present": false,
+  "score_file": "answers.ai-scores.jsonl",
+  "score_file_sha256": "5294d76222662ed3aaee5e2495da3d15158ea7f0f9a0312415a4953ae5148e55",
+  "template_sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+  "criteria_file": "experiments/reviews/adaptive-cascade-development-20261119-001/ai-review/rubric.json",
+  "criteria_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+  "rubric_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+  "protocol_file": "paper/phase7-held-out-protocol.md",
+  "protocol_sha256": "f5892af99dd4551f8703b9a67bcb32438d96a28934a3812d9d82705a7becf30b",
+  "adjudication_sha256": "ac8415a6cb96c0f76feeeb37022993eb8c6f5dd86e47727937515fbdae72730e",
+  "assessment_files": {
+    "a": {
+      "file": "ai-review/assessments/group-a.jsonl",
+      "sha256": "0be9a18ad61bf07ee0222c093f2f0c618fb1af8b4b1d0114d2d9c641e0d11aa2",
+      "created_at": "2026-11-20T09:00:22.746742-05:00",
+      "source_birthtime_epoch_seconds": 1795183222.7467422,
+      "unique_cases": 36
+    },
+    "b": {
+      "file": "ai-review/assessments/group-b.jsonl",
+      "sha256": "f56f412a0e5c31af7fdf3cd848e4963c8dfd0866557565e39036f845a6fd3ce8",
+      "created_at": "2026-11-20T09:02:16.563532-05:00",
+      "source_birthtime_epoch_seconds": 1795183336.5635316,
+      "unique_cases": 34
+    },
+    "c": {
+      "file": "ai-review/assessments/group-c.jsonl",
+      "sha256": "dbbfa12207219c99326d3137a3aa9d745aa95f0d1e3eb2f9da2453bd2a764b9e",
+      "created_at": "2026-11-20T09:01:13.879045-05:00",
+      "source_birthtime_epoch_seconds": 1795183273.8790455,
+      "unique_cases": 35
+    }
+  },
+  "item_assessments_sha256": "99dd2ee8287d4cb0c4ad3ed7877cd46d5c3f2d313ed19b410ac65b23cec7bd36",
+  "inputs_manifest_sha256": "3ea7ef9eb4baefa242b440853ba087a2c050cf404e0f03b1afa64446f379e6e6",
+  "binding_validation_sha256": "fbc9e0ad9b2f702490adea1c7e07dcc96ecc61c7f112c12339eb307a202fcc76",
+  "integrity_audits": {
+    "input-integrity-audit.json": {
+      "sha256": "ee7dce73dcd02a47368da83846a49113f5929caf38ebeb18a0b47c5fae14c60c",
+      "status": "passed"
+    },
+    "pre-freeze-output-audit.json": {
+      "sha256": "0c5f8fc803e9b080ce03708559b8882ab3da6a45e0e6b03ae7af5281782499d2",
+      "status": "passed"
+    }
+  },
+  "blinding": "All scores and adjudications finalized without inspecting condition labels, selected strategies, raw traces, or any held-out aggregate, preflight, confirmatory analysis or run report. The sole raw access was the authorized binding-check script reading results.jsonl and displaying counts only. Graders received disjoint blinded cases and the unchanged criteria/pinned source; no prior review context. Answer styles may suggest a strategy.",
+  "timestamp_basis": "Original creation time (filesystem birthtime) of each completed assessment file, following the unchanged development criteria. ISO8601 America/New_York, microsecond precision exposed by the filesystem API.",
+  "validation": "All202 exact run_id/job_id/output_sha256 bindings validated against frozen outputs, every available answer covered once, duplicates scored identically, all150 cited/reference excerpt hashes and32 full source files verified, original template/packets/protocol/criteria unchanged.",
+  "condition_labels_inspected": false,
+  "results_or_comparisons_computed": false,
+  "tally_scope": "Only the user-requested overall counts of correctness scores1/0.5/0 are recorded. No means, per-condition results or confirmatory comparisons are computed.",
+  "limitations": "One AI evaluation workflow with delegated source inspection and root adjudication; no per-item human review or inter-rater reliability estimate.",
+  "post_freeze_policy": "No score changes after this freeze. If a correction is needed, stop and notify Shekhar."
+}

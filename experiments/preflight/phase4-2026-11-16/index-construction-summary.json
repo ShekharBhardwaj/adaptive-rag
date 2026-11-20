@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-11-17T00:49:24.955840+00:00",
+  "status": "completed",
+  "index": "/Users/shekhar/development/research/adaptive-rag/datasets/indexes/langchain-openrouter-qwen3-phase4-002",
+  "chunks": 9404,
+  "dimensions": 4096,
+  "successful_model_calls": 588,
+  "reused_successful_model_calls": 541,
+  "new_successful_model_calls": 47,
+  "failed_parent_model_attempts": 1,
+  "distinct_construction_model_attempts": 589,
+  "successful_batch_usage": {
+    "input_tokens": 5064142,
+    "output_tokens": 0
+  },
+  "unknown_usage_calls": 1,
+  "known_successful_batch_estimated_cost_usd": 0.20256568,
+  "complete_construction_cost_usd": null,
+  "complete_construction_usage": {
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "parent_elapsed_seconds": 1541.2299310830422,
+  "recovery_elapsed_seconds": 1035.7811859999783,
+  "cumulative_build_elapsed_seconds": 2577.0111170830205,
+  "source_artifacts_retained": "/Users/shekhar/development/research/adaptive-rag/datasets/indexes/langchain-openrouter-qwen3-phase4-001",
+  "source_journal_sha256": "85a0bfb2cab8ce29a1c3bd9cfc2a480b9dafe5c6d3ec6fcd8f9d0957c0e3b1bb",
+  "source_failure_sha256": "bd79a0b70a07d8c12d6cc1bdf5c962bd7ae0b5831a49d6eaadd61e51e83a1574",
+  "cost_scope": "Successful embedding batches counted once. Earlier failed attempt has unknown usage and additional unknown cost. Index construction remains separate from query experiments."
+}

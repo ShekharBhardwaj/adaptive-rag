@@ -1,0 +1,44 @@
+{
+  "operation": "chat",
+  "model": "claude-haiku-4-5-20251001",
+  "base_url": "https://api.anthropic.com/v1",
+  "started_at": "2026-11-17T01:32:58.319878Z",
+  "request": {
+    "model": "claude-haiku-4-5-20251001",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Return exactly {\"connection\":\"ok\"} as JSON."
+      }
+    ],
+    "max_tokens": 32,
+    "temperature": 0.0
+  },
+  "response": {
+    "id": "msg_011Ch7dzPxVYmqCYCKVL9fn2",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\"connection\":\"ok\"}\n```"
+        }
+      }
+    ],
+    "created": 1794879179,
+    "model": "claude-haiku-4-5-20251001",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 13,
+      "prompt_tokens": 18,
+      "total_tokens": 31
+    }
+  },
+  "usage": {
+    "input_tokens": 18,
+    "output_tokens": 13
+  },
+  "elapsed_seconds": 0.7180872079916298,
+  "error": null
+}

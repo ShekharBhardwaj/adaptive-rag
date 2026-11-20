@@ -1,0 +1,14 @@
+{
+  "schema_version": "1",
+  "kind": "development_only_handoff_view",
+  "created_at": "2026-11-19T00:43:53.026002+00:00",
+  "source_benchmark": "benchmarks/pilot.jsonl",
+  "source_benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "derived_file": "development-only.jsonl",
+  "derived_sha256": "105525732e5849e5c055b503245e29e42d18957201f18547af0e164bf750488f",
+  "split": "development",
+  "question_count": 15,
+  "derivation": "Select original JSONL lines where split==development; preserve each selected line byte for byte. Original benchmark is unchanged.",
+  "contains_held_out_questions": false,
+  "intended_use": "Development-only redesign and offline analysis. This file contains development reference answers and evidence for evaluation; never feed those annotations into routing/retrieval/answer generation."
+}

@@ -1,0 +1,98 @@
+{
+  "category_counts": {
+    "conceptual": 10,
+    "cross_file": 10,
+    "structural": 10
+  },
+  "category_split_counts": {
+    "conceptual": {
+      "development": 5,
+      "held_out": 5
+    },
+    "cross_file": {
+      "development": 5,
+      "held_out": 5
+    },
+    "structural": {
+      "development": 5,
+      "held_out": 5
+    }
+  },
+  "dataset_path": "/Users/shekhar/development/research/adaptive-rag/benchmarks/pilot.jsonl",
+  "dataset_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "discovery_policy": {
+    "exclude_globs": [
+      "**/.git/**",
+      "**/.env",
+      "**/.env.*",
+      "**/.aws/**",
+      "**/.ssh/**",
+      "**/secrets.*",
+      "**/credentials.*",
+      "**/*.pem",
+      "**/*.key",
+      "**/id_rsa",
+      "**/id_ed25519",
+      "**/node_modules/**",
+      "**/vendor/**",
+      "**/vendors/**",
+      "**/vendored/**",
+      "**/third_party/**",
+      "**/third-party/**",
+      "**/.venv/**",
+      "**/venv/**",
+      "**/env/**",
+      "**/build/**",
+      "**/dist/**",
+      "**/target/**",
+      "**/out/**",
+      "**/coverage/**",
+      "**/htmlcov/**",
+      "**/__pycache__/**",
+      "**/.pytest_cache/**",
+      "**/.mypy_cache/**",
+      "**/.ruff_cache/**",
+      "**/.cache/**",
+      "**/.tox/**",
+      "**/.nox/**",
+      "**/.next/**",
+      "**/.nuxt/**",
+      "**/.output/**",
+      "**/.eggs/**",
+      "**/*.egg-info/**",
+      "**/*.min.js",
+      "**/*.min.css",
+      "**/*.map",
+      "**/*_pb2.py",
+      "**/*_pb2_grpc.py",
+      "**/*.generated.*",
+      "**/*.gen.*",
+      "**/package-lock.json",
+      "**/pnpm-lock.yaml",
+      "**/yarn.lock",
+      "**/poetry.lock",
+      "**/uv.lock",
+      "**/Pipfile.lock",
+      "**/Cargo.lock",
+      "**/composer.lock"
+    ],
+    "include_globs": [
+      "**/*"
+    ],
+    "max_file_bytes": 1000000
+  },
+  "errors": [],
+  "expected_commit": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "pilot": true,
+  "question_count": 30,
+  "repository": "/Users/shekhar/development/research/adaptive-rag/datasets/repos/langchain",
+  "require_reviewed": true,
+  "schema_version": "1",
+  "split_counts": {
+    "development": 15,
+    "held_out": 15
+  },
+  "valid": true,
+  "validated_at": "2026-11-17T01:58:04.581045Z",
+  "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "kind": "ai_review_progress",
+  "run_id": "efc5034c-b904-4a02-889f-f45e746a3e49",
+  "updated_at": "2026-11-19T14:40:04-05:00",
+  "status": "complete",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "total_available_answers": 206,
+  "scored_answers": 206,
+  "pending_ai_reviews": 0,
+  "classifications": {
+    "correct": 127,
+    "partial": 37,
+    "incorrect": 10,
+    "abstained": 32
+  },
+  "citation_support_counts": {
+    "full": 116,
+    "partial": 45,
+    "unsupported": 0,
+    "not_applicable": 45
+  },
+  "human_score_file_present": false,
+  "human_review_status": "additional_review_attested_by_shekhar",
+  "score_file": "answers.ai-scores.jsonl",
+  "score_file_sha256": "99d4a84742cf75b8b83483cf1e0b93d65471872f5de2adb32a9a1555a402d2c0",
+  "summary_file": "final-ai-review-summary.json",
+  "summary_file_sha256": "cd6c855fd681eeb17e74757fc7edca7d9a6987bdece3c8129ae550008a9a427f",
+  "user_review_attestation": {
+    "reviewer": "Shekhar",
+    "reviewed_at": "2026-11-19T14:40:04-05:00",
+    "file": "shekhar-review-attestation.json",
+    "sha256": "96f1e54bdc1f0975d341c17b0ced386a9cd4ce3e839286655b0d6ed2bb9af3eb"
+  }
+}

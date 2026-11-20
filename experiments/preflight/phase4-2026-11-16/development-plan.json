@@ -1,0 +1,1900 @@
+{
+  "schema_version": "1",
+  "run_id": "44f64eb7-f61d-4fc3-9294-83220ab727f2",
+  "created_at": "2026-11-17T00:48:52.300373+00:00",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "configuration_sha256": "40c5f1e696198d2b587d8d0afb5b2f73ba7336bffe2773440f6d1d37cf758948",
+  "configuration": {
+    "schema_version": "1",
+    "repository": {
+      "url": "https://github.com/langchain-ai/langchain.git",
+      "path": "/Users/shekhar/development/research/adaptive-rag/datasets/repos/langchain",
+      "commit_sha": "ea17e48f0a4336c920394fd029de99f1568b4c38"
+    },
+    "files": {
+      "include_globs": [
+        "**/*"
+      ],
+      "exclude_globs": [
+        "**/.git/**",
+        "**/.env",
+        "**/.env.*",
+        "**/.aws/**",
+        "**/.ssh/**",
+        "**/secrets.*",
+        "**/credentials.*",
+        "**/*.pem",
+        "**/*.key",
+        "**/id_rsa",
+        "**/id_ed25519",
+        "**/node_modules/**",
+        "**/vendor/**",
+        "**/vendors/**",
+        "**/vendored/**",
+        "**/third_party/**",
+        "**/third-party/**",
+        "**/.venv/**",
+        "**/venv/**",
+        "**/env/**",
+        "**/build/**",
+        "**/dist/**",
+        "**/target/**",
+        "**/out/**",
+        "**/coverage/**",
+        "**/htmlcov/**",
+        "**/__pycache__/**",
+        "**/.pytest_cache/**",
+        "**/.mypy_cache/**",
+        "**/.ruff_cache/**",
+        "**/.cache/**",
+        "**/.tox/**",
+        "**/.nox/**",
+        "**/.next/**",
+        "**/.nuxt/**",
+        "**/.output/**",
+        "**/.eggs/**",
+        "**/*.egg-info/**",
+        "**/*.min.js",
+        "**/*.min.css",
+        "**/*.map",
+        "**/*_pb2.py",
+        "**/*_pb2_grpc.py",
+        "**/*.generated.*",
+        "**/*.gen.*",
+        "**/package-lock.json",
+        "**/pnpm-lock.yaml",
+        "**/yarn.lock",
+        "**/poetry.lock",
+        "**/uv.lock",
+        "**/Pipfile.lock",
+        "**/Cargo.lock",
+        "**/composer.lock"
+      ],
+      "max_file_bytes": 1000000
+    },
+    "retrieval": {
+      "top_k": 5,
+      "budget": {
+        "max_tool_calls": 20,
+        "max_model_calls": 8,
+        "max_tokens": 64000,
+        "max_seconds": 30.0,
+        "max_evidence_chars": 24000
+      },
+      "indexing_budget": {
+        "max_tool_calls": 20,
+        "max_model_calls": 640,
+        "max_tokens": 25000000,
+        "max_seconds": 7200.0,
+        "max_evidence_chars": 24000
+      },
+      "chunking": {
+        "max_lines": 80,
+        "max_chars": 12000,
+        "overlap_lines": 8,
+        "parser": "auto",
+        "oversized_line_policy": "keep_complete_line"
+      },
+      "embedding_batch_size": 16
+    },
+    "routing": {
+      "chat_model": "anthropic/claude-haiku-4.5",
+      "temperature": 0.0,
+      "max_output_tokens": 256,
+      "budget": {
+        "max_tool_calls": 0,
+        "max_model_calls": 1,
+        "max_tokens": 6000,
+        "max_seconds": 15.0,
+        "max_evidence_chars": 24000
+      }
+    },
+    "models": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "embedding_model": "qwen/qwen3-embedding-8b",
+      "chat_model": "anthropic/claude-haiku-4.5",
+      "embedding_dimensions": null,
+      "temperature": 0.0,
+      "max_output_tokens": 512,
+      "token_parameter": "max_tokens"
+    },
+    "experiment": {
+      "dataset": "/Users/shekhar/development/research/adaptive-rag/benchmarks/pilot.jsonl",
+      "split": "development",
+      "conditions": [
+        "vector",
+        "vectorless",
+        "agentic",
+        "no_retrieval",
+        "adaptive_rule",
+        "adaptive_llm"
+      ],
+      "repetitions": 3,
+      "order_seed": 17,
+      "vector_index": "/Users/shekhar/development/research/adaptive-rag/datasets/indexes/langchain-openrouter-qwen3-phase4-002",
+      "require_pilot": true,
+      "answer_model": null,
+      "generation": {
+        "temperature": 0.0,
+        "max_output_tokens": 1024,
+        "max_tokens": 64000,
+        "max_seconds": 30.0,
+        "max_evidence_chars": 24000
+      },
+      "budget": {
+        "max_model_calls": 2000,
+        "max_tokens": 5000000,
+        "max_seconds": 7200.0,
+        "max_cost_usd": 5.0
+      },
+      "price_schedule": "/Users/shekhar/development/research/adaptive-rag/experiments/preflight/phase4-2026-11-16/prices.json"
+    }
+  },
+  "snapshot": {
+    "schema_version": "1",
+    "url": "https://github.com/langchain-ai/langchain.git",
+    "commit_sha": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+    "captured_at": "2026-11-17T00:48:44.931277Z"
+  },
+  "corpus_fingerprint": "3924731244e2e23840fc8930ff6d8cf39dc4cf3af55fcb17f02c96a75d8a5848",
+  "question_hashes": {
+    "lc-c-01": "a595f2d39386ad5ac26ba7f6773cfe50a5d2f1404a767077b79ea92c86d10a15",
+    "lc-c-02": "783a15312571d894f7db301188e65ecb1fd564dc3f388fca040ce7b982dd0abe",
+    "lc-c-03": "e39d31fdfb01aad579c566a3c009bb1daca072ac9613645abf4f7787723f298a",
+    "lc-c-04": "0821796370a635cebcbadb3c421d8dc1817e5d2940151f946526cc3cec2a1c79",
+    "lc-c-05": "dec52ed30e16dca790c9fa3b28fb79c9dc28e146b88a61a69b3bb30eb5bb3394",
+    "lc-s-01": "8f36e0feee07a2eb4da7dd5143cb04476b6405744c828af20e3ec27da01e0552",
+    "lc-s-02": "b3e93f80812ed0753829ca21b28c6d689e20fc89548fe955d7b9ac89183d39a7",
+    "lc-s-03": "61b5e64866c467b8155bf14ed64cc9a5822710257644ae5f06dac232873c5859",
+    "lc-s-04": "438327b71e4792a7f7fb7e1a1bb81f4a767eb3fab9ccbbe7a5133e726c61b571",
+    "lc-s-05": "e721fd5627da8718381a3ca9e6312841472f88932bb1047758e3152ba33a8c07",
+    "lc-x-01": "908895591e6210ca780f862542735d33e032fef97506b86d42588aed129763f5",
+    "lc-x-02": "8e0b5ffee66d7c59cd6b798ffd42ecb6e406bb517f74920fd7c869d267d36e2e",
+    "lc-x-03": "2f92e526569ccaf1bfb3748eae3b5d31eee3e983f34e067f4757f05803ef4568",
+    "lc-x-04": "9c0fde84b4135a56e2d8fe02477191215a09b60c81ce53888e1e44707004874f",
+    "lc-x-05": "ab765e5e1289f31827b1d30d96274b09d3a977a6447a352cd5bf52d4233113b7"
+  },
+  "split": "development",
+  "question_count": 15,
+  "planned_jobs": [
+    {
+      "job_id": "bfd92e13663d4b7114bf19d6a91ffd235241196d71094240c013f65954480633",
+      "question_id": "lc-s-02",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "977b4ea09504aa45c28456361f161481cc7f8bf11341b05afb492b62f370e7cf",
+      "question_id": "lc-c-03",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "d40bded38b992cdb3c3085fb8fa39bc1fbbaae597de0fd096ac11a4c15963e0e",
+      "question_id": "lc-s-05",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "9aaa0f6bbc6931dc1dff3f8f5d2266bd9db38c117c33dd635e6b4c052c56bd3e",
+      "question_id": "lc-s-02",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "c64b03d9652d934ac80415ee61f2a989e5e3b6c081e966c692cfcf0e28d42dfb",
+      "question_id": "lc-c-04",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "485f185cd32820a6a35a7c14fa3761c555ff7c740df6517cf7999c1c5b32b912",
+      "question_id": "lc-s-01",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "ffc021ed8dc582ad77636be95d4cbc58bae1872e383be07d188d78ec32ef86dd",
+      "question_id": "lc-s-05",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "ca57986c3000c7b031a6a15f0ac726a7b4eaa6cb8566033901eb8b2c876c6af0",
+      "question_id": "lc-s-02",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "018edb381123406685754013c337f9470b7d13115457bde60926fb067f7101fc",
+      "question_id": "lc-x-03",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "816169ac29a369c05b9b8aa9e55907037824dbf9051558d47930cf4e6fb0613e",
+      "question_id": "lc-x-04",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "70369bc502ad952f11557d18be744106eb0ae423b75d2ef893ccbbacc390a0bd",
+      "question_id": "lc-c-04",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "4e520cb476e7378a670b59d13f00cece247b807b8f93c5839c040e4ef359ff96",
+      "question_id": "lc-x-03",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "3554e97dfc4852d66ba43f5c800eca389f635d30963beaf3397ff8bc074e2b77",
+      "question_id": "lc-x-03",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "9eb21e8d835a77c8ded09f05906c315af99702a40f79417b0c1c446e8b7e091a",
+      "question_id": "lc-s-04",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "6a92d1bb64197b72ddfda4abdc52a8525333057dd710aec0c9168b83f670f1d4",
+      "question_id": "lc-x-05",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "3200e5bd2da453821009dab8f1b0d642d66fdf78e07727ac0edc9549435c7d65",
+      "question_id": "lc-c-02",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "04d42a8f2173ff4ed5a5b9e14e9cf6f214b809a103ada816d37ce49c0e329193",
+      "question_id": "lc-s-02",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "1a41c9da2c726153550e10a08cbf476634e9650ac8c6890fe2fcca878ca1816e",
+      "question_id": "lc-c-03",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "a3f3b26d75519177734652c2e056f27ad9fb58c1be7c34bd5613596f22ded983",
+      "question_id": "lc-s-02",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "73d84abde150d4c45977797d20568b1a8fea239ec1446893480ae8271dd4d60a",
+      "question_id": "lc-x-01",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "0c4a687b901943119bbbaf17b2b4e526f45a6628b5518245a998b5dab9ba1e43",
+      "question_id": "lc-s-02",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "8e30c5cfd06d5e9fa4d7dac895b17207f045534e07a7c688634920c5e5897d98",
+      "question_id": "lc-s-03",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "2e3a9e0139910b13a71ba2a6c6b7f22e3d3018a1d5917c52415bf349b1e821d1",
+      "question_id": "lc-x-03",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "7dd308ce70ab039f8eebb8331b902ed0317977829e31a9a489261e78dafc697d",
+      "question_id": "lc-c-03",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "968bed918c255e9e0f8962296e8b0f947ad6f903e42b2543b4697cd94806af2e",
+      "question_id": "lc-s-03",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "3c7965672ebb4e74936633f7232d4d08cbe422d22e842d0b5a87e252bf957894",
+      "question_id": "lc-x-03",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "3826ed39ba3da0092f305c454b6f507638fcc0f6572930bee8207d1a60c0055e",
+      "question_id": "lc-x-03",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "38155dea5c3522bb21a6767b2c2c1bb724c45e5e4e5aea690963a16ef7f7d5eb",
+      "question_id": "lc-x-02",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "0895feb63203703630c5e9b7eee284a60f4d3d9e2ef4a77a142cc3de3bae3da0",
+      "question_id": "lc-c-02",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "192ec97df8138a0d897a0736b78aef94fa4236f273b65eee34531483587ef829",
+      "question_id": "lc-s-03",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "c7116ad3b34f27f2c6212d7850c55341bcb13641753b74ea0a23cca260edc278",
+      "question_id": "lc-s-02",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "9c9bcc73d889b02df36f56687d5afe8cac89dfe4e42c94019120d259ec40147c",
+      "question_id": "lc-s-05",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "fc0f301334a79cec36d5df48782444de9844363073f5ef70e8151167abe9253e",
+      "question_id": "lc-x-01",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "1ab326564363f8999d1206d738f8ea3b17bdd13794bc6ded33721c7c23edef88",
+      "question_id": "lc-x-01",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "65a597772b15bcee810f57d8c3634137945617eb2e0fe7eb2b635800566ef95f",
+      "question_id": "lc-s-03",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "66c032cd9bd08b38824cdc96d3dd02751ce486d56880a8565e59525bf5ab5156",
+      "question_id": "lc-s-05",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "09618c258122604f679eabd8d13b88df6092e1fb1809c75d4c153695ff0aac67",
+      "question_id": "lc-s-01",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "ca838ac0fad14828bcd8f3c0772b859f7adeb34ba0b89afc871027e32cad416f",
+      "question_id": "lc-x-05",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "07a751c9bb78263f63a47080fbf2fafda0d7f60d147db50e143064f804780228",
+      "question_id": "lc-s-02",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "0eb3a76c524eb3db9963028a80c3e5b6555edaebfe183f09c9b900c8619ee779",
+      "question_id": "lc-c-01",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "e0384a697318752ac3cc61f5e060808d7e89e5d0eaac3e3a0877734d6190430d",
+      "question_id": "lc-c-04",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "42be47caee67061c8f9dfb107d6010ed36792d7609e53cde6d224dce7e3b944f",
+      "question_id": "lc-x-02",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "e9deea8c6c8b8751877768d0e5f8c06617f5b06c01a46af92e11a89c74911467",
+      "question_id": "lc-x-05",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "8f721e5e56ec66200aaf72ff070280b86e7cd3f018b4d313352cf3b1b396777b",
+      "question_id": "lc-x-02",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "2cbb28885712dec4f012004b465b548f5295dc16b3ce3c2d9bcf437883017acb",
+      "question_id": "lc-x-03",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "1270a96239c627285cc3094c5f6ab67b21612ca1633b0a7beec354d1f1b23dbb",
+      "question_id": "lc-s-01",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "e88710f274808f192b9f15543a2d7c3f04442b4755671eaa97b1c7c258ac1439",
+      "question_id": "lc-s-05",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "3195b617fd3be865af0245308e59b4d29d8142b560b263fe33107ae329ee8148",
+      "question_id": "lc-c-03",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "44436098a9aed5a1ef862a5b34954cbb9a73da8af5a709c9e26e93e437ba99ca",
+      "question_id": "lc-c-05",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "84f30052e2cd0cddc38b7142953bb699de0c4602ad384f1309a1e8c00ae92b66",
+      "question_id": "lc-s-02",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "78b55c1e64bdbea9c20266d2388b2cbe421578d505787f56e08c95f9bace9c3c",
+      "question_id": "lc-s-01",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "c52cbee1e72024df49a178206fbda5bdb0161863c44d089dbf449fa062bc0cbd",
+      "question_id": "lc-c-05",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "1c982afbb078a057d1f9041a1e3116175e39fe01293429d4ab2c7e9ac9cc86b8",
+      "question_id": "lc-x-01",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "3e56fcc67c46a998a4818c959b0a15a25eba83815aa0c5ab95a2d9f6f337f616",
+      "question_id": "lc-c-02",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "dc53dfede5c5c2b2d9e8786dd334de16c52e5d4dc0fc9547f5179f5c078d88e9",
+      "question_id": "lc-c-01",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "691a6bc3956e8baf4ec855bdeb0c26d5590d117a0f81d5703eb5cc500d521ff8",
+      "question_id": "lc-s-02",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "b87902fb8d784efdcc7f585b8ee08ff1c8ad76dc6779b89a5f860cf1c2443805",
+      "question_id": "lc-s-03",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "082c67e38ca80caf01b09b5be692685860534b6d0e00119c1388e790ca28bd09",
+      "question_id": "lc-s-04",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "20a0714a364a399ce85264c3576b6ce87d3a95cc89db460b0d2f896086ebf12a",
+      "question_id": "lc-c-02",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "138caf287aff4c2e4a5ef03d6c6345df5aa5e5a64bf7b37f163e0b4bf9cf1247",
+      "question_id": "lc-c-01",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "7fd6d5353df9276283598b0c9dd814844726ecef59b3ff1483ffd3222c730b0a",
+      "question_id": "lc-c-02",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "26ee66b5eaf83cf0b38554548020e4925a89de9aba32dfdac31a8c5442316f32",
+      "question_id": "lc-c-05",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "a72425b75daecf1192728fdfc85fd41298b1b46a3d6a6c980029e6ce41edd5cf",
+      "question_id": "lc-s-03",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "e4170e2d6b6bcd036531f8a6847e57f9fb4ab6816a8e43bc346b3cdc3ec2aefd",
+      "question_id": "lc-c-04",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "851149f89dd192c988211c492c393d52a0d4003b6371e6c4f388d5e65d189051",
+      "question_id": "lc-s-05",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "babc4cdd3880db0762095731c59b6138a1b848bcb2eca4a29190071b7d545634",
+      "question_id": "lc-c-05",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "e7b3ca29f7a686e84a231a2610fac920c3b4601215adccd5d83704dd2cf736ec",
+      "question_id": "lc-s-01",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "c2c241c8ade8e089b602264bbf510631441e93e20133729806d621df3c8fcca5",
+      "question_id": "lc-x-01",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "322ea8ad0f27487225dcdafe83cb6208e0d234606419df682e09d4fb494ff137",
+      "question_id": "lc-s-01",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "1f010ffd7f0f5b227bfcb874c517cfe4b0690b09c95253a553ca1815e35dedf1",
+      "question_id": "lc-s-04",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "c45b018bf2354f6556bfc71f082b0048e7ea988abf93374d50a5288f9c2d9a03",
+      "question_id": "lc-c-05",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "b5af99e4a1d80b7fc5091921f15545f93793a6c6cf6c5d245fe070dd6b8cf01d",
+      "question_id": "lc-c-01",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "b66b5f3c24c8f87f6ab827c949a9514f38f3fdd0528e0a8ab7822016f70bc55e",
+      "question_id": "lc-c-04",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "0d58650e37dab748989cb4c499d702565949d9552ddc140001695df91548395a",
+      "question_id": "lc-c-03",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "f5945b4f03aa860ed260aa65abb7a3a72afa3968d8f3daff59231953ab4e9e36",
+      "question_id": "lc-c-04",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "bd56341dccf5dc3e73869e76c64f39db89f2e67c17087af312cf3c3104c582c7",
+      "question_id": "lc-x-04",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "54dc7076b09ef4d010b92bc8d46bff4fcd1ae05e441763fb7199cc7797073e41",
+      "question_id": "lc-s-01",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "3d4e2cda321894018fcaf656498d28f0560f8510af4daf6936487f2f8e437fff",
+      "question_id": "lc-c-02",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "9c2429ea25592452c3d69df1b443c5de3991e225790a8cf5fd8d61bdee85dbcd",
+      "question_id": "lc-c-03",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "9eccad4c0dbabec55f44579d49a5abe76b6186fe9590f15a593d7d0c54b08f85",
+      "question_id": "lc-x-02",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "d411a0d48a53d2a9e4a10f16124b19bf9a1be590ca4b1a00710dd373c649d330",
+      "question_id": "lc-x-03",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "3e1ab3da37d20316ce164498bb0d7ea2cda44f6d8013d3aa320569313737c4b5",
+      "question_id": "lc-s-01",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "bb66b1f180b027f73c7b466568bb1fdfc0ff269a8991ecea2c339ac8a652c5b9",
+      "question_id": "lc-c-04",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "3dd1204a9eb90c234538662f0aa11ccb138e3ac6e98c484f34b119d66cd6ddf1",
+      "question_id": "lc-c-02",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "b6b20c128e6f8beaf7f4ade8d5eab668df2f774af71e02ab1218bae0d6608c48",
+      "question_id": "lc-c-05",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "d050654e30244bb018712ee5b93ec7f34952348c3699b4dcf825cfefd022e667",
+      "question_id": "lc-c-03",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "1d0327b8fbe2149aa5c95e67cbac8b79bffb33e55a5c86dcc25d0402fc84b12c",
+      "question_id": "lc-s-02",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "5e20d7a7df5a3daff3710a9e7428730cfd735a924066bed73159e3a5a7d6d839",
+      "question_id": "lc-x-04",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "aa480e5e09f25c316acc697824c65f1db09edf5aeb2f1477fc89918a215da5a5",
+      "question_id": "lc-x-05",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "0ad1a0068b9bc18c9ee9540669e7af0eb6030ff08ad1db4d8ea72d140c3a045c",
+      "question_id": "lc-c-05",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "beb390962f25cfb34c6b0fbdccadac8108f852934323fa441e400592dd93397c",
+      "question_id": "lc-s-02",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "25edfe845a8af60223eddb6b66dfac5efae0e9226058b44c7fc8baf142aebfff",
+      "question_id": "lc-c-01",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "50448e5446f4431fa188fa2f654764d48b288253ec4882b74bb92fedb37e8e65",
+      "question_id": "lc-c-05",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "45c41b1b5557291833d0143902526a3b2961b845ea60f95c1080e52795122485",
+      "question_id": "lc-x-02",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "002e020e252d37a104be7d7c88052dc3b0dbe48c95260075b7a3c34f06de19c3",
+      "question_id": "lc-s-05",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "6d79dfbe5a8baa29f2775c0fd99a44586a0a9eda64b109e0912630b548fe5026",
+      "question_id": "lc-c-03",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "241d6432eaf9627939b0d52041c91a9ba2dd52834be65e93ae3f111e596901c2",
+      "question_id": "lc-x-01",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "695e953892481637e5156855246393a8375181af30857eabfdb120dba2779150",
+      "question_id": "lc-x-01",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "9cfef2bf78c4578490d0ba59ce12b712fc1549fd2a5dd761654995abc887d148",
+      "question_id": "lc-c-02",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "2dcdf0ee4763037e686fac615c6aaada21c2e883fbf215c29b5ccb71b177a6bf",
+      "question_id": "lc-s-01",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "f3f280a72d0df3cb7f9b00c652e73f0f2dd021c8f71d454399f1261583d778af",
+      "question_id": "lc-c-04",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "4807662a12f83bf694ea09872dcac5b91518bb664db5c85d6cbcf556720fb270",
+      "question_id": "lc-c-01",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "27effcb31998fd79ee396b435bf28dcd3891a0c0f5aea691c9f42b19913ce3a4",
+      "question_id": "lc-x-05",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "5bb0c9f46783912f71c3bd1b7e0737e6daabaa16135db157e7a7cb2161d0679e",
+      "question_id": "lc-x-01",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "34d1867bfb296864772743d43eb96b0f705fd16b88eb4f92c47fad78cf060efd",
+      "question_id": "lc-s-04",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "45d14ca00f634275f2779eace32416221c9d9621cbc366d35fd952bbdc537f38",
+      "question_id": "lc-c-03",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "3ded75844e0e5f81b30a0a105b53798376df54c2b6f349a940acbef689d317ef",
+      "question_id": "lc-x-04",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "dbd73751369147bd788af675792f4f12334db9b9b6d1cb52b61179d5d3363a73",
+      "question_id": "lc-s-04",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "675e95bed922d75aa64b00f1736831d2bfe4a0271d0e3486db140f54639d6b7f",
+      "question_id": "lc-s-02",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "e6d5ffcad3b7ec9083f6b308c63253cb830393f33f6799f8a1117ca59e726caf",
+      "question_id": "lc-s-01",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "efe811bce8f292145489d03be627f0dfef78239e366e6bdda29881396515d8c5",
+      "question_id": "lc-s-04",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "637646fd73d377d493db39f806baab785d2e2cced89db849bf736d9bb37a49e0",
+      "question_id": "lc-c-05",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "20de75355bb145fe425244fecf83694b5fa8a1e91caa7dba3d02e6c4804a017d",
+      "question_id": "lc-c-04",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "1e4a862a22489e744fcfd4148a8228557e141793375efa529b5db301b339ac48",
+      "question_id": "lc-x-02",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "b8dfbeb813557be476b3b98a15d1823ef59f8b2160ce5687de09cb4063daf116",
+      "question_id": "lc-c-01",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "883197dcb397d2d34077719c0d0bf8b1154c6bc0cd22ab717de94d5829e31121",
+      "question_id": "lc-c-03",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "d9d4453e2f7c149309ed57d55f7fb4100032ae08e2e9dfbc98ef1c0f13a1996e",
+      "question_id": "lc-x-04",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "4ebd53dd1fd8d18a350f835ffd4170b9801ed4785463f14bd144b5e04e032a25",
+      "question_id": "lc-x-03",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "8f658fa384258d10500cbe6b67dbe7d42c0949de3d2e6dfa4a953b2563111171",
+      "question_id": "lc-c-05",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "a8a47f6573f97391fb67b1108046ba0bd43df22b2cc342ce028d093e149eb333",
+      "question_id": "lc-s-05",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "c39a9a7152b72b0d77e1fd7c3e47d9541cc9831d1fca0f76c4beea91c8c328c4",
+      "question_id": "lc-x-05",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "bd5a0fdeb4bf637e8017ad624eff6affb42dc48e2a9f75bade0a257426ff5896",
+      "question_id": "lc-x-01",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "9f7c3741532179efce9ec522819543f8f687ea053970a2898496d3e59da3572c",
+      "question_id": "lc-c-02",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "3fbef76972e7d944ebb4134788983f46e95a731853517cf2a9140d512db04a12",
+      "question_id": "lc-x-05",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "a9b914e3f42ce41875cd5f175f830161523a5bdbc0943e13181306d94c359dbe",
+      "question_id": "lc-s-03",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "1c593317b7b42d70d6863768fc4f2efc2d60c91d94baab90579557e6224dc9a3",
+      "question_id": "lc-c-01",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "1f898de7e5378d5d2e0901945de7fb5ac8cbb10f06793b0c9a410f984f19baa0",
+      "question_id": "lc-s-04",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "2169587f998e233fecd42b32629d52fdfcbbb4ae0d48cdd63b21f6316fd8bd29",
+      "question_id": "lc-x-05",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "ba5626f0bb46a25ccb7f8a87493d183a68d6db2d856c892ab0551d98c5b692ef",
+      "question_id": "lc-x-02",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "5cbbc6ea6d9d0f4bd7ac40751061a985d8223672a675530e18f761a6e7897edd",
+      "question_id": "lc-s-04",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "d7b7dc5de1f06bb26bbf45a83bbede0e1359c8249b57646e9efcae1977d91c79",
+      "question_id": "lc-s-04",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "9ced0fa58185fa9cbab9b8811116b89ba7aaf82b21cd53e7e4c7cf97424d8b32",
+      "question_id": "lc-s-04",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "44536b6d38af1a50f94d322eea746311a41db640270be274db71818d6c32fb7e",
+      "question_id": "lc-c-02",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "77b0127daea524b62070a8784e6f3a70a8947985fb98a0112d2b3475d7ebf2c7",
+      "question_id": "lc-s-01",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "7bb9a8d4120c7bf711c7f46d6eea5701d22a6a9d6e65249f0f334bb4f1900fe1",
+      "question_id": "lc-c-03",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "29a5c0cb1e7b7a9a59ab2b1f908af82097e75519baa5f7121cde1f2ac4f4c912",
+      "question_id": "lc-s-03",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "28e684c7bb555b43859fd4525b4dc76f52d1c5b915d5f70720f18af8055507c0",
+      "question_id": "lc-s-03",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "93f69f20310a7844e94598a2a8fa83ac72b77699ac301c8f129190ac83802863",
+      "question_id": "lc-c-05",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "8a54881f4e08ac517166c2b7575ff4bef2993b649166894e43be4054fde4dbc8",
+      "question_id": "lc-s-05",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "65a79f7560772ce4a5aaff0e170f003047ae3a207af09605f8fee9fb39bb75c4",
+      "question_id": "lc-s-03",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "316c871dd491c90940ff713cd613d6f6b9aad7445beb68a6b3810742dd9b575a",
+      "question_id": "lc-s-05",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "4ff20a95169a379c163d10f7a5dac5fb91e035c21dcad5d55918612b604a0f8a",
+      "question_id": "lc-x-04",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "4eb783cd0b590322669f6213ea804e5ca8a13366e0b7dd16056b33c87d90106d",
+      "question_id": "lc-c-02",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "89c8d81ea715faca8f044dffcd262556d3519c6a880dbdfe495898858d2b563f",
+      "question_id": "lc-x-04",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "5a6eda4d6514599c5525986baeae57b008edffa98a268eb48a4381ad63398160",
+      "question_id": "lc-s-05",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "47f5b2738a4102797c224900603aef1ca7055993af69b8a0b4ff68106cdcad52",
+      "question_id": "lc-s-04",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "df619571113a4cc00495aabe7479a697a9912a6805d680e09e721bd4baaf36f1",
+      "question_id": "lc-c-03",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "c51a08d1574383368744d5debf53d1104159f4f0de2d8721eb0e3e76d1c63c19",
+      "question_id": "lc-s-01",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "a3caf8687f2500ea7743d150e37eb572fc7de3f613016ea334a382a798a9831f",
+      "question_id": "lc-x-03",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "db33b51665b6b65a5c3a90928cbb538b9336715e756f3d0f51191a1128cc2c76",
+      "question_id": "lc-x-05",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "8dff36d47dc3f2f4168b69c290ffb9be8b3be7ac8760a304eb91dbec45c20fce",
+      "question_id": "lc-x-04",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "0a01aa420091b24d088c7f13e55249492ef59b408fb7059a87f88a09d1a18f6f",
+      "question_id": "lc-x-01",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "891d69c2109d7e35b2b7d4d993206b707e16aee0c19b280d304b8dcf3a29dc12",
+      "question_id": "lc-s-04",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "afa88bd9ac63b7174dcc87f07b9647fa1162ec50bd77d1a77a5efbcd20f34e22",
+      "question_id": "lc-c-01",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "b14b9b9015406c77ab47f14f2171283eb1d9a3ce47e3b86047154101883f9b9d",
+      "question_id": "lc-s-02",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "b793227186276a2bfd2587cf7e1a3d1469d026169d9b2d8893e77ef228a8f7e0",
+      "question_id": "lc-c-02",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "12de8aa1335e40adc1ed86c651b9a1e7ef695226295f721f9f4a9f9320cdfe3b",
+      "question_id": "lc-c-04",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "3657c7ddb1958415e12c197671dd17d5ea44bf8ebdb6300d0b0c24defe6eced5",
+      "question_id": "lc-x-03",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "96fde2b32323618a9837b41152fc7353cf63bfa707240a1020d76f4e0c0159d3",
+      "question_id": "lc-x-04",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "69a02d3bcd5293a777db019a35aaffb8ce3676ccff874ef22648fa48adbe4d6b",
+      "question_id": "lc-x-02",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "718c80af55f29f73796435ad2be79dad5f3de3973611b56e7c4766094fa0731f",
+      "question_id": "lc-x-03",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "0d53f5e44262bcfb92a7378dda0b03699855f44760c9da770d52ad73c98c2124",
+      "question_id": "lc-s-05",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "bc4ab25d7861541ac06b9ff89f3ec9d34688e5f18108e5317526babc0f6ab8ea",
+      "question_id": "lc-s-02",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "0afecd54564795b75217a4626b6d616ce3cccc9b49ed34f806de227bdeb8e4c0",
+      "question_id": "lc-x-02",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "61b84c4b6404f829c125136c6b5ab733c08cb695b195bcbceaf7b4f59065989b",
+      "question_id": "lc-x-04",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "6fd00a56694805078f07e903918441e3bcb6972df64fe9b33432cd19895be69c",
+      "question_id": "lc-x-04",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "570e4a70a328be731ce1f76e07aa7c7aa06256ab22b57c57141091ce80a9b473",
+      "question_id": "lc-c-01",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "9d915ba29eb8a4a68417ecbde013bd84577086b65c480e56a74259840f83a4a0",
+      "question_id": "lc-s-05",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "7e8c131138f3f2666724aaa61362fc9b09257f67b39ad29940816d48f9a0d387",
+      "question_id": "lc-c-04",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "51dc2fe63a79cebc6f5a9ed909fdda372c599f876b9b08db92ef85dc1f8cde0d",
+      "question_id": "lc-x-02",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "c4b896a938d2c6c9b3cc488dfa1b4ee57b1a3ad9d7c160ecaec7bc60e2184d7d",
+      "question_id": "lc-s-04",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "4d6bf5c82a7ef4dd76f53628ce15e7a1b48764f9ccfbbe925fc0e00e50c7dc1b",
+      "question_id": "lc-c-02",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "359b6683a80fea80ccdf542cce46b32d723a04269ec48c7f28270892d81b289a",
+      "question_id": "lc-c-05",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "f37e54d05907d9d50a8c66164ae662d53ec17853564d19559f44710429efe3ff",
+      "question_id": "lc-c-03",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "0c0b6fa510269552abba4fa775fdc02d5debed0b16ab47810ca5e825d57c4d87",
+      "question_id": "lc-c-05",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "766a61d68616d2bfec9f3f6c8c66d3595c1e0024d6a4f0c650711306258248e7",
+      "question_id": "lc-x-05",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "9b19b9ff237871a854a19082075c119125df42d998fcd593f58f68b4a9742c5f",
+      "question_id": "lc-c-05",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "8a4dc595789be1f417b5401cefc73e79de6d81d154d02efc0aa41bc6b6f4d1e0",
+      "question_id": "lc-s-05",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "5abc6767153a5ff29e9ce05f519adec884030b9cbd1d500180feb18c1274316a",
+      "question_id": "lc-c-04",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "443e5bb9d5f020685d64d359a9c22aea621926b37dddd48ddeac22639a407ed8",
+      "question_id": "lc-c-02",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "4e0ad1aeb309091a2f08ca3dc5fbd80531c64353289e28c7896b80f4b86151f3",
+      "question_id": "lc-x-04",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "a90795547310e3a2189e05123d18b3b34b3dd37c404c7e23e751194f904ab775",
+      "question_id": "lc-x-04",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "543d8a51e84405b4c9dc14e4353a1b07cd452a4a1fba385ded37dfff9e7bbc36",
+      "question_id": "lc-x-01",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "84911bdeb1fd8ed55bb47229f2fe373a21abb8d83e84aa7f3c9aefd1180f7e1b",
+      "question_id": "lc-s-04",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "ff15759464adfdf44d31a526366b128de633e1c96c79385d640cd3957cd9f69a",
+      "question_id": "lc-c-03",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "0597095887cf166e8a2ac1b5603cdb5bf60c3e7e3c17f0c985999de556a54486",
+      "question_id": "lc-c-04",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "a5daaacb069c2b7123b2d04cb9f326403bd28e170ecf037ac4cf21c329dc953f",
+      "question_id": "lc-c-01",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "019f89b1ba3f22e0cf51e9dec5792090a5960a0213415d3d655f9d6f150c9a48",
+      "question_id": "lc-c-04",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "cd97c3dc16212d3d7d798846c25ab78cafbd74954cef58e7ab4f8ce4ecf8abc4",
+      "question_id": "lc-c-01",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "6300333d3a8e8a237cd149420dd276a48404662dc5a9d25cc87241b8e04f8c1f",
+      "question_id": "lc-s-01",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "98f214cb37ce381edacb855296e57fd0a95b29095ddba982e487438f7fb98eb1",
+      "question_id": "lc-s-03",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "5520caea5fddf6e9a16f9e6a2c8d47d9c7538ceed216b871fa8fb941d13c806b",
+      "question_id": "lc-c-04",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "dd498826de23f0aa6ceba54c7cf392195dd789b1548da085afb2f8aae8967134",
+      "question_id": "lc-c-04",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "66f74051dee7760b89448db78e1bfb51c557a169d5f7ab30458deb37ab79fff6",
+      "question_id": "lc-x-05",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "2780578aa86c09f7ac00e06ad91bcd32027b7eeeadcbda36a60721e650a4c8a2",
+      "question_id": "lc-c-02",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "9b0f073a9acac7f3486216e76033051a1261a7bb7db323cf7454087b4d3d0e95",
+      "question_id": "lc-c-04",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "8bbab48682283260e4945ccee3452300c7b8c2f1fb53f03978f8f3c595cb4ebd",
+      "question_id": "lc-s-01",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "130929c0b130e0ea34941c8eefbd04d6551e413c60ffa8ded21a8d6ae7ca853b",
+      "question_id": "lc-c-01",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "8f66cb723d05bc39a55b39d58d7d9f24adf4516df2fffc4b1a15cc15f4069a8e",
+      "question_id": "lc-x-02",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "377469d9ab2543f104b4ac72b3bc3da8980fe1d104210046892cd072978c0fb8",
+      "question_id": "lc-x-05",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "3190bdaae1a8d7775eee859d95b7f73aee7faa460cac775f4f42ad7ef054c9fa",
+      "question_id": "lc-x-02",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "eb2ba99c07f041784a15802a2d0bcfbeafab06f5add0d5f60558cbf3c8876d6e",
+      "question_id": "lc-s-02",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "176ffce5d08b5fb918a4d42f14815252010e5a3a8f8e7f198dde48e91b4425d8",
+      "question_id": "lc-c-01",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "145d29026c77b04e159ed0bb3821e915f45780707f4e99639dc87c18b2c5108a",
+      "question_id": "lc-s-01",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "e72074bdfe9b22c6d954b7f9178465e59f9e7725671445e3ca4912be27ed77ba",
+      "question_id": "lc-x-01",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "c0e3012a69a7e99e7842a1560f3c720ec0111843126eaca1e2fb598c5195fc03",
+      "question_id": "lc-x-01",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "f1525461f4df9ed4fe85ca72b939a1ca034bf483108aab7dea583bac2542a11d",
+      "question_id": "lc-x-05",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "8038636b6bbefdd671d134d31ebd1e19f00a7d99b4607e266d95233d3d170724",
+      "question_id": "lc-s-04",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "f458474de99e61565e9df9151253eb0b281f5b55cf0761d179396a34f3fa0f6c",
+      "question_id": "lc-s-01",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "9038b33b8d0071d93bb39db999a25745375fbf76e539c624c040eae1fba22780",
+      "question_id": "lc-s-02",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "a70f594f5e9c647a57dff56de2826d52393b37540149d4d5844786b9e40c32d3",
+      "question_id": "lc-c-01",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "63d3a51fdfab5d8724be8bf0b43784f567ef2723fb69b4da18a597698fb86880",
+      "question_id": "lc-c-05",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "37a38ed745c445f41cdf22594ea54d8f91b8a70a29ee56da086fb041d07f020e",
+      "question_id": "lc-x-03",
+      "condition": "agentic",
+      "repetition": 0
+    },
+    {
+      "job_id": "691c959e3c4f3b2e57aa84c45f6efb7c82fb17c60757d88b6183292dca0895b1",
+      "question_id": "lc-x-04",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "31d803950ee831e82a047c6d3896fc60a9950029b88cbc1940e38b33b7904677",
+      "question_id": "lc-x-04",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "7476c4702611b21ca3f50458427cf16080d29324b985a0ff9abca68cc79fabdd",
+      "question_id": "lc-x-02",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "c9b9f0d64cf974e882a498235b542da76aceab695fdb6b183f1722ba9eef5508",
+      "question_id": "lc-s-05",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "fce4092f1fb19860d48db6ae6bf037fa845050ce896eeaad78be135d57b1b41a",
+      "question_id": "lc-c-03",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "8fd4986153c44db1f7f4b23ac318d7b6a91150f2ef7c8f8354400d1fce27c423",
+      "question_id": "lc-s-04",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "672a5fe8a9365c8d35461c3f92c9aa6698e518f93baeea7ed5e2ecca0f1d58b4",
+      "question_id": "lc-x-03",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "5fe2f1f54caa9774ddb28aeb480fd9e812f6c2f7173abcef00fee879cf1ba978",
+      "question_id": "lc-s-02",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "4feea663cdbb3c257ebf4649ab82c2ecca5214d6586b8fb8c8f591fde4bc6049",
+      "question_id": "lc-x-03",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "2664d90917f5cd727f80645a37d17dab53d24b3d42a17f6b09de51b3d1decc1c",
+      "question_id": "lc-x-05",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "2cb5d0318467862a539aa2347e949d90ecdc0d45991b5ab692f124e4e402ac1a",
+      "question_id": "lc-c-02",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "0c30cc50edf056f342e13d985624872b05292cecb220ae1c8fe2c9d4fa83b720",
+      "question_id": "lc-s-01",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "b6abd13d5112ebae357996a5ec2b697c3f88a06fbe1949d610b5738adb7328e0",
+      "question_id": "lc-c-05",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "f754621b1e1aebe88b6deb960f2cae4483a4414578882ec690277c0e5a90184c",
+      "question_id": "lc-c-01",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "1006b5ee9cbfa026668ee9663eeae2b0bef4bc83f2743413254d4cffed7f09df",
+      "question_id": "lc-x-05",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "90b3d735724631fe22639bbdb87e8b2c150183e1f086927c7cd98dd9eee24f1d",
+      "question_id": "lc-x-01",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "e6d4c7fa815299355e520bd425abe1c370c6fe3e5f4c44ccffa37110db70c68d",
+      "question_id": "lc-x-04",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "a496d2e8b82928b4d742f16ddd6587179f193fca251314da7bb06eb19fee51dc",
+      "question_id": "lc-c-02",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "4f3373c17236b6c25ebea97dcf9f967a061b0640da868e400083a40c87ff7724",
+      "question_id": "lc-s-03",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "05b3345e14aa4ccac9fc44cbc0f107ca03d85193fc3ef6de1398c72855e6027e",
+      "question_id": "lc-c-05",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "351541101410ee57ad49c8ecf6c42fb5e1e5c942b6e4994c89ac95ad8d30eaa3",
+      "question_id": "lc-c-03",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "61ca94f0661debed173f6f8c424d2fba8e6af525b93a033aa3989c088da2a4b3",
+      "question_id": "lc-x-05",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "4850424ded47d14564fc56b72b21ac1e90272212ec6053db0960a1258026caa0",
+      "question_id": "lc-x-02",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "a0c1cd34105bf72895e36c7f5bc6aeca22b0a314bf1b125f8cd6a3e44d15b24e",
+      "question_id": "lc-s-03",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "db6048d66a3278df0b022d9b8ff301992714043ba5401f19d8eb01fff373394e",
+      "question_id": "lc-s-03",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "82686a02359867d384bfd3c2282da63d5fd9af35664541e41f8b30a52116c83b",
+      "question_id": "lc-x-01",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "d7b1b7c42a65b4e61c93788b0b8fefcb29616db0e38ce49f1d8948a4c8b8ad31",
+      "question_id": "lc-x-03",
+      "condition": "no_retrieval",
+      "repetition": 0
+    },
+    {
+      "job_id": "e4f4b3683517c1d7330da6f8f4ddf1b7bd3dc3b755fedab06b754e0ddd407686",
+      "question_id": "lc-c-03",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "5c32a7bc8c9287f672600b2d18c39a04b642a5c3dc4b1d374b702ae788fff90b",
+      "question_id": "lc-c-03",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "0b7b456a304ad6d22aecaee5b531e65bba70ca3db44a80cbd75c15144a6ac0b5",
+      "question_id": "lc-x-03",
+      "condition": "agentic",
+      "repetition": 2
+    },
+    {
+      "job_id": "1a576d32bb98c5ea053572fdec2639b141a784f0b74a42fefd7fd28573163c20",
+      "question_id": "lc-x-02",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "64c672b4a1dda956e47314f476cf238158df1f5a47aba53d730272b2e2daebbd",
+      "question_id": "lc-x-02",
+      "condition": "no_retrieval",
+      "repetition": 1
+    },
+    {
+      "job_id": "85cc66816d3460dcab1386f10a223894c927efb6fd123bc1d885747a6f068752",
+      "question_id": "lc-x-04",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "baf3d37027129f4a6cfd7260b1b9b20be3bfa0892364ea8c00c845600578ab29",
+      "question_id": "lc-c-01",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "e5331534f443eb06a8243afc326b76315c641da385d5ebe92b45b033b30e9258",
+      "question_id": "lc-s-03",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    },
+    {
+      "job_id": "fd870d028333ef458e9d37bd5a06d1ad31ae42f078d945cc440987dcaac1e93b",
+      "question_id": "lc-c-02",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "ee78bcf95228781148aea695f632a0a3b543be1c401dfe0f4df3aa7b735efa6d",
+      "question_id": "lc-s-01",
+      "condition": "adaptive_rule",
+      "repetition": 0
+    },
+    {
+      "job_id": "f934ec3729adb13264c91790db312a99c1ba2c07aca28235787dc71c500e2a32",
+      "question_id": "lc-x-01",
+      "condition": "vectorless",
+      "repetition": 2
+    },
+    {
+      "job_id": "cfbb1417c3a44a7c2a38bb07d949c115af8d756f3186378d539c8b90bb1527ca",
+      "question_id": "lc-x-04",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "5ac03c47da8685999b2090ce5999a0ba97f95a8d612d4d3eb6389b74c6bd869f",
+      "question_id": "lc-s-05",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "64c96d21b52da458fd03403a3219058f80b826a900de913de1562c4552e81dca",
+      "question_id": "lc-x-03",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "bc39928c33ac4432ac6f7e0be09b755f94162b72b2860d31a4a8069997985205",
+      "question_id": "lc-s-05",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "ee7de2aac5ec87087ea7f82a9a0b982bb9fbf16a7fb00f208e90596a70cebc91",
+      "question_id": "lc-s-05",
+      "condition": "vector",
+      "repetition": 0
+    },
+    {
+      "job_id": "ebfc191d28f7154d7e3cd6a120d22628ff99681edeca757b4697ca633098f467",
+      "question_id": "lc-x-05",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "567e0f45232db46f15b90c81df3432ee7bfb22e8b9e322305fb68c60d5c21896",
+      "question_id": "lc-s-03",
+      "condition": "vectorless",
+      "repetition": 0
+    },
+    {
+      "job_id": "97b6b61face58ff184c99abc38cb9d5ead149f467c9456a4adfb65a265ff658d",
+      "question_id": "lc-x-02",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "e9e7072f343b3e4b79f7c39f1e605577a9895c683555c3d679226d198cd69c7d",
+      "question_id": "lc-x-01",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "1d27770ed809183a34493e17c7b46140126ac415b35ca58ba5debb4f2542ff83",
+      "question_id": "lc-s-03",
+      "condition": "vector",
+      "repetition": 1
+    },
+    {
+      "job_id": "0b1dbd9fc992fa1ef81a746b02ae2403f016e94181bc3207d34aa541fb55b1c5",
+      "question_id": "lc-c-01",
+      "condition": "adaptive_rule",
+      "repetition": 1
+    },
+    {
+      "job_id": "579ffdccb7c13c91832e7121b0bde7df4a7a0b5f744e9559a4992da2097f455d",
+      "question_id": "lc-c-04",
+      "condition": "vector",
+      "repetition": 2
+    },
+    {
+      "job_id": "863ca80e68db63f1ff007aef198e422ba2dda20347c70da75b0244532547a0fa",
+      "question_id": "lc-s-03",
+      "condition": "adaptive_llm",
+      "repetition": 1
+    },
+    {
+      "job_id": "45edd29d6dd04906db679da600d30131fec646d5ee87573d3f635c4f154730e7",
+      "question_id": "lc-c-05",
+      "condition": "adaptive_llm",
+      "repetition": 2
+    },
+    {
+      "job_id": "65cf81970799eae7e92d738488ddcc8b3d65ecd0858297fa65a810e6b224fcaf",
+      "question_id": "lc-s-04",
+      "condition": "vectorless",
+      "repetition": 1
+    },
+    {
+      "job_id": "dc434ebf1d926fcbd5664467a519425cdb99d1a3c6a46624ae15bcdaf2e69db0",
+      "question_id": "lc-x-01",
+      "condition": "agentic",
+      "repetition": 1
+    },
+    {
+      "job_id": "5bd0089812b8ca5285fcba744ce4de5d3ed641fc7a1b34736684245a6cf876d3",
+      "question_id": "lc-s-04",
+      "condition": "no_retrieval",
+      "repetition": 2
+    },
+    {
+      "job_id": "8a1adffd6ca6255db5a2d16753103c2e195c7f853db568a4ad0cc399e70f6416",
+      "question_id": "lc-x-02",
+      "condition": "adaptive_rule",
+      "repetition": 2
+    },
+    {
+      "job_id": "e371adf91f397af1159ed3912f3a04befb5f42d943f400e802490d7f751fe5e9",
+      "question_id": "lc-x-05",
+      "condition": "adaptive_llm",
+      "repetition": 0
+    }
+  ],
+  "order_seed": 17,
+  "model_identities": {
+    "answer": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "anthropic/claude-haiku-4.5"
+    },
+    "embedding": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "qwen/qwen3-embedding-8b",
+      "dimensions": null
+    },
+    "agent": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "anthropic/claude-haiku-4.5"
+    },
+    "router": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "anthropic/claude-haiku-4.5"
+    }
+  },
+  "generation_settings": {
+    "temperature": 0.0,
+    "max_output_tokens": 1024,
+    "max_tokens": 64000,
+    "max_seconds": 30.0,
+    "max_evidence_chars": 24000
+  },
+  "retrieval_settings": {
+    "top_k": 5,
+    "budget": {
+      "max_tool_calls": 20,
+      "max_model_calls": 8,
+      "max_tokens": 64000,
+      "max_seconds": 30.0,
+      "max_evidence_chars": 24000
+    },
+    "indexing_budget": {
+      "max_tool_calls": 20,
+      "max_model_calls": 640,
+      "max_tokens": 25000000,
+      "max_seconds": 7200.0,
+      "max_evidence_chars": 24000
+    },
+    "chunking": {
+      "max_lines": 80,
+      "max_chars": 12000,
+      "overlap_lines": 8,
+      "parser": "auto",
+      "oversized_line_policy": "keep_complete_line"
+    },
+    "embedding_batch_size": 16
+  },
+  "routing_settings": {
+    "chat_model": "anthropic/claude-haiku-4.5",
+    "temperature": 0.0,
+    "max_output_tokens": 256,
+    "budget": {
+      "max_tool_calls": 0,
+      "max_model_calls": 1,
+      "max_tokens": 6000,
+      "max_seconds": 15.0,
+      "max_evidence_chars": 24000
+    }
+  },
+  "price_schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d",
+  "index_manifest_sha256": "15ac7923deb060d79d088cd00564a496b3a969df22c693d25d1fceb2282e76d9",
+  "framework": {
+    "framework_version": "0.4.0",
+    "framework_git_sha": "a44b4cdde7a05cb4c4ed4068b948ac209d3bd5ae",
+    "framework_worktree_dirty": true,
+    "framework_source_sha256": "ec5f5c3c4731ffa7dac191ca0f4de7540ce02404aa94f9faa04dc6247f241956",
+    "lockfile_sha256": "4b248c2fe58dcbce25d4aad6cabb5c9fa1dc601747053c03ce1a96afd96faf73",
+    "python": "3.13.9 (main, Oct 14 2025, 21:10:40) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "dependencies": {
+      "pydantic": "2.14.3",
+      "PyYAML": "6.0.3",
+      "httpx": "0.28.1",
+      "numpy": "2.5.4",
+      "faiss-cpu": "1.16.0",
+      "tree-sitter": "0.26.1",
+      "tree-sitter-python": "0.25.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    }
+  },
+  "preparation_seconds": 30.348761333036236,
+  "execution_policy": {
+    "retrieval_failure": "stop before generation; preserve failed retrieval and partial evidence",
+    "retries": "none",
+    "indexing_costs_in_queries": false,
+    "provider_seed": null,
+    "order_seed_is_provider_seed": false,
+    "held_out_labels_in_model_inputs": false,
+    "cache_policy": "shared immutable corpus and loaded vector index; navigation/symbol tools fresh per query",
+    "global_budget": "tighten stage admission/deadlines as remaining run budget decreases",
+    "routing": "one pre-retrieval selection; all overhead charged; no fallback or escalation"
+  }
+}

@@ -1,0 +1,2195 @@
+{
+  "schema_version": "1",
+  "kind": "blinded_ai_review_input_integrity_audit",
+  "reviewer": "Codex subagent (AI auditor)",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "created_at": "2026-11-20T09:04:41.635776-05:00",
+  "scope": "Read-only integrity verification of the original blinded 202-item template, frozen criteria/protocol, 14 packets, all 32 current-manifest source files, 150 distinct source excerpts and 105 work cases. The source scope includes the original 28 files plus four actual implementation contexts authorized by root before freeze. No answer quality or experimental results computed.",
+  "status": "pass",
+  "check_summary": {
+    "checks": 22,
+    "passed": 22,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "criteria_file_hash",
+      "passed": true
+    },
+    {
+      "name": "protocol_file_hash",
+      "passed": true
+    },
+    {
+      "name": "original_template_file_hash",
+      "passed": true
+    },
+    {
+      "name": "manifest_frozen_hashes_match_supplied_values",
+      "passed": true
+    },
+    {
+      "name": "manifest_pinned_commit",
+      "passed": true
+    },
+    {
+      "name": "original_template_has_202_items",
+      "passed": true,
+      "details": {
+        "expected": 202,
+        "actual": 202
+      }
+    },
+    {
+      "name": "template_items_all_at_pinned_commit",
+      "passed": true
+    },
+    {
+      "name": "all_14_packet_hashes",
+      "passed": true,
+      "details": {
+        "expected": 14,
+        "checked": 14,
+        "passed": 14,
+        "failed": 0
+      }
+    },
+    {
+      "name": "all_current_manifest_full_source_file_hashes",
+      "passed": true,
+      "details": {
+        "initial_task_source_file_count": 28,
+        "current_manifest_expected": 32,
+        "checked": 32,
+        "passed": 32,
+        "failed": 0,
+        "scope_update": "Root authorized the current manifest containing four additional implementation-context source files before freeze."
+      }
+    },
+    {
+      "name": "all_150_distinct_excerpt_hashes",
+      "passed": true,
+      "details": {
+        "expected": 150,
+        "checked": 150,
+        "passed": 150,
+        "failed": 0
+      }
+    },
+    {
+      "name": "all_work_group_assignment_counts_and_memberships",
+      "passed": true
+    },
+    {
+      "name": "105_unique_work_case_keys",
+      "passed": true,
+      "details": {
+        "rows": 105,
+        "unique_keys": 105
+      }
+    },
+    {
+      "name": "105_recomputed_canonical_case_keys",
+      "passed": true,
+      "details": {
+        "checked": 105,
+        "passed": 105,
+        "failed": 0
+      }
+    },
+    {
+      "name": "105_recomputed_question_keys",
+      "passed": true,
+      "details": {
+        "checked": 105,
+        "passed": 105,
+        "failed": 0
+      }
+    },
+    {
+      "name": "202_template_item_memberships_exactly_once",
+      "passed": true,
+      "details": {
+        "expected_memberships": 202,
+        "actual_memberships": 202,
+        "distinct_items": 202,
+        "items_with_nonunit_membership": []
+      }
+    },
+    {
+      "name": "all_202_work_to_template_frozen_content_bindings",
+      "passed": true,
+      "details": {
+        "checked": 202,
+        "passed": 202,
+        "failed": 0
+      }
+    },
+    {
+      "name": "work_case_keys_equal_template_distinct_case_keys",
+      "passed": true,
+      "details": {
+        "template_distinct_cases": 105
+      }
+    },
+    {
+      "name": "15_unique_question_keys",
+      "passed": true,
+      "details": {
+        "actual": 15
+      }
+    },
+    {
+      "name": "saved_binding_validation_report_consistency",
+      "passed": true
+    },
+    {
+      "name": "inputs_manifest_unchanged_during_audit",
+      "passed": true
+    },
+    {
+      "name": "original_group_a_assessment_metadata_unchanged",
+      "passed": true
+    },
+    {
+      "name": "all_3_work_file_hashes_match_current_manifest",
+      "passed": true,
+      "details": {
+        "checked": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    }
+  ],
+  "frozen_input_hashes": {
+    "criteria": {
+      "path": "experiments/reviews/adaptive-cascade-development-20261119-001/ai-review/rubric.json",
+      "expected_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+      "actual_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+      "passed": true
+    },
+    "protocol": {
+      "path": "paper/phase7-held-out-protocol.md",
+      "expected_sha256": "f5892af99dd4551f8703b9a67bcb32438d96a28934a3812d9d82705a7becf30b",
+      "actual_sha256": "f5892af99dd4551f8703b9a67bcb32438d96a28934a3812d9d82705a7becf30b",
+      "passed": true
+    },
+    "original_template": {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/answers.review-template.jsonl",
+      "expected_sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+      "actual_sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+      "passed": true
+    },
+    "inputs_manifest": {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/ai-review/inputs-manifest.json",
+      "sha256": "3ea7ef9eb4baefa242b440853ba087a2c050cf404e0f03b1afa64446f379e6e6"
+    }
+  },
+  "packet_checks": [
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-001.md",
+      "expected_sha256": "5a44a83f5bb36023ae39facc81d364f32955c6fd00243834fc3e85e0dae08623",
+      "actual_sha256": "5a44a83f5bb36023ae39facc81d364f32955c6fd00243834fc3e85e0dae08623",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-002.md",
+      "expected_sha256": "8de8098313fddecf869245ad2b7535a182a50ec4bf71833b513301832a77e15f",
+      "actual_sha256": "8de8098313fddecf869245ad2b7535a182a50ec4bf71833b513301832a77e15f",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-003.md",
+      "expected_sha256": "be0abec4a5314bc8cb6b46002bb2c0057b9bbdbc1f97dffe105e23af3711cbb1",
+      "actual_sha256": "be0abec4a5314bc8cb6b46002bb2c0057b9bbdbc1f97dffe105e23af3711cbb1",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-004.md",
+      "expected_sha256": "f22b14bee38c7db860f0e59c9cf6dee743d7a286b8f30d1df87c9b08d14ce9aa",
+      "actual_sha256": "f22b14bee38c7db860f0e59c9cf6dee743d7a286b8f30d1df87c9b08d14ce9aa",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-005.md",
+      "expected_sha256": "da62bccddac48f8aaaec34e7b37ffae3bcbb4bfd22d0982e1dfc658ac7716220",
+      "actual_sha256": "da62bccddac48f8aaaec34e7b37ffae3bcbb4bfd22d0982e1dfc658ac7716220",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-006.md",
+      "expected_sha256": "d848acd7cc936c28c83d117e2c37e68eb698cfbb48506125fe3c6abfcb780c63",
+      "actual_sha256": "d848acd7cc936c28c83d117e2c37e68eb698cfbb48506125fe3c6abfcb780c63",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-007.md",
+      "expected_sha256": "94f76454ab941e3701049aa12fd41550738b1b9cd80870b92e2c18ca44c7dde1",
+      "actual_sha256": "94f76454ab941e3701049aa12fd41550738b1b9cd80870b92e2c18ca44c7dde1",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-008.md",
+      "expected_sha256": "6094361be9b57d21d9593ba576bfbf4eab5c107024f5d7ca39737e82d999c44f",
+      "actual_sha256": "6094361be9b57d21d9593ba576bfbf4eab5c107024f5d7ca39737e82d999c44f",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-009.md",
+      "expected_sha256": "4c2223ccfadd0f445beffa48144e56b383e13a4b1741bee888b8a731cb311871",
+      "actual_sha256": "4c2223ccfadd0f445beffa48144e56b383e13a4b1741bee888b8a731cb311871",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-010.md",
+      "expected_sha256": "d88e215ec6d7026c08c2362e814cc1197e798c615d1b673c464c613840b4669d",
+      "actual_sha256": "d88e215ec6d7026c08c2362e814cc1197e798c615d1b673c464c613840b4669d",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-011.md",
+      "expected_sha256": "f4ec943fb7fe384aff69302f00ddf70af2ef96d0cf602c0352b4784554cb5ab1",
+      "actual_sha256": "f4ec943fb7fe384aff69302f00ddf70af2ef96d0cf602c0352b4784554cb5ab1",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-012.md",
+      "expected_sha256": "fd41223518c46173f76734351a8ca11fc6fe793ce874b58ee3d44c814c224645",
+      "actual_sha256": "fd41223518c46173f76734351a8ca11fc6fe793ce874b58ee3d44c814c224645",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-013.md",
+      "expected_sha256": "e1f5c663ccef8e25d8f8dad39b21fe4a898e6ea9021bd41d656efe696ff2a59f",
+      "actual_sha256": "e1f5c663ccef8e25d8f8dad39b21fe4a898e6ea9021bd41d656efe696ff2a59f",
+      "passed": true
+    },
+    {
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/review-packets/packet-014.md",
+      "expected_sha256": "1061e6cefa7982c3fb1924e7dcc32d6fe3c2c0d1e43b9140d9709702a665ed0f",
+      "actual_sha256": "1061e6cefa7982c3fb1924e7dcc32d6fe3c2c0d1e43b9140d9709702a665ed0f",
+      "passed": true
+    }
+  ],
+  "pinned_repo_commit": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "source_file_checks": [
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "manifest_sha256": "bc7f6ebc1aa2dade3aa6c78c25a603b8e42e364194b43d8e5b4b029b89ccdac0",
+      "current_sha256": "bc7f6ebc1aa2dade3aa6c78c25a603b8e42e364194b43d8e5b4b029b89ccdac0",
+      "pinned_git_sha256": "bc7f6ebc1aa2dade3aa6c78c25a603b8e42e364194b43d8e5b4b029b89ccdac0",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "manifest_sha256": "6b37dd84a34a49b932983ec92e5dc826fefdd1a047424a014a251a0ed0e2d507",
+      "current_sha256": "6b37dd84a34a49b932983ec92e5dc826fefdd1a047424a014a251a0ed0e2d507",
+      "pinned_git_sha256": "6b37dd84a34a49b932983ec92e5dc826fefdd1a047424a014a251a0ed0e2d507",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/.claims/reference/chat-models.json",
+      "manifest_sha256": "cd11fc4dc235336ae4492f61a7246f7b5a52c71108edc74c7081dacef347243f",
+      "current_sha256": "cd11fc4dc235336ae4492f61a7246f7b5a52c71108edc74c7081dacef347243f",
+      "pinned_git_sha256": "cd11fc4dc235336ae4492f61a7246f7b5a52c71108edc74c7081dacef347243f",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/.claims/concepts/chat-models.json",
+      "manifest_sha256": "fdb1cb5ef8bea99a5d816370f9adaa4eb46327e0ef373666bcb6edefd34f1c4c",
+      "current_sha256": "fdb1cb5ef8bea99a5d816370f9adaa4eb46327e0ef373666bcb6edefd34f1c4c",
+      "pinned_git_sha256": "fdb1cb5ef8bea99a5d816370f9adaa4eb46327e0ef373666bcb6edefd34f1c4c",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/language_models/chat_models/test_cache.py",
+      "manifest_sha256": "14a149174bd8191c76a24000a1666222cf0781e4ae643cffbf49ebf73e2d40e5",
+      "current_sha256": "14a149174bd8191c76a24000a1666222cf0781e4ae643cffbf49ebf73e2d40e5",
+      "pinned_git_sha256": "14a149174bd8191c76a24000a1666222cf0781e4ae643cffbf49ebf73e2d40e5",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "manifest_sha256": "af67e64631eca49018e263fb82fa465e04370cd825d6f7a03c9d0daac10657c2",
+      "current_sha256": "af67e64631eca49018e263fb82fa465e04370cd825d6f7a03c9d0daac10657c2",
+      "pinned_git_sha256": "af67e64631eca49018e263fb82fa465e04370cd825d6f7a03c9d0daac10657c2",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "manifest_sha256": "ef38ab793ad7439cf412170b0b683ef0eb10c9ff3617a78194a6a814474d94b1",
+      "current_sha256": "ef38ab793ad7439cf412170b0b683ef0eb10c9ff3617a78194a6a814474d94b1",
+      "pinned_git_sha256": "ef38ab793ad7439cf412170b0b683ef0eb10c9ff3617a78194a6a814474d94b1",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/outputs/chat_result.py",
+      "manifest_sha256": "42094550d8eee8332185972684ff0c6062cd0e1536db45f7f22cb777ad6e8904",
+      "current_sha256": "42094550d8eee8332185972684ff0c6062cd0e1536db45f7f22cb777ad6e8904",
+      "pinned_git_sha256": "42094550d8eee8332185972684ff0c6062cd0e1536db45f7f22cb777ad6e8904",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "manifest_sha256": "260de5bbbc388123f43ef30b9c4625e3e4748fd4c378db5f2f646347dc8bf556",
+      "current_sha256": "260de5bbbc388123f43ef30b9c4625e3e4748fd4c378db5f2f646347dc8bf556",
+      "pinned_git_sha256": "260de5bbbc388123f43ef30b9c4625e3e4748fd4c378db5f2f646347dc8bf556",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "manifest_sha256": "407284bddbe9616352ad9d3dd8dab4f3dd197aa31a5c9fc253e57e4265839242",
+      "current_sha256": "407284bddbe9616352ad9d3dd8dab4f3dd197aa31a5c9fc253e57e4265839242",
+      "pinned_git_sha256": "407284bddbe9616352ad9d3dd8dab4f3dd197aa31a5c9fc253e57e4265839242",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "manifest_sha256": "ec163e4b6f3d24847c7cd256990d90d5ca474fff2bc2cc9797074ba3bcef4dcc",
+      "current_sha256": "ec163e4b6f3d24847c7cd256990d90d5ca474fff2bc2cc9797074ba3bcef4dcc",
+      "pinned_git_sha256": "ec163e4b6f3d24847c7cd256990d90d5ca474fff2bc2cc9797074ba3bcef4dcc",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "manifest_sha256": "1e6041f01cf8d3ae774fe7b7540451a0575595dc92bec3df42569f6e6ab2cf6e",
+      "current_sha256": "1e6041f01cf8d3ae774fe7b7540451a0575595dc92bec3df42569f6e6ab2cf6e",
+      "pinned_git_sha256": "1e6041f01cf8d3ae774fe7b7540451a0575595dc92bec3df42569f6e6ab2cf6e",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/retriever.py",
+      "manifest_sha256": "582ab78ea57ec6151a053853847780c577a34d20a33923c12c00c795131cbc96",
+      "current_sha256": "582ab78ea57ec6151a053853847780c577a34d20a33923c12c00c795131cbc96",
+      "pinned_git_sha256": "582ab78ea57ec6151a053853847780c577a34d20a33923c12c00c795131cbc96",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "manifest_sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4",
+      "current_sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4",
+      "pinned_git_sha256": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/structured.py",
+      "manifest_sha256": "f51689a1707c1ee31a173b8d8c9aaea33d994f4d95a79e6d51fe7369b2247142",
+      "current_sha256": "f51689a1707c1ee31a173b8d8c9aaea33d994f4d95a79e6d51fe7369b2247142",
+      "pinned_git_sha256": "f51689a1707c1ee31a173b8d8c9aaea33d994f4d95a79e6d51fe7369b2247142",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "manifest_sha256": "c37b6d1e4472ecd832c584e0be73670e2f060065e90541817bc11a25d49b0a18",
+      "current_sha256": "c37b6d1e4472ecd832c584e0be73670e2f060065e90541817bc11a25d49b0a18",
+      "pinned_git_sha256": "c37b6d1e4472ecd832c584e0be73670e2f060065e90541817bc11a25d49b0a18",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "manifest_sha256": "e843cfee0389906b2bb8dac6b8ad67b8b2c50cd6003222070f3d55dd5ac61f06",
+      "current_sha256": "e843cfee0389906b2bb8dac6b8ad67b8b2c50cd6003222070f3d55dd5ac61f06",
+      "pinned_git_sha256": "e843cfee0389906b2bb8dac6b8ad67b8b2c50cd6003222070f3d55dd5ac61f06",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/in_memory.py",
+      "manifest_sha256": "b6ca63061d5f8277de199bcc5df759923164f141d0192ccf6fdd92a385c9688c",
+      "current_sha256": "b6ca63061d5f8277de199bcc5df759923164f141d0192ccf6fdd92a385c9688c",
+      "pinned_git_sha256": "b6ca63061d5f8277de199bcc5df759923164f141d0192ccf6fdd92a385c9688c",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/langchain/tests/unit_tests/indexes/test_indexing.py",
+      "manifest_sha256": "ecfda7b419cc8e1d7e269d81263377f394b72c0ede6b8e2a9ef8c09a2a44b6a4",
+      "current_sha256": "ecfda7b419cc8e1d7e269d81263377f394b72c0ede6b8e2a9ef8c09a2a44b6a4",
+      "pinned_git_sha256": "ecfda7b419cc8e1d7e269d81263377f394b72c0ede6b8e2a9ef8c09a2a44b6a4",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/runnables/test_runnable_events_v2.py",
+      "manifest_sha256": "fbd4b201a61d6f21a658076dbd5cc550cbb2e6e57c2c451faf507bcf3f0c106b",
+      "current_sha256": "fbd4b201a61d6f21a658076dbd5cc550cbb2e6e57c2c451faf507bcf3f0c106b",
+      "pinned_git_sha256": "fbd4b201a61d6f21a658076dbd5cc550cbb2e6e57c2c451faf507bcf3f0c106b",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/runnables/test_runnable_events_v1.py",
+      "manifest_sha256": "7f3ef7f73f5b822148ed14ba861079c0cffb24986449afc8dff12c4e515d5d67",
+      "current_sha256": "7f3ef7f73f5b822148ed14ba861079c0cffb24986449afc8dff12c4e515d5d67",
+      "pinned_git_sha256": "7f3ef7f73f5b822148ed14ba861079c0cffb24986449afc8dff12c4e515d5d67",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/rate_limiters/test_in_memory_rate_limiter.py",
+      "manifest_sha256": "4fb79d9e9264635bc71b8e0fec7a8a9d276c8f20d543f60e5d2d5f9c04a6bc08",
+      "current_sha256": "4fb79d9e9264635bc71b8e0fec7a8a9d276c8f20d543f60e5d2d5f9c04a6bc08",
+      "pinned_git_sha256": "4fb79d9e9264635bc71b8e0fec7a8a9d276c8f20d543f60e5d2d5f9c04a6bc08",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/concepts/tools.md",
+      "manifest_sha256": "ed2a633a034e717e41c662ac159bb59a465f0bd86364a58221bc8c60c941fa89",
+      "current_sha256": "ed2a633a034e717e41c662ac159bb59a465f0bd86364a58221bc8c60c941fa89",
+      "pinned_git_sha256": "ed2a633a034e717e41c662ac159bb59a465f0bd86364a58221bc8c60c941fa89",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/messages/tool.py",
+      "manifest_sha256": "218c48ca2f82cffcc8c453ab8387f1b9821f5728b3b868c7903b9ea3ff1e5a08",
+      "current_sha256": "218c48ca2f82cffcc8c453ab8387f1b9821f5728b3b868c7903b9ea3ff1e5a08",
+      "pinned_git_sha256": "218c48ca2f82cffcc8c453ab8387f1b9821f5728b3b868c7903b9ea3ff1e5a08",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/tools.md",
+      "manifest_sha256": "18b158b86b4d777c69f2ba33e0c4d5c9f1c4ba7996929f2f49c911ff29759d10",
+      "current_sha256": "18b158b86b4d777c69f2ba33e0c4d5c9f1c4ba7996929f2f49c911ff29759d10",
+      "pinned_git_sha256": "18b158b86b4d777c69f2ba33e0c4d5c9f1c4ba7996929f2f49c911ff29759d10",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/caches/test_in_memory_cache.py",
+      "manifest_sha256": "48d41cc0e50bd25d5b35784ce84f6726845cc5a751b26d9e758fff02cadd82a2",
+      "current_sha256": "48d41cc0e50bd25d5b35784ce84f6726845cc5a751b26d9e758fff02cadd82a2",
+      "pinned_git_sha256": "48d41cc0e50bd25d5b35784ce84f6726845cc5a751b26d9e758fff02cadd82a2",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/langchain_v1/tests/unit_tests/agents/test_injected_runtime_create_agent.py",
+      "manifest_sha256": "33becdc64958e247e28b07db0691a6cdb423b0469fcf56ee5be1d60c148467ff",
+      "current_sha256": "33becdc64958e247e28b07db0691a6cdb423b0469fcf56ee5be1d60c148467ff",
+      "pinned_git_sha256": "33becdc64958e247e28b07db0691a6cdb423b0469fcf56ee5be1d60c148467ff",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/langchain_v1/langchain/agents/middleware/tool_error.py",
+      "manifest_sha256": "3bba2a45edd577157854eb27f913391623441956d37d6cce703c80c2b51f95c7",
+      "current_sha256": "3bba2a45edd577157854eb27f913391623441956d37d6cce703c80c2b51f95c7",
+      "pinned_git_sha256": "3bba2a45edd577157854eb27f913391623441956d37d6cce703c80c2b51f95c7",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/load/dump.py",
+      "manifest_sha256": "a928ca73ad5e5848ab8273393ae257b23625549bbb571ddcff5e15f4f55ce65d",
+      "current_sha256": "a928ca73ad5e5848ab8273393ae257b23625549bbb571ddcff5e15f4f55ce65d",
+      "pinned_git_sha256": "a928ca73ad5e5848ab8273393ae257b23625549bbb571ddcff5e15f4f55ce65d",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/load/_validation.py",
+      "manifest_sha256": "0bbd6b48d5641dcd1054d5a423a6231bcd5fba8274e5447f16a3f55147f9a4f1",
+      "current_sha256": "0bbd6b48d5641dcd1054d5a423a6231bcd5fba8274e5447f16a3f55147f9a4f1",
+      "pinned_git_sha256": "0bbd6b48d5641dcd1054d5a423a6231bcd5fba8274e5447f16a3f55147f9a4f1",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/load/serializable.py",
+      "manifest_sha256": "444e63d0e4d6209653c5ed1717aa2598fc7fca29120aec683f800690d8067ab3",
+      "current_sha256": "444e63d0e4d6209653c5ed1717aa2598fc7fca29120aec683f800690d8067ab3",
+      "pinned_git_sha256": "444e63d0e4d6209653c5ed1717aa2598fc7fca29120aec683f800690d8067ab3",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/messages/base.py",
+      "manifest_sha256": "c99304892b711954f0662ceb309433dc0579ea8576c9a997a51cd90ed145e9f6",
+      "current_sha256": "c99304892b711954f0662ceb309433dc0579ea8576c9a997a51cd90ed145e9f6",
+      "pinned_git_sha256": "c99304892b711954f0662ceb309433dc0579ea8576c9a997a51cd90ed145e9f6",
+      "current_matches_manifest": true,
+      "current_matches_pinned_git": true,
+      "manifest_matches_pinned_git": true,
+      "passed": true
+    }
+  ],
+  "excerpt_hash_convention": "sha256('\\n'.join(source_text.splitlines()[start_line-1:end_line]).encode('utf-8')); do not strip terminal blank lines or add a terminal line separator.",
+  "source_excerpt_checks": [
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "start_line": 1,
+      "end_line": 31,
+      "expected_sha256": "6ad73c30fd3e8ca4bbed8e0795bed0412b08edc342466869c5cddd557ade95b8",
+      "actual_sha256": "6ad73c30fd3e8ca4bbed8e0795bed0412b08edc342466869c5cddd557ade95b8",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "start_line": 1,
+      "end_line": 50,
+      "expected_sha256": "ad3265eabe1a4c4067d5b74595b1021850cb82f036edc6157e5a37c8f3ae24bf",
+      "actual_sha256": "ad3265eabe1a4c4067d5b74595b1021850cb82f036edc6157e5a37c8f3ae24bf",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "start_line": 32,
+      "end_line": 111,
+      "expected_sha256": "26bbfc41396b0720933040ae19bacf9fd662272c8702a9da0218f1c28cefb55c",
+      "actual_sha256": "26bbfc41396b0720933040ae19bacf9fd662272c8702a9da0218f1c28cefb55c",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "start_line": 104,
+      "end_line": 154,
+      "expected_sha256": "67a64aabdef545bec8f9d3dafe4f9c5cc14032502b384472ca684304a9e835dc",
+      "actual_sha256": "67a64aabdef545bec8f9d3dafe4f9c5cc14032502b384472ca684304a9e835dc",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "start_line": 153,
+      "end_line": 232,
+      "expected_sha256": "aee18374cb97c356ad379e0aa7ad8b3879168f22d079c9a0da779e99813195be",
+      "actual_sha256": "aee18374cb97c356ad379e0aa7ad8b3879168f22d079c9a0da779e99813195be",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "start_line": 153,
+      "end_line": 252,
+      "expected_sha256": "e744ff51add87ba8bc5fa0aae8c42344dd5a5a9826e39924e901e86321e65543",
+      "actual_sha256": "e744ff51add87ba8bc5fa0aae8c42344dd5a5a9826e39924e901e86321e65543",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/caches.py",
+      "start_line": 201,
+      "end_line": 231,
+      "expected_sha256": "1eeccf3b8c4c73826412481955f5d46a5a3f79bf0134f87d87e9c5f552d415a5",
+      "actual_sha256": "1eeccf3b8c4c73826412481955f5d46a5a3f79bf0134f87d87e9c5f552d415a5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 182,
+      "end_line": 192,
+      "expected_sha256": "41954ac74d9421613bf22b73d42944bf82b5a816e58a428ab432543e6a58d183",
+      "actual_sha256": "41954ac74d9421613bf22b73d42944bf82b5a816e58a428ab432543e6a58d183",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 215,
+      "end_line": 254,
+      "expected_sha256": "c9963c2e5a1b5499d2e6cc5ef6bf6bc3e92aefa26d48961149b8fa85b063b7a4",
+      "actual_sha256": "c9963c2e5a1b5499d2e6cc5ef6bf6bc3e92aefa26d48961149b8fa85b063b7a4",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 215,
+      "end_line": 266,
+      "expected_sha256": "0c4903e4d4510582910ad0f5ef796398455b397e57d570b637733dca8140cb25",
+      "actual_sha256": "0c4903e4d4510582910ad0f5ef796398455b397e57d570b637733dca8140cb25",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 215,
+      "end_line": 267,
+      "expected_sha256": "9227e9aa9d7b5293d51f422ed9a5f199fece90168dc6970acd9135e434a4b107",
+      "actual_sha256": "9227e9aa9d7b5293d51f422ed9a5f199fece90168dc6970acd9135e434a4b107",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 221,
+      "end_line": 228,
+      "expected_sha256": "8731886269657ca26fd70bae6960b0fcd2c38fbe53caf26fe9706c086a0e2db5",
+      "actual_sha256": "8731886269657ca26fd70bae6960b0fcd2c38fbe53caf26fe9706c086a0e2db5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 221,
+      "end_line": 260,
+      "expected_sha256": "dba7f29d715b0167ea42d6c707ca8d35883fcc8f9456e5bfb6f2ef2d39fec0b0",
+      "actual_sha256": "dba7f29d715b0167ea42d6c707ca8d35883fcc8f9456e5bfb6f2ef2d39fec0b0",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 221,
+      "end_line": 267,
+      "expected_sha256": "269694fb24a3d962c68411f6346adbdb086256af5dbb49fa24e0f408ae4926c3",
+      "actual_sha256": "269694fb24a3d962c68411f6346adbdb086256af5dbb49fa24e0f408ae4926c3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 223,
+      "end_line": 230,
+      "expected_sha256": "ca5243acc5a783b3f7fc6e87ff253e2ae4951bd2d6c226dc30cc8968dc9cb599",
+      "actual_sha256": "ca5243acc5a783b3f7fc6e87ff253e2ae4951bd2d6c226dc30cc8968dc9cb599",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 245,
+      "end_line": 251,
+      "expected_sha256": "58d206420ce98bbef04520989f5974eed30da7f91f19da67074cdc43d51ebfc9",
+      "actual_sha256": "58d206420ce98bbef04520989f5974eed30da7f91f19da67074cdc43d51ebfc9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 254,
+      "end_line": 267,
+      "expected_sha256": "7e442d1ef3402d1004164b4c3ab239456c2ded5a1e6f7550ecfbd9cd62af6d0c",
+      "actual_sha256": "7e442d1ef3402d1004164b4c3ab239456c2ded5a1e6f7550ecfbd9cd62af6d0c",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 260,
+      "end_line": 267,
+      "expected_sha256": "fee74488913bcdc9341e125db0292a2912ce31bc6e1cbea044284d8a8f3f6b4f",
+      "actual_sha256": "fee74488913bcdc9341e125db0292a2912ce31bc6e1cbea044284d8a8f3f6b4f",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/chat_history.py",
+      "start_line": 261,
+      "end_line": 263,
+      "expected_sha256": "22166555c7c1f961033cf2054399f66e225beca2bfe7e35c120df1fa95ab0cc9",
+      "actual_sha256": "22166555c7c1f961033cf2054399f66e225beca2bfe7e35c120df1fa95ab0cc9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1446,
+      "end_line": 1485,
+      "expected_sha256": "ffbf26ac860bdc43dbfa6ab0cf17bf8259434f3d43bbd3df5e67e63cfaebc1e4",
+      "actual_sha256": "ffbf26ac860bdc43dbfa6ab0cf17bf8259434f3d43bbd3df5e67e63cfaebc1e4",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1446,
+      "end_line": 1495,
+      "expected_sha256": "2b76018d5839f819bc7a83e90d843eef9524698c119cdbc6d13844262f709648",
+      "actual_sha256": "2b76018d5839f819bc7a83e90d843eef9524698c119cdbc6d13844262f709648",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1448,
+      "end_line": 1450,
+      "expected_sha256": "afbe14386c8a04a47b6a7478596a8313cd1f350bcbf962c8d3bcb6cd37e22bb6",
+      "actual_sha256": "afbe14386c8a04a47b6a7478596a8313cd1f350bcbf962c8d3bcb6cd37e22bb6",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1448,
+      "end_line": 1465,
+      "expected_sha256": "bd28a4a6a13dfc924f6bfc6c87c38eb013170b0e58fa119f38fd4eec6ee638e6",
+      "actual_sha256": "bd28a4a6a13dfc924f6bfc6c87c38eb013170b0e58fa119f38fd4eec6ee638e6",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1448,
+      "end_line": 1487,
+      "expected_sha256": "89931cabea00cada1ef0159f991f012cd135bac2498aa80fdc22e286a57c395f",
+      "actual_sha256": "89931cabea00cada1ef0159f991f012cd135bac2498aa80fdc22e286a57c395f",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1933,
+      "end_line": 1972,
+      "expected_sha256": "4b8bdb34fa0ff3a456a10a3cbe0743865391cdaca3c64cbc7d26d9c87d4c9fc0",
+      "actual_sha256": "4b8bdb34fa0ff3a456a10a3cbe0743865391cdaca3c64cbc7d26d9c87d4c9fc0",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1935,
+      "end_line": 1984,
+      "expected_sha256": "df8adec8da90edc45a0230717182cbb85ec5fa0d647295a76a9b4ff54d70876d",
+      "actual_sha256": "df8adec8da90edc45a0230717182cbb85ec5fa0d647295a76a9b4ff54d70876d",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1942,
+      "end_line": 1978,
+      "expected_sha256": "9fe07a645e9d51165f4c1a9a483e2b3ad3a94048ed22c6d0c93ff1f7f5275c49",
+      "actual_sha256": "9fe07a645e9d51165f4c1a9a483e2b3ad3a94048ed22c6d0c93ff1f7f5275c49",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1950,
+      "end_line": 1975,
+      "expected_sha256": "9c462b2f8d9a0af3add652b57b7c7a5044136cb86a69b3f749e7d1a049b995a3",
+      "actual_sha256": "9c462b2f8d9a0af3add652b57b7c7a5044136cb86a69b3f749e7d1a049b995a3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1958,
+      "end_line": 1967,
+      "expected_sha256": "1f69eaef2589cebf0ebf7122ce251088f089df2b3220ba588d9673eab249678d",
+      "actual_sha256": "1f69eaef2589cebf0ebf7122ce251088f089df2b3220ba588d9673eab249678d",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1960,
+      "end_line": 1975,
+      "expected_sha256": "bcc91f48028d5d58ebed42f099056e5a1dc70e9061a2a6035413b59c1dc0baac",
+      "actual_sha256": "bcc91f48028d5d58ebed42f099056e5a1dc70e9061a2a6035413b59c1dc0baac",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1970,
+      "end_line": 2009,
+      "expected_sha256": "eb6c3a7f5fbef28eba8a525ed7806f75139e7116228cdd675be954e41ae5f129",
+      "actual_sha256": "eb6c3a7f5fbef28eba8a525ed7806f75139e7116228cdd675be954e41ae5f129",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 1975,
+      "end_line": 1985,
+      "expected_sha256": "f41de94dc1629268560b762e257fa9c509fb8da1c063650578d1125b57e77bf8",
+      "actual_sha256": "f41de94dc1629268560b762e257fa9c509fb8da1c063650578d1125b57e77bf8",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/language_models/chat_models.py",
+      "start_line": 2090,
+      "end_line": 2092,
+      "expected_sha256": "612ddfa1262549d09a08e69abeb6cae003b0ecfce4bbe54f5c6ad73ff6456d33",
+      "actual_sha256": "612ddfa1262549d09a08e69abeb6cae003b0ecfce4bbe54f5c6ad73ff6456d33",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/messages/tool.py",
+      "start_line": 26,
+      "end_line": 105,
+      "expected_sha256": "500a0892b85b09c217f583b7eefd4d7092cfb00a747134cf12ad3ebd0d3a4485",
+      "actual_sha256": "500a0892b85b09c217f583b7eefd4d7092cfb00a747134cf12ad3ebd0d3a4485",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/outputs/chat_result.py",
+      "start_line": 1,
+      "end_line": 39,
+      "expected_sha256": "e8a16200b0f2ae347b432d32c1c6b276c6ce2354fec139610cdca1dc4ebdbee9",
+      "actual_sha256": "e8a16200b0f2ae347b432d32c1c6b276c6ce2354fec139610cdca1dc4ebdbee9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 40,
+      "end_line": 139,
+      "expected_sha256": "38d303cf98783e51a4ddd1b39a9b71199de23c132cb154ab13a34119da0ec189",
+      "actual_sha256": "38d303cf98783e51a4ddd1b39a9b71199de23c132cb154ab13a34119da0ec189",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 67,
+      "end_line": 146,
+      "expected_sha256": "321ff8e326439cdb2cbb04d47324a88e586ee3ecda5463b651cfd22ab8b042e3",
+      "actual_sha256": "321ff8e326439cdb2cbb04d47324a88e586ee3ecda5463b651cfd22ab8b042e3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 118,
+      "end_line": 197,
+      "expected_sha256": "09dbd3ccb63dac3a6455b9130eff7fd0d865e180896a5a9d30f181f1373f7ae8",
+      "actual_sha256": "09dbd3ccb63dac3a6455b9130eff7fd0d865e180896a5a9d30f181f1373f7ae8",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 139,
+      "end_line": 218,
+      "expected_sha256": "76d09d2bfe9c13dd13b873b637c6884d11dd7ef7b2d4e7541aacd110cb3d69c9",
+      "actual_sha256": "76d09d2bfe9c13dd13b873b637c6884d11dd7ef7b2d4e7541aacd110cb3d69c9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 139,
+      "end_line": 253,
+      "expected_sha256": "78d33f9ade00f71fea8cbb68b6cb95b013c9cac1b5635f6e9a90fc09627bfef6",
+      "actual_sha256": "78d33f9ade00f71fea8cbb68b6cb95b013c9cac1b5635f6e9a90fc09627bfef6",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 146,
+      "end_line": 193,
+      "expected_sha256": "2c2ddd2dcb4bf0b884b1dcd16d32db9b6d41713d76cb8918895d7ea703be26fd",
+      "actual_sha256": "2c2ddd2dcb4bf0b884b1dcd16d32db9b6d41713d76cb8918895d7ea703be26fd",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 197,
+      "end_line": 254,
+      "expected_sha256": "5e293c152546926584707fb8ad13afc84af3ece44cd4b7aa2169d30e88f3e891",
+      "actual_sha256": "5e293c152546926584707fb8ad13afc84af3ece44cd4b7aa2169d30e88f3e891",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 211,
+      "end_line": 254,
+      "expected_sha256": "5fd4bdc00dc9edf859c6c64b56c1e1bc028d27daa265ec4c106bb093ccc416a9",
+      "actual_sha256": "5fd4bdc00dc9edf859c6c64b56c1e1bc028d27daa265ec4c106bb093ccc416a9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/rate_limiters.py",
+      "start_line": 212,
+      "end_line": 218,
+      "expected_sha256": "96e6c55c0948367e83b5851768494f94c19577e2e26fa13780f33d06fa4194c4",
+      "actual_sha256": "96e6c55c0948367e83b5851768494f94c19577e2e26fa13780f33d06fa4194c4",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "start_line": 40,
+      "end_line": 139,
+      "expected_sha256": "b2fb42f3409d1181c3ea6ef351a692d2b88984c97bac85c0b5ad2410d01a0720",
+      "actual_sha256": "b2fb42f3409d1181c3ea6ef351a692d2b88984c97bac85c0b5ad2410d01a0720",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "start_line": 53,
+      "end_line": 152,
+      "expected_sha256": "961bc5c93e5aa6719dc4695865ddc7df0cd0de5e8918d66f6125ad15d8e5b085",
+      "actual_sha256": "961bc5c93e5aa6719dc4695865ddc7df0cd0de5e8918d66f6125ad15d8e5b085",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "start_line": 55,
+      "end_line": 69,
+      "expected_sha256": "e9e5c70a5050e2350988f9ed115dbcc4d9055b25dd7c738b816a0ab0cbd34e2e",
+      "actual_sha256": "e9e5c70a5050e2350988f9ed115dbcc4d9055b25dd7c738b816a0ab0cbd34e2e",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "start_line": 55,
+      "end_line": 134,
+      "expected_sha256": "e60c72ae527ab25c5a2093189b441d2012eec10f91678bc2c7355e1c590d7999",
+      "actual_sha256": "e60c72ae527ab25c5a2093189b441d2012eec10f91678bc2c7355e1c590d7999",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "start_line": 238,
+      "end_line": 328,
+      "expected_sha256": "7d425c9e64d65892a7e3f3cac36503f86d266e3364b8f1ef86f8bedaa1f81fc8",
+      "actual_sha256": "7d425c9e64d65892a7e3f3cac36503f86d266e3364b8f1ef86f8bedaa1f81fc8",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "start_line": 251,
+      "end_line": 328,
+      "expected_sha256": "e52a5d221795dedf608f47e6d40f2aa0d09757bf8b337261b615b60115f3021a",
+      "actual_sha256": "e52a5d221795dedf608f47e6d40f2aa0d09757bf8b337261b615b60115f3021a",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/retrievers.py",
+      "start_line": 297,
+      "end_line": 328,
+      "expected_sha256": "69b40f3865bbcf4557e80cce63c7341357435159b26d1c12e85de56c7ef4b207",
+      "actual_sha256": "69b40f3865bbcf4557e80cce63c7341357435159b26d1c12e85de56c7ef4b207",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3094,
+      "end_line": 3098,
+      "expected_sha256": "72d1426b53d4654509dc2b12453e1f68972e592c4c8ab9f74e055e36da602b13",
+      "actual_sha256": "72d1426b53d4654509dc2b12453e1f68972e592c4c8ab9f74e055e36da602b13",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3094,
+      "end_line": 3133,
+      "expected_sha256": "8e5a0d0871d40d72b093c3ad498ff736bb1fdfb1cdace2428a417ad2b54f8453",
+      "actual_sha256": "8e5a0d0871d40d72b093c3ad498ff736bb1fdfb1cdace2428a417ad2b54f8453",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3165,
+      "end_line": 3204,
+      "expected_sha256": "15d76063ceca06a0cde9e8cf4d9cddaadff1f2fc271ca9ece7de0bb32b622ea3",
+      "actual_sha256": "15d76063ceca06a0cde9e8cf4d9cddaadff1f2fc271ca9ece7de0bb32b622ea3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3166,
+      "end_line": 3245,
+      "expected_sha256": "66441de92f042b2fef1ea8be1de4be900825aa73263ba7899174c5b38be99dda",
+      "actual_sha256": "66441de92f042b2fef1ea8be1de4be900825aa73263ba7899174c5b38be99dda",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3176,
+      "end_line": 3190,
+      "expected_sha256": "5537ebb252ad20981db50ced64435d454c1c0ffa34d97ce2b7a55e6d86fc41c5",
+      "actual_sha256": "5537ebb252ad20981db50ced64435d454c1c0ffa34d97ce2b7a55e6d86fc41c5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3177,
+      "end_line": 3190,
+      "expected_sha256": "47101fba14d780aa4b5256d5206ec77b39f0d331a36545e6c508405909f6287e",
+      "actual_sha256": "47101fba14d780aa4b5256d5206ec77b39f0d331a36545e6c508405909f6287e",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3178,
+      "end_line": 3186,
+      "expected_sha256": "d2aa46c50e3fc00095b10a9cf9deecabc7dd4959c81d0c6dd7d6a52895139640",
+      "actual_sha256": "d2aa46c50e3fc00095b10a9cf9deecabc7dd4959c81d0c6dd7d6a52895139640",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3235,
+      "end_line": 3260,
+      "expected_sha256": "6ed7987ca27d6507edd2446f08d3ff878ef3a200962cee5b4820c2a47dcac5fa",
+      "actual_sha256": "6ed7987ca27d6507edd2446f08d3ff878ef3a200962cee5b4820c2a47dcac5fa",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3238,
+      "end_line": 3257,
+      "expected_sha256": "766b9c331c4e4a82ef4eb468538ccf3c84e911256582555b7e27dd52ec4e3c93",
+      "actual_sha256": "766b9c331c4e4a82ef4eb468538ccf3c84e911256582555b7e27dd52ec4e3c93",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3238,
+      "end_line": 3260,
+      "expected_sha256": "7d5e2d83d213295d06168d8b74ca23d8bfc263242300b3d7acc57cea401732a7",
+      "actual_sha256": "7d5e2d83d213295d06168d8b74ca23d8bfc263242300b3d7acc57cea401732a7",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3238,
+      "end_line": 3317,
+      "expected_sha256": "99e1fb66252673a0436fc6444e0945842f9c248958b0143876b0c766ea378287",
+      "actual_sha256": "99e1fb66252673a0436fc6444e0945842f9c248958b0143876b0c766ea378287",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 3239,
+      "end_line": 3246,
+      "expected_sha256": "ecb2afe592304e3c4f8efa01688df26b74ac392db11753ff92940d62830fe922",
+      "actual_sha256": "ecb2afe592304e3c4f8efa01688df26b74ac392db11753ff92940d62830fe922",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/base.py",
+      "start_line": 4180,
+      "end_line": 4215,
+      "expected_sha256": "14fbe99febb77db0da6b05d654ca8b07ead6d3f4f5bdfe5c7dd3275040400871",
+      "actual_sha256": "14fbe99febb77db0da6b05d654ca8b07ead6d3f4f5bdfe5c7dd3275040400871",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 37,
+      "end_line": 116,
+      "expected_sha256": "1eb4c0b4b413d3cf73c6fdb37a2d7caf81eb708b7ea0a18d9546fb3ce3cb7a25",
+      "actual_sha256": "1eb4c0b4b413d3cf73c6fdb37a2d7caf81eb708b7ea0a18d9546fb3ce3cb7a25",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 75,
+      "end_line": 114,
+      "expected_sha256": "7816cbfb90acf56422d8f63adf03dc75436a362773fadc211b89ff60768ff79d",
+      "actual_sha256": "7816cbfb90acf56422d8f63adf03dc75436a362773fadc211b89ff60768ff79d",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 100,
+      "end_line": 199,
+      "expected_sha256": "4f87d936b92964f6dc2c01e93f61040fe60da842000ba6d5e032742b39840e27",
+      "actual_sha256": "4f87d936b92964f6dc2c01e93f61040fe60da842000ba6d5e032742b39840e27",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 175,
+      "end_line": 214,
+      "expected_sha256": "383cfb4679158b2c264943c5ee2f97e83644c41ab5197cb5ad44ecc1552a51ef",
+      "actual_sha256": "383cfb4679158b2c264943c5ee2f97e83644c41ab5197cb5ad44ecc1552a51ef",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 184,
+      "end_line": 212,
+      "expected_sha256": "c9a8cde3276537912ea27215b6f8b53c24cb05fca780ffc68efb30e5012d8826",
+      "actual_sha256": "c9a8cde3276537912ea27215b6f8b53c24cb05fca780ffc68efb30e5012d8826",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 185,
+      "end_line": 215,
+      "expected_sha256": "4c9f81dab19432d9a91d6658dad94ca209a776c41fec35af3fe0246471f7586f",
+      "actual_sha256": "4c9f81dab19432d9a91d6658dad94ca209a776c41fec35af3fe0246471f7586f",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 189,
+      "end_line": 228,
+      "expected_sha256": "e96f144f7c1468d94be29f6bd8e93d9710b92da173e48dac56f526085312684d",
+      "actual_sha256": "e96f144f7c1468d94be29f6bd8e93d9710b92da173e48dac56f526085312684d",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 199,
+      "end_line": 298,
+      "expected_sha256": "9d190e866d2fc09ce69879967ad32a187be03dffee83db82e2c6850bc88d883d",
+      "actual_sha256": "9d190e866d2fc09ce69879967ad32a187be03dffee83db82e2c6850bc88d883d",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/fallbacks.py",
+      "start_line": 228,
+      "end_line": 267,
+      "expected_sha256": "db128a04b22ff6c001f5d04781bc6978280e75bb7add1b1c72888830a245afb3",
+      "actual_sha256": "db128a04b22ff6c001f5d04781bc6978280e75bb7add1b1c72888830a245afb3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 40,
+      "end_line": 119,
+      "expected_sha256": "f32bca4a3661e3882b0be87d1013c163795e612f12101c32a13566a2d4312bb0",
+      "actual_sha256": "f32bca4a3661e3882b0be87d1013c163795e612f12101c32a13566a2d4312bb0",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 240,
+      "end_line": 279,
+      "expected_sha256": "60e52a2c73bd65dfaf267f55ece4e3bb3c963d1e4e0ac0df905b4e4be16f9bbd",
+      "actual_sha256": "60e52a2c73bd65dfaf267f55ece4e3bb3c963d1e4e0ac0df905b4e4be16f9bbd",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 280,
+      "end_line": 349,
+      "expected_sha256": "14977bfec525f2dfb12ab60ba1deb32ab4aa35a9200e7f5578a938f4e67d2001",
+      "actual_sha256": "14977bfec525f2dfb12ab60ba1deb32ab4aa35a9200e7f5578a938f4e67d2001",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 300,
+      "end_line": 339,
+      "expected_sha256": "50e31c33908f23c02ad4eef5f3b0941e17b0597a7705284a32f88a668c40f69e",
+      "actual_sha256": "50e31c33908f23c02ad4eef5f3b0941e17b0597a7705284a32f88a668c40f69e",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 350,
+      "end_line": 389,
+      "expected_sha256": "bed86b0f3294bed536571b08e8a4c586aafd6a8ceca58eef27d161f95ad46a14",
+      "actual_sha256": "bed86b0f3294bed536571b08e8a4c586aafd6a8ceca58eef27d161f95ad46a14",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 520,
+      "end_line": 579,
+      "expected_sha256": "0b8ed8f37791943fe27d470e853ad851f71ee553e6cb6bce417ec271b9d5e6e8",
+      "actual_sha256": "0b8ed8f37791943fe27d470e853ad851f71ee553e6cb6bce417ec271b9d5e6e8",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 522,
+      "end_line": 532,
+      "expected_sha256": "3b40b664268952ee57c6406b852b44a672d6bf19a150cd05bf50827ff7e3cac2",
+      "actual_sha256": "3b40b664268952ee57c6406b852b44a672d6bf19a150cd05bf50827ff7e3cac2",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/history.py",
+      "start_line": 548,
+      "end_line": 563,
+      "expected_sha256": "7dc40da6a4dc3e8d84a100f046033c7a68adcccf2a6a3fe21b18358707fc4252",
+      "actual_sha256": "7dc40da6a4dc3e8d84a100f046033c7a68adcccf2a6a3fe21b18358707fc4252",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "start_line": 205,
+      "end_line": 223,
+      "expected_sha256": "4a507f5daf0cd1019a106699a42c16a647a3992bac17079ec4eec0c38024c5fa",
+      "actual_sha256": "4a507f5daf0cd1019a106699a42c16a647a3992bac17079ec4eec0c38024c5fa",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "start_line": 205,
+      "end_line": 264,
+      "expected_sha256": "0b1e19eee37b76f42193b2cd264ad8849d2240b3247b8329a10aa8c3d89873f5",
+      "actual_sha256": "0b1e19eee37b76f42193b2cd264ad8849d2240b3247b8329a10aa8c3d89873f5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "start_line": 350,
+      "end_line": 449,
+      "expected_sha256": "fd4d066b1161ad4177b4d617a4e4062e8435ab0dd9d3888708e19adcab5be0ab",
+      "actual_sha256": "fd4d066b1161ad4177b4d617a4e4062e8435ab0dd9d3888708e19adcab5be0ab",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "start_line": 352,
+      "end_line": 431,
+      "expected_sha256": "abdfede0fff0b4b495529480a3f39fb408d1470bf5f4dafbb52df6f1954d7eb2",
+      "actual_sha256": "abdfede0fff0b4b495529480a3f39fb408d1470bf5f4dafbb52df6f1954d7eb2",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "start_line": 449,
+      "end_line": 548,
+      "expected_sha256": "0e031a4a1553dd7761ec8cfd9c5d5062bdbb662a8d701d3296c1d097dffd0c0c",
+      "actual_sha256": "0e031a4a1553dd7761ec8cfd9c5d5062bdbb662a8d701d3296c1d097dffd0c0c",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "start_line": 484,
+      "end_line": 511,
+      "expected_sha256": "a028bf206e071d7abc76e32dca5346568a1e954ae98cff93b45633a8bbb55a0a",
+      "actual_sha256": "a028bf206e071d7abc76e32dca5346568a1e954ae98cff93b45633a8bbb55a0a",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/runnables/passthrough.py",
+      "start_line": 496,
+      "end_line": 575,
+      "expected_sha256": "119d272fd8091e2a35de03d8f802ee2707048d0503eb91f6558f5f033a849a61",
+      "actual_sha256": "119d272fd8091e2a35de03d8f802ee2707048d0503eb91f6558f5f033a849a61",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1008,
+      "end_line": 1087,
+      "expected_sha256": "1a205432408b15250a1084f4943449d22d469f7b8e544107dba66adcb0420332",
+      "actual_sha256": "1a205432408b15250a1084f4943449d22d469f7b8e544107dba66adcb0420332",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1067,
+      "end_line": 1146,
+      "expected_sha256": "94ba749dc4dc6f118cd87c08cad4a9e933e482b7e4657abf7166246dc27a1ec4",
+      "actual_sha256": "94ba749dc4dc6f118cd87c08cad4a9e933e482b7e4657abf7166246dc27a1ec4",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1085,
+      "end_line": 1115,
+      "expected_sha256": "5da75d8fae37a81fa0331ba4abdff30467913d74e51f8a93ff39bd6662c7af58",
+      "actual_sha256": "5da75d8fae37a81fa0331ba4abdff30467913d74e51f8a93ff39bd6662c7af58",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1087,
+      "end_line": 1166,
+      "expected_sha256": "d9dd1e1df3b5e31e9f2500b4d96e049363c3ff719f623fee525e7d256517e204",
+      "actual_sha256": "d9dd1e1df3b5e31e9f2500b4d96e049363c3ff719f623fee525e7d256517e204",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1100,
+      "end_line": 1199,
+      "expected_sha256": "40989c9c424462fce38043fe3bd09490d8bc93babcbf7d95c09a3a9b3ece2a7c",
+      "actual_sha256": "40989c9c424462fce38043fe3bd09490d8bc93babcbf7d95c09a3a9b3ece2a7c",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1107,
+      "end_line": 1206,
+      "expected_sha256": "bd6f193e86bc8bb7a80d4a377f4220468672a962460efc0c6ed13b5c722f2ed0",
+      "actual_sha256": "bd6f193e86bc8bb7a80d4a377f4220468672a962460efc0c6ed13b5c722f2ed0",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1116,
+      "end_line": 1136,
+      "expected_sha256": "6aa51219bbcb04798751b74b7fe2fc3680b96262b9e37179b1003aef6ba324d8",
+      "actual_sha256": "6aa51219bbcb04798751b74b7fe2fc3680b96262b9e37179b1003aef6ba324d8",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1131,
+      "end_line": 1136,
+      "expected_sha256": "1878c7a98dfdb2e5a4c7335b96370d28af29192fc53511e68583922f531302c2",
+      "actual_sha256": "1878c7a98dfdb2e5a4c7335b96370d28af29192fc53511e68583922f531302c2",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1206,
+      "end_line": 1285,
+      "expected_sha256": "0b39d08aecc1d208cb4e5440d888d0ad2f769d6f6fc1b89b39a256dd9044bdfc",
+      "actual_sha256": "0b39d08aecc1d208cb4e5440d888d0ad2f769d6f6fc1b89b39a256dd9044bdfc",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1280,
+      "end_line": 1339,
+      "expected_sha256": "5f26a225195798e3aec8df055c1338fea57e5c1fad8dfcdbee3d48d2e21df5f6",
+      "actual_sha256": "5f26a225195798e3aec8df055c1338fea57e5c1fad8dfcdbee3d48d2e21df5f6",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1280,
+      "end_line": 1359,
+      "expected_sha256": "9d521084e927d8147d0e7e0ce7f05f226d57e7f1b5bb992df59264b7647119c3",
+      "actual_sha256": "9d521084e927d8147d0e7e0ce7f05f226d57e7f1b5bb992df59264b7647119c3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1282,
+      "end_line": 1352,
+      "expected_sha256": "3bedca2d2838873fb7bb3532b12918651f6dbd0a569a74dd3281944f8ba30e31",
+      "actual_sha256": "3bedca2d2838873fb7bb3532b12918651f6dbd0a569a74dd3281944f8ba30e31",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1339,
+      "end_line": 1368,
+      "expected_sha256": "8b13d24f63e110161d65410abfd51aee44e9b534ea148e72f5818ff7faa1c04b",
+      "actual_sha256": "8b13d24f63e110161d65410abfd51aee44e9b534ea148e72f5818ff7faa1c04b",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1389,
+      "end_line": 1396,
+      "expected_sha256": "59cda1425f1c2a3d1e944d63997a231fa52df34de7d2df76e9b70612fe91494a",
+      "actual_sha256": "59cda1425f1c2a3d1e944d63997a231fa52df34de7d2df76e9b70612fe91494a",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1389,
+      "end_line": 1448,
+      "expected_sha256": "a6190cd29364a19a782129b44491b0bdd8e5132b2eebf1ca7d7f7391975d827e",
+      "actual_sha256": "a6190cd29364a19a782129b44491b0bdd8e5132b2eebf1ca7d7f7391975d827e",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/base.py",
+      "start_line": 1391,
+      "end_line": 1427,
+      "expected_sha256": "5c191f3909343063b0350d48fe4dfefe883a33128ecef46354203a79d824c941",
+      "actual_sha256": "5c191f3909343063b0350d48fe4dfefe883a33128ecef46354203a79d824c941",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/retriever.py",
+      "start_line": 1,
+      "end_line": 94,
+      "expected_sha256": "5618fa37a8bd09cc01395139b814eb3d7a46f86e95d8be2cc61d59dc7d657612",
+      "actual_sha256": "5618fa37a8bd09cc01395139b814eb3d7a46f86e95d8be2cc61d59dc7d657612",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/retriever.py",
+      "start_line": 31,
+      "end_line": 94,
+      "expected_sha256": "74fe6c6754606da0ec10072dd4b6b9fd4b5c27f1d1e02dcb03f03613bb941497",
+      "actual_sha256": "74fe6c6754606da0ec10072dd4b6b9fd4b5c27f1d1e02dcb03f03613bb941497",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/retriever.py",
+      "start_line": 63,
+      "end_line": 94,
+      "expected_sha256": "1252dae6490e2c7c7ae545f4e3d22feda511f36b39d89d06d5203d1d2245c4cd",
+      "actual_sha256": "1252dae6490e2c7c7ae545f4e3d22feda511f36b39d89d06d5203d1d2245c4cd",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/structured.py",
+      "start_line": 85,
+      "end_line": 115,
+      "expected_sha256": "1e5dd15c81afb53a4b50321d6c720e5e261491a109792eddef486e9ffcc99f3d",
+      "actual_sha256": "1e5dd15c81afb53a4b50321d6c720e5e261491a109792eddef486e9ffcc99f3d",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/structured.py",
+      "start_line": 91,
+      "end_line": 130,
+      "expected_sha256": "7a8321a394350ed2debebc2a92340e104efe8f99d17aeb5d0a0c057997e39a6b",
+      "actual_sha256": "7a8321a394350ed2debebc2a92340e104efe8f99d17aeb5d0a0c057997e39a6b",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/structured.py",
+      "start_line": 93,
+      "end_line": 112,
+      "expected_sha256": "79d1336c914285a4684b4b7f3856704fa437b60199857e455ae5a9e00aa61cd0",
+      "actual_sha256": "79d1336c914285a4684b4b7f3856704fa437b60199857e455ae5a9e00aa61cd0",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/structured.py",
+      "start_line": 93,
+      "end_line": 172,
+      "expected_sha256": "c5b01fb1de2baf2530b6d68d52522ae7c9e6160a4e8bfc12be31154e2370c31f",
+      "actual_sha256": "c5b01fb1de2baf2530b6d68d52522ae7c9e6160a4e8bfc12be31154e2370c31f",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/tools/structured.py",
+      "start_line": 147,
+      "end_line": 154,
+      "expected_sha256": "0811300d4fd33d38489fba686c8318582dab3a4ce27f021a0c43430c6407b1dd",
+      "actual_sha256": "0811300d4fd33d38489fba686c8318582dab3a4ce27f021a0c43430c6407b1dd",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 42,
+      "end_line": 81,
+      "expected_sha256": "ab3c9e8ef0d4b8a93b2f04c061b40d360746734473d98e41639e2c13d2f82b06",
+      "actual_sha256": "ab3c9e8ef0d4b8a93b2f04c061b40d360746734473d98e41639e2c13d2f82b06",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 44,
+      "end_line": 123,
+      "expected_sha256": "059d9456af89c5cee38f21846e7dbdc239a06da081e7811c633ed6b0296895db",
+      "actual_sha256": "059d9456af89c5cee38f21846e7dbdc239a06da081e7811c633ed6b0296895db",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 47,
+      "end_line": 86,
+      "expected_sha256": "0921f98d5d6b5dfea011f3b40efaf63e8bd0a3cb13f9633c1b37b4dacfd0bf40",
+      "actual_sha256": "0921f98d5d6b5dfea011f3b40efaf63e8bd0a3cb13f9633c1b37b4dacfd0bf40",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 47,
+      "end_line": 98,
+      "expected_sha256": "ebb70b004d42b4a1e1113d3ec6e7bfe0de7f81a5cf3dc4bb130caaf83e39f4e2",
+      "actual_sha256": "ebb70b004d42b4a1e1113d3ec6e7bfe0de7f81a5cf3dc4bb130caaf83e39f4e2",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 75,
+      "end_line": 105,
+      "expected_sha256": "e6ae4853359bfd0c9edf46b3c90c4f2f1083631437c54573594229b827d420d5",
+      "actual_sha256": "e6ae4853359bfd0c9edf46b3c90c4f2f1083631437c54573594229b827d420d5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 188,
+      "end_line": 267,
+      "expected_sha256": "2c18f956154ab779f5406160fd84291ad8698281d8edc7ad0782309896c43c8a",
+      "actual_sha256": "2c18f956154ab779f5406160fd84291ad8698281d8edc7ad0782309896c43c8a",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 332,
+      "end_line": 411,
+      "expected_sha256": "a900375c913a5f0b3f0a0fe8df22e1ddbdc3b279cf87690bb9ada9af4e0a4a83",
+      "actual_sha256": "a900375c913a5f0b3f0a0fe8df22e1ddbdc3b279cf87690bb9ada9af4e0a4a83",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 908,
+      "end_line": 964,
+      "expected_sha256": "08a2067c78c8f76850568b1fc64adebb5d5d3b5045faec680624de530064a9a3",
+      "actual_sha256": "08a2067c78c8f76850568b1fc64adebb5d5d3b5045faec680624de530064a9a3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 963,
+      "end_line": 1000,
+      "expected_sha256": "a7820921b6a88dc2d3b860c8f24b1eaa1a91a2a6ff6e931cc7f80c189645c772",
+      "actual_sha256": "a7820921b6a88dc2d3b860c8f24b1eaa1a91a2a6ff6e931cc7f80c189645c772",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 963,
+      "end_line": 1002,
+      "expected_sha256": "64238ea5de4ec239e7cdd7db2f5545af66778d0fbd8cf5c177f30619c2c82a7b",
+      "actual_sha256": "64238ea5de4ec239e7cdd7db2f5545af66778d0fbd8cf5c177f30619c2c82a7b",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 963,
+      "end_line": 1022,
+      "expected_sha256": "41abde11c0a50d2d4947fe14cd134e99550e2947709e8da7ae62d8349c9150a4",
+      "actual_sha256": "41abde11c0a50d2d4947fe14cd134e99550e2947709e8da7ae62d8349c9150a4",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 963,
+      "end_line": 1062,
+      "expected_sha256": "d172ae446e8aee30aa79e5130d7c0606921fb8aaa850bbcfc769b6dd68869512",
+      "actual_sha256": "d172ae446e8aee30aa79e5130d7c0606921fb8aaa850bbcfc769b6dd68869512",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 965,
+      "end_line": 1044,
+      "expected_sha256": "774337c45b30a0f3346ae6e370d209805dc076eed6c818a4dd09913f2dcf29a5",
+      "actual_sha256": "774337c45b30a0f3346ae6e370d209805dc076eed6c818a4dd09913f2dcf29a5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 1039,
+      "end_line": 1062,
+      "expected_sha256": "c6afd2286c6ba9f1019c814cb2b3e4fcb886844314407b09730a43a05e5b3150",
+      "actual_sha256": "c6afd2286c6ba9f1019c814cb2b3e4fcb886844314407b09730a43a05e5b3150",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 1039,
+      "end_line": 1063,
+      "expected_sha256": "8b4018d1a3abe486139ff07cf16cf66773dc839d5a3d8a720b6cf1520bdc95f0",
+      "actual_sha256": "8b4018d1a3abe486139ff07cf16cf66773dc839d5a3d8a720b6cf1520bdc95f0",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 1039,
+      "end_line": 1068,
+      "expected_sha256": "a57b6c73e77cafa55d2145ead5d4a4e6578f336de860fd8fc9fedbf56bdf8804",
+      "actual_sha256": "a57b6c73e77cafa55d2145ead5d4a4e6578f336de860fd8fc9fedbf56bdf8804",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 1040,
+      "end_line": 1059,
+      "expected_sha256": "547a871b6e79e1eb2d9901aca894c52d70dcbf1798a31d0215a04822642ae5e9",
+      "actual_sha256": "547a871b6e79e1eb2d9901aca894c52d70dcbf1798a31d0215a04822642ae5e9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 1040,
+      "end_line": 1062,
+      "expected_sha256": "75fb234bf92ba4a0692f3859a870d8f7b66c527d537d3831d3db884ce42b07be",
+      "actual_sha256": "75fb234bf92ba4a0692f3859a870d8f7b66c527d537d3831d3db884ce42b07be",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 1041,
+      "end_line": 1059,
+      "expected_sha256": "f4228b47a26d92c05609fc14cc55fd0f54bd499795b6ee50a2809d828a431eac",
+      "actual_sha256": "f4228b47a26d92c05609fc14cc55fd0f54bd499795b6ee50a2809d828a431eac",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/base.py",
+      "start_line": 1050,
+      "end_line": 1089,
+      "expected_sha256": "1cc821f13091dc11c738e4345f538bb8f515574f54cdc83dcef98a41558b62f9",
+      "actual_sha256": "1cc821f13091dc11c738e4345f538bb8f515574f54cdc83dcef98a41558b62f9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/in_memory.py",
+      "start_line": 140,
+      "end_line": 239,
+      "expected_sha256": "8a063daa19446e5a06ffc65e027e03ad4aa553079f2fd6f25514843bae153188",
+      "actual_sha256": "8a063daa19446e5a06ffc65e027e03ad4aa553079f2fd6f25514843bae153188",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/langchain_core/vectorstores/in_memory.py",
+      "start_line": 188,
+      "end_line": 221,
+      "expected_sha256": "8b367886369c0aa7957ce3754aa4f3a79c0e4b8ce6716edbdc2a2c6b3291ad2e",
+      "actual_sha256": "8b367886369c0aa7957ce3754aa4f3a79c0e4b8ce6716edbdc2a2c6b3291ad2e",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/caches/test_in_memory_cache.py",
+      "start_line": 1,
+      "end_line": 100,
+      "expected_sha256": "26e35a5365d35a83bbc5114d8fa1e807debc528e1cbfff8886f47fbd43d0e1c5",
+      "actual_sha256": "26e35a5365d35a83bbc5114d8fa1e807debc528e1cbfff8886f47fbd43d0e1c5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/language_models/chat_models/test_cache.py",
+      "start_line": 1,
+      "end_line": 76,
+      "expected_sha256": "d65740a46e7bf02a87c95252cb9884707a60da38aa56989991123bad3e8c7937",
+      "actual_sha256": "d65740a46e7bf02a87c95252cb9884707a60da38aa56989991123bad3e8c7937",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/language_models/chat_models/test_cache.py",
+      "start_line": 464,
+      "end_line": 539,
+      "expected_sha256": "ee4885a8846bf40c89130893cc6752ae8c8ce85e19f1d61212d98838bc808d88",
+      "actual_sha256": "ee4885a8846bf40c89130893cc6752ae8c8ce85e19f1d61212d98838bc808d88",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/rate_limiters/test_in_memory_rate_limiter.py",
+      "start_line": 1,
+      "end_line": 40,
+      "expected_sha256": "e3cd50cf45100a001c9600b5eb42012cafc7db1011bed6ae0585d207ef82d959",
+      "actual_sha256": "e3cd50cf45100a001c9600b5eb42012cafc7db1011bed6ae0585d207ef82d959",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/rate_limiters/test_in_memory_rate_limiter.py",
+      "start_line": 1,
+      "end_line": 74,
+      "expected_sha256": "cbe3128e0593838e012c6d583ba1ad0a43c18da49251fd8df2f650a1922020e0",
+      "actual_sha256": "cbe3128e0593838e012c6d583ba1ad0a43c18da49251fd8df2f650a1922020e0",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/rate_limiters/test_in_memory_rate_limiter.py",
+      "start_line": 19,
+      "end_line": 26,
+      "expected_sha256": "104a129ebca99ebb4e6af3f1c36cdc797c18295adce2e32718b112b0fda4e6c9",
+      "actual_sha256": "104a129ebca99ebb4e6af3f1c36cdc797c18295adce2e32718b112b0fda4e6c9",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/rate_limiters/test_in_memory_rate_limiter.py",
+      "start_line": 40,
+      "end_line": 109,
+      "expected_sha256": "81241f9a784758f23e78cfbe8cbd04235917945d1ccd6dd7c0172ce144423c91",
+      "actual_sha256": "81241f9a784758f23e78cfbe8cbd04235917945d1ccd6dd7c0172ce144423c91",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/runnables/test_runnable_events_v1.py",
+      "start_line": 1967,
+      "end_line": 2044,
+      "expected_sha256": "a223907038a2a6e8554a4ca950152c6e8cbde66c723dc38cf3efb2b89247aad4",
+      "actual_sha256": "a223907038a2a6e8554a4ca950152c6e8cbde66c723dc38cf3efb2b89247aad4",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/core/tests/unit_tests/runnables/test_runnable_events_v2.py",
+      "start_line": 1913,
+      "end_line": 1992,
+      "expected_sha256": "aa8e3c82fb1b9de8ed152d4eec8ab1794177635666a5b61a7fa34455fa1ba95d",
+      "actual_sha256": "aa8e3c82fb1b9de8ed152d4eec8ab1794177635666a5b61a7fa34455fa1ba95d",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/langchain/tests/unit_tests/indexes/test_indexing.py",
+      "start_line": 40,
+      "end_line": 119,
+      "expected_sha256": "f0bde002584d07a6cc6630e4fa2a0b7d2a8b82de6a0ef486eb4d9d0111a75b7e",
+      "actual_sha256": "f0bde002584d07a6cc6630e4fa2a0b7d2a8b82de6a0ef486eb4d9d0111a75b7e",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/langchain_v1/langchain/agents/middleware/tool_error.py",
+      "start_line": 37,
+      "end_line": 116,
+      "expected_sha256": "2c7e17528df592d6d7bc358d3f6c9c6ef6c6f27af4e381458bda82f33e56619c",
+      "actual_sha256": "2c7e17528df592d6d7bc358d3f6c9c6ef6c6f27af4e381458bda82f33e56619c",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "libs/langchain_v1/tests/unit_tests/agents/test_injected_runtime_create_agent.py",
+      "start_line": 432,
+      "end_line": 482,
+      "expected_sha256": "8d8aed249c423e186d6975205c2289c0ab525d9e528a8e530d321c457b9c9ef5",
+      "actual_sha256": "8d8aed249c423e186d6975205c2289c0ab525d9e528a8e530d321c457b9c9ef5",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/.claims/concepts/chat-models.json",
+      "start_line": 73,
+      "end_line": 152,
+      "expected_sha256": "81b57c944e3a49e8830c7ff481a9c3b308e3445fbe9259665bf5e197927f0fa3",
+      "actual_sha256": "81b57c944e3a49e8830c7ff481a9c3b308e3445fbe9259665bf5e197927f0fa3",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/.claims/reference/chat-models.json",
+      "start_line": 1,
+      "end_line": 80,
+      "expected_sha256": "9d432c45ef663fc537814a9070ca5a68dbc933d22c515c900aa15c6113c62bda",
+      "actual_sha256": "9d432c45ef663fc537814a9070ca5a68dbc933d22c515c900aa15c6113c62bda",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/concepts/tools.md",
+      "start_line": 505,
+      "end_line": 584,
+      "expected_sha256": "8b267fb648364e9d9e9fa6c78343fa023c054cd4ee6cc492a88599b5e4b74f17",
+      "actual_sha256": "8b267fb648364e9d9e9fa6c78343fa023c054cd4ee6cc492a88599b5e4b74f17",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    },
+    {
+      "path": "openwiki/tools.md",
+      "start_line": 145,
+      "end_line": 224,
+      "expected_sha256": "84e19e9b89c4f612c51d8e9ca3935f2445e7d5ffea374ad0693d003e5ab5924a",
+      "actual_sha256": "84e19e9b89c4f612c51d8e9ca3935f2445e7d5ffea374ad0693d003e5ab5924a",
+      "range_valid": true,
+      "citation_commit_matches_pinned": true,
+      "passed": true
+    }
+  ],
+  "unique_case_key_convention": "sha256(json.dumps({question,reference_answer,gold_evidence,repo_commit,generated_answer,citations,citation_claims},sort_keys=True,ensure_ascii=False,separators=(',',':')).encode('utf-8'))",
+  "question_key_convention": "First 12 hex characters of SHA256 of canonical JSON encoding of the question string, using the same canonical JSON settings.",
+  "work_group_checks": [
+    {
+      "group": "a",
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/ai-review/work/group-a.jsonl",
+      "sha256": "033de13c46220e564da32edf92ab08105c7717c1b7b3a65aaa2a3949da472fc5",
+      "expected_unique_cases": 36,
+      "actual_unique_cases": 36,
+      "expected_item_count": 68,
+      "actual_item_count": 68,
+      "question_key_membership_matches_assignment": true,
+      "passed": true,
+      "manifest_sha256": "033de13c46220e564da32edf92ab08105c7717c1b7b3a65aaa2a3949da472fc5",
+      "current_sha256": "033de13c46220e564da32edf92ab08105c7717c1b7b3a65aaa2a3949da472fc5",
+      "hash_matches_manifest": true
+    },
+    {
+      "group": "b",
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/ai-review/work/group-b.jsonl",
+      "sha256": "0e1155f21bb23fa5478825fa7a00d6eede04808e508461ebe5a2dd3bd0ee97ab",
+      "expected_unique_cases": 34,
+      "actual_unique_cases": 34,
+      "expected_item_count": 61,
+      "actual_item_count": 61,
+      "question_key_membership_matches_assignment": true,
+      "passed": true,
+      "manifest_sha256": "0e1155f21bb23fa5478825fa7a00d6eede04808e508461ebe5a2dd3bd0ee97ab",
+      "current_sha256": "0e1155f21bb23fa5478825fa7a00d6eede04808e508461ebe5a2dd3bd0ee97ab",
+      "hash_matches_manifest": true
+    },
+    {
+      "group": "c",
+      "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/ai-review/work/group-c.jsonl",
+      "sha256": "af98f996b1f62e48c047f84636a5c2dcd4e0ea271da3da7aef5920465fabf119",
+      "expected_unique_cases": 35,
+      "actual_unique_cases": 35,
+      "expected_item_count": 73,
+      "actual_item_count": 73,
+      "question_key_membership_matches_assignment": true,
+      "passed": true,
+      "manifest_sha256": "af98f996b1f62e48c047f84636a5c2dcd4e0ea271da3da7aef5920465fabf119",
+      "current_sha256": "af98f996b1f62e48c047f84636a5c2dcd4e0ea271da3da7aef5920465fabf119",
+      "hash_matches_manifest": true
+    }
+  ],
+  "saved_binding_validation": {
+    "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/ai-review/binding-validation.json",
+    "sha256": "415ae19c60c9eea37b0011ea6d1f7b51b77b7e9c607a14f29818885ffea8a1b9",
+    "validated_outputs": 202,
+    "every_answer_covered_exactly_once": true,
+    "condition_labels_exposed_to_graders": false,
+    "raw_files_unchanged_as_reported": true,
+    "raw_sha256_matches_manifest": true,
+    "verification_limit": "This audit checks saved binding-validation report consistency only. It does not read or independently rehash any raw file."
+  },
+  "original_assessment_preservation": {
+    "path": "experiments/reviews/adaptive-cascade-heldout-20261119-001/ai-review/assessments/group-a.jsonl",
+    "metadata_before": {
+      "size": 49724,
+      "mtime_ns": 1795183222746856257,
+      "ctime_ns": 1795183222746856257,
+      "birthtime": 1795183222.7467422
+    },
+    "metadata_after": {
+      "size": 49724,
+      "mtime_ns": 1795183222746856257,
+      "ctime_ns": 1795183222746856257,
+      "birthtime": 1795183222.7467422
+    },
+    "unchanged": true,
+    "assessment_contents_read_for_audit": false
+  },
+  "access_and_activity_status": {
+    "audit_is_ai_evaluation": true,
+    "human_review_claimed": false,
+    "raw_files_read": false,
+    "condition_labels_inspected": false,
+    "aggregates_read": false,
+    "preflight_read": false,
+    "analysis_outputs_read": false,
+    "paper_phase7_held_out_run_read": false,
+    "other_agent_assessments_read": false,
+    "provider_calls_made": false,
+    "answer_scores_computed_or_changed": false,
+    "experimental_results_or_comparisons_computed": false,
+    "original_assessment_edited": false,
+    "frozen_criteria_modified_or_copied": false,
+    "packets_or_template_modified": false,
+    "only_output_written": "experiments/reviews/adaptive-cascade-heldout-20261119-001/ai-review/input-integrity-audit.json"
+  },
+  "normalization_correction": "The earlier group-a warnings for vectorstores/base.py 908–964 and 963–1022 arose from stripping terminal blank lines. Both pass this audit under the required exact join convention. Original assessment is preserved for root adjudication.",
+  "audit_revision_note": "Initial audit calculation used a hardcoded expected source-file count of 28 after the manifest had expanded to 32. All 32 source hashes already passed; this revision adopts the root-authorized current manifest count and adds comparisons against its three work-file hashes. No source-hash failure was found.",
+  "updated_at": "2026-11-20T09:05:34.548544-05:00"
+}

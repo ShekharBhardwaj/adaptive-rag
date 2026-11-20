@@ -1,0 +1,2 @@
+{"stage": "anthropic_wrapup_retry_after_ignored_instruction", "request_number": 2, "message": {"role": "assistant", "content": null, "tool_calls": [{"id": "simulated-ignored-instruction", "type": "function", "function": {"name": "read_file", "arguments": "{\"path\": \"synthetic.py\"}"}}]}}
+{"stage": "anthropic_wrapup_retry_after_prose", "request_number": 2, "message": {"role": "assistant", "content": "Based on my reading, SyntheticWidget.value is defined in synthetic.py."}}

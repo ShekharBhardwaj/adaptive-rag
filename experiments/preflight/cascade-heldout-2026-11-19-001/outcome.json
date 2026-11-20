@@ -1,0 +1,170 @@
+{
+  "recorded_at": "2026-11-19T22:07:34.528722+00:00",
+  "run_id": "eb914cf0-4437-4d25-bfd3-2b4253f990a6",
+  "split": "held_out",
+  "status": "completed_with_errors",
+  "execution_coverage": "225/225 planned jobs have unique durable outcomes; failures retained",
+  "planned_jobs": 225,
+  "observed_jobs": 225,
+  "result_counts": {
+    "budget_exhausted": 15,
+    "completed": 202,
+    "error": 8
+  },
+  "result_counts_by_condition": {
+    "adaptive_cascade": {
+      "completed": 45
+    },
+    "agentic": {
+      "error": 6,
+      "budget_exhausted": 15,
+      "completed": 24
+    },
+    "agentic_wrapup": {
+      "completed": 43,
+      "error": 2
+    },
+    "no_retrieval": {
+      "completed": 45
+    },
+    "vector": {
+      "completed": 45
+    }
+  },
+  "terminal_failure_reasons": {
+    "agentic": {
+      "final response must select unique available evidence_ids within top_k": 6,
+      "token budget cannot admit the next prompt and reserved output": 11,
+      "model-call budget exhausted": 3,
+      "provider did not report complete token usage; further calls are disabled": 1
+    },
+    "agentic_wrapup": {
+      "invalid answer response: Expecting value: line 1 column 1 (char 0)": 2
+    }
+  },
+  "model_calls": 1179,
+  "model_call_counts": {
+    "Anthropic chat": 1089,
+    "OpenRouter Qwen query embeddings": 90
+  },
+  "elapsed_seconds_monotonic": 6877.900165291969,
+  "provider_cost_estimate": {
+    "estimated_usd": null,
+    "known_subtotal_usd": 8.375972039999992,
+    "unknown_calls": 1,
+    "note": "Dated price estimates of reported usage; total unknown. Separate reservations are admission charges, not bills."
+  },
+  "budget_accounting": {
+    "estimated_cost_usd": 8.396843039999993,
+    "interpretation": "Used-or-reserved admission estimates; not actual billed usage.",
+    "known_cost_subtotal_usd": 8.396843039999993,
+    "policy": "reserve",
+    "reserved_unknown_calls": 1,
+    "unknown_cost_jobs": 0,
+    "unreserved_unknown_calls": 0,
+    "usage": {
+      "input_tokens": 7470345,
+      "output_tokens": 186303
+    }
+  },
+  "synthetic_preflight": {
+    "provider_calls": 9,
+    "estimated_cost_usd": 0.01846328
+  },
+  "known_run_plus_preflight_estimate_usd": 8.394435319999992,
+  "unknown_usage_jobs": [
+    {
+      "condition": "agentic",
+      "repetition": 0,
+      "cause": "ConnectTimeout"
+    }
+  ],
+  "model_call_errors": {
+    "ConnectTimeout": 1
+  },
+  "index_rebuilt": false,
+  "automatic_retries": 0,
+  "automatic_reruns": 0,
+  "load_run": {
+    "partial": true,
+    "issues": [
+      "status.json: run status is 'completed_with_errors'; results are partial"
+    ],
+    "interpretation": "Conservative flag from completed_with_errors; no missing planned jobs."
+  },
+  "manifest_equals_frozen_plan": true,
+  "pacing_audit": {
+    "anthropic_chat": {
+      "requests": 1089,
+      "min_adjacent_gap_seconds": 5.913414,
+      "gaps_below_6_seconds": 5,
+      "smallest_gaps_seconds": [
+        5.913414,
+        5.992781,
+        5.996775
+      ],
+      "rolling_60_second_peak_starts": 11
+    },
+    "openrouter_embedding": {
+      "requests": 90,
+      "min_adjacent_gap_seconds": 6.005201,
+      "gaps_below_6_seconds": 0,
+      "smallest_gaps_seconds": [
+        6.005201,
+        6.010288,
+        6.010338
+      ],
+      "rolling_60_second_peak_starts": 7
+    },
+    "note": "Wall-clock started_at values recorded per request; monotonic admission times are not persisted."
+  },
+  "review": {
+    "available_answer_texts": 202,
+    "packets": 14,
+    "ratings_completed": 0,
+    "score_file_present": false
+  },
+  "next_gate": "Blind scoring under the frozen protocol, score freeze, then the three confirmatory comparisons",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "configuration_file_sha256": "9db82a44e5445fecc578bbad69f848b75a0cc42089c2f684afd4cc59ed9b10f6",
+  "configuration_sha256": "3f155d45c521cb3dcf246f0796faca047cff992c0805e1a0645ba3e12caedde2",
+  "framework_source_sha256": "b59ad0bce4ec89471d3bc792ed26d2e83ea08aaeb91436851f0ca662684b813b",
+  "protocol_sha256": "f5892af99dd4551f8703b9a67bcb32438d96a28934a3812d9d82705a7becf30b",
+  "raw_file_sha256": {
+    "benchmark.jsonl": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+    "configuration.json": "f7804727670eecffe72fb74061954c40046cbec1291c4f7ebef2d47458c3cd7c",
+    "corpus-manifest.json": "13560490b81af9b4a2874ba60b56635c90f8888dc4b4d051da2fe5bcd137f62f",
+    "events.jsonl": "aa55da99c8c03c76955425d33a0fffe5637c4a6e54fc819d674b4829f6723455",
+    "index-manifest.json": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11",
+    "manifest.json": "bf376a1b54551d04921a7851642d9be79c2b64759380b9844156da5265406864",
+    "price-schedule.json": "03e2a87b96af12e0e250e54e8e0342c338d1aa728dfb1c903b775fd18b0f8eed",
+    "results.jsonl": "7f05e44e9d2238f49f8ab274805398bfc73d3d0191a788949357527cbcf48fe0",
+    "status.json": "7a80245481b0d0b9564d0a162e28794d0ea6eedbfb2c03a2e4579fa63550ea27",
+    "validation.json": "e225b96c18788d8bc78ec2b8025de7aefe945a62caba481ddd91f89bbc3f1a76"
+  },
+  "derived_artifacts": {
+    "aggregate": "experiments/aggregates/adaptive-cascade-heldout-20261119-001-unreviewed.json",
+    "aggregate_sha256": "4a3767a4340bc08955ac0e18e53f8071aa082d6bc8fb7687e2ceff3908dc6c63",
+    "review_template": "experiments/reviews/adaptive-cascade-heldout-20261119-001/answers.review-template.jsonl",
+    "review_template_sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+    "review_template_seed": 0,
+    "review_packets_sha256": {
+      "packet-001.md": "5a44a83f5bb36023ae39facc81d364f32955c6fd00243834fc3e85e0dae08623",
+      "packet-002.md": "8de8098313fddecf869245ad2b7535a182a50ec4bf71833b513301832a77e15f",
+      "packet-003.md": "be0abec4a5314bc8cb6b46002bb2c0057b9bbdbc1f97dffe105e23af3711cbb1",
+      "packet-004.md": "f22b14bee38c7db860f0e59c9cf6dee743d7a286b8f30d1df87c9b08d14ce9aa",
+      "packet-005.md": "da62bccddac48f8aaaec34e7b37ffae3bcbb4bfd22d0982e1dfc658ac7716220",
+      "packet-006.md": "d848acd7cc936c28c83d117e2c37e68eb698cfbb48506125fe3c6abfcb780c63",
+      "packet-007.md": "94f76454ab941e3701049aa12fd41550738b1b9cd80870b92e2c18ca44c7dde1",
+      "packet-008.md": "6094361be9b57d21d9593ba576bfbf4eab5c107024f5d7ca39737e82d999c44f",
+      "packet-009.md": "4c2223ccfadd0f445beffa48144e56b383e13a4b1741bee888b8a731cb311871",
+      "packet-010.md": "d88e215ec6d7026c08c2362e814cc1197e798c615d1b673c464c613840b4669d",
+      "packet-011.md": "f4ec943fb7fe384aff69302f00ddf70af2ef96d0cf602c0352b4784554cb5ab1",
+      "packet-012.md": "fd41223518c46173f76734351a8ca11fc6fe793ce874b58ee3d44c814c224645",
+      "packet-013.md": "e1f5c663ccef8e25d8f8dad39b21fe4a898e6ea9021bd41d656efe696ff2a59f",
+      "packet-014.md": "1061e6cefa7982c3fb1924e7dcc32d6fe3c2c0d1e43b9140d9709702a665ed0f"
+    }
+  },
+  "temporary_sleep_inhibitor": "caffeinate -is wrapped the run process and exited with it; no system setting was changed.",
+  "started_by": "Claude (AI assistant) on Shekhar's authorization; credentials loaded from .env into the process environment and not displayed"
+}

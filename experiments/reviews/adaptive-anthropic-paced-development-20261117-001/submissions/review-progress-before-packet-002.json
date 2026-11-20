@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "updated_at": "2026-11-18T02:08:38.203768+00:00",
+  "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+  "available_answer_texts": 227,
+  "validated_human_scores": 15,
+  "pending_human_scores": 212,
+  "reviewer": "Shekhar",
+  "packet_status": {
+    "001": "complete;15validated",
+    "002": "next;items16-30"
+  },
+  "last_reviewed_at": "2026-11-17T21:05:00-05:00",
+  "correctness_counts": {
+    "fully_correct": 5,
+    "partially_correct": 3,
+    "incorrect_attempted": 0,
+    "abstained": 7
+  },
+  "citation_support_not_applicable": 8,
+  "classification": "Abstentions counted separately using the reviewer notes beginning Abstained.; all item-level scores remain as submitted.",
+  "summary_count_discrepancy": "Reviewer closing summary said8 abstentions;7 item-level notes are marked Abstained. No additional score was changed.",
+  "score_file_sha256": "6a89511dfaac25f0b1accee5920ed30b83411f6382be8805a189452386ef3812",
+  "partial_review_aggregate": "../../aggregates/adaptive-anthropic-paced-development-20261117-001-reviewed-001.json",
+  "next_packet": "review-packets/packet-002.md",
+  "study_conclusion": "Review incomplete; no overall accuracy ranking inferred."
+}

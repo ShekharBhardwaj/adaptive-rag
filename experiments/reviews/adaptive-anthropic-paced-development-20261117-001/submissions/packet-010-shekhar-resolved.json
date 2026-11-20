@@ -1,0 +1,311 @@
+{
+  "schema_version": "1",
+  "kind": "resolved_human_review_submission",
+  "status": "validated_and_recorded",
+  "recorded_at": "2026-11-18T02:40:48.468542+00:00",
+  "reviewer": "Shekhar",
+  "reviewed_at": "2026-11-17T22:07:00-05:00",
+  "review_time_precision": "minute",
+  "reviewer_timestamp_text": "November 17, 2026 at 10:07PM EST",
+  "timezone": "America/New_York",
+  "timezone_basis": "Explicit EST timestamp in reviewer submission; established chat timezone.",
+  "packet": 10,
+  "items": [
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150
+  ],
+  "template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19",
+  "packet_sha256": "297eb017873b6f8c9994be68843b0eb7c028abb026bac6540b880c69ea0dabec",
+  "score_file": "answers.scores.jsonl",
+  "score_file_sha256_before": "9bd98a4bda415cebf599a4ed2698c7b1499746cadf1470228d95e937db9c004c",
+  "score_file_sha256_after": "b6c6842881d5901023beb1533724ee7786074e8fe367e121b8130a55de7abc53",
+  "previous_scores_preserved_byte_for_byte": true,
+  "validation": {
+    "schema": "passed15/15",
+    "exact_output_bindings": "passed15/15",
+    "benchmark_question_bindings": "passed15/15",
+    "not_before_output": "passed15/15",
+    "no_duplicates": "passed150/150"
+  },
+  "summary": {
+    "received_judgments": 15,
+    "fully_correct": 3,
+    "partially_correct": 2,
+    "abstained": 9,
+    "incorrect_attempted": 1,
+    "citation_support_not_applicable": 9,
+    "validated_total": 150,
+    "remaining_unreviewed": 77
+  },
+  "normalization": "Only N/A normalized to JSON null. User scores and reasons retained. Abstentions use notes prefix Abstained; incorrect attempted answers remain distinct. Correctness and citation support remain independent.",
+  "reviews": [
+    {
+      "packet": 10,
+      "item": 136,
+      "review_id": "0a6a476b6a4f36bcb2151c663bc6c3cb935f7340c4fd6a6fb82ef4be1809f561",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "7f1191c1918f0daab1bb373f6388fe230d8fb92b3d423221df389d62b7b0d47d",
+        "output_sha256": "4de4abb8c8b5287a7132de76e8badf9147ee3cf705c77e09da362ec6f9bf0e0c",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 0.5,
+        "notes": "Same text and citations as packet 3 item 42: right conclusions, but the cited secret-injection tests are about user data that looks like a secret.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 137,
+      "review_id": "97f3d7ad68f7b38e0005430273006d82ca84f52406a985d9d0ad2eaf5edb70c7",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b66d95414173a3e67288ddd9453d4852925f3c483bd59e1b68c1ef8443f989d7",
+        "output_sha256": "3af5d0dee699bddc6ea50c25c2a03c950a54e1d19be01a397517a3269c73f2e3",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot give class names or bases without the source.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 138,
+      "review_id": "8e696f4997eb45483de3d5ab9f1c81e5dd258220729e1dc34df1b7ed52359f8c",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "237ef9cd8b91083c408fcd12c5d1fc385f634cc4625e3dcf30c16cb9f50566b6",
+        "output_sha256": "f5a9907e99b31ddb462552dee225bc73a4e581dffb67ac285368b43257e25807",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Says the distinction is preserved, with each async method delegating to its own sync method through run_in_executor; matches embeddings/embeddings.py 67 and 78.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 139,
+      "review_id": "7859498683bc9c36f9964d6c6115bfa4106eba5243311a4611c62d7277186d54",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "097cdd50cba5a7e1fda5c405214f4ebec70b40e66a9dc727d3d4e4d521a93c1c",
+        "output_sha256": "e5d56d23c7835ce47f524355e5299af76c37226a45db5a1ceba25a4721f6eeb2",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 9.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 140,
+      "review_id": "4b5bd4f43e90f62837612a793224c34fac66fc2a5c8c98ab8efe5701f4cc5e84",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b95a2f06eb19e07b77ab5973f0a6341edc3141b1a59884bf1e6ba8a470586402",
+        "output_sha256": "7a975f4bae18587c7f89d14b9fac456aaddbfd16ff3e8b20356c52be465816f0",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "Same text and citation as packet 1 item 2: one of the two classes, with the right bases.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 141,
+      "review_id": "ca28dda0937319837373f39bd0da423affc251b9248ba3eb451b91184e2e0a45",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "1c64944e089525c2cf5a81ad520d66dc17dfa52442c66439dd6e8ff3d598af4b",
+        "output_sha256": "16827fc74c8f7304cd37c641dff28728e21959cfeabcf8f3d253d2af104108a2",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 9.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 142,
+      "review_id": "36c408834ae8de57f38430767f98e9e1e08ac14b0dc094a7f516b2b29bd86615",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "0a239c1458dba9d2061ba1f395b2c1239947db989d947f6d78c4a0a9b23727e1",
+        "output_sha256": "a77c446dea1ef1297224f77d16894c583a0518c61fd43c3869cb42101a2f8f67",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as packet 9 item 121: right for strings and text blocks, but says block mode leaves list content as-is and never covers list strings.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 143,
+      "review_id": "c12be9c165560f99cad6a06f748703205b76bd598328bd9a77d2922f9ab8ae60",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "128cebea9adcef4634fe8cee5943f5c361f1a565f8a037ee234cfbb0880b3b8a",
+        "output_sha256": "6a696ccef442dcd76e7b4e6306ce224a11b2d1685667cf4168f164ac4892e73f",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without repository evidence.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 144,
+      "review_id": "16ddac4b9c994c5921abfb15637f1a857b8cdab23ef03dc315799eeb20283ae5",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "f7bd7efe6248d319e7670983c47f2c021808d40dc30d4fbf6b445966058c3b79",
+        "output_sha256": "bccf05196b6060e4bc04f586fca074bc763eb032b5629167457a92f6c981e335",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "BaseBlobParser and @abstractmethod lazy_parse(self, blob: Blob) -> Iterator[Document] match document_loaders/base.py 117 and 127-128. The cited range starts at 118, one line after the class statement, but contains the method.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 145,
+      "review_id": "3a193181f90139ed8e8aa52ffffd58e82d8f9872dc80c50b1147bb2cfcd4293f",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "fd1e236325f970d3e5e58b6148b4d8060ae9e2b3d39815504abe72a99fc49519",
+        "output_sha256": "5933fbaa9c90090c3ffe53d96b00cf698d004e60216e0c237a6bc6a890c8991d",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": 0.5,
+        "notes": "Wrong. Same substance and citations as packet 2 item 24: names load() and loads(), which deserialize, where the question asks for dumps and dumpd.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 146,
+      "review_id": "fc9ae137d691848c672ad9699c80f6e36653cd9f0f830942a391ff0730b7e106",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "97051d9c0e9ba86eda67d781fc20ce95c16ca35b75a05ddd1523641e9eefd100",
+        "output_sha256": "d0e2de0c85916a2c9b177db241292602d64ebfdd0befc960a02dd3eba7f78bb8",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 5.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 147,
+      "review_id": "2da5ee9e678525761416a97e91e9619acf94ad6ddd0da8789bcab83b3f381f83",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "1070c164013a6591c0be26347da0ef48bdb079a98f9641fa359d008abf029c97",
+        "output_sha256": "aa3a8e6724669d5e9448a2753e28ee771e7a3ef75e54439e733734acce9a8f5f",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 9.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 148,
+      "review_id": "748dd7bd1e8025566cf04b53e5ee2ff73d1a655e780445cf94a09f34e7475011",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "72492d169c52d35e08a6ce31c26704606aa211f7140b5c4fe7a82ab7906f00aa",
+        "output_sha256": "6f5b772d6c3a9f31d1bdddb39a0deb3e14ed6c6e708fd4fe695afcd3f20ea505",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Mentions a general Python rule about generators but does not say what this code does.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 149,
+      "review_id": "caa0a74d292966a495147923e68620b064934ee05ba168c3bcacc1ed8e1fda0b",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "c1fdc284dda64905d48d36f40766c2ddc4565a107edb9a5060528ed4b84fbca5",
+        "output_sha256": "24010797eca0f506be703727a49f2878d1a0a0f6934a075f7347ad0587730f4f",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without the serialization source.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 10,
+      "item": 150,
+      "review_id": "27539e19973b1c8e89093d04314194c16da7870d15be7360180b6122c5589510",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "6c82a705a2e5501ad19ea3993d7727dce96a4e1246e045cf5181caedf3205b87",
+        "output_sha256": "260a75aa8ffd7dbfd302b2f4c6610795ca6dfe18dd63a1950db9168080b70d2a",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:07:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 9.",
+        "rubric_version": "manual-v1"
+      }
+    }
+  ]
+}

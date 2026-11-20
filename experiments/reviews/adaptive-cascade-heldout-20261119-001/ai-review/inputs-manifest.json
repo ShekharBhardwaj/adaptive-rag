@@ -1,0 +1,139 @@
+{
+  "schema_version": "1",
+  "kind": "blinded_ai_review_inputs",
+  "created_at": "2026-11-20T13:55:38.661965+00:00",
+  "authorization": "Shekhar explicitly requested blind AI scoring only of these 202 held-out answers, with no results or comparisons computed.",
+  "reviewer": "Codex (AI reviewer)",
+  "human_review": false,
+  "rubric": "manual-v1",
+  "criteria_file": "experiments/reviews/adaptive-cascade-development-20261119-001/ai-review/rubric.json",
+  "criteria_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+  "protocol_file": "paper/phase7-held-out-protocol.md",
+  "protocol_sha256": "f5892af99dd4551f8703b9a67bcb32438d96a28934a3812d9d82705a7becf30b",
+  "template_sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+  "item_count": 202,
+  "unique_question_count": 15,
+  "unique_content_cases": 105,
+  "deduplication": "Only identical question, reference answer, gold evidence, commit, generated answer, citations and citation claims share an assessment. Every item retains its own frozen output binding.",
+  "packet_sha256": {
+    "packet-001.md": "5a44a83f5bb36023ae39facc81d364f32955c6fd00243834fc3e85e0dae08623",
+    "packet-002.md": "8de8098313fddecf869245ad2b7535a182a50ec4bf71833b513301832a77e15f",
+    "packet-003.md": "be0abec4a5314bc8cb6b46002bb2c0057b9bbdbc1f97dffe105e23af3711cbb1",
+    "packet-004.md": "f22b14bee38c7db860f0e59c9cf6dee743d7a286b8f30d1df87c9b08d14ce9aa",
+    "packet-005.md": "da62bccddac48f8aaaec34e7b37ffae3bcbb4bfd22d0982e1dfc658ac7716220",
+    "packet-006.md": "d848acd7cc936c28c83d117e2c37e68eb698cfbb48506125fe3c6abfcb780c63",
+    "packet-007.md": "94f76454ab941e3701049aa12fd41550738b1b9cd80870b92e2c18ca44c7dde1",
+    "packet-008.md": "6094361be9b57d21d9593ba576bfbf4eab5c107024f5d7ca39737e82d999c44f",
+    "packet-009.md": "4c2223ccfadd0f445beffa48144e56b383e13a4b1741bee888b8a731cb311871",
+    "packet-010.md": "d88e215ec6d7026c08c2362e814cc1197e798c615d1b673c464c613840b4669d",
+    "packet-011.md": "f4ec943fb7fe384aff69302f00ddf70af2ef96d0cf602c0352b4784554cb5ab1",
+    "packet-012.md": "fd41223518c46173f76734351a8ca11fc6fe793ce874b58ee3d44c814c224645",
+    "packet-013.md": "e1f5c663ccef8e25d8f8dad39b21fe4a898e6ea9021bd41d656efe696ff2a59f",
+    "packet-014.md": "1061e6cefa7982c3fb1924e7dcc32d6fe3c2c0d1e43b9140d9709702a665ed0f"
+  },
+  "pinned_repo_commit": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "verified_source_excerpt_count": 150,
+  "source_file_sha256": {
+    "libs/core/langchain_core/runnables/fallbacks.py": "bc7f6ebc1aa2dade3aa6c78c25a603b8e42e364194b43d8e5b4b029b89ccdac0",
+    "libs/core/langchain_core/language_models/chat_models.py": "6b37dd84a34a49b932983ec92e5dc826fefdd1a047424a014a251a0ed0e2d507",
+    "openwiki/.claims/reference/chat-models.json": "cd11fc4dc235336ae4492f61a7246f7b5a52c71108edc74c7081dacef347243f",
+    "openwiki/.claims/concepts/chat-models.json": "fdb1cb5ef8bea99a5d816370f9adaa4eb46327e0ef373666bcb6edefd34f1c4c",
+    "libs/core/tests/unit_tests/language_models/chat_models/test_cache.py": "14a149174bd8191c76a24000a1666222cf0781e4ae643cffbf49ebf73e2d40e5",
+    "libs/core/langchain_core/rate_limiters.py": "af67e64631eca49018e263fb82fa465e04370cd825d6f7a03c9d0daac10657c2",
+    "libs/core/langchain_core/caches.py": "ef38ab793ad7439cf412170b0b683ef0eb10c9ff3617a78194a6a814474d94b1",
+    "libs/core/langchain_core/outputs/chat_result.py": "42094550d8eee8332185972684ff0c6062cd0e1536db45f7f22cb777ad6e8904",
+    "libs/core/langchain_core/runnables/passthrough.py": "260de5bbbc388123f43ef30b9c4625e3e4748fd4c378db5f2f646347dc8bf556",
+    "libs/core/langchain_core/runnables/base.py": "407284bddbe9616352ad9d3dd8dab4f3dd197aa31a5c9fc253e57e4265839242",
+    "libs/core/langchain_core/runnables/history.py": "ec163e4b6f3d24847c7cd256990d90d5ca474fff2bc2cc9797074ba3bcef4dcc",
+    "libs/core/langchain_core/chat_history.py": "1e6041f01cf8d3ae774fe7b7540451a0575595dc92bec3df42569f6e6ab2cf6e",
+    "libs/core/langchain_core/tools/retriever.py": "582ab78ea57ec6151a053853847780c577a34d20a33923c12c00c795131cbc96",
+    "libs/core/langchain_core/tools/base.py": "239c77d07a9283ced902fb161ca0fcdb5e532a9824caaa169ab014ac41c899d4",
+    "libs/core/langchain_core/tools/structured.py": "f51689a1707c1ee31a173b8d8c9aaea33d994f4d95a79e6d51fe7369b2247142",
+    "libs/core/langchain_core/retrievers.py": "c37b6d1e4472ecd832c584e0be73670e2f060065e90541817bc11a25d49b0a18",
+    "libs/core/langchain_core/vectorstores/base.py": "e843cfee0389906b2bb8dac6b8ad67b8b2c50cd6003222070f3d55dd5ac61f06",
+    "libs/core/langchain_core/vectorstores/in_memory.py": "b6ca63061d5f8277de199bcc5df759923164f141d0192ccf6fdd92a385c9688c",
+    "libs/langchain/tests/unit_tests/indexes/test_indexing.py": "ecfda7b419cc8e1d7e269d81263377f394b72c0ede6b8e2a9ef8c09a2a44b6a4",
+    "libs/core/tests/unit_tests/runnables/test_runnable_events_v2.py": "fbd4b201a61d6f21a658076dbd5cc550cbb2e6e57c2c451faf507bcf3f0c106b",
+    "libs/core/tests/unit_tests/runnables/test_runnable_events_v1.py": "7f3ef7f73f5b822148ed14ba861079c0cffb24986449afc8dff12c4e515d5d67",
+    "libs/core/tests/unit_tests/rate_limiters/test_in_memory_rate_limiter.py": "4fb79d9e9264635bc71b8e0fec7a8a9d276c8f20d543f60e5d2d5f9c04a6bc08",
+    "openwiki/concepts/tools.md": "ed2a633a034e717e41c662ac159bb59a465f0bd86364a58221bc8c60c941fa89",
+    "libs/core/langchain_core/messages/tool.py": "218c48ca2f82cffcc8c453ab8387f1b9821f5728b3b868c7903b9ea3ff1e5a08",
+    "openwiki/tools.md": "18b158b86b4d777c69f2ba33e0c4d5c9f1c4ba7996929f2f49c911ff29759d10",
+    "libs/core/tests/unit_tests/caches/test_in_memory_cache.py": "48d41cc0e50bd25d5b35784ce84f6726845cc5a751b26d9e758fff02cadd82a2",
+    "libs/langchain_v1/tests/unit_tests/agents/test_injected_runtime_create_agent.py": "33becdc64958e247e28b07db0691a6cdb423b0469fcf56ee5be1d60c148467ff",
+    "libs/langchain_v1/langchain/agents/middleware/tool_error.py": "3bba2a45edd577157854eb27f913391623441956d37d6cce703c80c2b51f95c7",
+    "libs/core/langchain_core/load/dump.py": "a928ca73ad5e5848ab8273393ae257b23625549bbb571ddcff5e15f4f55ce65d",
+    "libs/core/langchain_core/load/_validation.py": "0bbd6b48d5641dcd1054d5a423a6231bcd5fba8274e5447f16a3f55147f9a4f1",
+    "libs/core/langchain_core/load/serializable.py": "444e63d0e4d6209653c5ed1717aa2598fc7fca29120aec683f800690d8067ab3",
+    "libs/core/langchain_core/messages/base.py": "c99304892b711954f0662ceb309433dc0579ea8576c9a997a51cd90ed145e9f6"
+  },
+  "raw_file_sha256": {
+    "results.jsonl": "7f05e44e9d2238f49f8ab274805398bfc73d3d0191a788949357527cbcf48fe0"
+  },
+  "assignments": {
+    "a": {
+      "question_keys": [
+        "58dedf5bc5a3",
+        "34022a33caee",
+        "9c64d1853b39",
+        "0e15d421029a",
+        "340cea4245bb"
+      ],
+      "unique_cases": 36,
+      "item_count": 68
+    },
+    "b": {
+      "question_keys": [
+        "404429e13906",
+        "a2b2f702284b",
+        "e1527840d26f",
+        "5d3cf80b8890",
+        "aa6e96aef9a5"
+      ],
+      "unique_cases": 34,
+      "item_count": 61
+    },
+    "c": {
+      "question_keys": [
+        "ad2c2a46f9ea",
+        "237158a1a3ea",
+        "4384aa7d2be2",
+        "04bfa14ccd0a",
+        "278e7a01a144"
+      ],
+      "unique_cases": 35,
+      "item_count": 73
+    }
+  },
+  "blinding": "Graders receive only blinded template content and pinned source. No condition labels, selected strategies, aggregate results or raw traces are inspected. The sole raw read is the authorized counts-only binding-check script.",
+  "criteria_policy": "Read the existing frozen criteria at its original path without modification, extension or copying.",
+  "pinned_source_full_files_verified": 32,
+  "work_file_sha256": {
+    "group-a.jsonl": "033de13c46220e564da32edf92ab08105c7717c1b7b3a65aaa2a3949da472fc5",
+    "group-b.jsonl": "0e1155f21bb23fa5478825fa7a00d6eede04808e508461ebe5a2dd3bd0ee97ab",
+    "group-c.jsonl": "af98f996b1f62e48c047f84636a5c2dcd4e0ea271da3da7aef5920465fabf119"
+  },
+  "assessment_files": {
+    "a": {
+      "file": "ai-review/assessments/group-a.jsonl",
+      "sha256": "0be9a18ad61bf07ee0222c093f2f0c618fb1af8b4b1d0114d2d9c641e0d11aa2",
+      "created_at": "2026-11-20T09:00:22.746742-05:00",
+      "source_birthtime_epoch_seconds": 1795183222.7467422,
+      "unique_cases": 36
+    },
+    "b": {
+      "file": "ai-review/assessments/group-b.jsonl",
+      "sha256": "f56f412a0e5c31af7fdf3cd848e4963c8dfd0866557565e39036f845a6fd3ce8",
+      "created_at": "2026-11-20T09:02:16.563532-05:00",
+      "source_birthtime_epoch_seconds": 1795183336.5635316,
+      "unique_cases": 34
+    },
+    "c": {
+      "file": "ai-review/assessments/group-c.jsonl",
+      "sha256": "dbbfa12207219c99326d3137a3aa9d745aa95f0d1e3eb2f9da2453bd2a764b9e",
+      "created_at": "2026-11-20T09:01:13.879045-05:00",
+      "source_birthtime_epoch_seconds": 1795183273.8790455,
+      "unique_cases": 35
+    }
+  }
+}

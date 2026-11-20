@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "packet": 10,
+  "kind": "metadata_validation",
+  "validated_scores": 150,
+  "packet_bindings": "passed15/15",
+  "prior_135_scores": "preserved byte for byte",
+  "frozen_raw_files": "unchanged",
+  "original_review_template": "unchanged",
+  "supplied_grades_and_notes": "preserved",
+  "repeat_check": "All five stated exact-repeat groups match with consistent ratings; substance-only and similar-description rating checks also pass.",
+  "source_semantic_regrading": false
+}

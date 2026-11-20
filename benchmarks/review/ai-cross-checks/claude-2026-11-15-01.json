@@ -1,0 +1,165 @@
+{
+  "schema_version": "1",
+  "cross_check_id": "claude-2026-11-15-01",
+  "kind": "ai_source_cross_check",
+  "supplied_by": "Shekhar",
+  "reported_agent": "Claude",
+  "reported_tool": "Claude Code",
+  "reported_model": "claude-fable-5-2",
+  "reported_requested_by": "Shekhar",
+  "source_commit_reported": "ea17e48f",
+  "source_commit_resolved": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "recorded_at": "2026-11-15T23:55:26.187183+00:00",
+  "performed_at": null,
+  "timestamp_semantics": "The report supplied no separate run time; recorded_at is when the chat report was recorded.",
+  "report_basis": "User-supplied AI source cross-check; no new Claude execution was performed while recording it.",
+  "benchmark_file": "../../pilot.draft.jsonl",
+  "benchmark_sha256": "c85a14e6910d8f73069fcad1c1114910bb85181d7f9dbe0fa501ec7df66829df",
+  "human_source_inspection": false,
+  "human_acceptance_recorded": false,
+  "satisfies_human_review_requirement": false,
+  "human_review_counts": {
+    "accepted": 14,
+    "pending": 16
+  },
+  "protected_sha256": {
+    "benchmarks/pilot.draft.jsonl": "c85a14e6910d8f73069fcad1c1114910bb85181d7f9dbe0fa501ec7df66829df",
+    "benchmarks/review/decisions.jsonl": "0b5ca9bdacea1965f483ac9a08c79bd7354c2589f575ee78233913a0ebf5b619",
+    "benchmarks/review/decisions.template.jsonl": "3fc13a92ed95f5965fc1fdd9ad74579bbf0ab1efaf51511adf2c9c796fbf0bc3",
+    "benchmarks/review/validation-authoring.json": "a67543ededc30146584a31f84b9f1f97a5a85fcdce97a61239714594184d4b5e",
+    "benchmarks/review/validation-review-required.json": "53c720fc189cef09045b98130e25cd2e2eb208577fadf1e8b5819814deb5f315"
+  },
+  "recommendations": [
+    {
+      "question_id": "lc-c-06",
+      "question_sha256": "2f83ba6af3f991e3fc9c387a43b481d16f0d0619444ae4a4b2f0dc8f6f2efff8",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "tools/base.py 1116-1136. Validation and ToolException branches depend on their flags; a plain ValueError falls to except BaseException (1128-1129), is reported via on_tool_error and raised (1131-1133)."
+    },
+    {
+      "question_id": "lc-c-07",
+      "question_sha256": "6cd09864ed8ff05d355af8c4f71233781b5cca3d62096ab64abd8b9a67223eb5",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "vectorstores/base.py 1044-1059. kwargs_ = self.search_kwargs | kwargs, so runtime kwargs win; one backend call per search type, with scores dropped at 1053."
+    },
+    {
+      "question_id": "lc-c-08",
+      "question_sha256": "58e8b2cb8af59f3f3feb9fda33de3e3da5ee2700bf6aef12071436c2332d4ec2",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "runnables/fallbacks.py 184-212. last_error is written into the input dict before each later attempt (188-189); first_error is raised at the end (211-212); unhandled exceptions are re-raised at once (202-204)."
+    },
+    {
+      "question_id": "lc-c-09",
+      "question_sha256": "113b8f66089195b821427208e1e4de53b16c71543b1b2040786210e0f1ff7be5",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "language_models/chat_models.py 1950-1967 and 1977-1978. Non-null IDs are nulled on copies before dumps; a list-valued hit returns before rate_limiter.acquire."
+    },
+    {
+      "question_id": "lc-c-10",
+      "question_sha256": "b67c8346d908a9cf9ce01e2445729f8d29735c1bf9cd3fb183e01ffbac339fca",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "rate_limiters.py 146-193 and 212-218. available_tokens starts at 0.0 and last at None, so the first non-blocking acquire returns False; refill, cap and blocking loop are as stated."
+    },
+    {
+      "question_id": "lc-s-06",
+      "question_sha256": "774633d69cf5a0d8561f40fbe80d5e2ba10760fbbd43a6aa2d1a37b37391460e",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "tools/structured.py 93-109. StructuredTool(BaseTool) with args_schema, func and coroutine; both callables default to None."
+    },
+    {
+      "question_id": "lc-s-07",
+      "question_sha256": "ad890ed8626df22ac8a014f12b513432ebcc3959f6769b6cadb51ec2d0c84aac",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "retrievers.py 55, 297-300 and 311-313. BaseRetriever with abstract _get_relevant_documents and a concrete _aget_relevant_documents."
+    },
+    {
+      "question_id": "lc-s-08",
+      "question_sha256": "64237229d9c4206ac265dacff6fcf06a221d5e462f71238fe04d0e69bb0c7fa8",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "runnables/base.py 3094, 3181-3185 and 3239-3246. RunnableSequence fields first, middle, last and the steps property."
+    },
+    {
+      "question_id": "lc-s-09",
+      "question_sha256": "28ecf1ffecda6357ae3b91434250e041a57b72fe1e9524af60e51f0929701abd",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "language_models/chat_models.py 1448-1450, inside BaseChatModel. Signature and docstring as stated."
+    },
+    {
+      "question_id": "lc-s-10",
+      "question_sha256": "e331d3714442d6a24b3eea183b2d4c808d5dfada3af7283d6bc7e31c85d6f483",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "chat_history.py 223, 229, 245-251 and 261-263. InMemoryChatMessageHistory(BaseChatMessageHistory, BaseModel); add_message appends, clear assigns a new list."
+    },
+    {
+      "question_id": "lc-x-06",
+      "question_sha256": "738b2680c9ff9e9d5ca29de1d3c598eb264f9a0901b7061b092782c4ce8408be",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "tools/retriever.py 63-94, tools/base.py 1085-1115, 1131-1136 and 1391-1427, tools/structured.py 147-154. The callable returns ('alpha | beta', docs); run unpacks it (1111); _format_output returns the bare string when tool_call_id is None (1417) and a ToolMessage with artifact otherwise (1421-1427)."
+    },
+    {
+      "question_id": "lc-x-07",
+      "question_sha256": "ee05fedf0f20527814048d341d1a23873c82f6f3f490d032fb4ec0e4e590898a",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "vectorstores/base.py 47-98 and vectorstores/in_memory.py 188-221. list(texts) at 78 exhausts a generator and line 90 zips the original texts, so add_documents receives []; a list yields two documents stored under generated UUIDs."
+    },
+    {
+      "question_id": "lc-x-08",
+      "question_sha256": "1dd971442c276f39553aa8118d32b906b68e003f71c1f5a26e39de8319867df3",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "runnables/passthrough.py 205-223 and 484-511, runnables/base.py 4180-4215. Every step is submitted with the same input (4202); _invoke merges input first, mapper output second (495-502). Result {'n': 2, 'double': 4, 'prior': 99}."
+    },
+    {
+      "question_id": "lc-x-09",
+      "question_sha256": "0bb9737244db391d179adb1a0f1b46fe0e5087266e2b6ae194f5f93f8bad9753",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "language_models/chat_models.py 1958-1967 and 2090-2092, caches.py 201-231. result.generations is stored; lookup is a plain dict get; update deletes the first-inserted key at capacity, so B and C remain."
+    },
+    {
+      "question_id": "lc-x-10",
+      "question_sha256": "3befe134e2e0a336b0505b8480a11080e1b32840185ea22ebc3a8a063dff6ace",
+      "split": "held_out",
+      "human_review_state": "pending",
+      "recommendation": "accept",
+      "notes": "runnables/history.py 522-532 and 548-563, chat_history.py 182-192, 223-230 and 245-251. [H0, A0, H1] is forwarded; the stored prefix is stripped (556-558); [H1, A1] is added one message at a time."
+    },
+    {
+      "question_id": "lc-c-02",
+      "question_sha256": "ff7e5e7a9b0c8e4655545986c8007888cc03f786bcb211643498b0127234adbc",
+      "split": "development",
+      "human_review_state": "revised_pending_confirmation",
+      "recommendation": "confirm_revised_annotation",
+      "notes": "the revised question matches the requested wording, the answer is unchanged, and evidence 274-304 and 360-378 supports it. Recommend confirming."
+    }
+  ],
+  "revise": [],
+  "reject": [],
+  "supplied_text": "Source cross-check by Claude (Claude Code, claude-fable-5-2), run at Shekhar's request against commit ea17e48f. This is an AI cross-check of the cited source, not a human source inspection.\n\nHeld-out: recommend accept for all 15.\n- lc-c-06: tools/base.py 1116-1136. Validation and ToolException branches depend on their flags; a plain ValueError falls to except BaseException (1128-1129), is reported via on_tool_error and raised (1131-1133).\n- lc-c-07: vectorstores/base.py 1044-1059. kwargs_ = self.search_kwargs | kwargs, so runtime kwargs win; one backend call per search type, with scores dropped at 1053.\n- lc-c-08: runnables/fallbacks.py 184-212. last_error is written into the input dict before each later attempt (188-189); first_error is raised at the end (211-212); unhandled exceptions are re-raised at once (202-204).\n- lc-c-09: language_models/chat_models.py 1950-1967 and 1977-1978. Non-null IDs are nulled on copies before dumps; a list-valued hit returns before rate_limiter.acquire.\n- lc-c-10: rate_limiters.py 146-193 and 212-218. available_tokens starts at 0.0 and last at None, so the first non-blocking acquire returns False; refill, cap and blocking loop are as stated.\n- lc-s-06: tools/structured.py 93-109. StructuredTool(BaseTool) with args_schema, func and coroutine; both callables default to None.\n- lc-s-07: retrievers.py 55, 297-300 and 311-313. BaseRetriever with abstract _get_relevant_documents and a concrete _aget_relevant_documents.\n- lc-s-08: runnables/base.py 3094, 3181-3185 and 3239-3246. RunnableSequence fields first, middle, last and the steps property.\n- lc-s-09: language_models/chat_models.py 1448-1450, inside BaseChatModel. Signature and docstring as stated.\n- lc-s-10: chat_history.py 223, 229, 245-251 and 261-263. InMemoryChatMessageHistory(BaseChatMessageHistory, BaseModel); add_message appends, clear assigns a new list.\n- lc-x-06: tools/retriever.py 63-94, tools/base.py 1085-1115, 1131-1136 and 1391-1427, tools/structured.py 147-154. The callable returns ('alpha | beta', docs); run unpacks it (1111); _format_output returns the bare string when tool_call_id is None (1417) and a ToolMessage with artifact otherwise (1421-1427).\n- lc-x-07: vectorstores/base.py 47-98 and vectorstores/in_memory.py 188-221. list(texts) at 78 exhausts a generator and line 90 zips the original texts, so add_documents receives []; a list yields two documents stored under generated UUIDs.\n- lc-x-08: runnables/passthrough.py 205-223 and 484-511, runnables/base.py 4180-4215. Every step is submitted with the same input (4202); _invoke merges input first, mapper output second (495-502). Result {'n': 2, 'double': 4, 'prior': 99}.\n- lc-x-09: language_models/chat_models.py 1958-1967 and 2090-2092, caches.py 201-231. result.generations is stored; lookup is a plain dict get; update deletes the first-inserted key at capacity, so B and C remain.\n- lc-x-10: runnables/history.py 522-532 and 548-563, chat_history.py 182-192, 223-230 and 245-251. [H0, A0, H1] is forwarded; the stored prefix is stripped (556-558); [H1, A1] is added one message at a time.\n\nDevelopment, lc-c-02 (revised_pending_confirmation): the revised question matches the requested wording, the answer is unchanged, and evidence 274-304 and 360-378 supports it. Recommend confirming.\n\nRevise: none. Reject: none."
+}

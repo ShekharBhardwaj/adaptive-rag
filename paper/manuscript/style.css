@@ -1,0 +1,204 @@
+/* Print layout for the draft manuscript. Light only: it is a paper. */
+@page {
+  size: letter;
+  margin: 0.95in 1in 1in 1in;
+}
+
+html {
+  font-size: 10.5pt;
+}
+
+body {
+  font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.42;
+  color: #111;
+  background: #fff;
+  max-width: 6.5in;
+  margin: 0 auto;
+  padding: 0.4in 0.2in;
+  text-rendering: optimizeLegibility;
+  hyphens: manual;
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+header#title-block-header {
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+h1.title {
+  font-size: 17pt;
+  line-height: 1.22;
+  margin: 0 0 0.6em;
+  font-weight: 700;
+}
+
+p.author,
+p.date {
+  margin: 0.15em 0;
+  font-size: 10.5pt;
+}
+
+p.date {
+  color: #555;
+  font-size: 9.5pt;
+  margin-top: 0.5em;
+}
+
+div.abstract {
+  margin: 1.4em 0.45in 1.6em;
+  font-size: 9.6pt;
+  line-height: 1.4;
+  text-align: left;
+}
+
+div.abstract-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.4em;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 12.5pt;
+  margin: 1.5em 0 0.4em;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 11pt;
+  margin: 1.15em 0 0.3em;
+  line-height: 1.25;
+}
+
+h1,
+h2,
+h3 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 0 0 0.62em;
+  orphans: 3;
+  widows: 3;
+}
+
+ul,
+ol {
+  margin: 0.2em 0 0.7em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.22em;
+}
+
+li > p {
+  margin-bottom: 0.3em;
+}
+
+a {
+  color: #1c4f8c;
+  text-decoration: none;
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  overflow-wrap: anywhere;
+}
+
+blockquote {
+  margin: 0.5em 0 0.9em 1.1em;
+  padding-left: 0.8em;
+  border-left: 2px solid #c3c2b7;
+  color: #2b2b2b;
+  font-size: 9.6pt;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.35em 0 1.25em;
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 8.3pt;
+  line-height: 1.32;
+  font-variant-numeric: tabular-nums;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+thead th {
+  border-top: 1px solid #222;
+  border-bottom: 0.6px solid #222;
+  font-weight: 600;
+  vertical-align: bottom;
+}
+
+th,
+td {
+  padding: 3px 6px;
+  vertical-align: top;
+  text-align: left;
+}
+
+tbody td {
+  border-bottom: 0.4px solid #d8d7d0;
+}
+
+tbody tr:last-child td {
+  border-bottom: 1px solid #222;
+}
+
+img {
+  display: block;
+  margin: 0.9em auto 0.3em;
+  max-width: 100%;
+  height: auto;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+math {
+  font-size: 1.02em;
+}
+
+div#refs {
+  font-size: 9.2pt;
+  line-height: 1.36;
+}
+
+div.csl-entry {
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  overflow-wrap: anywhere;
+}
+
+/* Keep a caption with its table or figure, and keep short cells on one line. */
+div.tablebox,
+div.figbox {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+div.tablebox > p,
+div.figbox > p {
+  margin-bottom: 0.3em;
+}
+
+div.figbox {
+  margin: 0.9em 0 1em;
+}
+
+tbody td:first-child,
+tbody td[style*="right"] {
+  white-space: nowrap;
+}

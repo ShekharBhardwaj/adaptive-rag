@@ -1,0 +1,305 @@
+{
+  "schema_version": "1",
+  "kind": "pending_human_review_submission",
+  "status": "pending_reviewed_at",
+  "recorded_at": "2026-11-18T02:06:09.207045+00:00",
+  "reviewer": "Shekhar",
+  "reviewed_at": null,
+  "missing_fields": [
+    "actual reviewed_at with timezone"
+  ],
+  "reviewer_timestamp_text": "Reviewed on [your actual date and time, with timezone].",
+  "timestamp_followup_answer": "yes",
+  "timestamp_interpretation": "Placeholder and yes supply no actual review date/time; no time inferred. recorded_at is receipt/storage metadata only.",
+  "packet": 1,
+  "template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19",
+  "packet_sha256": "6503d1c8255a814034941c3a3fae7f8d7ef57240c7f5bc263946706c29d6b25f",
+  "reviewer_summary_claims": {
+    "abstention_count": 8,
+    "abstention_rule": "Abstentions scored0, citation_support N/A, reason starts Abstained.",
+    "repeated_answer_groups": [
+      [
+        6,
+        10,
+        15
+      ],
+      [
+        4,
+        11
+      ]
+    ]
+  },
+  "transcription_note": "Item-level judgments and reasons preserved; N/A normalized to JSON null. Explicit notes identify7 abstentions; summary claim of8 retained separately, not applied to change any score.",
+  "validation": {
+    "exact_output_bindings": "passed15/15",
+    "other_score_fields": "passed15/15; reviewed_at is sole unresolved field",
+    "ready_for_aggregation": false
+  },
+  "summary": {
+    "received_judgments": 15,
+    "finalized_scores": 0,
+    "fully_correct": 5,
+    "partly_correct": 3,
+    "zero_correctness": 7,
+    "abstentions_marked_in_notes": 7,
+    "citation_support_not_applicable": 8,
+    "answers_without_submitted_judgments": 212
+  },
+  "reviews": [
+    {
+      "packet": 1,
+      "item": 1,
+      "review_id": "2310467cd9221f0ea50c40e473dec4485f30bd80847860206ff286c5237edb9c",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "bf0bdf2c6b582c39e26c746892ff79e8cb64fb0e9d8f37ae17c2f54a92f85016",
+        "output_sha256": "9c750a1883f9a23bb0326295d18082408ca786bbc8da0ebb90c7b04497b83756",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.5,
+        "citation_support": null,
+        "notes": "Right that inherited lazy_load iterates over the overridden load(). Wrong for the no-override case: it predicts infinite recursion or an error, but document_loaders/base.py 97-100 guards against recursion and raises NotImplementedError. No citations.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 2,
+      "review_id": "ae4a5e3b5139f5056783ecac5c9c70ddcbb756f7a4bd073447b071908c23b4d4",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "8ab97a9919272d575d95dca062ab0f154230b62d1ac90cbdafda102d73e5c881",
+        "output_sha256": "89a402b0c0afc1b97c16a61f70deeb422505a2a6bcfb9b2036cd71f8f5fe53b8",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "Identifies DeterministicFakeEmbedding with bases Embeddings and BaseModel, but not FakeEmbeddings. The cited embeddings/fake.py 67-96 contains the class at line 70 and the quoted docstring.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 3,
+      "review_id": "0e7b2e613734df8d4c44e7a06a078acff5460c11bea7938e026b28f75bd407bf",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "c61b27e5e4bb2fb76812e08481a8d2a8ff95cf136cf3f3d9d78d3e7f7b83437c",
+        "output_sha256": "7103126a4fc7f67581b496a211baf091747f5ed802c0379bbaf12a8bdbc990c8",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "String-mode and single-string cases are right. For lists it only covers text blocks and says block mode leaves them as-is; messages/utils.py 1700-1711 converts list strings to text blocks. Cited docstring, implementation and tests support what it does claim.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 4,
+      "review_id": "63f4c59ae1acfdbb64551ef44fdf44ba928d9d1d382f2db8a6775e1c3a8557dd",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "3ef6966c4af351887d57014263d63d3b446287aa3c38b5b7d6b246ff0c39efc0",
+        "output_sha256": "d00384c42514ccae694d6a2ceb6d21e7e5558cf2356e7d79f2371d10a7f9db90",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "ChatGeneration, its file, parent Generation, message: BaseMessage and type \"ChatGeneration\" all match outputs/chat_generation.py 17-42. Cited ranges cover the class, its parent and BaseMessage.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 5,
+      "review_id": "639511777ba15841f1fdc8dc72d0f08a9d48e14504c79e9771e67989f24d58e8",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a99715586b5009e985cd5d18b2b6d97e86c6b113eddef9f278909a0b19ad81b3",
+        "output_sha256": "9cce20d8b464e9a3ca6978a3f05dbd01a60dda29e0be729627a04f8d8a9f8be8",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without source; names no class or method.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 6,
+      "review_id": "14dd4fe82a62dea1cabe126a555138bba516e8bc182d5d1d69b2e1f8c9cfe65e",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b1df0599dc88b4b909ba7044d4e7e494381303ccb3a35a8688c2926f9824507f",
+        "output_sha256": "dbc0c369b06c8b55ecf2a04330bce7b19c96bcabc5a2f0b4c85beb4e1fd1cfaa",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Lists three JSON parsers but does not say which backs SimpleJsonOutputParser or give the type identifier.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 7,
+      "review_id": "597abc99ea78e1e468fe46c71f06c537bdf0d64e7dfc5b1a48c4bb29fbc3e7cd",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "1ea508d434be80c1ba874708329bf94150c6f86ad9ad68314899e7230b6a812a",
+        "output_sha256": "97e4c997a7ea09c90985eb9e5946116379b59050818cd6a1b9de170fd4118585",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 0.5,
+        "notes": "Marker {\"lc\": 1, \"type\": \"secret\", \"id\": [\"API_KEY\"]} and no mutation of the original both match load/serializable.py 297-304 and 360-378. The cited test (test_serializable.py 66-117) shows the marker for top-level secrets only; it does not cover nested paths or check that the original is unchanged.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 8,
+      "review_id": "f572cb68ae89b969d31d2dfe6bdbcb732209298138ba7d93f61c382aed9136b0",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "c309501bad256989de3bbaa5a1706067ea3faee7eceebd9cdb2509149f4bbca1",
+        "output_sha256": "76973fad62004cbc8a0395db856cd18f2102f0f35f963914d766ca46bbce76b5",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot trace the behaviour without source.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 9,
+      "review_id": "f31b158457dfd434a5369635f00ac1d2a3ad7b9cea06ad2dd162f9a2a280b6d2",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "13cffb64064d3ba794b0f9d42a0c1fd7348a7866c5634ab97f943e013424c7ea",
+        "output_sha256": "b6db891fdf7e3d2d6db0d4d4a398fd68d1fa83c35531706df372bd24834d1191",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says the evidence lacks the parse_result implementation.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 10,
+      "review_id": "a87a1880f098e569262555d0b082e3e9c9bac83de309c1dcb6fe7e67de3a0ebc",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a3bbbd3d1334390de196bf71b8449ba935c60ec76d554ccd5d99332d18d5bce1",
+        "output_sha256": "9356f703027cbf48fa63c0aa451d7a0245dd20adb28ee4786aade81d3d968a79",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as item 6.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 11,
+      "review_id": "180a40ec5ac7767e3fd1936973436936185bb79d76d5150a52b8de7a0f9e8065",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "f84355585b49ccdfe83e877fb4ee9c3e72122c6b89f88156416da918f53c09b3",
+        "output_sha256": "4fb551d9af6642d08baafe2b10ba971a4917ab83bcf2b34900d88497320524b9",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as item 4; all facts match outputs/chat_generation.py 17-42.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 12,
+      "review_id": "ec1c229e924cab8624a74facee97b9d811504b7179c1465953a7c65ce273eb2e",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "0dfe89d6bacedb7ad210b4c7effd3f9e85eaa6b9d718882be35f6ebee0b69122",
+        "output_sha256": "8dd83ce7924a871502639e2ca63f7b1335377299293501cd5aa9c6de7f315aad",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "ChatGeneration, file, parent Generation, BaseMessage and type literal \"ChatGeneration\" are correct. Cited chat_generation.py 1-79 and generation.py 1-60 support them.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 13,
+      "review_id": "c275bd57a3dc8f0d4657e8230a8da62c3605e2618f496ec2d996fc6f7a425f41",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "5ba55662acbaaea692a2358d39833cc131b377914ba86a51f5733422005f42c0",
+        "output_sha256": "ade88d5c8f65d41ec5764960755b5f0b77b487e4dfd327753652ec3638fef05c",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says the evidence lacks the aembed_documents implementation and the executor helper.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 14,
+      "review_id": "dd5c77745b8cded717e8582cab2f87793d57c0a04f879eaf9fd6edc859d3b89f",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "f0bda9fc27c3115cd692c38b559cd030f8680fef7149c5ae3a6beb4e682ffa02",
+        "output_sha256": "f89a60a91b51c6a41dcf0d709d3346ad1460938fb6792ac201f9090f3a790e8e",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "All four string/block cases are right, including list strings joined with newlines and block mode yielding a list of dicts. \"Left as-is\" is slightly loose, since extra keys are dropped. Cited messages/utils.py 1560-1659 and 1680-1709 and the tests support it.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 1,
+      "item": 15,
+      "review_id": "cda92e5885a504a422e619b8af2d5d8f2cb9d25ccb15cbcdf54fb055560eb4fc",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "5b3b2e34198bdc2cdaa6f8f1d88199732011b81287a3ec0d26cd55f67467fc77",
+        "output_sha256": "2bcc1c293807e77cc2aa723384919b04f5809588a2bf1f3ad203b527b57d99b7",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as item 6.",
+        "rubric_version": "manual-v1"
+      }
+    }
+  ]
+}

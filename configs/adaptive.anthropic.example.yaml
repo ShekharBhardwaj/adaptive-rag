@@ -1,0 +1,79 @@
+# Portable example of the reviewed six-condition development settings.
+# This new example has its own hash; retain original study configs and run lineage.
+# Copy to a new ignored *.local.yaml in configs/; see configs/README.md.
+# Requires a separately obtained or built compatible vector index.
+schema_version: '1'
+repository:
+  url: https://github.com/langchain-ai/langchain.git
+  path: ../datasets/repos/langchain
+  commit_sha: ea17e48f0a4336c920394fd029de99f1568b4c38
+files:
+  max_file_bytes: 1000000
+models:
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  embedding_model: qwen/qwen3-embedding-8b
+  chat_model: claude-haiku-4-5-20251001
+  temperature: 0.0
+  max_output_tokens: 512
+  token_parameter: max_tokens
+  chat_base_url: https://api.anthropic.com/v1
+  chat_api_key_env: ANTHROPIC_API_KEY
+  request_pacing:
+    min_interval_seconds: 6.0
+    max_requests_per_minute: 10
+retrieval:
+  top_k: 5
+  budget:
+    max_tool_calls: 24
+    max_model_calls: 12
+    max_tokens: 128000
+    max_seconds: 300
+    max_evidence_chars: 24000
+  indexing_budget:
+    max_model_calls: 640
+    max_tokens: 25000000
+    max_seconds: 7200
+  chunking:
+    max_lines: 80
+    max_chars: 12000
+    overlap_lines: 8
+    parser: auto
+  embedding_batch_size: 16
+experiment:
+  dataset: ../benchmarks/pilot.jsonl
+  split: development
+  conditions:
+  - vector
+  - vectorless
+  - agentic
+  - no_retrieval
+  - adaptive_rule
+  - adaptive_llm
+  repetitions: 3
+  order_seed: 17
+  vector_index: ../datasets/indexes/langchain-openrouter-qwen3-phase4-002
+  require_pilot: true
+  answer_model: null
+  generation:
+    temperature: 0.0
+    max_output_tokens: 1024
+    max_tokens: 64000
+    max_seconds: 90
+    max_evidence_chars: 24000
+  budget:
+    max_model_calls: 2000
+    max_tokens: 12000000
+    max_seconds: 7200
+    max_cost_usd: 9.90
+    unknown_usage_policy: reserve
+  price_schedule: ../experiments/preflight/anthropic-development-2026-11-16-001/prices.json
+routing:
+  chat_model: claude-haiku-4-5-20251001
+  temperature: 0.0
+  max_output_tokens: 256
+  budget:
+    max_model_calls: 1
+    max_tool_calls: 0
+    max_tokens: 6000
+    max_seconds: 90

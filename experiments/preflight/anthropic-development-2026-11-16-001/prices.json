@@ -1,0 +1,21 @@
+{
+  "currency": "USD",
+  "as_of": "2026-11-16",
+  "source": "Anthropic Haiku 4.5 standard pricing verified 2026-11-16: https://platform.claude.com/docs/en/about-claude/pricing ($1/M input, $5/M output). Qwen conservative planning rate retained from https://openrouter.ai/qwen/qwen3-embedding-8b/providers ($0.04/M input). Estimates are not invoices; cache/provider discounts, fees and taxes are omitted.",
+  "entries": [
+    {
+      "base_url": "https://api.anthropic.com/v1",
+      "model": "claude-haiku-4-5-20251001",
+      "operation": "chat",
+      "input_usd_per_million": 1.0,
+      "output_usd_per_million": 5.0
+    },
+    {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "qwen/qwen3-embedding-8b",
+      "operation": "embedding",
+      "input_usd_per_million": 0.04,
+      "output_usd_per_million": 0.0
+    }
+  ]
+}

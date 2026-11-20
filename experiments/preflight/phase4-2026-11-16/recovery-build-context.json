@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-11-17T00:30:15.467166+00:00",
+  "environment": {
+    "framework_version": "0.4.0",
+    "framework_git_sha": "a44b4cdde7a05cb4c4ed4068b948ac209d3bd5ae",
+    "framework_worktree_dirty": true,
+    "framework_source_sha256": "ec5f5c3c4731ffa7dac191ca0f4de7540ce02404aa94f9faa04dc6247f241956",
+    "lockfile_sha256": "4b248c2fe58dcbce25d4aad6cabb5c9fa1dc601747053c03ce1a96afd96faf73",
+    "python": "3.13.9 (main, Oct 14 2025, 21:10:40) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "dependencies": {
+      "pydantic": "2.14.3",
+      "PyYAML": "6.0.3",
+      "httpx": "0.28.1",
+      "numpy": "2.5.4",
+      "faiss-cpu": "1.16.0",
+      "tree-sitter": "0.26.1",
+      "tree-sitter-python": "0.25.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    }
+  },
+  "framework_archive": "experiments/preflight/phase4-2026-11-16/framework-recovery-source.tar.gz",
+  "framework_archive_sha256": "e1a25e4b2ec826e34d9e1e730f72e8edf113d53527dff97c9fce2721defee2ec",
+  "driver_sha256": "e746932abad1d6cfa2f722f1c5a56f8fee90d0a08734028da8241c8db1bbd700",
+  "source": "datasets/indexes/langchain-openrouter-qwen3-phase4-001",
+  "target": "datasets/indexes/langchain-openrouter-qwen3-phase4-002",
+  "explicit_api_opt_in": true
+}

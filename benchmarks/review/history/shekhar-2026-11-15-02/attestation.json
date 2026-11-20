@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "batch_id": "shekhar-2026-11-15-02",
+  "reviewer": "Shekhar",
+  "method": "source_inspection",
+  "source_commit_reported": "ea17e48f",
+  "source_commit_resolved": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "recorded_at": "2026-11-15T19:30:55.937801+00:00",
+  "inspection_time_supplied": null,
+  "timestamp_semantics": "The reviewer supplied no separate inspection time; reviewed_at records when the chat attestation was recorded.",
+  "dataset_before_sha256": "610cb100bb50a523286184997b2577037c6174f62db486cddef173cda44254aa",
+  "dataset_after_sha256": "5e808ef5fb8f1f1f1efde9dcb612ad80a044b1fc39607f13da9837dc6d25c753",
+  "inspected_question_ids": [
+    "lc-s-01",
+    "lc-s-02",
+    "lc-s-03",
+    "lc-s-04",
+    "lc-s-05"
+  ],
+  "accept": {
+    "lc-s-01": "output_parsers/json.py 32, 129-131 and 134-135. SimpleJsonOutputParser is a module-level alias of JsonOutputParser, whose _type property returns \"simple_json_output_parser\".",
+    "lc-s-02": "load/dump.py 70 and 105. Signatures and return annotations (str, Any) are as stated; dumps ends in json.dumps (96-102) and dumpd returns _serialize_value(obj) directly (119-120).",
+    "lc-s-03": "outputs/chat_generation.py 17, 37 and 41-42. ChatGeneration subclasses Generation and declares message: BaseMessage and type: Literal[\"ChatGeneration\"] = \"ChatGeneration\".",
+    "lc-s-04": "embeddings/fake.py 16 and 70, with imports at 7 and 10. FakeEmbeddings and DeterministicFakeEmbedding each declare (Embeddings, BaseModel).",
+    "lc-s-05": "document_loaders/base.py 117 and 127-128. BaseBlobParser(ABC) with @abstractmethod lazy_parse(self, blob: Blob) -> Iterator[Document]."
+  },
+  "revise": {},
+  "reject": []
+}

@@ -1,0 +1,712 @@
+{
+  "schema_version": "1",
+  "kind": "confirmatory_comparisons",
+  "run_id": "efc5034c-b904-4a02-889f-f45e746a3e49",
+  "split": "development",
+  "planned_jobs": 225,
+  "observed_jobs": 225,
+  "method": {
+    "primary_metric": "failure-aware correctness over all planned jobs",
+    "interval": "95% paired question-cluster percentile bootstrap",
+    "bootstrap_samples": 2000,
+    "seed": 0,
+    "similarity_margin_points": 10.0,
+    "endpoint_tolerance": 1e-09,
+    "multiplicity_adjustment": null,
+    "statistics_by": "adaptive_rag.evaluation.analysis.aggregate_results"
+  },
+  "inputs": {
+    "run": "experiments/raw/adaptive-cascade-development-20261119-001",
+    "results_sha256": "e19808c9f9e0665abc0751f3aeb8755ccb2cebb793ff93375e8683dfc196668a",
+    "manifest_sha256": "6506c4c28bb9623bf1b60226d0e859f7429c6b9353edf3c5fed33886053b4c0c",
+    "scores": "experiments/reviews/adaptive-cascade-development-20261119-001/answers.ai-scores.jsonl",
+    "scores_sha256": "99d4a84742cf75b8b83483cf1e0b93d65471872f5de2adb32a9a1555a402d2c0",
+    "template": "experiments/reviews/adaptive-cascade-development-20261119-001/answers.review-template.jsonl",
+    "template_sha256": "af02082dc3452bf6042194c5c7eeca89cc135df817531ca8cf5b71c2295227a9",
+    "analysis_script_sha256": "5fdadf7958fe72942fa86e933e6ea592a48aa2178d31598739c0cabe01501506",
+    "framework": {
+      "dependencies": {
+        "PyYAML": "6.0.3",
+        "faiss-cpu": "1.16.0",
+        "httpx": "0.28.1",
+        "numpy": "2.5.4",
+        "pydantic": "2.14.3",
+        "tree-sitter": "0.26.1",
+        "tree-sitter-javascript": "0.25.0",
+        "tree-sitter-python": "0.25.0",
+        "tree-sitter-typescript": "0.23.2"
+      },
+      "framework_git_sha": "a44b4cdde7a05cb4c4ed4068b948ac209d3bd5ae",
+      "framework_source_sha256": "b59ad0bce4ec89471d3bc792ed26d2e83ea08aaeb91436851f0ca662684b813b",
+      "framework_version": "0.4.0",
+      "framework_worktree_dirty": true,
+      "lockfile_sha256": "4b248c2fe58dcbce25d4aad6cabb5c9fa1dc601747053c03ce1a96afd96faf73",
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "python": "3.13.9 (main, Oct 14 2025, 21:10:40) [Clang 20.1.4 ]"
+    }
+  },
+  "score_checks": {
+    "answer_texts": 206,
+    "scores": 206,
+    "answer_texts_without_score": [],
+    "scores_without_answer_text": [],
+    "template_items": 206,
+    "template_binds_exactly_the_answer_texts": true,
+    "template_rating_fields_filled": 0,
+    "distinct_answer_cases": 88,
+    "identical_cases_rated_differently": [],
+    "correctness_values": {
+      "0.0": 42,
+      "0.5": 37,
+      "1.0": 127
+    },
+    "correctness_values_outside_0_half_1": 0,
+    "reviewer_labels": {
+      "Codex (AI reviewer)": 206
+    },
+    "reviewed_at_first": "2026-11-19T14:18:39.191154-05:00",
+    "reviewed_at_last": "2026-11-19T14:20:00.256080-05:00"
+  },
+  "score_freeze": {
+    "file": "experiments/reviews/adaptive-cascade-development-20261119-001/ai-review/scores-frozen.json",
+    "sha256": "886fadbd5810a735fa32fbfeeca9beb652c4789d19beda6705d4da53116a6407",
+    "kind": "frozen_blinded_ai_scores",
+    "frozen_at": "2026-11-19T19:23:02.754410+00:00",
+    "reviewer": "Codex (AI reviewer)",
+    "reviewer_type": "ai",
+    "human_review": false,
+    "item_count": 206,
+    "score_file_sha256_is_in_the_freeze_record": true,
+    "template_sha256_is_in_the_freeze_record": true,
+    "protocol_rubric_sha256_is_in_the_freeze_record": true,
+    "protocol_rubric_file_is_unchanged": true
+  },
+  "execution_outcome": {
+    "file": "experiments/preflight/cascade-development-2026-11-19-001/outcome.json",
+    "sha256": "c11204259c280e31b3773a9ae45af399b989258f0f5afc5cbb210aecd0c5e675",
+    "raw_files_checked": 10,
+    "raw_files_changed": [],
+    "review_template_matches": true,
+    "review_packets_checked": null,
+    "review_packets_changed": null,
+    "protocol_matches": null
+  },
+  "author_attestation": {
+    "file": "experiments/reviews/adaptive-cascade-development-20261119-001/shekhar-review-attestation.json",
+    "sha256": "96f1e54bdc1f0975d341c17b0ced386a9cd4ce3e839286655b0d6ed2bb9af3eb",
+    "names_this_score_file": true,
+    "kind": "user_review_attestation",
+    "reviewer": "Shekhar",
+    "reviewed_at": "2026-11-19T14:40:04-05:00",
+    "score_author": "Codex (AI reviewer)",
+    "separate_per_item_human_scores_supplied": false
+  },
+  "confirmatory_comparisons": [
+    {
+      "comparison": 1,
+      "left": "adaptive_cascade",
+      "right": "vector",
+      "difference": "left_minus_right",
+      "metric": "failure_aware_correctness",
+      "mean_difference": 0.12222222222222223,
+      "interval_95": [
+        0.03333333333333333,
+        0.23333333333333334
+      ],
+      "paired_questions": 15,
+      "questions_left_out_for_unknown_values": 0,
+      "paired_question_ids": [
+        "lc-c-01",
+        "lc-c-02",
+        "lc-c-03",
+        "lc-c-04",
+        "lc-c-05",
+        "lc-s-01",
+        "lc-s-02",
+        "lc-s-03",
+        "lc-s-04",
+        "lc-s-05",
+        "lc-x-01",
+        "lc-x-02",
+        "lc-x-03",
+        "lc-x-04",
+        "lc-x-05"
+      ],
+      "rule": "general rule, direction 'left is more correct than right'",
+      "verdict": "Supported"
+    },
+    {
+      "comparison": 2,
+      "left": "adaptive_cascade",
+      "right": "agentic_wrapup",
+      "difference": "left_minus_right",
+      "metric": "failure_aware_correctness",
+      "mean_difference": 0.0,
+      "interval_95": [
+        -0.16666666666666666,
+        0.13333333333333333
+      ],
+      "paired_questions": 15,
+      "questions_left_out_for_unknown_values": 0,
+      "paired_question_ids": [
+        "lc-c-01",
+        "lc-c-02",
+        "lc-c-03",
+        "lc-c-04",
+        "lc-c-05",
+        "lc-s-01",
+        "lc-s-02",
+        "lc-s-03",
+        "lc-s-04",
+        "lc-s-05",
+        "lc-x-01",
+        "lc-x-02",
+        "lc-x-03",
+        "lc-x-04",
+        "lc-x-05"
+      ],
+      "rule": "quality against Agentic: similar only if the whole interval is within ten points either side of zero",
+      "verdict": "Not distinguishable at this sample size"
+    },
+    {
+      "comparison": 2,
+      "left": "adaptive_cascade",
+      "right": "agentic_wrapup",
+      "difference": "left_minus_right",
+      "metric": "estimated_cost_usd",
+      "mean_difference": -0.04107136857142857,
+      "interval_95": [
+        -0.056379465738095234,
+        -0.02423947735714288
+      ],
+      "paired_questions": 14,
+      "questions_left_out_for_unknown_values": 1,
+      "paired_question_ids": [
+        "lc-c-01",
+        "lc-c-02",
+        "lc-c-03",
+        "lc-c-04",
+        "lc-c-05",
+        "lc-s-01",
+        "lc-s-02",
+        "lc-s-04",
+        "lc-s-05",
+        "lc-x-01",
+        "lc-x-02",
+        "lc-x-03",
+        "lc-x-04",
+        "lc-x-05"
+      ],
+      "rule": "efficiency: supported if the paired cost interval lies below zero; otherwise the general rule; stated together with the quality result",
+      "verdict": "Supported"
+    },
+    {
+      "comparison": 2,
+      "left": "adaptive_cascade",
+      "right": "agentic_wrapup",
+      "difference": "left_minus_right",
+      "metric": "latency_seconds",
+      "mean_difference": -28.396354033324556,
+      "interval_95": [
+        -37.7840099087741,
+        -17.095488805057
+      ],
+      "paired_questions": 15,
+      "questions_left_out_for_unknown_values": 0,
+      "paired_question_ids": [
+        "lc-c-01",
+        "lc-c-02",
+        "lc-c-03",
+        "lc-c-04",
+        "lc-c-05",
+        "lc-s-01",
+        "lc-s-02",
+        "lc-s-03",
+        "lc-s-04",
+        "lc-s-05",
+        "lc-x-01",
+        "lc-x-02",
+        "lc-x-03",
+        "lc-x-04",
+        "lc-x-05"
+      ],
+      "rule": "general rule, direction 'the cascade takes less time'; the protocol fixes wording for cost only",
+      "verdict": "Supported"
+    },
+    {
+      "comparison": 3,
+      "left": "agentic_wrapup",
+      "right": "agentic",
+      "difference": "left_minus_right",
+      "metric": "failure_aware_correctness",
+      "mean_difference": 0.35555555555555557,
+      "interval_95": [
+        0.14444444444444446,
+        0.5666666666666667
+      ],
+      "paired_questions": 15,
+      "questions_left_out_for_unknown_values": 0,
+      "paired_question_ids": [
+        "lc-c-01",
+        "lc-c-02",
+        "lc-c-03",
+        "lc-c-04",
+        "lc-c-05",
+        "lc-s-01",
+        "lc-s-02",
+        "lc-s-03",
+        "lc-s-04",
+        "lc-s-05",
+        "lc-x-01",
+        "lc-x-02",
+        "lc-x-03",
+        "lc-x-04",
+        "lc-x-05"
+      ],
+      "rule": "general rule, direction 'left is more correct than right'",
+      "verdict": "Supported"
+    }
+  ],
+  "sensitivity_without_unreachable_provider_jobs": {
+    "jobs_left_out": [
+      {
+        "condition": "agentic_wrapup",
+        "question_id": "lc-s-03",
+        "repetition": 1,
+        "status": "budget_exhausted",
+        "request_errors": [
+          "ConnectTimeout"
+        ]
+      },
+      {
+        "condition": "agentic",
+        "question_id": "lc-c-01",
+        "repetition": 0,
+        "status": "budget_exhausted",
+        "request_errors": [
+          "ConnectTimeout"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "comparison": 1,
+        "left": "adaptive_cascade",
+        "right": "vector",
+        "difference": "left_minus_right",
+        "metric": "failure_aware_correctness",
+        "mean_difference": 0.12222222222222223,
+        "interval_95": [
+          0.03333333333333333,
+          0.23333333333333334
+        ],
+        "paired_questions": 15,
+        "questions_left_out_for_unknown_values": 0,
+        "paired_question_ids": [
+          "lc-c-01",
+          "lc-c-02",
+          "lc-c-03",
+          "lc-c-04",
+          "lc-c-05",
+          "lc-s-01",
+          "lc-s-02",
+          "lc-s-03",
+          "lc-s-04",
+          "lc-s-05",
+          "lc-x-01",
+          "lc-x-02",
+          "lc-x-03",
+          "lc-x-04",
+          "lc-x-05"
+        ],
+        "rule": "general rule, direction 'left is more correct than right'",
+        "verdict": "Supported"
+      },
+      {
+        "comparison": 2,
+        "left": "adaptive_cascade",
+        "right": "agentic_wrapup",
+        "difference": "left_minus_right",
+        "metric": "failure_aware_correctness",
+        "mean_difference": -0.022222222222222223,
+        "interval_95": [
+          -0.1888888888888889,
+          0.1
+        ],
+        "paired_questions": 15,
+        "questions_left_out_for_unknown_values": 0,
+        "paired_question_ids": [
+          "lc-c-01",
+          "lc-c-02",
+          "lc-c-03",
+          "lc-c-04",
+          "lc-c-05",
+          "lc-s-01",
+          "lc-s-02",
+          "lc-s-03",
+          "lc-s-04",
+          "lc-s-05",
+          "lc-x-01",
+          "lc-x-02",
+          "lc-x-03",
+          "lc-x-04",
+          "lc-x-05"
+        ],
+        "rule": "quality against Agentic: similar only if the whole interval is within ten points either side of zero",
+        "verdict": "Not distinguishable at this sample size"
+      },
+      {
+        "comparison": 2,
+        "left": "adaptive_cascade",
+        "right": "agentic_wrapup",
+        "difference": "left_minus_right",
+        "metric": "estimated_cost_usd",
+        "mean_difference": -0.039949547999999994,
+        "interval_95": [
+          -0.05491993331111111,
+          -0.02433611762222223
+        ],
+        "paired_questions": 15,
+        "questions_left_out_for_unknown_values": 0,
+        "paired_question_ids": [
+          "lc-c-01",
+          "lc-c-02",
+          "lc-c-03",
+          "lc-c-04",
+          "lc-c-05",
+          "lc-s-01",
+          "lc-s-02",
+          "lc-s-03",
+          "lc-s-04",
+          "lc-s-05",
+          "lc-x-01",
+          "lc-x-02",
+          "lc-x-03",
+          "lc-x-04",
+          "lc-x-05"
+        ],
+        "rule": "efficiency: supported if the paired cost interval lies below zero; otherwise the general rule; stated together with the quality result",
+        "verdict": "Supported"
+      },
+      {
+        "comparison": 2,
+        "left": "adaptive_cascade",
+        "right": "agentic_wrapup",
+        "difference": "left_minus_right",
+        "metric": "latency_seconds",
+        "mean_difference": -27.861522768069214,
+        "interval_95": [
+          -37.382222207913266,
+          -16.58113374529274
+        ],
+        "paired_questions": 15,
+        "questions_left_out_for_unknown_values": 0,
+        "paired_question_ids": [
+          "lc-c-01",
+          "lc-c-02",
+          "lc-c-03",
+          "lc-c-04",
+          "lc-c-05",
+          "lc-s-01",
+          "lc-s-02",
+          "lc-s-03",
+          "lc-s-04",
+          "lc-s-05",
+          "lc-x-01",
+          "lc-x-02",
+          "lc-x-03",
+          "lc-x-04",
+          "lc-x-05"
+        ],
+        "rule": "general rule, direction 'the cascade takes less time'; the protocol fixes wording for cost only",
+        "verdict": "Supported"
+      },
+      {
+        "comparison": 3,
+        "left": "agentic_wrapup",
+        "right": "agentic",
+        "difference": "left_minus_right",
+        "metric": "failure_aware_correctness",
+        "mean_difference": 0.35555555555555557,
+        "interval_95": [
+          0.15555555555555556,
+          0.5666666666666667
+        ],
+        "paired_questions": 15,
+        "questions_left_out_for_unknown_values": 0,
+        "paired_question_ids": [
+          "lc-c-01",
+          "lc-c-02",
+          "lc-c-03",
+          "lc-c-04",
+          "lc-c-05",
+          "lc-s-01",
+          "lc-s-02",
+          "lc-s-03",
+          "lc-s-04",
+          "lc-s-05",
+          "lc-x-01",
+          "lc-x-02",
+          "lc-x-03",
+          "lc-x-04",
+          "lc-x-05"
+        ],
+        "rule": "general rule, direction 'left is more correct than right'",
+        "verdict": "Supported"
+      }
+    ]
+  },
+  "plain_json_recomputation": {
+    "agrees": true,
+    "largest_absolute_gap": 0.0,
+    "allowed_gap": 1e-12
+  },
+  "descriptive": {
+    "conditions": {
+      "vector": {
+        "planned": 45,
+        "completed": 45,
+        "failed_counted_as_zero": 0,
+        "rated_full": 28,
+        "rated_partial": 14,
+        "rated_zero": 3,
+        "failure_aware_correctness": 0.7777777777777778,
+        "correctness_among_completed": 0.7777777777777778,
+        "citation_support_mean": 0.7888888888888889,
+        "citation_support_rated": 45,
+        "known_cost_usd": 0.31978284,
+        "jobs_with_unknown_cost": 0,
+        "mean_known_cost_per_job_usd": 0.0071062853333333335,
+        "mean_elapsed_seconds": 12.410308943419821,
+        "mean_evidence_recall": 0.6
+      },
+      "agentic": {
+        "planned": 45,
+        "completed": 27,
+        "failed_counted_as_zero": 18,
+        "rated_full": 23,
+        "rated_partial": 3,
+        "rated_zero": 1,
+        "failure_aware_correctness": 0.5444444444444444,
+        "correctness_among_completed": 0.9074074074074074,
+        "citation_support_mean": 0.8518518518518519,
+        "citation_support_rated": 27,
+        "known_cost_usd": 3.245007,
+        "jobs_with_unknown_cost": 1,
+        "mean_known_cost_per_job_usd": 0.0737501590909091,
+        "mean_elapsed_seconds": 52.665375094467564,
+        "mean_evidence_recall": 0.46481481481481485
+      },
+      "agentic_wrapup": {
+        "planned": 45,
+        "completed": 44,
+        "failed_counted_as_zero": 1,
+        "rated_full": 37,
+        "rated_partial": 7,
+        "rated_zero": 0,
+        "failure_aware_correctness": 0.9,
+        "correctness_among_completed": 0.9204545454545454,
+        "citation_support_mean": 0.9090909090909091,
+        "citation_support_rated": 44,
+        "known_cost_usd": 2.582784,
+        "jobs_with_unknown_cost": 1,
+        "mean_known_cost_per_job_usd": 0.05869963636363637,
+        "mean_elapsed_seconds": 46.88714020742466,
+        "mean_evidence_recall": 0.8092592592592592
+      },
+      "adaptive_cascade": {
+        "planned": 45,
+        "completed": 45,
+        "failed_counted_as_zero": 0,
+        "rated_full": 39,
+        "rated_partial": 3,
+        "rated_zero": 3,
+        "failure_aware_correctness": 0.9,
+        "correctness_among_completed": 0.9,
+        "citation_support_mean": 0.8888888888888888,
+        "citation_support_rated": 45,
+        "known_cost_usd": 0.81583184,
+        "jobs_with_unknown_cost": 0,
+        "mean_known_cost_per_job_usd": 0.018129596444444444,
+        "mean_elapsed_seconds": 18.490786174100098,
+        "mean_evidence_recall": 0.7277777777777777
+      },
+      "no_retrieval": {
+        "planned": 45,
+        "completed": 45,
+        "failed_counted_as_zero": 0,
+        "rated_full": 0,
+        "rated_partial": 10,
+        "rated_zero": 35,
+        "failure_aware_correctness": 0.1111111111111111,
+        "correctness_among_completed": 0.1111111111111111,
+        "citation_support_mean": null,
+        "citation_support_rated": 0,
+        "known_cost_usd": 0.059593,
+        "jobs_with_unknown_cost": 0,
+        "mean_known_cost_per_job_usd": 0.001324288888888889,
+        "mean_elapsed_seconds": 4.489606039787436,
+        "mean_evidence_recall": 0.0
+      }
+    },
+    "cascade": {
+      "observed": 45,
+      "escalated": 9,
+      "escalation_reasons": {
+        "evidence_reported_insufficient": 9
+      },
+      "escalations_not_admitted": 0,
+      "final_strategies": {
+        "agentic_wrapup": 9,
+        "vector": 36
+      },
+      "fell_back_to_first_stage": 0,
+      "final_answers_when_escalated": {
+        "full": 9
+      },
+      "final_answers_when_not_escalated": {
+        "partial": 3,
+        "full": 30,
+        "zero": 3
+      },
+      "first_stage_answers_kept_and_rated_below_full": 6,
+      "questions_escalated_at_least_once": 3,
+      "cascade_minus_vector_from_questions_escalated_at_least_once": 0.1,
+      "cascade_minus_vector_from_questions_never_escalated": 0.022222222222222223
+    },
+    "vector_sufficiency_report_by_rating": {
+      "note": "Not in the protocol's list of descriptive results; shown for context.",
+      "reported_insufficient": {
+        "partial": 9
+      },
+      "reported_sufficient": {
+        "full": 28,
+        "partial": 5,
+        "zero": 3
+      }
+    },
+    "question_means": {
+      "lc-c-01": {
+        "vector": 1.0,
+        "agentic": 0.6666666666666666,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-c-02": {
+        "vector": 1.0,
+        "agentic": 0.3333333333333333,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-c-03": {
+        "vector": 0.5,
+        "agentic": 0.5,
+        "agentic_wrapup": 0.5,
+        "adaptive_cascade": 0.5,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-c-04": {
+        "vector": 0.6666666666666666,
+        "agentic": 0.0,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-c-05": {
+        "vector": 1.0,
+        "agentic": 1.0,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.5,
+        "cascade_escalations": 0
+      },
+      "lc-s-01": {
+        "vector": 1.0,
+        "agentic": 1.0,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-s-02": {
+        "vector": 0.0,
+        "agentic": 0.0,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 0.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-s-03": {
+        "vector": 1.0,
+        "agentic": 1.0,
+        "agentic_wrapup": 0.6666666666666666,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-s-04": {
+        "vector": 0.5,
+        "agentic": 1.0,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 3
+      },
+      "lc-s-05": {
+        "vector": 1.0,
+        "agentic": 1.0,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.16666666666666666,
+        "cascade_escalations": 0
+      },
+      "lc-x-01": {
+        "vector": 1.0,
+        "agentic": 0.3333333333333333,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-x-02": {
+        "vector": 1.0,
+        "agentic": 0.3333333333333333,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 0
+      },
+      "lc-x-03": {
+        "vector": 0.5,
+        "agentic": 0.0,
+        "agentic_wrapup": 0.8333333333333334,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.0,
+        "cascade_escalations": 3
+      },
+      "lc-x-04": {
+        "vector": 0.5,
+        "agentic": 1.0,
+        "agentic_wrapup": 1.0,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.5,
+        "cascade_escalations": 3
+      },
+      "lc-x-05": {
+        "vector": 1.0,
+        "agentic": 0.0,
+        "agentic_wrapup": 0.5,
+        "adaptive_cascade": 1.0,
+        "no_retrieval": 0.5,
+        "cascade_escalations": 0
+      }
+    }
+  },
+  "pooled_descriptive": null
+}

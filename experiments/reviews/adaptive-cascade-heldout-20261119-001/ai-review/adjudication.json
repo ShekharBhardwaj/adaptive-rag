@@ -1,0 +1,714 @@
+{
+  "schema_version": "1",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "condition_labels_hidden": true,
+  "scope": "Root inspected all105 assessment rationales and the pinned implementations, and checked exact answers/citations for borderline cases. Three graders handled disjoint question families in one AI evaluation workflow.",
+  "criteria_file": "experiments/reviews/adaptive-cascade-development-20261119-001/ai-review/rubric.json",
+  "criteria_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+  "decisions": [
+    {
+      "unique_key": "84d20ed1f27010b934bc121ba5a265d784828282d58e3fa7af35e6354c4ad7fd",
+      "items": [
+        2,
+        51,
+        78
+      ],
+      "scores": [
+        0.5,
+        1.0
+      ],
+      "reason": "The expressed lack of evidence does not make this an abstention: the helper and implementation location are substantive correct requested components.",
+      "judgments": [
+        "The expressed lack of evidence does not make this an abstention: the helper and implementation location are substantive correct requested components."
+      ]
+    },
+    {
+      "unique_key": "d65d18d2478b90882acee114a8b7245555426d3ace657bff2de5f541fa5e090c",
+      "items": [
+        4,
+        62,
+        139
+      ],
+      "scores": [
+        0.5,
+        null
+      ],
+      "reason": "Partial credit is retained for the explicit correct refill/cap and wait-until-token components despite the materially wrong initial-burst answer.",
+      "judgments": [
+        "Partial credit is retained for the explicit correct refill/cap and wait-until-token components despite the materially wrong initial-burst answer."
+      ]
+    },
+    {
+      "unique_key": "8029f43e145bd8584de724dba6f075e5401e2902fae6c68dbe779e423005951c",
+      "items": [
+        5
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "Citation support is complete for this answer: the cited cache contract expressly describes Generation-list storage, while its implementation establishes the stated eviction behavior; the answer does not purport to quote a BaseChatModel update-call trace.",
+      "judgments": [
+        "Citation support is complete for this answer: the cited cache contract expressly describes Generation-list storage, while its implementation establishes the stated eviction behavior; the answer does not purport to quote a BaseChatModel update-call trace."
+      ]
+    },
+    {
+      "unique_key": "277c60f73b73badcf4ab694c5fa1e6d8ba41746474e4aed01cf9b7ce52efa1ae",
+      "items": [
+        6,
+        30,
+        47,
+        100,
+        121,
+        136
+      ],
+      "scores": [
+        1.0,
+        0.5
+      ],
+      "reason": "The duplicate double key is acceptable because the valid Python literal and explicit overwrite explanation unambiguously yield double=4. Citation support is partial because the cited class description and outer mapper call do not establish the material shared-input branch execution shown in base.py.",
+      "judgments": [
+        "The duplicate double key is acceptable because the valid Python literal and explicit overwrite explanation unambiguously yield double=4.",
+        "Citation support is partial because the cited class description and outer mapper call do not establish the material shared-input branch execution shown in base.py."
+      ]
+    },
+    {
+      "unique_key": "b9a1ba64d383af80df3b141279d944e4be284520768f6c7482ba82fd80ecdaee",
+      "items": [
+        9,
+        73,
+        194
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Substantive retrieval and unpacking components merit partial credit despite the refusal to give the exact formatter outputs. Citation support is partial because the ID-dependent formatting behavior is asserted beyond the cited formatter signature.",
+      "judgments": [
+        "Substantive retrieval and unpacking components merit partial credit despite the refusal to give the exact formatter outputs. Citation support is partial because the ID-dependent formatting behavior is asserted beyond the cited formatter signature."
+      ]
+    },
+    {
+      "unique_key": "e42e48251d34f8c185fb819e225a38970eb631ce0750e12eb46345c6e95c36cc",
+      "items": [
+        15,
+        89,
+        137
+      ],
+      "scores": [
+        0.0,
+        1.0
+      ],
+      "reason": "The separate empty-history test example is contextual evidence, not a substantive answer for the stated preloaded-history case; this remains an abstention rather than a partial answer. Citation support for the contextual claims remains complete.",
+      "judgments": [
+        "The separate empty-history test example is contextual evidence, not a substantive answer for the stated preloaded-history case; this remains an abstention rather than a partial answer. Citation support for the contextual claims remains complete."
+      ]
+    },
+    {
+      "unique_key": "9b9ac4fecfac80abd9bcad4faaeff5a79ea939f41c527881e9ae8e5ca417a60c",
+      "items": [
+        18,
+        111,
+        149
+      ],
+      "scores": [
+        1.0,
+        null
+      ],
+      "reason": "Correctness remains complete: dict.update is an inaccurate name for the actual dictionary-unpacking merge, but the described overwrite semantics and every requested result are correct.",
+      "judgments": [
+        "Correctness remains complete: dict.update is an inaccurate name for the actual dictionary-unpacking merge, but the described overwrite semantics and every requested result are correct."
+      ]
+    },
+    {
+      "unique_key": "d215c16be9f909824db618355565e7e66d0fb23a23bd9405ba122c9c95fd7ebe",
+      "items": [
+        20,
+        65
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "Correctness remains 1. The answer's inline line numbers are displaced, but the complete supplied source range supports the correct behavior; the rubric allows minor locator errors.",
+      "judgments": [
+        {
+          "judgment": "Correctness remains 1.",
+          "reason": "The answer's inline line numbers are displaced, but the complete supplied source range supports the correct behavior; the rubric allows minor locator errors."
+        }
+      ]
+    },
+    {
+      "unique_key": "c52c87f408acc97a70c2fa17e98edd6bba970473360bbe394a55f241a744ecb1",
+      "items": [
+        21,
+        41,
+        140,
+        170
+      ],
+      "scores": [
+        1.0,
+        0.5
+      ],
+      "reason": "Correctness remains 1; citation_support is 0.5. None is incorrectly called the default (actual False), but both are falsy and every requested behavioral result is correct. Helpers/documentation support only part of the claims, while BaseTool.run control flow and middleware remedy are not in the supplied citations.",
+      "judgments": [
+        {
+          "judgment": "Correctness remains 1; citation_support is 0.5.",
+          "reason": "None is incorrectly called the default (actual False), but both are falsy and every requested behavioral result is correct. Helpers/documentation support only part of the claims, while BaseTool.run control flow and middleware remedy are not in the supplied citations."
+        }
+      ]
+    },
+    {
+      "unique_key": "e1fb888a18b60261af191a4ef3b3fd5038c4e74a0f6f63849522b036543359b6",
+      "items": [
+        23,
+        152
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The inaccurate inline locators and shorthand document examples do not change the correct requested behavior; the actual cited ranges contain the relevant implementation, so both scores remain full.",
+      "judgments": [
+        "The inaccurate inline locators and shorthand document examples do not change the correct requested behavior; the actual cited ranges contain the relevant implementation, so both scores remain full."
+      ]
+    },
+    {
+      "unique_key": "861db84abe56be1eaca42e2e47a71220e7f18607cd963dc1bd3e33edef09e604",
+      "items": [
+        25,
+        37,
+        133,
+        141,
+        159,
+        178
+      ],
+      "scores": [
+        1.0,
+        0.5
+      ],
+      "reason": "Correctness remains 1; citation_support is 0.5. The question asks to identify the hooks, which are correctly named despite abbreviated signatures; the implementation explicitly tolerates hooks without run_manager. The cited documentation does not show the default async wrapper, so that material citation claim is unsupported there.",
+      "judgments": [
+        {
+          "judgment": "Correctness remains 1; citation_support is 0.5.",
+          "reason": "The question asks to identify the hooks, which are correctly named despite abbreviated signatures; the implementation explicitly tolerates hooks without run_manager. The cited documentation does not show the default async wrapper, so that material citation claim is unsupported there."
+        }
+      ]
+    },
+    {
+      "unique_key": "1efcfbab00ff9d6b3c10177b5633a422f4b1724a9b81f77ea2a3cbaf34511d63",
+      "items": [
+        27,
+        50,
+        116
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The prose does not separately state the implementation path, but its source citation provides the exact file; treated as a minor locator presentation issue with no correctness reduction.",
+      "judgments": [
+        "The prose does not separately state the implementation path, but its source citation provides the exact file; treated as a minor locator presentation issue with no correctness reduction."
+      ]
+    },
+    {
+      "unique_key": "f5293c8a68d0fdcf3d5877a7b656dd0109500a9d46660e6b6f9d49013f1ec4ad",
+      "items": [
+        29,
+        70,
+        93
+      ],
+      "scores": [
+        0.5,
+        null
+      ],
+      "reason": "The correct survivors and concrete insertion-order behavior warrant partial credit despite the material stored-component error; the LRU label does not negate the otherwise explicit correct eviction mechanism.",
+      "judgments": [
+        "The correct survivors and concrete insertion-order behavior warrant partial credit despite the material stored-component error; the LRU label does not negate the otherwise explicit correct eviction mechanism."
+      ]
+    },
+    {
+      "unique_key": "f67f7f9d72f47f02ca009cb9660f6cd24309e4c05c58f80743331eb38cf8d37b",
+      "items": [
+        31
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Partial credit is retained for the requested list-storage and UUID components even though the generator outcome and causal comparison are wrong.",
+      "judgments": [
+        "Partial credit is retained for the requested list-storage and UUID components even though the generator outcome and causal comparison are wrong."
+      ]
+    },
+    {
+      "unique_key": "b36a46e2160a86a6918adf8e5491f457360d728b79acd7669cbbaafc1d6650b5",
+      "items": [
+        32
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The premature [H1] label is treated as imprecise intermediate wording because the answer explicitly describes removing the historical prefix and gives every requested message sequence correctly. The inherited-loop detail is not explicitly explained, but the answer correctly assigns duplication prevention to wrapper trimming and the history implementation to appending; this is substantively complete.",
+      "judgments": [
+        "The premature [H1] label is treated as imprecise intermediate wording because the answer explicitly describes removing the historical prefix and gives every requested message sequence correctly.",
+        "The inherited-loop detail is not explicitly explained, but the answer correctly assigns duplication prevention to wrapper trimming and the history implementation to appending; this is substantively complete."
+      ]
+    },
+    {
+      "unique_key": "40b5808419efac143df50e36952890fd909f709840254d654cacf3c9e3004b4b",
+      "items": [
+        36
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The cited cache contract expressly supports Generation-list storage for this answer; a separate quoted chat-model update trace is not claimed, so the absence of that citation does not reduce support.",
+      "judgments": [
+        "The cited cache contract expressly supports Generation-list storage for this answer; a separate quoted chat-model update trace is not claimed, so the absence of that citation does not reduce support."
+      ]
+    },
+    {
+      "unique_key": "2add87d9d6deaa96f97888f3d847c4b14857eee791cebaedb0d25244cb31d38e",
+      "items": [
+        40
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The exact implementation file is supplied by the source citation rather than prose; the class and all requested fields are correct, so no correctness reduction.",
+      "judgments": [
+        "The exact implementation file is supplied by the source citation rather than prose; the class and all requested fields are correct, so no correctness reduction."
+      ]
+    },
+    {
+      "unique_key": "b7cec6471a7274e68e0f0a6907ecaf9571ea78d5e304bd0e188f251debb9dc34",
+      "items": [
+        43,
+        104,
+        171
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "The correct retrieval tuple and with-ID content/artifact behavior are substantive requested components; the incorrect no-ID branch makes this partial rather than wholly incorrect.",
+      "judgments": [
+        "The correct retrieval tuple and with-ID content/artifact behavior are substantive requested components; the incorrect no-ID branch makes this partial rather than wholly incorrect."
+      ]
+    },
+    {
+      "unique_key": "64d82054211545b9cfd22dd9f4f0acb35c0f80bc84ac793b5b93736da23a62c8",
+      "items": [
+        44
+      ],
+      "scores": [
+        0.0,
+        1.0
+      ],
+      "reason": "Quoting the conversion branch alone is insufficient substantive resolution: no requested storage result or iterator-exhaustion effect is supplied. The case remains abstained with correctness zero, while accurate cited-context claims receive citation support one.",
+      "judgments": [
+        "Quoting the conversion branch alone is insufficient substantive resolution: no requested storage result or iterator-exhaustion effect is supplied. The case remains abstained with correctness zero, while accurate cited-context claims receive citation support one."
+      ]
+    },
+    {
+      "unique_key": "b15ff0c9206d67e22fa79e57e3b1262aea482c4476fc3bce595a2cf00e3be9f6",
+      "items": [
+        45,
+        126
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The phrase only after 2.0 seconds is interpreted in its explicit test-evidence context as the first observed successful call in that trace, not the earliest possible acquisition at requests_per_second=2; the preceding algorithm correctly gives the threshold.",
+      "judgments": [
+        "The phrase only after 2.0 seconds is interpreted in its explicit test-evidence context as the first observed successful call in that trace, not the earliest possible acquisition at requests_per_second=2; the preceding algorithm correctly gives the threshold."
+      ]
+    },
+    {
+      "unique_key": "eddb8d82a68f9cbf1eb35ed284fe66199ce4c93e9a9ca720f3e97a265de5a916",
+      "items": [
+        48,
+        96
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "Inline locator mistakes do not alter the correct behavior or the encompassing source citations; no score reduction.",
+      "judgments": [
+        "Inline locator mistakes do not alter the correct behavior or the encompassing source citations; no score reduction."
+      ]
+    },
+    {
+      "unique_key": "5ad2d1d2101118e44d333675952f622ec28195b4a9bf60b87ceda91bc1e27e8c",
+      "items": [
+        56,
+        124,
+        129
+      ],
+      "scores": [
+        0.5,
+        null
+      ],
+      "reason": "Partial, not abstained. Hedging does not erase the correct BaseRetriever and hook identifications or default-wrapper description; however, the requested definition location is explicitly omitted.",
+      "judgments": [
+        {
+          "judgment": "Partial, not abstained.",
+          "reason": "Hedging does not erase the correct BaseRetriever and hook identifications or default-wrapper description; however, the requested definition location is explicitly omitted."
+        }
+      ]
+    },
+    {
+      "unique_key": "b9df952c6619d0df6216cf6ed9b38058b1406adbaeab5f63e01f9c9588342111",
+      "items": [
+        58,
+        142,
+        187
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Partial correctness and partial citation support, both 0.5. E2 input and immediate unhandled propagation are correct, but final failure is first_error/E1 rather than the claimed last handled error. The cited documentation does not establish either detailed error bookkeeping claim.",
+      "judgments": [
+        {
+          "judgment": "Partial correctness and partial citation support, both 0.5.",
+          "reason": "E2 input and immediate unhandled propagation are correct, but final failure is first_error/E1 rather than the claimed last handled error. The cited documentation does not establish either detailed error bookkeeping claim."
+        }
+      ]
+    },
+    {
+      "unique_key": "5308ead9dbc0a08a37fb96ebfd3b5ae366698d48f1b449e93f1f6afc082d305c",
+      "items": [
+        59
+      ],
+      "scores": [
+        0.5,
+        1.0
+      ],
+      "reason": "The explicit Generation-list storage component is substantive requested content, so hedging does not make this a full abstention.",
+      "judgments": [
+        "The explicit Generation-list storage component is substantive requested content, so hedging does not make this a full abstention."
+      ]
+    },
+    {
+      "unique_key": "7f46e27c764444f8d7c6282f82d231460a095add3b9551e61f0cf3f47acb8cc9",
+      "items": [
+        60,
+        115
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The one-line return locator error is minor; both requested behavioral conclusions and source support are complete.",
+      "judgments": [
+        "The one-line return locator error is minor; both requested behavioral conclusions and source support are complete."
+      ]
+    },
+    {
+      "unique_key": "f461a7ece24cd360c7dff33a9237f0138d22332d50c87c26ca2f2c264a1c7a80",
+      "items": [
+        61,
+        82,
+        144
+      ],
+      "scores": [
+        0.0,
+        null
+      ],
+      "reason": "Abstained, correctness 0. The tentative generic statement that flags likely control errors does not identify a specific requested behavior, special exception distinction, or ValueError outcome.",
+      "judgments": [
+        {
+          "judgment": "Abstained, correctness 0.",
+          "reason": "The tentative generic statement that flags likely control errors does not identify a specific requested behavior, special exception distinction, or ValueError outcome."
+        }
+      ]
+    },
+    {
+      "unique_key": "b4a2104650292674bd2c0483770ec828a28c78c569ba5e75cb2e9766063dfaea",
+      "items": [
+        66,
+        132
+      ],
+      "scores": [
+        1.0,
+        0.5
+      ],
+      "reason": "All requested synchronous behavior is correctly supplied, so hedging does not lower correctness. Citation support is partial because the cited dispatch body belongs to asynchronous VectorStore.asearch, while the actual synchronous body is outside the cited ranges.",
+      "judgments": [
+        "All requested synchronous behavior is correctly supplied, so hedging does not lower correctness. Citation support is partial because the cited dispatch body belongs to asynchronous VectorStore.asearch, while the actual synchronous body is outside the cited ranges."
+      ]
+    },
+    {
+      "unique_key": "8ed3c1cdd65eca345e64e96291e13ee22eb60f95839f80f77d1eea1dfab2f3d7",
+      "items": [
+        67
+      ],
+      "scores": [
+        0.5,
+        1.0
+      ],
+      "reason": "Correct kwargs precedence is a substantive requested result, so this remains partial despite the final uncertainty statement. Citation support is full for the supplied async facts and merge; answer incompleteness is scored independently.",
+      "judgments": [
+        "Correct kwargs precedence is a substantive requested result, so this remains partial despite the final uncertainty statement. Citation support is full for the supplied async facts and merge; answer incompleteness is scored independently."
+      ]
+    },
+    {
+      "unique_key": "bf503522d4765dca186cc147eac8a9100191386b3dcf0091af29d6424061d715",
+      "items": [
+        68
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Correct retrieval, unpacking and with-ID behavior are substantive components; the false no-ID return prevents full correctness and citation support.",
+      "judgments": [
+        "Correct retrieval, unpacking and with-ID behavior are substantive components; the false no-ID return prevents full correctness and citation support."
+      ]
+    },
+    {
+      "unique_key": "6040b834f26ec9345ab5b9c4bd6fbfadf2f349a9a8d4f97cabb31068f12daf26",
+      "items": [
+        69
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "Correctness remains 1. The internal ValueError is first stored in error_to_raise and then raised; the answer's phrasing describes the correct observable propagation rather than claiming a materially different outcome.",
+      "judgments": [
+        {
+          "judgment": "Correctness remains 1.",
+          "reason": "The internal ValueError is first stored in error_to_raise and then raised; the answer's phrasing describes the correct observable propagation rather than claiming a materially different outcome."
+        }
+      ]
+    },
+    {
+      "unique_key": "23520171ce95a1ce6e00fe5873179d9d549c1a36f9b5220cbebf31adcb421443",
+      "items": [
+        95
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The cited cache update contract directly documents the Generation-list stored component for this answer, while its implementation proves the stated FIFO behavior; the absent chat-model call citation does not reduce support.",
+      "judgments": [
+        "The cited cache update contract directly documents the Generation-list stored component for this answer, while its implementation proves the stated FIFO behavior; the absent chat-model call citation does not reduce support."
+      ]
+    },
+    {
+      "unique_key": "4567adaa5288e451966aee22cd7369d6aa017748567afd9762e7a817ecea6503",
+      "items": [
+        97
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The implementation path is given only by the source citation; the class and requested fields are correct, so this is a minor locator presentation issue without a score reduction.",
+      "judgments": [
+        "The implementation path is given only by the source citation; the class and requested fields are correct, so this is a minor locator presentation issue without a score reduction."
+      ]
+    },
+    {
+      "unique_key": "a018615b2b291e42ca095c46a06ccd0362cc3cd49978e10c401d19ad250bb654",
+      "items": [
+        102
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The cited cache contract/type and tests support the stored Generation-list component without a separately quoted BaseChatModel call trace. The extra possible metadata examples do not change the requested cache behavior.",
+      "judgments": [
+        "The cited cache contract/type and tests support the stored Generation-list component without a separately quoted BaseChatModel call trace. The extra possible metadata examples do not change the requested cache behavior."
+      ]
+    },
+    {
+      "unique_key": "97b39761aacce2c79ac3f59d2a51306f1afbc4d7184461b2972a51c3f1efc1f7",
+      "items": [
+        113
+      ],
+      "scores": [
+        1.0,
+        0.5
+      ],
+      "reason": "The valid duplicate-key dictionary literal still unambiguously evaluates to the correct final dictionary, so its notation does not reduce correctness. Citation support is partial because original-input distribution to both mapper branches is a material claim established in base.py but absent from the cited passthrough ranges.",
+      "judgments": [
+        "The valid duplicate-key dictionary literal still unambiguously evaluates to the correct final dictionary, so its notation does not reduce correctness.",
+        "Citation support is partial because original-input distribution to both mapper branches is a material claim established in base.py but absent from the cited passthrough ranges."
+      ]
+    },
+    {
+      "unique_key": "e83831d6e5597575ed717858c6f90f68fcec97158a8ed60f2ac8c08325981273",
+      "items": [
+        117,
+        147
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Reduced for the explicit content-only cache-key generalization, not for the two requested conclusions: dumps(normalized_messages) preserves other message fields and lookup(prompt, llm_string) includes the other cache-key argument. Root considered the otherwise-identical-message context but retains the literal reading: the explicit content-only cache-key generalization is materially overbroad; both requested yes/no conclusions alone are correct.",
+      "judgments": [
+        "Reduced for the explicit content-only cache-key generalization, not for the two requested conclusions: dumps(normalized_messages) preserves other message fields and lookup(prompt, llm_string) includes the other cache-key argument.",
+        "Root considered the otherwise-identical-message context but retains the literal reading: the explicit content-only cache-key generalization is materially overbroad; both requested yes/no conclusions alone are correct."
+      ]
+    },
+    {
+      "unique_key": "01efe8379e64639dc7fc94f010040b09fd358bdecfc20a4c02eb2eaf7a05e8bd",
+      "items": [
+        120
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The cache contract expressly documents the Generation-list stored value and its code proves the eviction behavior; the answer does not claim a separately quoted BaseChatModel update trace.",
+      "judgments": [
+        "The cache contract expressly documents the Generation-list stored value and its code proves the eviction behavior; the answer does not claim a separately quoted BaseChatModel update trace."
+      ]
+    },
+    {
+      "unique_key": "d1ead40a50ff9a67cf57bf55771002f0fdf68b55c62d06169cde5bcfaec9a511",
+      "items": [
+        135,
+        177
+      ],
+      "scores": [
+        1.0,
+        0.5
+      ],
+      "reason": "Correctness remains 1; citation_support is 0.5. The requested special-error and ordinary-ValueError results are correct. 'Uncaught' is imprecise shorthand for propagation, and the false claim that the cited test compares ToolException with ValueError is a provenance/support defect rather than a false reported behavioral result.",
+      "judgments": [
+        {
+          "judgment": "Correctness remains 1; citation_support is 0.5.",
+          "reason": "The requested special-error and ordinary-ValueError results are correct. 'Uncaught' is imprecise shorthand for propagation, and the false claim that the cited test compares ToolException with ValueError is a provenance/support defect rather than a false reported behavioral result."
+        }
+      ]
+    },
+    {
+      "unique_key": "0c642fc3d9af5500fa7ba724e6d9fbe7d74dcc651ca0f3e7a5f187ec94115b72",
+      "items": [
+        162
+      ],
+      "scores": [
+        0.0,
+        1.0
+      ],
+      "reason": "Unlike the partial cache answers, this answer does not explicitly supply the cached Generation-list component; interface and unsized-fixture context alone leave it an abstention.",
+      "judgments": [
+        "Unlike the partial cache answers, this answer does not explicitly supply the cached Generation-list component; interface and unsized-fixture context alone leave it an abstention."
+      ]
+    },
+    {
+      "unique_key": "a969c514c44e5e8b2f373bd43b6a02e4d57b5e352e641b1c15b19a55a2b5bffa",
+      "items": [
+        166
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Correct forwarded history-plus-current-input content is a substantive requested component, so this is partial rather than abstained despite uncertainty.",
+      "judgments": [
+        "Correct forwarded history-plus-current-input content is a substantive requested component, so this is partial rather than abstained despite uncertainty."
+      ]
+    },
+    {
+      "unique_key": "0ff0da5dd42e5dc1f9801b1d09cf72a9fdb1a93e42cdd56a8e781225aff8ea70",
+      "items": [
+        186
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Unlike the test-trace wording in items45/126, this answer states tokens only accumulate to allow acquisition after two seconds and reverses a real source ordering; those material errors and the missing blocking loop justify partial correctness and citation support.",
+      "judgments": [
+        "Unlike the test-trace wording in items45/126, this answer states tokens only accumulate to allow acquisition after two seconds and reverses a real source ordering; those material errors and the missing blocking loop justify partial correctness and citation support."
+      ]
+    },
+    {
+      "unique_key": "5b5fb43d244a342bfd491b89747adc66b05e1f30386e3f86f23bb46ece016761",
+      "items": [
+        188
+      ],
+      "scores": [
+        0.0,
+        1.0
+      ],
+      "reason": "Conversion/replay discussion does not answer either requested IDs or limiter outcome, so this is an abstention rather than a substantive partial answer. Citation support stays full for the factual excerpt description actually supplied.",
+      "judgments": [
+        "Conversion/replay discussion does not answer either requested IDs or limiter outcome, so this is an abstention rather than a substantive partial answer. Citation support stays full for the factual excerpt description actually supplied."
+      ]
+    },
+    {
+      "unique_key": "a8e97e152df93a30aa5d67971308cd591ac7387074157df1adf27cf20a2468b1",
+      "items": [
+        189
+      ],
+      "scores": [
+        1.0,
+        1.0
+      ],
+      "reason": "The cache contract explicitly documents a list of Generation values, supporting this stored-component claim without a separately quoted BaseChatModel update-call trace.",
+      "judgments": [
+        "The cache contract explicitly documents a list of Generation values, supporting this stored-component claim without a separately quoted BaseChatModel update-call trace."
+      ]
+    },
+    {
+      "unique_key": "4352dc1294dc820e3cf829ff78e63c6a692460d4863ff68a6816eafb09db6a93",
+      "items": [
+        192
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "The correct requested list-storage/UUID component merits partial credit despite the materially wrong generator outcome and same-ID assertion.",
+      "judgments": [
+        "The correct requested list-storage/UUID component merits partial credit despite the materially wrong generator outcome and same-ID assertion."
+      ]
+    },
+    {
+      "unique_key": "cf15bc33e0acca9735a3f5e9d959131eb56949889e00688716ccdcccb4d4b558",
+      "items": [
+        201
+      ],
+      "scores": [
+        0.5,
+        1.0
+      ],
+      "reason": "The explicit Generation/ChatGeneration-list stored-value answer warrants partial credit despite the refusal to determine survivors or eviction behavior.",
+      "judgments": [
+        "The explicit Generation/ChatGeneration-list stored-value answer warrants partial credit despite the refusal to determine survivors or eviction behavior."
+      ]
+    }
+  ],
+  "source_verification_corrections": [
+    {
+      "items": [
+        66,
+        132,
+        167
+      ],
+      "reason": "An initial grader incorrectly removed trailing blank lines when hashing two excerpts. Exact line-join hashing and pinned full-file checks verify both original citation hashes. False mismatch flags/findings are superseded in final item-assessments; original grader file is preserved. No numerical scores changed.",
+      "numerical_scores_changed": false,
+      "verified_excerpt_hashes": {
+        "908-964": "08a2067c78c8f76850568b1fc64adebb5d5d3b5045faec680624de530064a9a3",
+        "963-1022": "41abde11c0a50d2d4947fe14cd134e99550e2947709e8da7ae62d8349c9150a4"
+      }
+    }
+  ],
+  "score_changes_after_freeze": "Prohibited. All decisions above were finalized before the freeze; condition labels remain hidden."
+}

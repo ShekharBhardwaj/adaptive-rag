@@ -1,0 +1,89 @@
+{
+  "recorded_at": "2026-11-17T22:53:38.526931+00:00",
+  "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+  "status": "completed_with_errors",
+  "execution_coverage": "270/270 planned jobs have unique durable outcomes; failures retained",
+  "planned_jobs": 270,
+  "observed_jobs": 270,
+  "result_counts": {
+    "budget_exhausted": 36,
+    "completed": 225,
+    "error": 9
+  },
+  "model_calls": 1051,
+  "model_call_counts": {
+    "Anthropic chat": 988,
+    "OpenRouter Qwen query embeddings": 63
+  },
+  "elapsed_seconds_monotonic": 6293.04456858302,
+  "provider_cost_estimate": {
+    "estimated_usd": null,
+    "known_subtotal_usd": 7.5663485199999965,
+    "unknown_calls": 1,
+    "note": "Dated price estimates of reported usage; total unknown. Separate reservations are admission charges, not bills."
+  },
+  "budget_accounting": {
+    "estimated_cost_usd": 7.5939195199999965,
+    "interpretation": "Used-or-reserved admission estimates; not actual billed usage.",
+    "known_cost_subtotal_usd": 7.5939195199999965,
+    "policy": "reserve",
+    "reserved_unknown_calls": 1,
+    "unknown_cost_jobs": 0,
+    "unreserved_unknown_calls": 0,
+    "usage": {
+      "input_tokens": 6826864,
+      "output_tokens": 153956
+    }
+  },
+  "synthetic_preflight": {
+    "calls": 5,
+    "estimated_cost_usd": 0.00677328
+  },
+  "known_run_plus_preflight_estimate_usd": 7.5731217999999965,
+  "index_rebuilt": false,
+  "automatic_retries": 0,
+  "automatic_reruns": 0,
+  "load_run": {
+    "partial": true,
+    "issues": [
+      "status.json: run status is 'completed_with_errors'; results are partial"
+    ],
+    "interpretation": "Conservative flag from completed_with_errors; no missing planned jobs."
+  },
+  "human_review": {
+    "available_answer_texts": 227,
+    "packets": 16,
+    "ratings_completed": 0,
+    "score_file_present": false
+  },
+  "next_gate": "Human scoring, development decision and frozen held-out protocol; no held-out execution performed",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "configuration_file_sha256": "93fbc5415894f2eb452fc9f13c2e30008360c8c9cab3634b5607e95e21fb60e4",
+  "framework_source_sha256": "da28ce6622273fad0f3171886ee0ff05ef605639002d5a206062a8feb6c2f6bf",
+  "raw_file_sha256": {
+    "benchmark.jsonl": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+    "configuration.json": "5347fae4a1086d241d4201de78c98f3f2715800f461ab5641f95f86478db218a",
+    "corpus-manifest.json": "7e5edab39abd26b36af4c75875fb4812ade814c0f4e5beb344686df194894631",
+    "events.jsonl": "43cf284f0a3a88aec7c1f0e26fd1666c5c3e69b491abf78dac95cc9650dbc08f",
+    "index-manifest.json": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11",
+    "manifest.json": "8e251aa80e00c2cf824a519ccc480e0147ad2f3bbcc8c122394a2ec50fc43561",
+    "price-schedule.json": "03e2a87b96af12e0e250e54e8e0342c338d1aa728dfb1c903b775fd18b0f8eed",
+    "results.jsonl": "169f3c56575c3d7f7152167caea54c669eb0e23f8abae62619015ffe55ccffe2",
+    "status.json": "53996d7c3e884d349e8e164ff2f0e98e8f3fbd7ed077da6b1442854be726bf1c",
+    "validation.json": "4c33bbe94cc788408ebc3f4ce71b1aa7ae37f0fa5e9cd59ede3703fd3920bc41"
+  },
+  "derived_artifacts": {
+    "aggregate": "experiments/aggregates/adaptive-anthropic-paced-development-20261117-001-unreviewed.json",
+    "review_template": "experiments/reviews/adaptive-anthropic-paced-development-20261117-001/answers.review-template.jsonl",
+    "review_template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19"
+  },
+  "temporary_sleep_inhibitor": "Stopped after experiment completion; exit143 verified. No persistent system preference changed.",
+  "operational_audit": {
+    "path": "experiments/preflight/final-development-2026-11-17-001/operational-audit-final.json",
+    "sha256": "f48ad541a13f90e7ffe531947e8ffba394c3611eb252637061545042591c8506",
+    "result": "PASS_WITH_WALL_TIMESTAMP_PACING_EXCEPTION",
+    "wall_recorded_chat_start_min_gap_seconds": 5.945952,
+    "wall_recorded_chat_peak_starts_per_60_seconds": 11,
+    "interpretation": "One wall timestamp gap below configured6s; three overlapping boundary windows exceed10. Monotonic admission timing is not persisted, so these wall timestamps cannot establish a monotonic gate violation. No recorded HTTPerrors/429s. No rerun."
+  }
+}

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 433" width="700" height="433" role="img" aria-label="Per-question difference in correctness, cascade minus Vector" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<rect width="700" height="433" fill="#ffffff"/>
+<rect x="78" y="14" width="12" height="10" fill="#2a78d6"/>
+<text x="96.0" y="23.0" font-size="13" fill="#52514e">Cascade higher</text>
+<rect x="218" y="14" width="12" height="10" fill="#e34948"/>
+<text x="236.0" y="23.0" font-size="13" fill="#52514e">Vector higher</text>
+<text x="68.0" y="54.0" font-size="13" fill="#898781" text-anchor="end">Question</text>
+<text x="482.0" y="54.0" font-size="13" fill="#898781">Cascade escalated</text>
+<line x1="78.0" x2="78.0" y1="62" y2="381" stroke="#e1e0d9" stroke-width="1"/>
+<text x="78.0" y="397.0" font-size="13" fill="#898781" text-anchor="middle">−60</text>
+<line x1="132.3" x2="132.3" y1="62" y2="381" stroke="#e1e0d9" stroke-width="1"/>
+<text x="132.3" y="397.0" font-size="13" fill="#898781" text-anchor="middle">−40</text>
+<line x1="186.6" x2="186.6" y1="62" y2="381" stroke="#e1e0d9" stroke-width="1"/>
+<text x="186.6" y="397.0" font-size="13" fill="#898781" text-anchor="middle">−20</text>
+<line x1="240.9" x2="240.9" y1="62" y2="381" stroke="#c3c2b7" stroke-width="1"/>
+<text x="240.9" y="397.0" font-size="13" fill="#898781" text-anchor="middle">0</text>
+<line x1="295.1" x2="295.1" y1="62" y2="381" stroke="#e1e0d9" stroke-width="1"/>
+<text x="295.1" y="397.0" font-size="13" fill="#898781" text-anchor="middle">+20</text>
+<line x1="349.4" x2="349.4" y1="62" y2="381" stroke="#e1e0d9" stroke-width="1"/>
+<text x="349.4" y="397.0" font-size="13" fill="#898781" text-anchor="middle">+40</text>
+<line x1="403.7" x2="403.7" y1="62" y2="381" stroke="#e1e0d9" stroke-width="1"/>
+<text x="403.7" y="397.0" font-size="13" fill="#898781" text-anchor="middle">+60</text>
+<line x1="458.0" x2="458.0" y1="62" y2="381" stroke="#e1e0d9" stroke-width="1"/>
+<text x="458.0" y="397.0" font-size="13" fill="#898781" text-anchor="middle">+80</text>
+<text x="268.0" y="419.0" font-size="13" fill="#52514e" text-anchor="middle">Cascade minus Vector, percentage points (mean of three repetitions)</text>
+<text x="68.0" y="80.5" font-size="13" fill="#52514e" text-anchor="end">lc-x-09</text>
+<path d="M240.9,70.5 H417.8 A4.0,4.0 0 0 1 421.8,74.5 V78.5 A4.0,4.0 0 0 1 417.8,82.5 H240.9 Z" fill="#2a78d6"><title>lc-x-09: +66.7 points; escalated 3 of 3 times</title></path>
+<text x="427.8" y="80.5" font-size="13" fill="#52514e">+66.7</text>
+<text x="482.0" y="80.5" font-size="13" fill="#52514e">3 of 3 repetitions</text>
+<text x="68.0" y="101.5" font-size="13" fill="#52514e" text-anchor="end">lc-c-08</text>
+<path d="M240.9,91.5 H372.6 A4.0,4.0 0 0 1 376.6,95.5 V99.5 A4.0,4.0 0 0 1 372.6,103.5 H240.9 Z" fill="#2a78d6"><title>lc-c-08: +50.0 points; escalated 3 of 3 times</title></path>
+<text x="382.6" y="101.5" font-size="13" fill="#52514e">+50.0</text>
+<text x="482.0" y="101.5" font-size="13" fill="#52514e">3 of 3 repetitions</text>
+<text x="68.0" y="122.5" font-size="13" fill="#52514e" text-anchor="end">lc-s-09</text>
+<path d="M240.9,112.5 H372.6 A4.0,4.0 0 0 1 376.6,116.5 V120.5 A4.0,4.0 0 0 1 372.6,124.5 H240.9 Z" fill="#2a78d6"><title>lc-s-09: +50.0 points; escalated 3 of 3 times</title></path>
+<text x="382.6" y="122.5" font-size="13" fill="#52514e">+50.0</text>
+<text x="482.0" y="122.5" font-size="13" fill="#52514e">3 of 3 repetitions</text>
+<text x="68.0" y="143.5" font-size="13" fill="#52514e" text-anchor="end">lc-x-10</text>
+<path d="M240.9,133.5 H282.1 A4.0,4.0 0 0 1 286.1,137.5 V141.5 A4.0,4.0 0 0 1 282.1,145.5 H240.9 Z" fill="#2a78d6"><title>lc-x-10: +16.7 points; escalated 3 of 3 times</title></path>
+<text x="292.1" y="143.5" font-size="13" fill="#52514e">+16.7</text>
+<text x="482.0" y="143.5" font-size="13" fill="#52514e">3 of 3 repetitions</text>
+<text x="68.0" y="164.5" font-size="13" fill="#52514e" text-anchor="end">lc-c-07</text>
+<path d="M240.9,154.5 H282.1 A4.0,4.0 0 0 1 286.1,158.5 V162.5 A4.0,4.0 0 0 1 282.1,166.5 H240.9 Z" fill="#2a78d6"><title>lc-c-07: +16.7 points; escalated 3 of 3 times</title></path>
+<text x="292.1" y="164.5" font-size="13" fill="#52514e">+16.7</text>
+<text x="482.0" y="164.5" font-size="13" fill="#52514e">3 of 3 repetitions</text>
+<text x="68.0" y="185.5" font-size="13" fill="#52514e" text-anchor="end">lc-x-06</text>
+<path d="M240.9,175.5 H282.1 A4.0,4.0 0 0 1 286.1,179.5 V183.5 A4.0,4.0 0 0 1 282.1,187.5 H240.9 Z" fill="#2a78d6"><title>lc-x-06: +16.7 points; escalated 3 of 3 times</title></path>
+<text x="292.1" y="185.5" font-size="13" fill="#52514e">+16.7</text>
+<text x="482.0" y="185.5" font-size="13" fill="#52514e">3 of 3 repetitions</text>
+<text x="68.0" y="206.5" font-size="13" fill="#52514e" text-anchor="end">lc-c-06</text>
+<text x="246.9" y="206.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="206.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="227.5" font-size="13" fill="#52514e" text-anchor="end">lc-c-10</text>
+<text x="246.9" y="227.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="227.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="248.5" font-size="13" fill="#52514e" text-anchor="end">lc-s-06</text>
+<text x="246.9" y="248.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="248.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="269.5" font-size="13" fill="#52514e" text-anchor="end">lc-s-07</text>
+<text x="246.9" y="269.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="269.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="290.5" font-size="13" fill="#52514e" text-anchor="end">lc-s-08</text>
+<text x="246.9" y="290.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="290.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="311.5" font-size="13" fill="#52514e" text-anchor="end">lc-s-10</text>
+<text x="246.9" y="311.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="311.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="332.5" font-size="13" fill="#52514e" text-anchor="end">lc-x-07</text>
+<text x="246.9" y="332.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="332.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="353.5" font-size="13" fill="#52514e" text-anchor="end">lc-x-08</text>
+<text x="246.9" y="353.5" font-size="13" fill="#898781">0</text>
+<text x="482.0" y="353.5" font-size="13" fill="#898781">never</text>
+<text x="68.0" y="374.5" font-size="13" fill="#52514e" text-anchor="end">lc-c-09</text>
+<path d="M240.9,364.5 H154.4 A4.0,4.0 0 0 0 150.4,368.5 V372.5 A4.0,4.0 0 0 0 154.4,376.5 H240.9 Z" fill="#e34948"><title>lc-c-09: −33.3 points; escalated 2 of 3 times</title></path>
+<text x="144.4" y="374.5" font-size="13" fill="#52514e" text-anchor="end">−33.3</text>
+<text x="482.0" y="374.5" font-size="13" fill="#52514e">2 of 3 repetitions</text>
+</svg>

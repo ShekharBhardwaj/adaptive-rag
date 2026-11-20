@@ -1,0 +1,17 @@
+{
+  "repo_commit": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "corpus_fingerprint": "3924731244e2e23840fc8930ff6d8cf39dc4cf3af55fcb17f02c96a75d8a5848",
+  "source_files": 3119,
+  "chunks": 9404,
+  "embedding_input_utf8_bytes": 20031728,
+  "embedding_batch_size": 32,
+  "planned_embedding_calls": 294,
+  "indexing_budget": {
+    "max_tool_calls": 20,
+    "max_model_calls": 1000,
+    "max_tokens": 1000000,
+    "max_seconds": 600.0,
+    "max_evidence_chars": 24000
+  },
+  "note": "Byte counts are conservative admission estimates, not provider token usage."
+}

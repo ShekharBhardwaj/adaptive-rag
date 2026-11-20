@@ -1,0 +1,73 @@
+# Copy to configs/adaptive.local.yaml and set actual endpoint/model identifiers.
+# Freeze policy, prompt, budgets, and development settings before held-out use.
+schema_version: "1"
+repository:
+  url: https://github.com/langchain-ai/langchain.git
+  path: ../datasets/repos/langchain
+  commit_sha: ea17e48f0a4336c920394fd029de99f1568b4c38
+files:
+  max_file_bytes: 1000000
+models:
+  base_url: http://localhost:8000/v1
+  api_key_env: LOCAL_LLM_API_KEY
+  embedding_model: REPLACE_WITH_EMBEDDING_MODEL_ID
+  chat_model: REPLACE_WITH_TOOL_CAPABLE_CHAT_MODEL_ID
+  temperature: 0.0
+  max_output_tokens: 512
+  token_parameter: max_tokens
+  # Optional provider pacing; defaults are disabled. Waits consume stage time.
+  # request_pacing:
+  #   min_interval_seconds: 6
+  #   max_requests_per_minute: 10
+routing:
+  # null shares models.chat_model; an explicit ID separates routing from navigation.
+  chat_model: null
+  temperature: 0.0
+  max_output_tokens: 256
+  budget:
+    max_tool_calls: 0
+    max_model_calls: 1
+    max_tokens: 4000
+    max_seconds: 10
+retrieval:
+  top_k: 5
+  # For adaptive jobs this is the combined routing + retrieval stage budget.
+  budget:
+    max_tool_calls: 20
+    max_model_calls: 8
+    max_tokens: 16000
+    max_seconds: 30
+    max_evidence_chars: 24000
+  indexing_budget:
+    max_model_calls: 1000
+    max_tokens: 1000000
+    max_seconds: 600
+  chunking:
+    max_lines: 80
+    max_chars: 12000
+    overlap_lines: 8
+    parser: auto
+  embedding_batch_size: 32
+experiment:
+  dataset: ../benchmarks/pilot.jsonl
+  split: development
+  conditions: [vector, vectorless, agentic, no_retrieval, adaptive_rule, adaptive_llm]
+  repetitions: 3
+  order_seed: 17
+  # Required for adaptive conditions even when a particular query chooses another strategy.
+  vector_index: ../datasets/indexes/langchain-001
+  require_pilot: true
+  answer_model: null
+  generation:
+    temperature: 0.0
+    max_output_tokens: 1024
+    max_tokens: 16000
+    max_seconds: 30
+    max_evidence_chars: 24000
+  budget:
+    max_model_calls: 1500
+    max_tokens: 1500000
+    max_seconds: 5400
+    # Requires a complete dated price schedule for every potentially used model.
+    max_cost_usd: null
+  price_schedule: null

@@ -1,0 +1,23 @@
+{
+  "elapsed_seconds": 845.5918752499856,
+  "estimated_cost_usd": null,
+  "events_written": 773,
+  "finished_at": "2026-11-17T02:45:46.113124+00:00",
+  "known_cost_subtotal_usd": 2.2674931200000006,
+  "model_attempts": 313,
+  "observed_jobs": 73,
+  "planned_jobs": 270,
+  "records_written": 73,
+  "result_counts": {
+    "budget_exhausted": 13,
+    "completed": 58,
+    "error": 2
+  },
+  "status": "budget_exhausted",
+  "stop_reason": "an in-flight operation exceeded or invalidated the global run budget",
+  "unknown_cost_calls": 1,
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}

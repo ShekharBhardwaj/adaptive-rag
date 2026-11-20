@@ -1,0 +1,86 @@
+{
+  "schema_version": "1",
+  "reviewer_type": "ai",
+  "condition_labels_hidden": true,
+  "scope": "Root reviewed all88 assessment rationales plus exact answers/citations for borderline, partial and mistaken examples; source-reading work was divided by question family.",
+  "decisions": [
+    {
+      "items": [
+        21,
+        51,
+        53
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "One correct requested implementation name is substantive partial content despite incomplete bases/other class and uncertainty."
+    },
+    {
+      "items": [
+        184
+      ],
+      "scores": [
+        0.5,
+        null
+      ],
+      "reason": "Correct parser among alternatives and near-correct typed method give partial content despite uncertainty/omitted class selection/location/decorator."
+    },
+    {
+      "items": [
+        11,
+        46,
+        87
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Correct requested implementation trace earns partial credit despite absent concrete content/text results; cited different message subclass leaves partial support."
+    },
+    {
+      "items": [
+        50
+      ],
+      "scores": [
+        1,
+        1
+      ],
+      "reason": "Property called a method is a minor terminology error; requested class/alias/type values correct and cited."
+    },
+    {
+      "items": [
+        18,
+        25
+      ],
+      "scores": [
+        1,
+        1
+      ],
+      "reason": "Wrong inline alias line locator is minor; actual citation includes declaration and alias."
+    },
+    {
+      "items": [
+        122
+      ],
+      "scores": [
+        1,
+        1
+      ],
+      "reason": "Minor cumulative base-class naming error, with exact emission/diff/previous-value mechanism and cited source otherwise correct."
+    },
+    {
+      "items": [
+        73,
+        143
+      ],
+      "scores": [
+        0.5,
+        0.5
+      ],
+      "reason": "Correct inherited base behavior but material false extra claim that native OpenAI async encoding ultimately delegates to sync."
+    }
+  ],
+  "citation_gap_policy": "As-is wrapper/module documentation can support opaque roundtrip claims. Explicit load recursion/Reviver control-flow claims need the load path; declarations/import provenance missing from cited ranges are partial support.",
+  "score_changes_after_condition_unblinding": "none; this record and scores were frozen before aggregate interpretation"
+}

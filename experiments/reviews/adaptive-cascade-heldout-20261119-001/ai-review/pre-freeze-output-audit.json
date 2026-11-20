@@ -1,0 +1,279 @@
+{
+  "schema_version": "1",
+  "kind": "blinded_ai_review_pre_freeze_output_integrity_audit",
+  "reviewer": "Codex subagent (AI auditor)",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "created_at": "2026-11-20T09:08:46.216964-05:00",
+  "scope": "Read-only validation of formal score schema, original-template bindings, canonical membership, duplicate score/notes consistency, adjudication coverage, source-verification corrections and final artifact hashes/timestamps. No answer rerating, raw/aggregate/preflight/analysis access or per-condition results.",
+  "status": "pass",
+  "check_summary": {
+    "checks": 30,
+    "passed": 30,
+    "failed": 0
+  },
+  "counts": {
+    "formal_scores": 202,
+    "item_assessments": 202,
+    "distinct_case_assessments": 105,
+    "question_keys": 15,
+    "item_memberships": 202,
+    "adjudication_case_decisions": 44,
+    "genuine_grader_borderline_judgments_checked": 47,
+    "source_verification_corrected_items": 3,
+    "source_verification_corrected_excerpt_ranges": 2
+  },
+  "checks": [
+    {
+      "name": "load_reviews_formal_schema_202",
+      "passed": true
+    },
+    {
+      "name": "output_item_and_template_counts",
+      "passed": true
+    },
+    {
+      "name": "grader_unique_case_count_105",
+      "passed": true
+    },
+    {
+      "name": "all_202_memberships_once",
+      "passed": true
+    },
+    {
+      "name": "all_202_final_item_numbers_once",
+      "passed": true
+    },
+    {
+      "name": "score_keys_unique_and_equal_template",
+      "passed": true
+    },
+    {
+      "name": "105_canonical_case_memberships_exact",
+      "passed": true
+    },
+    {
+      "name": "15_question_keys_and_all_item_case_keys_exact",
+      "passed": true
+    },
+    {
+      "name": "all_original_frozen_score_bindings_unchanged",
+      "passed": true
+    },
+    {
+      "name": "item_review_ids_and_complete_score_objects_match",
+      "passed": true
+    },
+    {
+      "name": "all_numerical_scores_and_notes_equal_original_graders",
+      "passed": true
+    },
+    {
+      "name": "duplicate_scores_notes_and_classifications_consistent",
+      "passed": true
+    },
+    {
+      "name": "explicit_ai_identity_and_abstention_prefix",
+      "passed": true
+    },
+    {
+      "name": "discrete_allowed_numeric_scores_and_null_policy",
+      "passed": true
+    },
+    {
+      "name": "criteria_template_protocol_hashes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "adjudication_criteria_reference_unchanged",
+      "passed": true
+    },
+    {
+      "name": "all_grader_reference_hash_creation_time_bindings",
+      "passed": true,
+      "details": {
+        "groups_checked": 3,
+        "errors": []
+      }
+    },
+    {
+      "name": "input_audit_final_pass",
+      "passed": true,
+      "details": {
+        "checks": 22,
+        "passed": 22,
+        "failed": 0
+      }
+    },
+    {
+      "name": "binding_report_202_no_condition_exposure",
+      "passed": true
+    },
+    {
+      "name": "uncorrected_details_preserved_with_documented_additive_adjudication",
+      "passed": true,
+      "details": {
+        "documented_additive_note_items": [
+          117,
+          147
+        ],
+        "errors": []
+      }
+    },
+    {
+      "name": "source_correction_membership_and_no_score_change",
+      "passed": true
+    },
+    {
+      "name": "false_hash_flags_and_judgments_superseded",
+      "passed": true
+    },
+    {
+      "name": "corrected_exact_excerpt_hashes_verified",
+      "passed": true
+    },
+    {
+      "name": "all_genuine_borderline_judgments_in_adjudication",
+      "passed": true,
+      "details": {
+        "judgments_checked": 47,
+        "missing_case_items": []
+      }
+    },
+    {
+      "name": "adjudication_unique_keys_and_score_consistency",
+      "passed": true
+    },
+    {
+      "name": "all_14_packet_hashes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "all_32_manifest_source_file_hashes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "input_audit_saved_hash_references_current",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "name": "pinned_source_commit_and_template_bindings",
+      "passed": true
+    },
+    {
+      "name": "all_inspected_output_files_unchanged_during_audit",
+      "passed": true
+    }
+  ],
+  "frozen_input_bindings": {
+    "criteria_file": "experiments/reviews/adaptive-cascade-development-20261119-001/ai-review/rubric.json",
+    "criteria_sha256": "3c53c294e7bf1f645d774c09a78bf4465848cb73b503e3c456b7257086dff4af",
+    "protocol_file": "paper/phase7-held-out-protocol.md",
+    "protocol_sha256": "f5892af99dd4551f8703b9a67bcb32438d96a28934a3812d9d82705a7becf30b",
+    "template_file": "experiments/reviews/adaptive-cascade-heldout-20261119-001/answers.review-template.jsonl",
+    "template_sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+    "schema_version": "1",
+    "rubric_version": "manual-v1",
+    "pinned_repo_commit": "ea17e48f0a4336c920394fd029de99f1568b4c38"
+  },
+  "formal_schema_verification": {
+    "loader": "adaptive_rag.evaluation.reviews.load_reviews",
+    "loader_source": "src/adaptive_rag/evaluation/reviews.py",
+    "loader_source_sha256": "ca36e2912f89efe8b693bc31dcae2f6b09c45cf13a5102b84e19b10f9b9a8ecd",
+    "loaded_records": 202
+  },
+  "source_verification_corrections": {
+    "items": [
+      66,
+      132,
+      167
+    ],
+    "verified_exact_excerpt_hashes": {
+      "908-964": "08a2067c78c8f76850568b1fc64adebb5d5d3b5045faec680624de530064a9a3",
+      "963-1022": "41abde11c0a50d2d4947fe14cd134e99550e2947709e8da7ae62d8349c9150a4"
+    },
+    "numerical_scores_changed": false,
+    "original_grader_files_preserved": true
+  },
+  "documented_additive_adjudication_note_items": [
+    117,
+    147
+  ],
+  "output_artifacts": {
+    "answers.review-template.jsonl": {
+      "sha256": "8518b2ff60d2aff50a140755917ef33950edd3e1fae305653b0b73f5735dc1fa",
+      "bytes": 726596,
+      "created_at": "2026-11-19T17:07:33.724155-05:00",
+      "source_birthtime_epoch_seconds": 1795126053.724155,
+      "modified_at": "2026-11-19T17:07:33.727049-05:00"
+    },
+    "answers.ai-scores.jsonl": {
+      "sha256": "5294d76222662ed3aaee5e2495da3d15158ea7f0f9a0312415a4953ae5148e55",
+      "bytes": 137347,
+      "created_at": "2026-11-20T09:04:31.192826-05:00",
+      "source_birthtime_epoch_seconds": 1795183471.1928256,
+      "modified_at": "2026-11-20T09:04:31.192879-05:00"
+    },
+    "ai-review/inputs-manifest.json": {
+      "sha256": "3ea7ef9eb4baefa242b440853ba087a2c050cf404e0f03b1afa64446f379e6e6",
+      "bytes": 8837,
+      "created_at": "2026-11-20T08:55:38.664546-05:00",
+      "source_birthtime_epoch_seconds": 1795182938.664546,
+      "modified_at": "2026-11-20T09:04:31.191810-05:00"
+    },
+    "ai-review/input-integrity-audit.json": {
+      "sha256": "ee7dce73dcd02a47368da83846a49113f5929caf38ebeb18a0b47c5fae14c60c",
+      "bytes": 91513,
+      "created_at": "2026-11-20T09:04:41.635910-05:00",
+      "source_birthtime_epoch_seconds": 1795183481.6359096,
+      "modified_at": "2026-11-20T09:05:34.549039-05:00"
+    },
+    "ai-review/binding-validation.json": {
+      "sha256": "fbc9e0ad9b2f702490adea1c7e07dcc96ecc61c7f112c12339eb307a202fcc76",
+      "bytes": 1026,
+      "created_at": "2026-11-20T08:56:46.447454-05:00",
+      "source_birthtime_epoch_seconds": 1795183006.4474545,
+      "modified_at": "2026-11-20T09:05:20.133665-05:00"
+    },
+    "ai-review/adjudication.json": {
+      "sha256": "ac8415a6cb96c0f76feeeb37022993eb8c6f5dd86e47727937515fbdae72730e",
+      "bytes": 32738,
+      "created_at": "2026-11-20T09:04:31.192088-05:00",
+      "source_birthtime_epoch_seconds": 1795183471.192088,
+      "modified_at": "2026-11-20T09:04:31.192142-05:00"
+    },
+    "ai-review/item-assessments.jsonl": {
+      "sha256": "99dd2ee8287d4cb0c4ad3ed7877cd46d5c3f2d313ed19b410ac65b23cec7bd36",
+      "bytes": 424213,
+      "created_at": "2026-11-20T09:04:31.194571-05:00",
+      "source_birthtime_epoch_seconds": 1795183471.1945708,
+      "modified_at": "2026-11-20T09:04:31.194764-05:00"
+    },
+    "ai-review/assessments/group-a.jsonl": {
+      "sha256": "0be9a18ad61bf07ee0222c093f2f0c618fb1af8b4b1d0114d2d9c641e0d11aa2",
+      "bytes": 49724,
+      "created_at": "2026-11-20T09:00:22.746742-05:00",
+      "source_birthtime_epoch_seconds": 1795183222.7467422,
+      "modified_at": "2026-11-20T09:00:22.746856-05:00"
+    },
+    "ai-review/assessments/group-b.jsonl": {
+      "sha256": "f56f412a0e5c31af7fdf3cd848e4963c8dfd0866557565e39036f845a6fd3ce8",
+      "bytes": 71105,
+      "created_at": "2026-11-20T09:02:16.563532-05:00",
+      "source_birthtime_epoch_seconds": 1795183336.5635316,
+      "modified_at": "2026-11-20T09:02:16.563640-05:00"
+    },
+    "ai-review/assessments/group-c.jsonl": {
+      "sha256": "dbbfa12207219c99326d3137a3aa9d745aa95f0d1e3eb2f9da2453bd2a764b9e",
+      "bytes": 40306,
+      "created_at": "2026-11-20T09:01:13.879045-05:00",
+      "source_birthtime_epoch_seconds": 1795183273.8790455,
+      "modified_at": "2026-11-20T09:01:13.879133-05:00"
+    }
+  },
+  "limitations": "The raw output hash bindings are checked against the unchanged original blinded template and the saved authorized binding-validation report; this audit does not reopen raw records. Review times are the original grader-file birthtimes under the approved convention.",
+  "errors": []
+}

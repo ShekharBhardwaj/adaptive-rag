@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "kind": "user_review_attestation",
+  "run_id": "eb914cf0-4437-4d25-bfd3-2b4253f990a6",
+  "reviewer": "Shekhar",
+  "reviewed_at": "2026-11-20T09:14:22-05:00",
+  "timezone": "America/New_York",
+  "label": "Reviewed by Shekhar",
+  "statement": "I have reviewed the scores in experiments/reviews/adaptive-cascade-heldout-20261119-001/answers.ai-scores.jsonl.",
+  "scope": "Shekhar's statement about the frozen 202-answer AI score file. It is a recorded attestation, not automated proof of how the review was carried out.",
+  "score_file": "answers.ai-scores.jsonl",
+  "score_file_sha256": "5294d76222662ed3aaee5e2495da3d15158ea7f0f9a0312415a4953ae5148e55",
+  "score_author": "Codex (AI reviewer)",
+  "separate_per_item_human_scores_supplied": false,
+  "timestamp_basis": "Current time when recording the user-requested review attestation.",
+  "score_freeze_record": "ai-review/scores-frozen.json",
+  "score_freeze_record_sha256": "eb140dc6e54861d35b2d3358a6eea77e1a0f3f7845d3e01b56b01b76aaa16f81",
+  "score_freeze_frozen_at": "2026-11-20T14:09:57.524573+00:00",
+  "scores_changed_by_this_record": false,
+  "results_computed_when_recorded": false,
+  "recorded_by": "Claude (AI assistant), from Shekhar's message in the Claude Code session"
+}

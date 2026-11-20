@@ -1,0 +1,53 @@
+{
+  "recorded_at": "2026-11-17T21:01:11.032246+00:00",
+  "status": "verified_ready_for_single_run",
+  "focused_tests": {
+    "passed": 147,
+    "elapsed_seconds": 81.11,
+    "command": ".venv/bin/pytest -q tests/test_reservation_accounting.py tests/test_runner.py tests/test_runner_boundary.py tests/test_journal.py tests/test_pacing.py tests/test_paced_connections.py tests/test_adaptive_runner.py"
+  },
+  "ruff_lint": "passed",
+  "ruff_format": "passed;77 files",
+  "git_diff_check": "passed",
+  "live_preflight": {
+    "status": "passed",
+    "calls": 5,
+    "estimated_cost_usd": 0.00677328,
+    "chat_start_gaps_seconds": [
+      6.005144,
+      6.00258,
+      6.005126
+    ]
+  },
+  "old_review_exports": {
+    "adaptive-development-20261116-001": {
+      "items": 207,
+      "byte_identical": true
+    },
+    "adaptive-anthropic-development-20261116-001": {
+      "items": 59,
+      "byte_identical": true
+    }
+  },
+  "framework": {
+    "framework_version": "0.4.0",
+    "framework_git_sha": "a44b4cdde7a05cb4c4ed4068b948ac209d3bd5ae",
+    "framework_worktree_dirty": true,
+    "framework_source_sha256": "da28ce6622273fad0f3171886ee0ff05ef605639002d5a206062a8feb6c2f6bf",
+    "lockfile_sha256": "4b248c2fe58dcbce25d4aad6cabb5c9fa1dc601747053c03ce1a96afd96faf73",
+    "python": "3.13.9 (main, Oct 14 2025, 21:10:40) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "dependencies": {
+      "pydantic": "2.14.3",
+      "PyYAML": "6.0.3",
+      "httpx": "0.28.1",
+      "numpy": "2.5.4",
+      "faiss-cpu": "1.16.0",
+      "tree-sitter": "0.26.1",
+      "tree-sitter-python": "0.25.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    }
+  },
+  "archive_sha256": "51d0abbb123e124bbed08fca51e1c7a802b1bc6b24724b6ae5cdd8c318c314dc"
+}

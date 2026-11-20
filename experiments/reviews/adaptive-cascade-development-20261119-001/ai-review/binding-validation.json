@@ -1,0 +1,10 @@
+{
+  "schema_version": "1",
+  "kind": "blinded_output_binding_validation",
+  "validated_outputs": 206,
+  "frozen_question_and_answer_bindings": "all passed",
+  "planned_observed_records": 225,
+  "failed_jobs_without_answer_text": 19,
+  "condition_labels_exposed_to_graders": false,
+  "raw_files_unchanged": true
+}

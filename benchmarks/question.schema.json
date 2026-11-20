@@ -1,0 +1,200 @@
+{
+  "$defs": {
+    "EvidenceProvenance": {
+      "additionalProperties": false,
+      "properties": {
+        "author": {
+          "minLength": 1,
+          "title": "Author",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "method": {
+          "enum": [
+            "source_inspection",
+            "executable_test"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "notes": {
+          "minLength": 1,
+          "title": "Notes",
+          "type": "string"
+        },
+        "review": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IndependentReview"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "author",
+        "created_at",
+        "method",
+        "notes"
+      ],
+      "title": "EvidenceProvenance",
+      "type": "object"
+    },
+    "EvidenceReference": {
+      "additionalProperties": false,
+      "description": "Inclusive 1-based source lines, hashed without a terminal newline.",
+      "properties": {
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "start_line": {
+          "minimum": 1,
+          "title": "Start Line",
+          "type": "integer"
+        },
+        "end_line": {
+          "minimum": 1,
+          "title": "End Line",
+          "type": "integer"
+        },
+        "excerpt_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Excerpt Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "start_line",
+        "end_line",
+        "excerpt_sha256"
+      ],
+      "title": "EvidenceReference",
+      "type": "object"
+    },
+    "IndependentReview": {
+      "additionalProperties": false,
+      "properties": {
+        "reviewer": {
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "reviewed_at": {
+          "format": "date-time",
+          "title": "Reviewed At",
+          "type": "string"
+        },
+        "method": {
+          "enum": [
+            "source_inspection",
+            "executable_test"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "notes": {
+          "minLength": 1,
+          "title": "Notes",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reviewer",
+        "reviewed_at",
+        "method",
+        "notes"
+      ],
+      "title": "IndependentReview",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1",
+      "default": "1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "question": {
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "conceptual",
+        "structural",
+        "cross_file"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "ground_truth_answer": {
+      "minLength": 1,
+      "title": "Ground Truth Answer",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/EvidenceReference"
+      },
+      "minItems": 1,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "repo_commit": {
+      "pattern": "^[0-9a-f]{40}$",
+      "title": "Repo Commit",
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "#/$defs/EvidenceProvenance"
+    },
+    "difficulty": {
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "title": "Difficulty",
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "development",
+        "held_out"
+      ],
+      "title": "Split",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "question",
+    "category",
+    "ground_truth_answer",
+    "evidence",
+    "repo_commit",
+    "provenance",
+    "difficulty",
+    "split"
+  ],
+  "title": "BenchmarkQuestion",
+  "type": "object"
+}

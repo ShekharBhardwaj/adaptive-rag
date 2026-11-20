@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-11-19T20:11:31.946649+00:00",
+  "status": "verified_ready_for_single_run",
+  "code_identity": {
+    "framework_source_sha256": "b59ad0bce4ec89471d3bc792ed26d2e83ea08aaeb91436851f0ca662684b813b",
+    "equals_development_run": true
+  },
+  "full_test_suite_on_identical_source": {
+    "passed": 874,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 246.54,
+    "finished_at_local": "2026-11-19 12:09:49",
+    "note": "Not rerun; the framework source hash is unchanged since that run."
+  },
+  "ruff_lint": "passed on identical source",
+  "ruff_format": "passed;81 files on identical source",
+  "freeze_intact": {
+    "protocol": true,
+    "configuration_file": true,
+    "framework_source": true,
+    "benchmark": true
+  },
+  "live_preflight": {
+    "status": "passed",
+    "provider_calls": 9,
+    "locally_simulated_responses": 2,
+    "estimated_cost_usd": 0.01846328,
+    "chat_start_gaps_seconds": [
+      6.005086,
+      6.005074,
+      6.005073,
+      6.005119,
+      6.00187,
+      6.005125,
+      6.005045
+    ],
+    "stages": {
+      "qwen_query_embedding": "passed",
+      "anthropic_sufficiency_answer_with_evidence": "passed",
+      "anthropic_sufficiency_answer_without_evidence": "passed",
+      "anthropic_wrapup_reserved_selection": "passed",
+      "anthropic_wrapup_retry_after_ignored_instruction": "passed",
+      "anthropic_wrapup_retry_after_prose": "passed"
+    }
+  },
+  "frozen_plan": {
+    "path": "experiments/preflight/cascade-heldout-2026-11-19-001/frozen-plan.json",
+    "sha256": "27ded94d1ca294a4847e731caeedb332c090dad9f94b794aea729521f866a3a3"
+  },
+  "archive_sha256": "27c7791046501fb063f2349fabb47cbcfb3ac7f355fa7f9c35cd31b5cd420ad1"
+}

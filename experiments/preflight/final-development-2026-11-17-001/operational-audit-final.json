@@ -1,0 +1,285 @@
+{
+  "actual_cost_accounting": {
+    "actual_usage": {
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    "complete_estimated_cost_usd": null,
+    "interpretation": "Complete actual usage and cost remain unknown for one ConnectError. Its finite reservation is only a budget charge.",
+    "recomputed_known_subtotal_usd": 7.56634852,
+    "status_known_subtotal_usd": 7.5663485199999965,
+    "unknown_cost_calls": 1
+  },
+  "audit_completed_at": "2026-11-18T01:42:31.903253+00:00",
+  "audit_kind": "metadata_only_final_operational_audit",
+  "audit_started_at": "2026-11-18T01:41:09.020630+00:00",
+  "budget_accounting": {
+    "all_observed_job_and_receipt_ledgers_finite": true,
+    "attempt_receipts": 1051,
+    "headroom_to_9_90_usd": 2.3060804800000003,
+    "interpretation": "Used-or-reserved admission charges, not actual billed usage or complete actual cost.",
+    "policy": "reserve",
+    "recomputed_estimated_cost_usd": 7.59391952,
+    "reconciliation_absolute_tolerance_usd": 1e-09,
+    "reserved_unknown_calls": 1,
+    "status_estimated_cost_usd": 7.5939195199999965,
+    "under_9_90_usd": true,
+    "unreserved_unknown_calls": 0,
+    "usage": {
+      "input_tokens": 6826864,
+      "output_tokens": 153956
+    }
+  },
+  "clock_discrepancy": {
+    "actual_provider_started_at": "2026-11-17T21:15:51.524245Z",
+    "enclosing_job_finished_at": "2026-11-17T21:16:35.297241+00:00",
+    "enclosing_job_id": "f717941328166ba32a59e1e84aa90efa54069b49a96ff5389d20b9edf23304c0",
+    "enclosing_job_recorded_monotonic_seconds": 63.90851445798762,
+    "enclosing_job_started_at": "2026-11-17T21:09:50.822964+00:00",
+    "enclosing_job_status": "budget_exhausted",
+    "enclosing_job_wall_seconds": 404.474277,
+    "evidence_revalidated_against_final_metadata": true,
+    "following_event": {
+      "at": "2026-11-17T21:15:52.397475+00:00",
+      "attempt_id": "e476629a80514541a437d79cc4c787f4",
+      "event": "model_result"
+    },
+    "interim_audit_path": "experiments/preflight/final-development-2026-11-17-001/operational-audit-interim.json",
+    "interim_audit_sha256": "c30aaaaaeed81c8992b4aa982590bb947aebf44a2ae364be210dc52c24ad5934",
+    "interpretation": "The approximately 341-second discrepancy occurred before the provider start. Metadata is consistent with machine suspension or a wall-clock adjustment, but does not identify the cause; it is not evidence of a 345-second provider network call.",
+    "largest_adjacent_event_gap_seconds": 345.755338,
+    "maximum_absolute_provider_wall_minus_recorded_elapsed_seconds": 0.17135062498754272,
+    "mitigation": {
+      "command": "caffeinate -i -t7500",
+      "source": "Root-reported operational action",
+      "timing": "Started after the discrepancy; exact start timestamp was not independently audited."
+    },
+    "negative_adjacent_event_gaps": 0,
+    "pre_provider_wall_gap_seconds": 344.882108,
+    "preceding_event": {
+      "at": "2026-11-17T21:10:06.642137+00:00",
+      "attempt_id": "e476629a80514541a437d79cc4c787f4",
+      "event": "model_request"
+    },
+    "provider_recorded_monotonic_elapsed_seconds": 0.8711292499210685,
+    "request_timeout_seconds": 284.50488508306444,
+    "wall_minus_monotonic_seconds": 340.56576254201235
+  },
+  "conclusion": "All270planned outcomes are recorded once; identities, call metadata, and finite reservation accounting reconcile. Strict wall-timestamp pacing checks have one small gap exception and three overlapping rolling-window exceptions. Persisted metadata does not prove a monotonic pacer violation. Errors and unknown actual cost remain explicit.",
+  "durability": {
+    "durably_recorded_provider_calls": 1051,
+    "event_counts": {
+      "job_finished": 270,
+      "job_started": 270,
+      "model_error": 1,
+      "model_request": 1051,
+      "model_result": 1050
+    },
+    "recorded_error_calls": 1,
+    "recorded_success_calls": 1050,
+    "result_call_metadata_matches_event_call_metadata": true,
+    "total_events": 2642,
+    "unique_request_intents": 1051,
+    "unique_terminal_attempt_events": 1051,
+    "unmatched_intents": 0
+  },
+  "errors_and_unknowns": {
+    "recorded_error_type_counts": {
+      "ConnectError": 1
+    },
+    "recorded_http_429_count": 0,
+    "recorded_http_error_counts": {},
+    "response_headers_persisted": false,
+    "retry_after_evidence": "Response headers are not persisted; presence, absence, or value of Retry-After cannot be inferred from these artifacts.",
+    "unknown_actual_usage_calls": 1,
+    "unknown_call_metadata": [
+      {
+        "actual_usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "attempt_id": "f5896585d545450eb833954f46fc4c19",
+        "base_url": "https://api.anthropic.com/v1",
+        "call_error_type": "ConnectError",
+        "elapsed_seconds": 0.13670995901338756,
+        "exception_type": "ModelClientError",
+        "model": "claude-haiku-4-5-20251001",
+        "operation": "chat",
+        "receipt_status": "reserved_unknown",
+        "started_at": "2026-11-17T21:08:22.866411Z",
+        "terminal_event_at": "2026-11-17T21:08:23.003912+00:00"
+      }
+    ]
+  },
+  "execution": {
+    "analysis_partial_flag_interpretation": "completed_with_errors retains failed/budget outcomes and may be marked partial by load_run; all 270 planned job outcomes are recorded. Coverage does not imply all jobs succeeded.",
+    "complete_execution_coverage": true,
+    "condition_job_counts": {
+      "adaptive_llm": 45,
+      "adaptive_rule": 45,
+      "agentic": 45,
+      "no_retrieval": 45,
+      "vector": 45,
+      "vectorless": 45
+    },
+    "each_condition_has_45_jobs": true,
+    "elapsed_minutes": 104.88407614305034,
+    "elapsed_seconds": 6293.04456858302,
+    "finished_at": "2026-11-17T22:52:13.195502+00:00",
+    "manifest_created_to_finished_wall_seconds": 6631.411475,
+    "missing_jobs": 0,
+    "planned_jobs": 270,
+    "recorded_jobs": 270,
+    "result_status_counts": {
+      "budget_exhausted": 36,
+      "completed": 225,
+      "error": 9
+    },
+    "run_created_at": "2026-11-17T21:01:41.784027+00:00",
+    "split": "development",
+    "status": "completed_with_errors",
+    "stop_reason": null,
+    "unique_planned_jobs": 270,
+    "unique_recorded_jobs": 270,
+    "unplanned_jobs": 0
+  },
+  "findings": [
+    {
+      "details": "One persisted chat start gap is5.945952seconds and three overlapping60second wall-time windows contain11starts. Exact monotonic pacing compliance cannot be independently established from persisted timestamps; no providerHTTPerrors were recorded.",
+      "monotonic_gate_violation_proven": false,
+      "severity": "observability_exception",
+      "type": "strict_wall_timestamp_pacing_exception"
+    }
+  ],
+  "json_integrity": {
+    "all_jsonl_lines_complete": true,
+    "duplicate_keys_rejected": true,
+    "nonfinite_constants_rejected": true
+  },
+  "pacing": {
+    "basis": "Actual ModelCallRecord.started_at timestamps from terminal call records; intent event times precede pacing.",
+    "configured_maximum_requests_per_minute": 10,
+    "configured_minimum_interval_seconds": 6,
+    "per_endpoint": [
+      {
+        "endpoint": "https://api.anthropic.com/v1/chat/completions",
+        "first_start_at": "2026-11-17T21:02:13.219693Z",
+        "last_start_at": "2026-11-17T22:52:08.285866Z",
+        "maximum_10_starts_per_60_seconds_satisfied": false,
+        "maximum_starts_in_rolling_60_seconds": 11,
+        "minimum_6_second_gap_satisfied": false,
+        "minimum_start_gap_seconds": 5.945952,
+        "model": "claude-haiku-4-5-20251001",
+        "recorded_provider_starts": 988
+      },
+      {
+        "endpoint": "https://openrouter.ai/api/v1/embeddings",
+        "first_start_at": "2026-11-17T21:05:10.398684Z",
+        "last_start_at": "2026-11-17T22:47:54.792186Z",
+        "maximum_10_starts_per_60_seconds_satisfied": true,
+        "maximum_starts_in_rolling_60_seconds": 4,
+        "minimum_6_second_gap_satisfied": true,
+        "minimum_start_gap_seconds": 6.004482,
+        "model": "qwen/qwen3-embedding-8b",
+        "recorded_provider_starts": 63
+      }
+    ],
+    "rolling_window": "(t - 60 seconds, t]",
+    "source_references": [
+      {
+        "lines": "73-113",
+        "observation": "Monotonic admission gate; starts recorded before yield.",
+        "path": "src/adaptive_rag/generation/pacing.py"
+      },
+      {
+        "lines": "134-180",
+        "observation": "Persisted wall-clock started_at sampled after pacing admission, before HTTP client creation.",
+        "path": "src/adaptive_rag/generation/client.py"
+      }
+    ],
+    "timestamp_semantics_and_limitations": "RequestPacer records admission starts using time.monotonic before yielding. ModelCallRecord.started_at uses datetime.now after admission in _post_admitted and precedes HTTP client creation. Monotonic admission timestamps and actual network-send timestamps are not persisted. Therefore recorded wall timestamps cannot prove exact monotonic gate compliance; scheduling delay after admission or wall-clock jitter can explain the small wall-time exception.",
+    "wall_timestamp_exceptions": {
+      "rolling_60_second_windows_above_10_starts": [
+        {
+          "first_started_at": "2026-11-17T22:07:39.812505+00:00",
+          "last_started_at": "2026-11-17T22:08:39.796079+00:00",
+          "recorded_starts": 11,
+          "span_seconds": 59.983574
+        },
+        {
+          "first_started_at": "2026-11-17T22:07:45.817771+00:00",
+          "last_started_at": "2026-11-17T22:08:45.800381+00:00",
+          "recorded_starts": 11,
+          "span_seconds": 59.98261
+        },
+        {
+          "first_started_at": "2026-11-17T22:07:51.822944+00:00",
+          "last_started_at": "2026-11-17T22:08:51.803740+00:00",
+          "recorded_starts": 11,
+          "span_seconds": 59.980796
+        }
+      ],
+      "sub_6_second_gaps": [
+        {
+          "following_attempt_id": "fcd7d2b2ca714fe58fee35a350b8e630",
+          "following_started_at": "2026-11-17T22:08:33.794920+00:00",
+          "gap_seconds": 5.945952,
+          "preceding_attempt_id": "7a4becbb36854e0e83a2f2999022eccf",
+          "preceding_started_at": "2026-11-17T22:08:27.848968+00:00"
+        }
+      ]
+    }
+  },
+  "preservation": "The interim audit was preserved unchanged. This final audit is a new artifact.",
+  "provider_identities": {
+    "all_recorded_calls_match_expected_identities": true,
+    "chat_role_names": [
+      "answer",
+      "agent",
+      "router"
+    ],
+    "expected_chat_roles": {
+      "base_url": "https://api.anthropic.com/v1",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    "expected_embedding": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "qwen/qwen3-embedding-8b"
+    },
+    "operation_counts": {
+      "chat": 988,
+      "embedding": 63
+    }
+  },
+  "result": "PASS_WITH_WALL_TIMESTAMP_PACING_EXCEPTION",
+  "run_directory": "experiments/raw/adaptive-anthropic-paced-development-20261117-001",
+  "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+  "schema_version": 1,
+  "scope": "Operational metadata only. No question, answer, reference, annotation, request text, or response text is included. No provider calls, retries, tests, source/config/raw edits, or run-control actions were performed.",
+  "source_artifacts": [
+    {
+      "bytes": 59520,
+      "path": "experiments/raw/adaptive-anthropic-paced-development-20261117-001/manifest.json",
+      "sha256": "8e251aa80e00c2cf824a519ccc480e0147ad2f3bbcc8c122394a2ec50fc43561"
+    },
+    {
+      "bytes": 659001,
+      "path": "experiments/raw/adaptive-anthropic-paced-development-20261117-001/status.json",
+      "sha256": "53996d7c3e884d349e8e164ff2f0e98e8f3fbd7ed077da6b1442854be726bf1c"
+    },
+    {
+      "bytes": 48845356,
+      "complete_rows": 2642,
+      "path": "experiments/raw/adaptive-anthropic-paced-development-20261117-001/events.jsonl",
+      "sha256": "43cf284f0a3a88aec7c1f0e26fd1666c5c3e69b491abf78dac95cc9650dbc08f",
+      "trailing_issue": null
+    },
+    {
+      "bytes": 66515672,
+      "complete_rows": 270,
+      "path": "experiments/raw/adaptive-anthropic-paced-development-20261117-001/results.jsonl",
+      "sha256": "169f3c56575c3d7f7152167caea54c669eb0e23f8abae62619015ffe55ccffe2",
+      "trailing_issue": null
+    }
+  ]
+}

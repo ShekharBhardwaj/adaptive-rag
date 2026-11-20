@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "kind": "user_review_attestation",
+  "run_id": "efc5034c-b904-4a02-889f-f45e746a3e49",
+  "reviewer": "Shekhar",
+  "reviewed_at": "2026-11-19T14:40:04-05:00",
+  "timezone": "America/New_York",
+  "label": "Reviewed by Shekhar",
+  "statement": "I have reviewed it as well add - reviewed by Shekhar now",
+  "scope": "Additional review of the 206-answer review material.",
+  "score_file": "answers.ai-scores.jsonl",
+  "score_file_sha256": "99d4a84742cf75b8b83483cf1e0b93d65471872f5de2adb32a9a1555a402d2c0",
+  "score_author": "Codex (AI reviewer)",
+  "separate_per_item_human_scores_supplied": false,
+  "timestamp_basis": "Current time when recording the user-requested review attestation.",
+  "prior_summary_sha256": "696190cc04394cfa64a491c89b237cf1c3bbab2609b53caddf076e36a2623636",
+  "prior_progress_sha256": "593ed877afa501ed1fcbfc6b8dc5d653e905ba475747d682343401c61961697a"
+}

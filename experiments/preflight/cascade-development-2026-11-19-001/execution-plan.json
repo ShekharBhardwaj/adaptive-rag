@@ -1,0 +1,260 @@
+{
+  "recorded_at": "2026-11-19T17:22:15.204949+00:00",
+  "scope": "one fresh development comparison of the phase 6 redesign; human scoring, then a held-out freeze, are the next gates",
+  "authorization": {
+    "by": "Shekhar",
+    "given_on": "2026-11-19",
+    "where": "Claude Code session, in reply to the question whether to authorize the 225-job development run or the lean 180-job version",
+    "words": "Yes, run it",
+    "recorded_by": "Claude (AI assistant); this is a record of the chat reply, not a signature"
+  },
+  "configuration": {
+    "schema_version": "1",
+    "repository": {
+      "url": "https://github.com/langchain-ai/langchain.git",
+      "path": "/Users/shekhar/development/research/adaptive-rag/datasets/repos/langchain",
+      "commit_sha": "ea17e48f0a4336c920394fd029de99f1568b4c38"
+    },
+    "files": {
+      "include_globs": [
+        "**/*"
+      ],
+      "exclude_globs": [
+        "**/.git/**",
+        "**/.env",
+        "**/.env.*",
+        "**/.aws/**",
+        "**/.ssh/**",
+        "**/secrets.*",
+        "**/credentials.*",
+        "**/*.pem",
+        "**/*.key",
+        "**/id_rsa",
+        "**/id_ed25519",
+        "**/node_modules/**",
+        "**/vendor/**",
+        "**/vendors/**",
+        "**/vendored/**",
+        "**/third_party/**",
+        "**/third-party/**",
+        "**/.venv/**",
+        "**/venv/**",
+        "**/env/**",
+        "**/build/**",
+        "**/dist/**",
+        "**/target/**",
+        "**/out/**",
+        "**/coverage/**",
+        "**/htmlcov/**",
+        "**/__pycache__/**",
+        "**/.pytest_cache/**",
+        "**/.mypy_cache/**",
+        "**/.ruff_cache/**",
+        "**/.cache/**",
+        "**/.tox/**",
+        "**/.nox/**",
+        "**/.next/**",
+        "**/.nuxt/**",
+        "**/.output/**",
+        "**/.eggs/**",
+        "**/*.egg-info/**",
+        "**/*.min.js",
+        "**/*.min.css",
+        "**/*.map",
+        "**/*_pb2.py",
+        "**/*_pb2_grpc.py",
+        "**/*.generated.*",
+        "**/*.gen.*",
+        "**/package-lock.json",
+        "**/pnpm-lock.yaml",
+        "**/yarn.lock",
+        "**/poetry.lock",
+        "**/uv.lock",
+        "**/Pipfile.lock",
+        "**/Cargo.lock",
+        "**/composer.lock"
+      ],
+      "max_file_bytes": 1000000
+    },
+    "retrieval": {
+      "top_k": 5,
+      "budget": {
+        "max_tool_calls": 24,
+        "max_model_calls": 12,
+        "max_tokens": 128000,
+        "max_seconds": 300.0,
+        "max_evidence_chars": 24000
+      },
+      "indexing_budget": {
+        "max_tool_calls": 20,
+        "max_model_calls": 640,
+        "max_tokens": 25000000,
+        "max_seconds": 7200.0,
+        "max_evidence_chars": 24000
+      },
+      "chunking": {
+        "max_lines": 80,
+        "max_chars": 12000,
+        "overlap_lines": 8,
+        "parser": "auto",
+        "oversized_line_policy": "keep_complete_line"
+      },
+      "embedding_batch_size": 16
+    },
+    "routing": {
+      "chat_model": "claude-haiku-4-5-20251001",
+      "temperature": 0.0,
+      "max_output_tokens": 256,
+      "budget": {
+        "max_tool_calls": 0,
+        "max_model_calls": 1,
+        "max_tokens": 6000,
+        "max_seconds": 90.0,
+        "max_evidence_chars": 24000
+      }
+    },
+    "models": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "chat_base_url": "https://api.anthropic.com/v1",
+      "chat_api_key_env": "ANTHROPIC_API_KEY",
+      "request_pacing": {
+        "min_interval_seconds": 6.0,
+        "max_requests_per_minute": 10
+      },
+      "chat_request_pacing": null,
+      "embedding_model": "qwen/qwen3-embedding-8b",
+      "chat_model": "claude-haiku-4-5-20251001",
+      "embedding_dimensions": null,
+      "temperature": 0.0,
+      "max_output_tokens": 512,
+      "token_parameter": "max_tokens"
+    },
+    "experiment": {
+      "dataset": "/Users/shekhar/development/research/adaptive-rag/benchmarks/pilot.jsonl",
+      "split": "development",
+      "conditions": [
+        "vector",
+        "agentic",
+        "agentic_wrapup",
+        "adaptive_cascade",
+        "no_retrieval"
+      ],
+      "repetitions": 3,
+      "order_seed": 17,
+      "vector_index": "/Users/shekhar/development/research/adaptive-rag/datasets/indexes/langchain-openrouter-qwen3-phase4-002",
+      "require_pilot": true,
+      "answer_model": null,
+      "generation": {
+        "temperature": 0.0,
+        "max_output_tokens": 1024,
+        "max_tokens": 64000,
+        "max_seconds": 90.0,
+        "max_evidence_chars": 24000,
+        "report_evidence_sufficiency": true
+      },
+      "budget": {
+        "max_model_calls": 2400,
+        "max_tokens": 14000000,
+        "max_seconds": 10800.0,
+        "max_cost_usd": 12.0,
+        "unknown_usage_policy": "reserve"
+      },
+      "price_schedule": "/Users/shekhar/development/research/adaptive-rag/experiments/preflight/anthropic-development-2026-11-16-001/prices.json"
+    }
+  },
+  "configuration_file_sha256": "afaf50e69bbb7048b072f1f1ac24fb534ab8849483d5bf70207e0b7595704b8b",
+  "configuration_sha256": "0d94a09dc2b72837b3be554672d8575901ec5358a88d7e650aee7cae20c5f78a",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+  "workload": {
+    "questions": 15,
+    "conditions": 5,
+    "repetitions": 3,
+    "planned_jobs": 225,
+    "split": "development"
+  },
+  "limits": {
+    "run_model_calls": 2400,
+    "run_tokens": 14000000,
+    "run_seconds": 10800,
+    "run_estimated_admission_cost_usd": 12.0,
+    "preflight_estimated_allocation_usd": 0.1,
+    "total_estimated_allocation_usd": 12.1,
+    "automatic_retries": 0,
+    "automatic_reruns": 0,
+    "per_retrieval": {
+      "max_tool_calls": 24,
+      "max_model_calls": 12,
+      "max_tokens": 128000,
+      "max_seconds": 300.0,
+      "max_evidence_chars": 24000
+    },
+    "per_answer": {
+      "temperature": 0.0,
+      "max_output_tokens": 1024,
+      "max_tokens": 64000,
+      "max_seconds": 90.0,
+      "max_evidence_chars": 24000,
+      "report_evidence_sufficiency": true
+    },
+    "request_pacing": {
+      "min_interval_seconds": 6.0,
+      "max_requests_per_minute": 10
+    }
+  },
+  "expected": {
+    "chat_requests": "about 950 to 1,260",
+    "embedding_requests": 90,
+    "duration_hours": "about 1.75 to 2.25",
+    "known_cost_usd": "about 7.10 to 9.40",
+    "basis": "measured costs of run 04ebe642-5ec1-4301-98b2-2a17859c8ece; the cascade's escalation rate is unknown in advance"
+  },
+  "price_check": "Claude Haiku 4.5 listed at $1 / MTok input and $5 / MTok output on https://platform.claude.com/docs/en/about-claude/pricing, read 2026-11-19; equal to the frozen schedule",
+  "stopping_rule": "the runner stops admitting jobs when a run limit is reached; unrun jobs stay in the denominator as missing; nothing is rerun, appended or replaced",
+  "unknown_usage_policy": "reserve: actual usage and cost remain unknown; failed job not retried; conservative serialized-input-byte/full-output admission charge permits later jobs. Unreservable unknowns halt. Estimates exclude fees/taxes/discounts and are not invoice guarantees.",
+  "predeclared_comparisons": [
+    "adaptive_cascade minus vector",
+    "adaptive_cascade minus agentic_wrapup, with costs",
+    "agentic_wrapup minus agentic"
+  ],
+  "primary_metric": "failure-aware correctness over all planned jobs; paired question-cluster bootstrap, 2000 samples, seed 0; descriptive",
+  "policy_versions": {
+    "cascade": "vector-first-cascade-v1",
+    "agentic_wrapup": {
+      "policy_version": "agentic-wrapup-v1",
+      "prompt_version": "repository-navigation-v7-wrapup",
+      "min_turn_growth_bytes": 8192,
+      "final_instruction_bytes": 353
+    },
+    "answer_prompt": "grounded-answer-v4-sufficiency",
+    "original_navigator_prompt": "repository-navigation-v6"
+  },
+  "framework": {
+    "framework_version": "0.4.0",
+    "framework_git_sha": "a44b4cdde7a05cb4c4ed4068b948ac209d3bd5ae",
+    "framework_worktree_dirty": true,
+    "framework_source_sha256": "b59ad0bce4ec89471d3bc792ed26d2e83ea08aaeb91436851f0ca662684b813b",
+    "lockfile_sha256": "4b248c2fe58dcbce25d4aad6cabb5c9fa1dc601747053c03ce1a96afd96faf73",
+    "python": "3.13.9 (main, Oct 14 2025, 21:10:40) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "dependencies": {
+      "pydantic": "2.14.3",
+      "PyYAML": "6.0.3",
+      "httpx": "0.28.1",
+      "numpy": "2.5.4",
+      "faiss-cpu": "1.16.0",
+      "tree-sitter": "0.26.1",
+      "tree-sitter-python": "0.25.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    }
+  },
+  "archive": {
+    "path": "experiments/preflight/cascade-development-2026-11-19-001/framework-and-tests-0.4.0-cascade.tar.gz",
+    "sha256": "b3f38af13c3acbaeb56a3ebddfcee24fdf4049f5cb5ba6c451be35d82d3dfb5a"
+  },
+  "raw_output": "experiments/raw/adaptive-cascade-development-20261119-001",
+  "index_policy": "Reuse completed Qwen index002 (restored 2026-11-18, index_sha256 verified); no repository embedding rebuild",
+  "index_manifest_sha256": "15ac7923deb060d79d088cd00564a496b3a969df22c693d25d1fceb2282e76d9",
+  "held_out_policy": "No held-out evaluation or outcome tuning; development only."
+}

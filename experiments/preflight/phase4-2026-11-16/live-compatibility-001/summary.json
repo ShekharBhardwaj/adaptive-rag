@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "kind": "compatibility_smoke_not_benchmark_results",
+  "recorded_at": "2026-11-16T20:56:21.029604+00:00",
+  "results": {
+    "error": {
+      "type": "ValueError",
+      "message": "Smoke cost/accounting/call gate reached; further requests disabled"
+    }
+  },
+  "model_calls": 1,
+  "cost": {
+    "estimated_usd": null,
+    "known_subtotal_usd": 0.0,
+    "unknown_calls": 1,
+    "priced_calls": 0,
+    "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+  }
+}

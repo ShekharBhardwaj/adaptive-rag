@@ -1,0 +1,39 @@
+{
+  "schema_version": "1",
+  "updated_at": "2026-11-18T02:47:50.554147+00:00",
+  "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+  "available_answer_texts": 227,
+  "validated_human_scores": 195,
+  "pending_human_scores": 32,
+  "reviewer": "Shekhar",
+  "packet_status": {
+    "001": "complete;15validated",
+    "002": "complete;15validated",
+    "003": "complete;15validated",
+    "004": "complete;15validated",
+    "005": "complete;15validated",
+    "006": "complete;15validated",
+    "007": "complete;15validated",
+    "008": "complete;15validated",
+    "009": "complete;15validated",
+    "010": "complete;15validated",
+    "011": "complete;15validated",
+    "012": "complete;15validated",
+    "013": "complete;15validated",
+    "014": "next;items196-210"
+  },
+  "last_reviewed_at": "2026-11-17T22:19:00-05:00",
+  "correctness_counts": {
+    "fully_correct": 85,
+    "partially_correct": 26,
+    "incorrect_attempted": 11,
+    "abstained": 73
+  },
+  "citation_support_not_applicable": 73,
+  "classification": "Abstentions counted separately using reviewer notes beginning Abstained, including Abstained on the substance. Correctness and citation support remain independent; all item-level scores remain as submitted.",
+  "summary_count_discrepancy": "Packet1 closing summary said8 abstentions;7 item-level notes are marked Abstained. No additional score was changed.",
+  "score_file_sha256": "0e43280e162df1df46942d3fcd922db06b577bd8cd827e796999dc753c76f139",
+  "partial_review_aggregate": "../../aggregates/adaptive-anthropic-paced-development-20261117-001-reviewed-013.json",
+  "next_packet": "review-packets/packet-014.md",
+  "study_conclusion": "Review incomplete; no overall accuracy ranking inferred."
+}

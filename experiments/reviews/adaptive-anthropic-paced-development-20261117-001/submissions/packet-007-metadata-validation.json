@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "packet": 7,
+  "kind": "metadata_validation",
+  "validated_scores": 105,
+  "packet_bindings": "passed15/15",
+  "prior_90_scores": "preserved byte for byte",
+  "frozen_raw_files": "unchanged",
+  "original_review_template": "unchanged",
+  "supplied_grades_and_notes": "preserved",
+  "repeat_check_note": "Items 91 and 92 differ only in Markdown emphasis punctuation around Distinction. Citations and submitted grades match. The reviewer note is preserved verbatim.",
+  "source_semantic_regrading": false
+}

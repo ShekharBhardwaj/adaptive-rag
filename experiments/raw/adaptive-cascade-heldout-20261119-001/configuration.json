@@ -1,0 +1,155 @@
+{
+  "experiment": {
+    "answer_model": null,
+    "budget": {
+      "max_cost_usd": 12.0,
+      "max_model_calls": 2400,
+      "max_seconds": 10800.0,
+      "max_tokens": 14000000,
+      "unknown_usage_policy": "reserve"
+    },
+    "conditions": [
+      "vector",
+      "agentic",
+      "agentic_wrapup",
+      "adaptive_cascade",
+      "no_retrieval"
+    ],
+    "dataset": "/Users/shekhar/development/research/adaptive-rag/benchmarks/pilot.jsonl",
+    "generation": {
+      "max_evidence_chars": 24000,
+      "max_output_tokens": 1024,
+      "max_seconds": 90.0,
+      "max_tokens": 64000,
+      "report_evidence_sufficiency": true,
+      "temperature": 0.0
+    },
+    "order_seed": 17,
+    "price_schedule": "/Users/shekhar/development/research/adaptive-rag/experiments/preflight/anthropic-development-2026-11-16-001/prices.json",
+    "repetitions": 3,
+    "require_pilot": true,
+    "split": "held_out",
+    "vector_index": "/Users/shekhar/development/research/adaptive-rag/datasets/indexes/langchain-openrouter-qwen3-phase4-002"
+  },
+  "files": {
+    "exclude_globs": [
+      "**/.git/**",
+      "**/.env",
+      "**/.env.*",
+      "**/.aws/**",
+      "**/.ssh/**",
+      "**/secrets.*",
+      "**/credentials.*",
+      "**/*.pem",
+      "**/*.key",
+      "**/id_rsa",
+      "**/id_ed25519",
+      "**/node_modules/**",
+      "**/vendor/**",
+      "**/vendors/**",
+      "**/vendored/**",
+      "**/third_party/**",
+      "**/third-party/**",
+      "**/.venv/**",
+      "**/venv/**",
+      "**/env/**",
+      "**/build/**",
+      "**/dist/**",
+      "**/target/**",
+      "**/out/**",
+      "**/coverage/**",
+      "**/htmlcov/**",
+      "**/__pycache__/**",
+      "**/.pytest_cache/**",
+      "**/.mypy_cache/**",
+      "**/.ruff_cache/**",
+      "**/.cache/**",
+      "**/.tox/**",
+      "**/.nox/**",
+      "**/.next/**",
+      "**/.nuxt/**",
+      "**/.output/**",
+      "**/.eggs/**",
+      "**/*.egg-info/**",
+      "**/*.min.js",
+      "**/*.min.css",
+      "**/*.map",
+      "**/*_pb2.py",
+      "**/*_pb2_grpc.py",
+      "**/*.generated.*",
+      "**/*.gen.*",
+      "**/package-lock.json",
+      "**/pnpm-lock.yaml",
+      "**/yarn.lock",
+      "**/poetry.lock",
+      "**/uv.lock",
+      "**/Pipfile.lock",
+      "**/Cargo.lock",
+      "**/composer.lock"
+    ],
+    "include_globs": [
+      "**/*"
+    ],
+    "max_file_bytes": 1000000
+  },
+  "models": {
+    "api_key_env": "OPENROUTER_API_KEY",
+    "base_url": "https://openrouter.ai/api/v1",
+    "chat_api_key_env": "ANTHROPIC_API_KEY",
+    "chat_base_url": "https://api.anthropic.com/v1",
+    "chat_model": "claude-haiku-4-5-20251001",
+    "chat_request_pacing": null,
+    "embedding_dimensions": null,
+    "embedding_model": "qwen/qwen3-embedding-8b",
+    "max_output_tokens": 512,
+    "request_pacing": {
+      "max_requests_per_minute": 10,
+      "min_interval_seconds": 6.0
+    },
+    "temperature": 0.0,
+    "token_parameter": "max_tokens"
+  },
+  "repository": {
+    "commit_sha": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+    "path": "/Users/shekhar/development/research/adaptive-rag/datasets/repos/langchain",
+    "url": "https://github.com/langchain-ai/langchain.git"
+  },
+  "retrieval": {
+    "budget": {
+      "max_evidence_chars": 24000,
+      "max_model_calls": 12,
+      "max_seconds": 300.0,
+      "max_tokens": 128000,
+      "max_tool_calls": 24
+    },
+    "chunking": {
+      "max_chars": 12000,
+      "max_lines": 80,
+      "overlap_lines": 8,
+      "oversized_line_policy": "keep_complete_line",
+      "parser": "auto"
+    },
+    "embedding_batch_size": 16,
+    "indexing_budget": {
+      "max_evidence_chars": 24000,
+      "max_model_calls": 640,
+      "max_seconds": 7200.0,
+      "max_tokens": 25000000,
+      "max_tool_calls": 20
+    },
+    "top_k": 5
+  },
+  "routing": {
+    "budget": {
+      "max_evidence_chars": 24000,
+      "max_model_calls": 1,
+      "max_seconds": 90.0,
+      "max_tokens": 6000,
+      "max_tool_calls": 0
+    },
+    "chat_model": "claude-haiku-4-5-20251001",
+    "max_output_tokens": 256,
+    "temperature": 0.0
+  },
+  "schema_version": "1"
+}

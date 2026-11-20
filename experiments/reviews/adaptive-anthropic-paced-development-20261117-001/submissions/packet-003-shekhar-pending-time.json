@@ -1,0 +1,307 @@
+{
+  "schema_version": "1",
+  "kind": "pending_human_review_submission",
+  "status": "pending_reviewed_at",
+  "recorded_at": "2026-11-18T02:22:39.842799+00:00",
+  "reviewer": "Shekhar",
+  "reviewed_at": null,
+  "missing_fields": [
+    "actual reviewed_at with timezone"
+  ],
+  "timestamp_interpretation": "Actual review time not supplied; storage recorded_at is metadata only and is not a human review timestamp.",
+  "packet": 3,
+  "items": [
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19",
+  "packet_sha256": "1df0324efe5ab04d08845b9ff378fb884a7ff09ef01b0732fc49ff009415b73a",
+  "prior_score_count": 30,
+  "prior_score_file_sha256": "7780e164c85dbb717c95c3845dee54612725fea26747fdb1c44089ee39206c66",
+  "summary": {
+    "received_judgments": 15,
+    "fully_correct": 10,
+    "partially_correct": 1,
+    "abstained": 4,
+    "incorrect_attempted": 0,
+    "citation_support_not_applicable": 3,
+    "existing_finalized_scores": 30,
+    "unsubmitted_answer_texts": 182
+  },
+  "validation": {
+    "exact_output_bindings": "passed15/15",
+    "other_score_fields": "passed15/15;reviewed_at is sole unresolved field",
+    "ready_for_aggregation": false
+  },
+  "normalization": "N/A is JSON null. Item-level scores and reasons retained. Abstentions use the reviewer notes prefix Abstained, including Abstained on the substance.; correctness and citation support remain independent.",
+  "reviews": [
+    {
+      "packet": 3,
+      "item": 31,
+      "review_id": "24e679b841078ec31433775a1f79b7e94e69d065ef04ee334fa3ddbb81526a24",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a1bf58f2aae1f33e3f9ed968bcd9bc14f0b68eccee6f1ecebdddd282a8ca3d0e",
+        "output_sha256": "592bebc0fa0f397141d658ae3f31750843740556fc343dfa03e1709add2ef1a3",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without the function's source.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 32,
+      "review_id": "be0ec4146dc780ada9403f3a719c3e510288cbeeb8fafb3abe3eb70eccf2a2d4",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "e60b9563509bacc5fc96fcde6a80a20e6dc432f92524561ed4ad9746e9638759",
+        "output_sha256": "2bf535351afe07e65bee5cc60ee2c59c5fb737bb2338345a8c8b45baf4fd5e2e",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "FakeEmbeddings and DeterministicFakeEmbedding, each with Embeddings and pydantic BaseModel, match embeddings/fake.py 7-10, 16 and 70. Both cited ranges cover those lines.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 33,
+      "review_id": "657cc79ee2fafeca63c43af7909ec6f5980b4e4c4a4d0a4e8672f3cc9601e1db",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "77c877f3c5552ddbbc3a0ef187e0b02d3352ba531a1f4593e6603f6644576c5b",
+        "output_sha256": "0741276d6bdcb4870a7f56b8b55e7ab1fba5b90c7f8fb3715c6b498cdb676fc1",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Says the distinction is preserved and quotes both run_in_executor calls correctly; they match embeddings/embeddings.py 67 and 78, inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 34,
+      "review_id": "bd6571561577134a546dd3203f28a6029f9eaac71f3be3df6ad147b61e7d611f",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "42f5f47df260a85e405bdcba072a87408eebdd872f995f19057a2b3cbaf9f144",
+        "output_sha256": "f7a1eb41108a59266b9c86f538d25304351f0c1374efaadfc3abce75c6525940",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "None for partial=True, OutputParserException with \"Invalid json output: {text}\" for partial=False, and the stripped text passed as llm_output all match output_parsers/json.py 83-95.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 35,
+      "review_id": "f500780a45053393289eac462d739a48f2d1a8f3c5179446e0822788e8872524",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "f503bc7b2a7fef1f79b4cf07ad414238129815f6985c35b4f27d855182fbbab7",
+        "output_sha256": "a6836af9041b1cc2ee7cb08286d93232d1c4a7867620e09072f319b584464d18",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": 1.0,
+        "notes": "Abstained on the substance. It restates the chunk contents from the question but gives no metadata values and says it cannot tell whether the original changes. The two cited ranges do support the little it claims (start_index is set; load_and_split takes a text_splitter).",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 36,
+      "review_id": "1be0ae9e557374d72695d18827f39b3753b6c10f148bf242fcbe469c794baaa6",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b8d736f4192407218e08c24186a5900f6cd38a65b7246c7f590f99acd6fa3bab",
+        "output_sha256": "c5d22ea202ad3ea23d4b5c74c136754f6753766e36432d2b0d2fc6bffc44bf83",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Wrapper {\"__lc_escaped__\": ...}, no recursion on the serialize side, and as-is unwrapping without the Reviver match load/_validation.py 44-55, 88-93 and 181-185. Like item 16 it does not cite load.py, but its claims are all true.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 37,
+      "review_id": "eebd46edf4f6fa0a25ada500217522035fb1bc33f2ee9d4d2293bd7d345df958",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "59b283e661a1c5a2450b3ad6eb5abfd8d36d859df70a5afaf62bb9faab199f71",
+        "output_sha256": "86502d33e3abdd4bd4de43fd19d304315744bfa9a40b4a2f995084b77107e0aa",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.5,
+        "citation_support": null,
+        "notes": "Chunk contents and \"original not mutated\" are right. The start_index values are wrong: it gives 99 and 103, but text-splitters base.py 139-141 sets them to 0 and 2 by searching the text. No citations.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 38,
+      "review_id": "b182fdd947a6c15b0d2d205d37ba64952876fa0d4588db200aaffda9974accd4",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "7e315e94fab559ed1fd2a43629d98efdf73d66e4ea089d5f55893f5b9285c4b2",
+        "output_sha256": "0c6ff5a790c102c969d7d2551e71fc6a1017761b9eae2fc8071088b16f1bff2a",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "BaseBlobParser and the full @abstractmethod lazy_parse(self, blob: Blob) -> Iterator[Document] signature match document_loaders/base.py 117-138, inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 39,
+      "review_id": "37d7b9e49966253592ec7a39c12b6bcaf9f50793e18d6ad70fbd7a1ea5d8ee91",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "e16baa5a75d5e7c862e7f6619bacdb43dfc8f8d55e32f963c6198c2c73d3e511",
+        "output_sha256": "6e26ed8f1558bec814841fa89e83ff7789901f99c3e6a57a7c6d1887e4ebf4bd",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 0.5,
+        "notes": "Marker form and no mutation of the original are both right (load/serializable.py 297-304, 360-378). The cited ranges stop at line 258 and never reach _replace_secrets, and the cited test covers top-level secrets only, so the no-mutation claim is not supported by what it cites.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 40,
+      "review_id": "014311b1024d5a2b99e3c78c4eec16652f79a14cebd786a633d9945704c44f4d",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "103643140e4ff4a00b03490d06b92c3c1437721a21aefb96e79aa0ca1dd5cdd3",
+        "output_sha256": "f578799804855a5a6b2357646aef3ac05b459702e18f9c744215a87309614335",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": 1.0,
+        "notes": "Abstained. It only states that text_format accepts \"string\" or \"block\" and defaults to \"string\", which the cited overloads at messages/utils.py 1540-1569 do show.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 41,
+      "review_id": "e3d6ed2abfc67da546590f9878de3aff83e9109f56078ea3dad2f7910adca7b8",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "6434a6fc02b96cb1d0e8960ff826175d687909755f35f47c075368cfee25b107",
+        "output_sha256": "0f3492ed78b3771fb58d3972600165cc58ea06f8a2b3f6f181a64126b2d271c3",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same facts as item 34, with the strip step stated explicitly; matches output_parsers/json.py 83-95.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 42,
+      "review_id": "b54788fff8b8305e71166a4e0dd4a76571c0b1bca874b481cdce372ff102185e",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "7533d7ef580d6164ab255c8b143081228fa6e58a9ae35d401ae1356bb053ebcf",
+        "output_sha256": "fa5581a189f261e333af3c7c7e331f1e7b571b38e0dad34eb5cc1680ca7d7956",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 0.5,
+        "notes": "Marker form and no mutation are right. The cited test_secret_injection.py tests check that secret-shaped user data does not leak; they are not about masking declared secrets, as the answer says. The marker itself is supported by the cited test_serializable.py lines.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 43,
+      "review_id": "14bc253c7303bd6e3511444cb910bccf3d301d61077e4e18987fd3f4a4f98f15",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "5002af5029b903078e3ca617a07f07e826fcaa43ace611c223780cd0bb4e9d7c",
+        "output_sha256": "71b2fb8d073f593956e3a8c47b3989ebe2f6ae87fa0fdb696851672b4ed2d883",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Contents 'abcd' and 'cdef', start_index 0 and 2, deep copy, unchanged original and the load -> split_documents -> create_documents path all match document_loaders/base.py 86-87 and text-splitters base.py 137-160.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 44,
+      "review_id": "ea9cedf340a528794dd833409cad04caeaa399e3c90e749bde23b32ddce48a97",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "5cfc9601760cfb312a96f008f0c405ae82a5940cc163aeed3686a370b6021ce2",
+        "output_sha256": "b0b126e82d0cdffd9fba164c4f465c3e2f11f0bef86afa5365918f5de3a50218",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "None for partial=True; OutputParserException carrying the stripped text as llm_output for partial=False. It first says \"original unparsed text\" and then clarifies it is the stripped text, which is what json.py 84 and 95 do.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 3,
+      "item": 45,
+      "review_id": "8cb17385064ff067d11530ddef4de60119071831ff9252ef466938b92caa0d84",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "25d92dfeb5e159cae5882f8232cbff1272ce7c1dbe65464ca9ce7f2ab6198fe2",
+        "output_sha256": "5d38cb16cadafdc4be6673a04ca46f690f771558d03f6860f37741f8e747e14b",
+        "reviewer": "Shekhar",
+        "reviewed_at": null,
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 2 item 28.",
+        "rubric_version": "manual-v1"
+      }
+    }
+  ]
+}

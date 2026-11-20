@@ -1,0 +1,356 @@
+{
+  "schema_version": "1",
+  "kind": "resolved_human_review_submission",
+  "status": "validated_and_recorded",
+  "recorded_at": "2026-11-18T02:53:44.055770+00:00",
+  "reviewer": "Shekhar",
+  "reviewed_at": "2026-11-17T22:27:00-05:00",
+  "review_time_precision": "minute",
+  "reviewer_timestamp_text": "November 17, 2026 at 10:27 PM EST",
+  "timezone": "America/New_York",
+  "timezone_basis": "Explicit EST timestamp supplied in follow-up to the combined submission.",
+  "packets": [
+    15,
+    16
+  ],
+  "items": [
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227
+  ],
+  "submission_basis": "User supplied scores as suggestions to check before recording. All17 score pairs checked against frozen outputs and pinned source, accepted unchanged, then recorded after actual review time was supplied.",
+  "ai_source_cross_check": "packets-015-016-ai-source-cross-check.json",
+  "template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19",
+  "packet_sha256": {
+    "15": "d10ea3bb2f0c3e1d6a4a7cb061eaf7ac2bad62a38233984d9435122b7228cbc5",
+    "16": "22fa1139701902387fc41f3357dbb12f8d36c769d04d6c70f656640589173267"
+  },
+  "score_file": "answers.scores.jsonl",
+  "score_file_sha256_before": "dfea3078823e30a5897f466e48d78bc32643017e4b6e34e84a05b765463856fc",
+  "score_file_sha256_after": "fb1e40957d52904b9fb56ca5f5bd1c554f09a14a433261c0ba3829dd70605288",
+  "previous_scores_preserved_byte_for_byte": true,
+  "validation": {
+    "schema": "passed17/17",
+    "exact_output_bindings": "passed17/17",
+    "benchmark_question_bindings": "passed17/17",
+    "not_before_output": "passed17/17",
+    "no_duplicates": "passed227/227",
+    "available_answer_review_coverage": "227/227"
+  },
+  "summary": {
+    "received_judgments": 17,
+    "fully_correct": 9,
+    "partially_correct": 3,
+    "abstained": 5,
+    "incorrect_attempted": 0,
+    "citation_support_not_applicable": 4,
+    "validated_total": 227,
+    "remaining_unreviewed": 0
+  },
+  "normalization": "Only N/A normalized to JSON null. User scores and reasons retained. Abstentions use notes prefix Abstained; incorrect attempted answers remain distinct. Correctness and citation support remain independent.",
+  "reviews": [
+    {
+      "packet": 15,
+      "item": 211,
+      "review_id": "7a3d69c0ffdce7de02210b8913faab0d1f50c6f0910a51d38715f4574ba85fe2",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "9a892fe51678e96d86a6e8e7eb37d7225ba7f0f88aa24ad8d08a7b502c74402e",
+        "output_sha256": "66d699dca853c65c3e75840eee504de85f203bf468bd7d6bf4484d7633f1373e",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citation as packet 3 item 33; both run_in_executor calls match embeddings/embeddings.py 67 and 78.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 212,
+      "review_id": "09d3d83a5fbe88b5e206c28d51111933703f06a35e97280ab1485296fb8d782f",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "8a32f38bcd078fdcaa25cc03ea2d3942295aba917cf3a88cf983f38beb03da6d",
+        "output_sha256": "c15dfd9b521a02f6c9d9725907e2a8e35b292f4cc4025655afca0e41eb2f04f9",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "Same text and citation as packet 1 item 2: one of the two classes, with the right bases.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 213,
+      "review_id": "7d2e7cf55d9f840e769fe1f1ccfb8b89ff5a87752f5253e7990a1762ef67b63d",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "1bdcc0103ec8084769c97ec9b45049c27f52b9d97c84d7e0e588cdd020c66bcb",
+        "output_sha256": "021ce6c8b351c5fc0ff738c17a3bb2b735c3f5fbf6fbecac0b137249e4f052e3",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Marker {\"lc\": 1, \"type\": \"secret\", \"id\": [\"API_KEY\"]}, no mutation, and _replace_secrets copying the root and each nested level all match load/serializable.py 297-304 and 363-377, inside the cited ranges.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 214,
+      "review_id": "e893aeab95d68b805daef47b5655395569e5e76731d7060d932ff2e4b8335450",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b7da1e9d04d292831f061500448e8048c8db2b928b46a295b09b96b56defac40",
+        "output_sha256": "d64c34e2d1da6242ecfa37dffa5b55ff6891648d316657d1b504756665da7e1f",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Guard, iter(self.load()) and NotImplementedError with the class name match document_loaders/base.py 97-100, inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 215,
+      "review_id": "6a7ce345e17d30c63d4835b79bb3a5cbbe74af87ff773cae63ed75b5da143219",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "da06af0545dc5638e030713614f8c8613123e7b207f6778df72fe0748a3fc4ac",
+        "output_sha256": "d6684905c09af2c55c6049602486a35ae09682e77f3446db014bc8c03e1f159a",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 2 item 28.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 216,
+      "review_id": "b0b22fa1362473139ad2ae8123444ecb2796335e0a3420deaac95c8f3ab84e83",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "595212482381f8d806dabc0c74a4524029daf3a49dde184c99a369e5286e90b4",
+        "output_sha256": "109fc4844e1de76fdcf8649ef293149cc3bc4cbb8d36e26b0b4de7ce37087806",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.0,
+        "citation_support": 1.0,
+        "notes": "Abstained. Same text and citations as packet 3 item 40.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 217,
+      "review_id": "e640afe1d3fad84fb50940f84bdb65f8eeb19f6f8bf970e0d1ca692279db9ae5",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "231fdfab1b4c1456aa8865d6d9785a94c9b9d84db757caa876a0f1c74405f1a5",
+        "output_sha256": "014fe3318504c19572b756662ce8155db0faff46362b11390ad579d83ce1d4c9",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 0.5,
+        "notes": "Right for None, the first A and B, and right that the output is JSONPatch. Wrong for the repeated A: it says an empty patch is emitted, but output_parsers/transform.py 143 emits nothing when the parse is unchanged. The cited json.py supports _diff; the emission logic is in transform.py, which it does not cite.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 218,
+      "review_id": "3ee6e616441f02fc90317284dadb4268cba0c564f3dce5734cc75ed128ec7ba8",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b367a888803ae4f217fc5b3b3e1f8afb519fdaf63f5597cf3b8ad689089e2d73",
+        "output_sha256": "54c3c230ba6cb1d639f6ec44146d46e54d3f09f15384400bd20bca76d2317af0",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as packet 1 items 4 and 11; all facts match outputs/chat_generation.py 17-42.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 219,
+      "review_id": "f66e89baff0ed1e290b92ecd038ba60a4b8cf9c7c683adb3090ac16d631467f9",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "512b8c3f460901879a60d8a094327b80613e5a484af31d358c73efa0ef92e550",
+        "output_sha256": "09f6f42fa0bc0422c543420536e6ec622aff9b4bd4a3cf43df8ecd35e54bd5b3",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "Same text and citation as packet 1 item 2.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 220,
+      "review_id": "fba5b64de3fa9ec3860a1cec824030b2dacae1c99c71099269abc215a032c08c",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "c7765e60927b2fb8c9cb9d9bd9c11b801f176312831b3fd77786695acf2d843f",
+        "output_sha256": "7a5206b1fb413c3629575dbcf05ec2b4fed56f4ee58e80c37b9c89ef180c82c0",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same substance as packet 10 item 148.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 221,
+      "review_id": "ef38411eab5cf7d44099adf27558e3a44d8eec5892f91164809d5261fae3937f",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "2b74057b84b54053c51b9aaa70910cfe74a39920bd9a65c8b6dc071c94276b50",
+        "output_sha256": "b1081b200cdc8ceedfea0e41fd59ebea15d1ee23276c78c2508058d3f20be004",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 2 item 28.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 222,
+      "review_id": "a0e74bc49b9f6827ece29c12c1392746e52b32720b91e413d8a8fb059037dc81",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "530cf7f6af9e8374a5568826194fde41a2372b7c1a98affff246907042ff81a2",
+        "output_sha256": "9ab9dfec8ff41d593d4b27372065525fc96c9a851c636e7eb38e3dccf81c5622",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same substance and citations as packet 14 item 199; matches output_parsers/json.py 129-135.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 223,
+      "review_id": "0fc83f8914a0bfb8aa63e4bc8087a8462ca38c6eb5d2ab85b0eb25a73ffe04bd",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "21d7c9eea874b1f76b6f375935be8a5c1bdb11676f4153020b666d2a86387bce",
+        "output_sha256": "691d48006dd7496e843ecb31caa049f9354286a55e3045152fdad3c60be8c207",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Marker form, no mutation, and copying of the root and the nested dictionaries on the path all match load/serializable.py 297-304 and 363-377, inside the cited ranges.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 224,
+      "review_id": "c65901f2fb186b02114cabe20c5a620b59696c71944756fa82ef902c8c2e1875",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "d5efd527a1988fab5de1d697a02c0d12db52193fb0cf235dfe4613942b0e4cc7",
+        "output_sha256": "573f5904f92ee4f45e8973da14fdc7ba2aaff46391bd8a0a0958d08d088d5b07",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 6.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 15,
+      "item": 225,
+      "review_id": "abde1debc2009a5e5f4b9c47e738b4e047107701f37d47f1b6744d46916c821c",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "2f34b82d49ce076465b893b5144c1e3ffaf43503a918b85cc46ecdf81c2c49c7",
+        "output_sha256": "b01319363a63de6eb04fc4ae494795fddb887a66211840265f5a30f24f065c71",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 0.5,
+        "notes": "Same text and citations as packet 3 item 42: right conclusions, but the cited secret-injection tests are about user data that looks like a secret.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 16,
+      "item": 226,
+      "review_id": "b0d6490c2f8622dc50da24b84068916d67e4259c7bd791e956769300f5d30e8b",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b0d13353dfa5cb437d820f1e8d4bc2144a5e88707ecd80ba56603f10422a4728",
+        "output_sha256": "474d056d83c69884ab58125016f3aa54f2ba9349ac86343c1e63654dd0dbbc59",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Contents 'abcd' and 'cdef', start_index 0 and 2, deep copy, unchanged original and the call path all match document_loaders/base.py 86-87 and text-splitters base.py 137-160. Its inline line numbers for load_and_split (52, 56) are off, but the code is inside the cited ranges.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 16,
+      "item": 227,
+      "review_id": "3c2f38681f7717db16c4c5af91eed7065504221f501218137369db68a762a9f8",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "11d7b39eb55646c62856acb73e8cc88f2d368d5388a45e1645e8795e2e94cb6a",
+        "output_sha256": "b9597083fe592aea7241236365a72c8741fa869fbd9b549b40b0679880c0e6d5",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T22:27:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same substance and citation as packet 3 item 38; BaseBlobParser and the lazy_parse signature match document_loaders/base.py 117-138.",
+        "rubric_version": "manual-v1"
+      }
+    }
+  ]
+}

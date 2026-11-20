@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "rubric_version": "manual-v1",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "authorization": "Shekhar explicitly assigned Codex the task of scoring these206 blinded answers. The existing guide assumed human scoring; this batch is separately labelled AI evaluation.",
+  "correctness": {
+    "1": "All material requested results/components correct. Minor locator or method/property terminology errors may be noted without reducing a substantively complete answer.",
+    "0.5": "Substantive requested components correct, but material results/components omitted or wrong; materially false extra examples also count. Hedging does not erase supplied correct components.",
+    "0": "Wrong target/behavior, or abstention with no substantive requested component beyond input restatement or generic possibilities."
+  },
+  "citation_support": {
+    "1": "Actual cited ranges support material factual claims made; incompleteness is graded independently.",
+    "0.5": "Some claims supported but a material cited-source range, attribution, behavior or provenance claim is missing or contradicted.",
+    "0": "Citations do not support material factual claims.",
+    "null": "No actual source citations supplied."
+  },
+  "abstention_policy": "Keep abstentions and wrong attempted answers separate. A substantive correct partial answer stays partial even if the answer says evidence is insufficient.",
+  "source_policy": "Inspect pinned actual source and the exact cited ranges, not only reference answers or evidence IDs. Citation correctness is independent of answer completeness.",
+  "duplicate_policy": "Only identical question,reference,gold evidence,repo commit,generated answer,citations and citation claims share an assessment. Every item retains its distinct frozen score binding.",
+  "blinding": "No condition labels, selected strategies or aggregate results exposed during scoring. Answer styles can still reveal a strategy.",
+  "review_time_policy": "Original creation time (filesystem birthtime) of each completed assessment file, using the user-approved file-creation-time convention. ISO8601 America/New_York, microsecond precision exposed by filesystem API."
+}

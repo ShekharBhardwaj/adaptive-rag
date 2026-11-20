@@ -1,0 +1,37 @@
+{
+  "status": "failed",
+  "kind": "compatibility_smoke_not_benchmark_results",
+  "recorded_at": "2026-11-16T20:59:49.551634+00:00",
+  "results": {
+    "synthetic_embedding": {
+      "inputs": 2,
+      "dimensions": 4096,
+      "usage": {
+        "input_tokens": 14,
+        "output_tokens": 0
+      },
+      "elapsed_seconds": 0.8072794589679688
+    },
+    "largest_corpus_embedding_batch": {
+      "inputs": 16,
+      "dimensions": 4096,
+      "usage": {
+        "input_tokens": 90461,
+        "output_tokens": 0
+      },
+      "elapsed_seconds": 9.86554625001736
+    },
+    "error": {
+      "type": "AssertionError",
+      "message": "('invalid router response: Expecting value: line 1 column 1 (char 0)',)"
+    }
+  },
+  "model_calls": 3,
+  "cost": {
+    "estimated_usd": 0.004384,
+    "known_subtotal_usd": 0.004384,
+    "unknown_calls": 0,
+    "priced_calls": 3,
+    "schedule_sha256": "58da57b799749ab3bc9b3acd3bca6e43284167b78224f10f7f66a98ac92e6e1d"
+  }
+}

@@ -151,6 +151,8 @@ activemq-data/
 
 # Environments
 .env
+.env.*
+!.env.example
 .envrc
 .venv
 env/
@@ -204,6 +206,22 @@ cython_debug/
 # .vscode/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
+
+# Local benchmark checkouts; pinned metadata is committed under datasets/.
+datasets/repos/
+datasets/indexes/
+configs/*.local.yaml
+
+# Machine-local settings and generated research artifacts.
+.DS_Store
+.claude/settings.local.json
+experiments/preflight/**/synthetic-source/
+
+# Full immutable copies stay local or in a separately published archive.
+# Their paths, sizes and checksums are retained in experiments/artifact-inventory.json.
+experiments/raw/**/index-manifest.json
+experiments/raw/**/events.jsonl
+experiments/raw/**/results.jsonl
 
 # Ruff stuff:
 .ruff_cache/

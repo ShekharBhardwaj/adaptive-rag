@@ -1,0 +1,311 @@
+{
+  "schema_version": "1",
+  "kind": "resolved_human_review_submission",
+  "status": "validated_and_recorded",
+  "recorded_at": "2026-11-18T02:25:40.170866+00:00",
+  "reviewer": "Shekhar",
+  "reviewed_at": "2026-11-17T21:25:00-05:00",
+  "review_time_precision": "minute",
+  "reviewer_timestamp_text": "nov/17/2026 9:25pm",
+  "timezone": "America/New_York",
+  "timezone_basis": "Established chat timezone and preceding clarification.",
+  "packet": 4,
+  "items": [
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19",
+  "packet_sha256": "71e6ae5b581c22cc415bd5ef9a9160bb4dac4245e8df5c70eda8ddb43fa99e1e",
+  "score_file": "answers.scores.jsonl",
+  "score_file_sha256_before": "5abf2b47a323bd4a931324688e45515898a744cb514baaf9db73cdbfbe88ec68",
+  "score_file_sha256_after": "c80019f9863ca8d00b314331d356d79c787ba792aba3e25e1d6348490ff5d4b1",
+  "previous_scores_preserved_byte_for_byte": true,
+  "validation": {
+    "schema": "passed15/15",
+    "exact_output_bindings": "passed15/15",
+    "benchmark_question_bindings": "passed15/15",
+    "not_before_output": "passed15/15",
+    "no_duplicates": "passed60/60"
+  },
+  "summary": {
+    "received_judgments": 15,
+    "fully_correct": 8,
+    "partially_correct": 1,
+    "abstained": 6,
+    "incorrect_attempted": 0,
+    "citation_support_not_applicable": 6,
+    "validated_total": 60,
+    "remaining_unreviewed": 167
+  },
+  "normalization": "Only N/A normalized to JSON null. All user scores and reasons retained. Abstentions use the reviewer notes prefix Abstained; correctness and citation support stay independent, including item59 correctness0/citation1.",
+  "reviews": [
+    {
+      "packet": 4,
+      "item": 46,
+      "review_id": "dc604a6183fd5f33ba85e72eb16385e44594ee528f638d1935021072dbe055fb",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "28ab3721a7970b0a68929a98f0e0caedd896b7dcd52fefa5dc6f6e52a91a1a09",
+        "output_sha256": "192fca01ca0c1d0734953b1b787ea06c03f26e51912447692b44bc3cb38f1894",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 0.5,
+        "citation_support": null,
+        "notes": "Right that inherited lazy_load iterates over the overridden load(). Wrong for the no-override case: it predicts infinite recursion, but document_loaders/base.py 97-100 raises NotImplementedError. Same substance as packet 1 item 1. No citations.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 47,
+      "review_id": "4935f3c32b692cc2e3158aadf67fcbefb4aa8c5ecd7cad08574472ff587657fe",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "169e274b3455ed3fb20d73c0ef0ebc2c093247a6e7441b893c3fda236e2a0d7d",
+        "output_sha256": "aea76d9cbc4a4dbbe94be4c624f777d26aeba7eaa287a0098d59374a72cf748f",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "RuntimeError from the StopIteration, the default executor for None or a dict, and copy_context().run all match runnables/config.py 696-712. The cited test_run_in_executor checks the conversion.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 48,
+      "review_id": "474770616443fc714f0b864af000c0f3b84b1262eb0b7f89130d2305be537f6c",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "f8d8ebbde920525faa8e5fa1cf338b88553912fd5df06b7d4c02fb2f08a63ce9",
+        "output_sha256": "6cabbe753d98a3521686d65ffa3e7af17f62c472770ef0c8b6b45f057e97f996",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as packet 3 item 36; wrapper and as-is unwrapping match load/_validation.py 44-55, 88-93 and 181-185.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 49,
+      "review_id": "f83367cfc4e043d67c0d2d2927fb3a1f9f28912ccf7904d0ef8a22a8d8fa9937",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a5eb01bd8c718e23266bb412c8523e69dab2a343653b49e3851e50bf2f867c3c",
+        "output_sha256": "de32eb2680136a8f12d6bdd70566bd2e7037d01eb1e2b477db977b42c89b0c01",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says the evidence does not cover the Embeddings async methods.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 50,
+      "review_id": "f8789213ca60a7c6dcb0dc65794f0aed267b6eee27757ed62be92b9d59114619",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "299f5dbe63a5795c079b9dc9b4314918ae6ae6d4c55ac5db8a822ee5da786797",
+        "output_sha256": "342f6e3abf340867669f6b4b10c6e0965a43785b2da50e2600fe83164223d4a3",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as packet 1 items 4 and 11; all facts match outputs/chat_generation.py 17-42.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 51,
+      "review_id": "321ee4ce69a468fda11a6aa5a060f8677773fd18a62d8ab9e5a230d5d094053b",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "74c1a54fb4f588c4725ac039440d2ba84fd7a2b9d9f2f7855023fd18aa3bda55",
+        "output_sha256": "62f2f62e97c9a40475882bfb85d769f3957306a3e540aa3d843086dd562c2a72",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without the Serializable implementation.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 52,
+      "review_id": "aa35c31ad8c727a17da2978485a9afadd28530fda362fe5bb736059207dbeb83",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "4dd202826b17129b605831a38a535847c8620b0b1c11e4998974d284751972c7",
+        "output_sha256": "6b17ae5741b5b1cee8eba2eb118507897b7efc2f3371b93904835c34b00c9ed3",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "None for partial=True, OutputParserException with \"Invalid json output: {text}\" for partial=False, and the stripped text as llm_output match output_parsers/json.py 83-95, inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 53,
+      "review_id": "50f0d36969e74f3fd61d70cabd106bacd1630a8970c46c8f76e68df1a03d7e2b",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "89fdf9fa618a9727f5636117ec041aace0a4611073678d8380af2bb971a07643",
+        "output_sha256": "4defa830d59c0774b7bc9eef5c090c87299f161c9541a5a84999052b24d788c1",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Same text as packet 1 item 8.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 54,
+      "review_id": "1f550e6aedc07e5cb7175deefd41e6b2d6e87344b99b97b0083af2e493c56768",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a5ec3f5346faccd8991c44f1cc51a48208b52177d77883aa03e307cac4e10925",
+        "output_sha256": "0fd706e1b433904998690f38176fd6c58b571e603f891deaf2ab15a3b84ed094",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same facts as item 47 in slightly different words; matches runnables/config.py 696-712 and embeddings.py 67.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 55,
+      "review_id": "d129cc3e7c3da0f0c06034a556d652b095fab3b5714439a518487606aad527cd",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "620922efbed4846f9064bd1491f52fed5602b6d9a85680da9631f6d7521e782c",
+        "output_sha256": "164c5576d934970e184bd1ac6a2c203827e666ce4bc697a9452bfeff3446ee49",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citation as packet 3 item 44; matches output_parsers/json.py 84-95.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 56,
+      "review_id": "261cfee66f511adcca04dd73f4caa6f3582a8b0c4e765b61fa80eb27afec8cc5",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "78ddbf5e7092a189c717bf7dd464344fd02722461897395f30c86c32935d1907",
+        "output_sha256": "ba935bd00c33666b6f00e36a4258776f95a225daaa96eb15fa225a3663f4c0d0",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "BaseBlobParser and the full lazy_parse signature match document_loaders/base.py 117-138, inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 57,
+      "review_id": "bf3f226621d76f01e65cc9b26b3a6306d0f2e84d41993302b258c866f3040cfc",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a89a85f81d825ea2fffa5e058a49967bea68bc6ec1ca404f7e6e01e331aa0abe",
+        "output_sha256": "d1815916b5b45777f7d484e4243fc078185c777176f3781d4fac210ab778cc06",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without the chunk-merging source.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 58,
+      "review_id": "5809306b7fbe678c06e1068638982cbe8d60c6f6e5a9ba65e7f4e437e762f0b5",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "5d23d881ea7ae372f834621a35fa65767c1537f39ae0e36dc393ea31c1b42ffa",
+        "output_sha256": "12e08830b209d54c0e6e9d6a22c66ec8985c9e4205d4a3cafc1fad3fd7b4f322",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Emits at the first A and at B only, as jsonpatch.make_patch(prev, next).patch, with prev_parsed updated after each emit. Matches output_parsers/transform.py 127-148 and json.py 51-53; both are inside the cited ranges.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 59,
+      "review_id": "647153b67a82922923a5b997a725a199e63648c9ed53593b8381c0051e9f78b6",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a931690d2e58cf5172f97223ca108b8f2a116ca30038edb2e3010503ca0ecee2",
+        "output_sha256": "552e6453ab6ad920dcf4704e55cbdccc15ba17c94b173da1923f546e2653eecc",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 0.0,
+        "citation_support": 1.0,
+        "notes": "Abstained. Same text and citations as packet 3 item 40; its only claim, the text_format options and default, is shown by the cited overloads.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 4,
+      "item": 60,
+      "review_id": "efa0c1c54e082682c7ebf7a23dbc3d9f687b28b8edad4c411af34fee7ebec785",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "9473c605cad99aa6255f4bfcfeb3f4244e0ee829e392a638d814e4d0b8437564",
+        "output_sha256": "9eb15f62f3e747f51afd5d0f02a6abe7303e6012ab7bc0104881f41c559a7445",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:25:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without repository evidence.",
+        "rubric_version": "manual-v1"
+      }
+    }
+  ]
+}

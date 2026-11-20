@@ -1,0 +1,6 @@
+{
+  "archive": "experiments/preflight/phase4-2026-11-16/framework-source-0.4.0.tar.gz",
+  "sha256": "0df4607988b2adfe05c8ccc8902a7d120936f695527739e94c69c885870fc34a",
+  "framework_source_sha256": "e9f82de8c3d650e0ab7add76bc81f4761914f5a665ddab692e20d06f54498dd5",
+  "purpose": "Exact implemented Python sources, tests and lockfile preserved while framework worktree is uncommitted. No credentials or benchmark annotations included."
+}

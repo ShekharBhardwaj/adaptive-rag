@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-11-17T00:27:50.361573+00:00",
+  "source_index": "datasets/indexes/langchain-openrouter-qwen3-phase4-001",
+  "target_index": "datasets/indexes/langchain-openrouter-qwen3-phase4-002",
+  "observed_source_successful_batches": 541,
+  "observed_source_model_attempts": 542,
+  "source_failure": "HTTP429 from upstream Nebius, token quota exceeded",
+  "source_complete_usage": "unknown because failed attempt has no reported usage",
+  "explicit_reuse": "Only verified successful batches; no mutation of source, no automatic retry or provider/model change.",
+  "new_calls_planned": 47,
+  "pacing": {
+    "window_seconds": 61,
+    "planning_input_tokens_per_window": 100000,
+    "next_request_reservation": "UTF8 byte estimate capped at100000; a single estimated-oversized request can start when window is empty. Actual provider usage remains authoritative.",
+    "limitation": "Conservative client planning, not a promise of provider quota or absence of throttling."
+  },
+  "primary_rate_limit_documentation": "https://docs.tokenfactory.nebius.com/ai-models-inference/rate-limits",
+  "study_boundary": "No benchmark answer or routing outcome observed; retrieval/generation policies stay frozen."
+}

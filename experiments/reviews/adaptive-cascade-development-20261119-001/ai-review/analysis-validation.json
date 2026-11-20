@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "kind": "final_ai_review_validation",
+  "validated_at": "2026-11-19T19:31:03.058756+00:00",
+  "status": "passed",
+  "reviewer_type": "ai",
+  "human_review": false,
+  "validated_scores": 206,
+  "unique_cases": 88,
+  "validated_source_excerpts": 130,
+  "source_files_unchanged": 24,
+  "raw_files_unchanged": 10,
+  "original_packets_unchanged": 14,
+  "template_unchanged_and_unrated": true,
+  "human_score_file_absent": true,
+  "score_freeze_unchanged": true,
+  "assessment_birthtimes_match": true,
+  "planned_attempts": 225,
+  "observed_attempts": 225,
+  "failed_attempts_without_answer": 19,
+  "readable_scored_packets": 14,
+  "all_original_items_present_once": true,
+  "final_aggregate_numeric_results_identical_to_cli": true,
+  "ai_provenance_explicit": true,
+  "markdown_links_and_whitespace": "passed",
+  "raw_load_issues": [
+    "status.json: run status is 'completed_with_errors'; results are partial"
+  ],
+  "raw_load_issue_interpretation": "The retained completed_with_errors status is expected; all 225 planned records are present.",
+  "audits": [
+    {
+      "agent": "cascade_ai_grade_a",
+      "scope": "Read-only independent revalidation of frozen bindings, source excerpts, input/assessment hashes and creation timestamps",
+      "result": "passed"
+    },
+    {
+      "agent": "cascade_ai_grade_b",
+      "scope": "Read-only denominator, comparison and interpretation audit of the CLI aggregate",
+      "result": "passed"
+    }
+  ],
+  "artifact_sha256": {
+    "experiments/reviews/adaptive-cascade-development-20261119-001/answers.ai-scores.jsonl": "99d4a84742cf75b8b83483cf1e0b93d65471872f5de2adb32a9a1555a402d2c0",
+    "experiments/reviews/adaptive-cascade-development-20261119-001/ai-review/scores-frozen.json": "886fadbd5810a735fa32fbfeeca9beb652c4789d19beda6705d4da53116a6407",
+    "experiments/reviews/adaptive-cascade-development-20261119-001/final-ai-review-summary.json": "696190cc04394cfa64a491c89b237cf1c3bbab2609b53caddf076e36a2623636",
+    "experiments/reviews/adaptive-cascade-development-20261119-001/review-progress.json": "593ed877afa501ed1fcbfc6b8dc5d653e905ba475747d682343401c61961697a",
+    "experiments/aggregates/adaptive-cascade-development-20261119-001-ai-reviewed-001.json": "52a55211d61f995b7cad402835d4976c9018146e9b91ddfae963c3d49e308fbb",
+    "experiments/reviews/adaptive-cascade-development-20261119-001/README.md": "44d362f0107729973b24744717d221de078f4ac744d6877cb76e96ccfaa50d9d",
+    "paper/phase6-cascade-development-run.md": "93efc00d52664d820b8de1069f244da81dfbb5ec9372b5c19741ec5e9232a519",
+    "README.md": "4d0534e9ed704d73d79d423eedd1cb7643dc22a7614def8b94331b8bae6f4163"
+  }
+}

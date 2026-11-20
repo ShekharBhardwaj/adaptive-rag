@@ -1,0 +1,42 @@
+{
+  "client_report_date": "2026-11-17",
+  "run_id": "e46a7d86-a64e-4312-9eca-f180bf8fe0a6",
+  "planned_jobs": 270,
+  "observed_jobs": 73,
+  "unrun_jobs": 197,
+  "result_counts": {
+    "budget_exhausted": 13,
+    "completed": 58,
+    "error": 2
+  },
+  "elapsed_seconds": 845.5918752499856,
+  "stop_cause": "Direct Anthropic answer request exceeded the 30-second read timeout; missing response usage invalidated complete accounting and stopped further calls. The $5 estimated cap was not reached.",
+  "known_cost_subtotal_usd": 2.2674931200000006,
+  "complete_cost_estimate_usd": null,
+  "unknown_usage_calls": 1,
+  "provider_accounting": {
+    "https://api.anthropic.com/v1": {
+      "attempts": 302,
+      "unknown_usage_calls": 1,
+      "known_estimated_subtotal_usd": 2.267473
+    },
+    "https://openrouter.ai/api/v1": {
+      "attempts": 11,
+      "unknown_usage_calls": 0,
+      "known_estimated_subtotal_usd": 2.012e-05
+    }
+  },
+  "review_items": 59,
+  "review_packet_sizes": [
+    15,
+    15,
+    15,
+    14
+  ],
+  "actual_human_reviews": 0,
+  "held_out_execution": "not_started",
+  "automatic_reruns_started": 0,
+  "integrity_checks": "framework/source/archive configuration and benchmark identities unchanged; all chat calls directAnthropic",
+  "source_sha256": "b2eae0b62bf0feb4b51b88e0e633a114acd7a9c64592e25484d1d02879817ef5",
+  "benchmark_sha256": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71"
+}

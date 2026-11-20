@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "kind": "synthetic_compatibility_check_not_benchmark_results",
+  "recorded_at": "2026-11-19T20:10:35.956108+00:00",
+  "config_sha256": "9db82a44e5445fecc578bbad69f848b75a0cc42089c2f684afd4cc59ed9b10f6",
+  "model_identities": {
+    "embedding": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "qwen/qwen3-embedding-8b",
+      "dimensions": null
+    },
+    "answer": {
+      "base_url": "https://api.anthropic.com/v1",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    "agent": {
+      "base_url": "https://api.anthropic.com/v1",
+      "model": "claude-haiku-4-5-20251001"
+    }
+  },
+  "limits": {
+    "model_calls": 12,
+    "seconds": 300,
+    "estimated_cost_usd": 0.1
+  },
+  "results": {
+    "qwen_query_embedding": {
+      "status": "passed",
+      "dimensions": 4096
+    },
+    "anthropic_sufficiency_answer_with_evidence": {
+      "status": "passed",
+      "citations": 1,
+      "evidence_sufficient": true
+    },
+    "anthropic_sufficiency_answer_without_evidence": {
+      "status": "passed",
+      "evidence_sufficient": false
+    },
+    "anthropic_wrapup_reserved_selection": {
+      "status": "passed",
+      "model_calls": 2,
+      "selection_method": "tool_call"
+    },
+    "anthropic_wrapup_retry_after_ignored_instruction": {
+      "status": "passed",
+      "model_calls_including_one_simulated": 3,
+      "selection_method": "text_json"
+    },
+    "anthropic_wrapup_retry_after_prose": {
+      "status": "passed",
+      "model_calls_including_one_simulated": 3,
+      "selection_method": "tool_call"
+    }
+  },
+  "provider_model_calls": 9,
+  "locally_simulated_responses": 2,
+  "chat_start_gaps_seconds": [
+    6.005086,
+    6.005074,
+    6.005073,
+    6.005119,
+    6.00187,
+    6.005125,
+    6.005045
+  ],
+  "cost": {
+    "estimated_usd": 0.01846328,
+    "known_subtotal_usd": 0.01846328,
+    "unknown_calls": 0,
+    "priced_calls": 9,
+    "schedule_sha256": "4a0fd3b11070c2bd2952e8835acd92e896bf26269fcd814203cbfbe7ae4ff793"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "packet": 9,
+  "kind": "metadata_validation",
+  "validated_scores": 135,
+  "packet_bindings": "passed15/15",
+  "prior_120_scores": "preserved byte for byte",
+  "frozen_raw_files": "unchanged",
+  "original_review_template": "unchanged",
+  "supplied_grades_and_notes": "preserved",
+  "repeat_check": "All seven exact-repeat groups and substance-only rating checks pass. Items 132 and 111 differ in answer text; no exact-repeat claim is made in the user submission, and their submitted grades match.",
+  "source_semantic_regrading": false
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "1",
+  "kind": "blinded_ai_review_inputs",
+  "created_at": "2026-11-19T19:15:38.137935+00:00",
+  "authorization": "Shekhar asked Codex to score all206 blinded answers. AI assessments will be explicitly labelled and kept separate from human review files.",
+  "reviewer": "Codex (AI reviewer)",
+  "human_review": false,
+  "rubric": "manual-v1",
+  "template_sha256": "af02082dc3452bf6042194c5c7eeca89cc135df817531ca8cf5b71c2295227a9",
+  "item_count": 206,
+  "unique_question_count": 15,
+  "unique_content_cases": 88,
+  "deduplication": "Only identical question,reference,gold evidence,repo commit,generated answer,citations and citation claims share an assessment. Every item retains its distinct frozen score binding.",
+  "packet_sha256": {
+    "packet-001.md": "11bdefa84f6e7368c61ca9b6c116e3948690c0e30d27264aee4ef2c41a6cae52",
+    "packet-002.md": "11e8b6a63d0e5f1cb26201a34481f15c85d1ddfd8900e0a3e15819423f2eec4e",
+    "packet-003.md": "df72a6fecfc1712f1c1f4e11f5ad156f32a93cd073b045474fa65a8f8b11370d",
+    "packet-004.md": "2138f377d041264dd3a607d292b243bda97a0339f5611438ca4d524edc3fbf75",
+    "packet-005.md": "abaf44a0a270f36fb583c99b067132ab2eaeb4fe0135e41c0ba2f6756443cc08",
+    "packet-006.md": "3f83a53814f474b5461a6aa1b004547f05658b1068b861f36e4eaeafc57eb842",
+    "packet-007.md": "06918e7e2c712c42672d8c5fda3a8672cde89890d82733e67aef6bd549a8c5f9",
+    "packet-008.md": "1f121ee8f694029b5c59b67373de396009269dd5a394f28ca8b5ae498094f8f5",
+    "packet-009.md": "008c113bfbb2b761941e8db45b6eac8479646b3485a5a069fe4bba0dd13b946e",
+    "packet-010.md": "da768839a57f32563c4903e6a582682f45fca7c11ed9038a2c0a326471677d64",
+    "packet-011.md": "683bbe55a4f7002e7102aab97e7f610cdf184af366ff7adc4ac694336a3069dc",
+    "packet-012.md": "b1b9d0fcd71deed767d8449a37d5e1031c27e0f011b8fbc838532a32562d2867",
+    "packet-013.md": "935c6e828f8e885b85c2b8620cda1703083e339f76af75b1b8beadd3fd1c5293",
+    "packet-014.md": "01a919c9ba295e3382898dbed91988ccd02cabb1ed92d9f63fba5e959c744983"
+  },
+  "pinned_repo_commit": "ea17e48f0a4336c920394fd029de99f1568b4c38",
+  "verified_source_excerpt_count": 130,
+  "source_file_sha256": {
+    "libs/core/langchain_core/embeddings/fake.py": "3c2a71df650f2916737418d50b32c533ea937770aca0b8483354138c219ab21d",
+    "libs/core/langchain_core/document_loaders/base.py": "8831ae87cd8321068efe1cef3f7648a95093eacb37e28a6538b33e47c8be9b21",
+    "libs/text-splitters/langchain_text_splitters/base.py": "7bf2ee7fc9ca1ec31f9b8a260a836b7241020786e1085e283df5322b2843a358",
+    "libs/core/langchain_core/embeddings/embeddings.py": "bb9d13d95c4b2f27c604229c56d59f4a266bb4ab9af2c3921f04921d12ad727a",
+    "libs/core/langchain_core/runnables/config.py": "304ae7748a0b47a052551182a638f2bf9e40840eaa5f9042011a3b349c6cf06b",
+    "libs/core/tests/unit_tests/runnables/test_config.py": "fed3b12f8e9712440fe0fc0938a993a83769985dbbcb07408f347688c93602bb",
+    "libs/core/langchain_core/outputs/chat_generation.py": "f2dee0345bd812265e418a95be59ff3cc8004c9e78f81a10a57591bac07ed740",
+    "libs/core/langchain_core/messages/base.py": "c99304892b711954f0662ceb309433dc0579ea8576c9a997a51cd90ed145e9f6",
+    "libs/core/langchain_core/load/dump.py": "a928ca73ad5e5848ab8273393ae257b23625549bbb571ddcff5e15f4f55ce65d",
+    "libs/text-splitters/tests/unit_tests/test_text_splitters.py": "2d9c8523c1ea0c9447f5d0b0bd5dde4f978f52d2b312532bb2dfa749046cf8de",
+    "libs/core/langchain_core/load/_validation.py": "0bbd6b48d5641dcd1054d5a423a6231bcd5fba8274e5447f16a3f55147f9a4f1",
+    "libs/core/langchain_core/load/load.py": "a72098a89e538b39708d783125a0e725e0d76219b9fa6e364e23b84433d59772",
+    "libs/core/tests/unit_tests/load/test_serializable.py": "b700320dafaa5dbf25368573b50b658da29049f9948ef144dcc3e6aab21c260e",
+    "libs/core/langchain_core/messages/chat.py": "b7d6b3f91d437b61dd884861a46c881689c2a98d3750092a31dbedb71d75ae13",
+    "libs/core/langchain_core/output_parsers/json.py": "a539848ecb3743963d3ea2203d5140fb81df3898d70f4cd41d7b7f84281060dc",
+    "libs/core/langchain_core/load/serializable.py": "444e63d0e4d6209653c5ed1717aa2598fc7fca29120aec683f800690d8067ab3",
+    "libs/core/langchain_core/messages/utils.py": "113831a1a017a00aaabec5276ae3607d45681d06d181428dd5990331c0b4858d",
+    "libs/core/tests/unit_tests/messages/test_utils.py": "a779ced395ec7dfbe7520c60c70d199f4a4e4a9145f692369f9a705f49c00907",
+    "libs/standard-tests/tests/unit_tests/test_embeddings.py": "8d6cd72739cd84900dd616e3877f673666b7d231469a15955078e7e85be77b3a",
+    "libs/core/tests/unit_tests/document_loaders/test_base.py": "30238fb13272cd1f36b25b1f77d605de7684d0c803a175bdd5af645680e4ddd0",
+    "libs/core/langchain_core/output_parsers/transform.py": "f6a9ccc423103fec55f966a257345c0beba97c756ecd2875cac5a03dd889c724",
+    "openwiki/workflows/structured-output.md": "98f2bc11f214b335e50381066120cfdfc53e8c7f0bec6718ae56f392d8340fcf",
+    "libs/core/langchain_core/outputs/generation.py": "59dd6a9daac545dc3dd35ab51ed6d017c05e2197cb9242de8bb19f1b6378fda6",
+    "libs/partners/openai/langchain_openai/embeddings/base.py": "770698e0bd78717d525c58f5a372e24ff2482cb5d252b5962059329fb101bd30"
+  },
+  "raw_file_sha256": {
+    "benchmark.jsonl": "e4c33c295518876c2b7537eff5fca281dd41b4779564062b41f0672220016a71",
+    "corpus-manifest.json": "897e6a1e449bf8295aec339bcad84db316504b09709b25375cc2631e65fee546",
+    "index-manifest.json": "0b073eba148f4c5c2933f3bb6b63b9db5419c73414238c7cd11d368915192f11",
+    "results.jsonl": "e19808c9f9e0665abc0751f3aeb8755ccb2cebb793ff93375e8683dfc196668a",
+    "price-schedule.json": "03e2a87b96af12e0e250e54e8e0342c338d1aa728dfb1c903b775fd18b0f8eed",
+    "events.jsonl": "1c745426ae857d72897b6be3a12a590f7108562cee12c09e0fa488a44e7c840b",
+    "configuration.json": "8bc9ff66343541a0b1ef564bcefb7b373250d6cff21103f8a1b38d02c55e0749",
+    "validation.json": "c01a6893bad649289da36bf630b407c1056282c8879de5851d4b1a2cef04a9f9",
+    "manifest.json": "6506c4c28bb9623bf1b60226d0e859f7429c6b9353edf3c5fed33886053b4c0c",
+    "status.json": "8934c420e2db05febd428c53474ea6968e198a37f407b6506aaf63a7bc917d37"
+  },
+  "assignments": {
+    "a": {
+      "question_keys": [
+        "07358b62fff7",
+        "4f25f906cc6f",
+        "8c2609ccb2ff",
+        "8e006dac5a25",
+        "e2503097d1a8"
+      ],
+      "unique_cases": 30,
+      "item_count": 69
+    },
+    "b": {
+      "question_keys": [
+        "0bc2707e05dc",
+        "9166500aa609",
+        "ac47e4d16963",
+        "ebc1f49a621e",
+        "ffec4153eebd"
+      ],
+      "unique_cases": 32,
+      "item_count": 69
+    },
+    "c": {
+      "question_keys": [
+        "0c3f127e7d2b",
+        "1e7b4d03c627",
+        "40c61cdb05d4",
+        "ea9921e29b78",
+        "ecd39ae3cb7d"
+      ],
+      "unique_cases": 26,
+      "item_count": 68
+    }
+  },
+  "blinding": "Graders receive only blinded template content and pinned source, not conditions, selected strategies, aggregates, raw traces or previous-run grades."
+}

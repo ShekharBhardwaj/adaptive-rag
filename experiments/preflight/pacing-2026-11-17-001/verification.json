@@ -1,0 +1,204 @@
+{
+  "client_date": "2026-11-17",
+  "status": "offline_verified_not_live_tested",
+  "paid_provider_calls": 0,
+  "experiment_runs_started": 0,
+  "configuration": {
+    "schema_version": "1",
+    "repository": {
+      "url": "https://github.com/langchain-ai/langchain.git",
+      "path": "/Users/shekhar/development/research/adaptive-rag/datasets/repos/langchain",
+      "commit_sha": "ea17e48f0a4336c920394fd029de99f1568b4c38"
+    },
+    "files": {
+      "include_globs": [
+        "**/*"
+      ],
+      "exclude_globs": [
+        "**/.git/**",
+        "**/.env",
+        "**/.env.*",
+        "**/.aws/**",
+        "**/.ssh/**",
+        "**/secrets.*",
+        "**/credentials.*",
+        "**/*.pem",
+        "**/*.key",
+        "**/id_rsa",
+        "**/id_ed25519",
+        "**/node_modules/**",
+        "**/vendor/**",
+        "**/vendors/**",
+        "**/vendored/**",
+        "**/third_party/**",
+        "**/third-party/**",
+        "**/.venv/**",
+        "**/venv/**",
+        "**/env/**",
+        "**/build/**",
+        "**/dist/**",
+        "**/target/**",
+        "**/out/**",
+        "**/coverage/**",
+        "**/htmlcov/**",
+        "**/__pycache__/**",
+        "**/.pytest_cache/**",
+        "**/.mypy_cache/**",
+        "**/.ruff_cache/**",
+        "**/.cache/**",
+        "**/.tox/**",
+        "**/.nox/**",
+        "**/.next/**",
+        "**/.nuxt/**",
+        "**/.output/**",
+        "**/.eggs/**",
+        "**/*.egg-info/**",
+        "**/*.min.js",
+        "**/*.min.css",
+        "**/*.map",
+        "**/*_pb2.py",
+        "**/*_pb2_grpc.py",
+        "**/*.generated.*",
+        "**/*.gen.*",
+        "**/package-lock.json",
+        "**/pnpm-lock.yaml",
+        "**/yarn.lock",
+        "**/poetry.lock",
+        "**/uv.lock",
+        "**/Pipfile.lock",
+        "**/Cargo.lock",
+        "**/composer.lock"
+      ],
+      "max_file_bytes": 1000000
+    },
+    "retrieval": {
+      "top_k": 5,
+      "budget": {
+        "max_tool_calls": 24,
+        "max_model_calls": 12,
+        "max_tokens": 128000,
+        "max_seconds": 300.0,
+        "max_evidence_chars": 24000
+      },
+      "indexing_budget": {
+        "max_tool_calls": 20,
+        "max_model_calls": 640,
+        "max_tokens": 25000000,
+        "max_seconds": 7200.0,
+        "max_evidence_chars": 24000
+      },
+      "chunking": {
+        "max_lines": 80,
+        "max_chars": 12000,
+        "overlap_lines": 8,
+        "parser": "auto",
+        "oversized_line_policy": "keep_complete_line"
+      },
+      "embedding_batch_size": 16
+    },
+    "routing": {
+      "chat_model": "claude-haiku-4-5-20251001",
+      "temperature": 0.0,
+      "max_output_tokens": 256,
+      "budget": {
+        "max_tool_calls": 0,
+        "max_model_calls": 1,
+        "max_tokens": 6000,
+        "max_seconds": 90.0,
+        "max_evidence_chars": 24000
+      }
+    },
+    "models": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "chat_base_url": "https://api.anthropic.com/v1",
+      "chat_api_key_env": "ANTHROPIC_API_KEY",
+      "request_pacing": {
+        "min_interval_seconds": 6.0,
+        "max_requests_per_minute": 10
+      },
+      "chat_request_pacing": null,
+      "embedding_model": "qwen/qwen3-embedding-8b",
+      "chat_model": "claude-haiku-4-5-20251001",
+      "embedding_dimensions": null,
+      "temperature": 0.0,
+      "max_output_tokens": 512,
+      "token_parameter": "max_tokens"
+    },
+    "experiment": {
+      "dataset": "/Users/shekhar/development/research/adaptive-rag/benchmarks/pilot.jsonl",
+      "split": "development",
+      "conditions": [
+        "vector",
+        "vectorless",
+        "agentic",
+        "no_retrieval",
+        "adaptive_rule",
+        "adaptive_llm"
+      ],
+      "repetitions": 3,
+      "order_seed": 17,
+      "vector_index": "/Users/shekhar/development/research/adaptive-rag/datasets/indexes/langchain-openrouter-qwen3-phase4-002",
+      "require_pilot": true,
+      "answer_model": null,
+      "generation": {
+        "temperature": 0.0,
+        "max_output_tokens": 1024,
+        "max_tokens": 64000,
+        "max_seconds": 90.0,
+        "max_evidence_chars": 24000
+      },
+      "budget": {
+        "max_model_calls": 2000,
+        "max_tokens": 5000000,
+        "max_seconds": 5400.0,
+        "max_cost_usd": 5.0
+      },
+      "price_schedule": "/Users/shekhar/development/research/adaptive-rag/experiments/preflight/anthropic-development-2026-11-16-001/prices.json"
+    }
+  },
+  "configuration_file_sha256": "34c6b8f7cd487936f23108cd948546cdf9cd4577589f7f89b71cca9509fa8425",
+  "framework": {
+    "framework_version": "0.4.0",
+    "framework_git_sha": "a44b4cdde7a05cb4c4ed4068b948ac209d3bd5ae",
+    "framework_worktree_dirty": true,
+    "framework_source_sha256": "3951fee69e4e0af3c344501309d3d1b6665f835224344c793f7d2edfdab970e5",
+    "lockfile_sha256": "4b248c2fe58dcbce25d4aad6cabb5c9fa1dc601747053c03ce1a96afd96faf73",
+    "python": "3.13.9 (main, Oct 14 2025, 21:10:40) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "dependencies": {
+      "pydantic": "2.14.3",
+      "PyYAML": "6.0.3",
+      "httpx": "0.28.1",
+      "numpy": "2.5.4",
+      "faiss-cpu": "1.16.0",
+      "tree-sitter": "0.26.1",
+      "tree-sitter-python": "0.25.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    }
+  },
+  "focused_test_command": ".venv/bin/pytest -q tests/test_pacing.py tests/test_paced_connections.py tests/test_model_client.py tests/test_chat_connections.py tests/test_config.py tests/test_journal.py tests/test_index_journal.py tests/test_index_recovery.py tests/test_phase4_cli.py tests/test_runner_boundary.py tests/test_adaptive_runner.py",
+  "focused_tests": {
+    "passed": 194,
+    "elapsed_seconds": 55.13
+  },
+  "ruff_lint": "passed",
+  "ruff_format": "passed;75 files",
+  "git_diff_check": "passed",
+  "backward_compatibility": {
+    "adaptive-development-20261116-001": {
+      "review_items": 207,
+      "review_export_bytes_identical": true
+    },
+    "adaptive-anthropic-development-20261116-001": {
+      "review_items": 59,
+      "review_export_bytes_identical": true
+    },
+    "old_anthropic_profile_file_sha256": "187ce8612d060ea1f8ab6646c9f1f9e6271bfe5762ddb8d87fb1fcdacc10fd36",
+    "persistent_model_identities": "unchanged; no pacing state or credentials added"
+  },
+  "archive_sha256": "4a73b950c27de025a0f646c7733f2d24db96d3aadfa6c9e6dbfa13f28a605215",
+  "bounds_note": "Six-second starts and ten starts per rolling minute per endpoint; unknown usage still stops cost-bounded execution. Global90-minute/$5 caps retained, so full270-job completion is not guaranteed. No automatic retries/reruns.",
+  "official_rate_limit_source": "https://platform.claude.com/docs/en/api/rate-limits"
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": "1",
+  "kind": "resolved_human_review_submission",
+  "status": "validated_and_recorded",
+  "recorded_at": "2026-11-18T02:16:49.447180+00:00",
+  "reviewer": "Shekhar",
+  "reviewed_at": "2026-11-17T21:15:00-05:00",
+  "review_time_precision": "minute",
+  "reviewer_timestamp_text": "tue nov/17/2026 9:15pm",
+  "timezone": "America/New_York",
+  "timezone_basis": "Established chat timezone; preceding clarification explicitly used New York time unless specified otherwise.",
+  "packet": 2,
+  "items": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "template_sha256": "dc3b3c6a5ee91ee2493ca2442d48743f52e8ecbe5ccd068847ccdd89f0cceb19",
+  "packet_sha256": "4c635cfb73626a837afcb8df5af5fef4644e13a2420694aada4c9510f6dc1157",
+  "score_file": "answers.scores.jsonl",
+  "score_file_sha256_before": "6a89511dfaac25f0b1accee5920ed30b83411f6382be8805a189452386ef3812",
+  "score_file_sha256_after": "7780e164c85dbb717c95c3845dee54612725fea26747fdb1c44089ee39206c66",
+  "previous_scores_preserved_byte_for_byte": true,
+  "validation": {
+    "schema": "passed15/15",
+    "exact_output_bindings": "passed15/15",
+    "benchmark_question_bindings": "passed15/15",
+    "not_before_output": "passed15/15",
+    "no_duplicates": "passed30/30"
+  },
+  "summary": {
+    "received_judgments": 15,
+    "fully_correct": 7,
+    "partially_correct": 3,
+    "incorrect_attempted": 1,
+    "abstained": 4,
+    "citation_support_not_applicable": 4,
+    "validated_total": 30,
+    "remaining_unreviewed": 197
+  },
+  "normalization": "Only N/A normalized to JSON null; user grades and reasons transcribed unchanged. Abstentions retained through the exact Abstained. notes prefix.",
+  "reviews": [
+    {
+      "packet": 2,
+      "item": 16,
+      "review_id": "71ceb798fd24a10578b8cf2a03cba58843aa27a52ccfd5c8252d5d84f2f91a00",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "022cb34e503c328c1db7e1c47b268b2fb984bf83b2ca73bb94eed93a0b04a28e",
+        "output_sha256": "fe7d2e75c3bcae511e63f793e2c259b40d47d0abc8b78919afe9718281f8b571",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Wrapper {\"__lc_escaped__\": original} and the as-is unwrap by _unescape_value match load/_validation.py 44-55, 92-93 and 181-185. It does not mention that load checks for the wrapper before recursing (load.py 826-827), but nothing it says is wrong. The cited test at test_serializable.py 480-494 shows the round trip it describes.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 17,
+      "review_id": "6d463b86ea4234fdf532ece3ed21fa555d9f35128f7204e49a465ceb48f6027e",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "5b98c9f808b139a67efd05682dc3ddc417d3604197349ef6d7ff8fa5ad9db674",
+        "output_sha256": "df2085f80d6abe76df4d5d51f12c751e2c2da813ce9bc9088ecb19bc34d3c9e8",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Guard, iter(self.load()) and NotImplementedError with the class name match document_loaders/base.py 97-100. The cited test file contains test_lazy_load_not_implemented.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 18,
+      "review_id": "ab98658eae0ad8c95c0a8595b8b4b94d8c6e12168f0324280fd62bcab5d60ec4",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "dc4e92cda8584cfcb81a85a2e2c65d8bd5fcd61c2f2932c73d25689630140d83",
+        "output_sha256": "5f154cebb974ddb489b74cb05750fd84e9953712a4783c3febbe43f85571ffb2",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says the evidence lacks the parse_result implementation.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 19,
+      "review_id": "851a9a33505403488c90ab2ca9ff8bf031ae71abd5056df171884cbb7ee43c6b",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "0969d154774e3de7abb94ab3cd03c45683792706fd0453306e82990d0c82b309",
+        "output_sha256": "3cd22310197da7133703756f2f4e3badeae765d9a943868d1d35cf5879bcaea3",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "JsonOutputParser, the alias and \"simple_json_output_parser\" from _type match output_parsers/json.py 129-135, which is inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 20,
+      "review_id": "b1f72129adee157efffbcaeeb7a9c8620b8029fc5a20c666f379ce3dbe1df888",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "f4f6857c226ca54488c4deea30fd9b550aa9465d57fc3945571fd6ecd5aa3917",
+        "output_sha256": "5719f4894a830312478b3b32156b6eca4c0f625ece27000508b5095b3714ced5",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says it cannot answer without repository evidence.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 21,
+      "review_id": "d8d0cbf45460625d28a9bf52f5f65ae537acf670f8124b982e5ce5d7c3a2320c",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a315cf911b767a5e4ed5b25f0cb7b5b0fc7c49eb4f2f2ab3716a21d42af191e2",
+        "output_sha256": "2b3263989401d5f57426180ab4249f85f1ad6a4d2973888a1aa6ed9050ba3711",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Guard, iter(self.load()), NotImplementedError and load() as list(self.lazy_load()) all match document_loaders/base.py 43 and 97-100. Both cited ranges cover those lines.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 22,
+      "review_id": "1a45cb2d341f736c2072e91eaf64e9732952682a3b91673f33611cb4afd197d0",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "8dd904c8a739fad0cffd5006ca9f5169f787466194144e6da91c59519be438cc",
+        "output_sha256": "7548360985d833cbf333864e95dfa339fae9c3dee33150cc227bee6e67941307",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "Page contents, deep copy, unchanged original and call path are right. It never gives the start_index values (0 and 2), which the question asks for; it leaves them as \"<calculated>\". Cited ranges contain the code it describes.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 23,
+      "review_id": "18983882613b89a98b27b31752f3ad3c6a621a9dd2668e7aa430be7beea1fbb6",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "6eddccbd5ffdf72524974a7adbcb7cc0bf49d338f6d6438f293f1968cfd0c343",
+        "output_sha256": "6dcba490bf697f6c131726b637b7899389a31705acfbef3c928629383a3dcebc",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "RuntimeError from the StopIteration, default executor and copy_context().run all match runnables/config.py 696-710 and embeddings.py 67. The cited test_run_in_executor checks exactly this conversion.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 24,
+      "review_id": "46c56b9e65658f7742f6886e2eb8df746b060bc34022cc83c1721b2668463d55",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "3d23c2ff1e28c2d02aa34527fe514835bd1163090904afa7389695ccca1bbacf",
+        "output_sha256": "ef3745421e0f975bfc5bef269357446f77b86c757db950a5359c08636e99e7b2",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.0,
+        "citation_support": 0.5,
+        "notes": "Names load() and loads(), which deserialize. The question asks for the serialization entry points, dumps and dumpd in load/dump.py. The quoted signatures do match the cited load.py lines, but that code does not support calling them serialization functions.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 25,
+      "review_id": "99a74fb601e15827432f153c81fa299bc66d6b4fc384468680e2d6df14f532f3",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "eb7a06b5b14fed0b9efc45b742b34a8e5fd459122cf2edd10c99027ec92285d0",
+        "output_sha256": "e38d7758e794ca15b5c7a11a96d6e2fd15f00d41d03c2168519973a8ee975e5d",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 1.0,
+        "notes": "Same text and citations as packet 1 items 4 and 11; all facts match outputs/chat_generation.py 17-42.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 26,
+      "review_id": "d602d31541e1e25a5b939961ae5b68dda2117653e0279d58919ef27039a644f1",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "018bdab08de5f05be8c45c7e931e9780c168da5a95b81b2a0cfcb748da613521",
+        "output_sha256": "ee55e40b719ba19bb6185bb03dbd099dceaafbd782b6c8d8ed2569e80ee0a468",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 1.0,
+        "notes": "Same substance as item 22: right contents, deep copy and call path, but no start_index values. Its inline line numbers for load_and_split (52, 56) are wrong; the calls are at 86-87, inside the cited range.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 27,
+      "review_id": "1ab699a2cba66018035ab8e82ac6de104cc46f7d40267d686df901d7b4dc03c6",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "020b7c3921738b463d2264a5bcf6cdb61552e22b9147a8c744c98005d60d32cc",
+        "output_sha256": "2562ea6e940341f86dec1171f8dc65197585d283a721d116461ea477661e9631",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.5,
+        "citation_support": 0.5,
+        "notes": "Names DeterministicFakeEmbedding as a core class but gives no base classes and does not identify FakeEmbeddings. The cited test file shows the import from langchain_core.embeddings; it shows nothing about the other classes the answer mentions.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 28,
+      "review_id": "6e210a48daa6bdcfa8a1094e7d2854622323c7c04b02577145fe6aa87164902e",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "f2201062c56a0847391aa098df6fbf16f62bd5efd1a1fbd9c5b60ce7c7477f7f",
+        "output_sha256": "74458d7b32e9d43dc2b9a11a29d95a4f314add433b9e97adacbaf4c3187ae307",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says the evidence lacks the __add__ implementations.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 29,
+      "review_id": "2cb5f3058f91dd076c7be0cc018ea9123de062bf25ed3d1a8ece892c4f96d5a4",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "a1ff25242a5308095dd151b48473bf0eef41437d9fda9bab3595fe9f4711c97d",
+        "output_sha256": "199ed23948aa882e8750460f386704154617c0d83e0bbfbcbfa7f853cb379e12",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 1.0,
+        "citation_support": 0.5,
+        "notes": "Guard, iter(self.load()) and NotImplementedError are right. The cited base.py 26-85 stops before lazy_load (91-100), so the quoted check and message are not in it; the cited tests show only the two behaviours.",
+        "rubric_version": "manual-v1"
+      }
+    },
+    {
+      "packet": 2,
+      "item": 30,
+      "review_id": "54e3f303653a8940661dda5b7a7e29c0b8bd46c1b9497e3e1de83e160521ec21",
+      "score": {
+        "schema_version": "1",
+        "run_id": "04ebe642-5ec1-4301-98b2-2a17859c8ece",
+        "job_id": "b936a6cfee84899c8d59be1d72a360549b7cbea10bce39f307e427468b0c228a",
+        "output_sha256": "c5fd0513c8494b36da732b2176a002bc6430569b2799569bdfc56c59521c7ebe",
+        "reviewer": "Shekhar",
+        "reviewed_at": "2026-11-17T21:15:00-05:00",
+        "correctness": 0.0,
+        "citation_support": null,
+        "notes": "Abstained. Says no source excerpts were provided.",
+        "rubric_version": "manual-v1"
+      }
+    }
+  ]
+}
