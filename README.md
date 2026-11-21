@@ -14,6 +14,12 @@ the [research manuscript](paper/manuscript/adaptive-rag-pilot.md) are included.
 Offline tests and live compatibility checks do not establish an answer-quality
 result.
 
+**Paper.** Shekhar Bhardwaj
+([ORCID 0009-0008-8098-9483](https://orcid.org/0009-0008-8098-9483)), *Adaptive
+Retrieval for Repository Question Answering: A Pre-Specified Pilot Study of a
+Vector-First Cascade*, November 2026. The PDF is on Zenodo:
+[doi.org/10.5281/zenodo.24408656](https://doi.org/10.5281/zenodo.24408656).
+
 ## Research files and reproducibility
 
 This Git repository contains the framework, tests, benchmark and review history,
